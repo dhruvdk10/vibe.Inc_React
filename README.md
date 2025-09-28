@@ -24,6 +24,6 @@
 
 - **React** (JSX)
 - **Bootstrap 5**
-- **HTML 5
+- **HTML 5**
 - **CSS / Inline Styling**
 - **JavaScript**
