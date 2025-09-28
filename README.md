@@ -43,19 +43,3 @@
 1. Clone the repository:  
 ```bash
 git clone https://github.com/your-username/vibe.git
-Navigate to the project directory:
-
-bash
-Copy code
-cd vibe
-Install dependencies:
-
-bash
-Copy code
-npm install
-Start the development server:
-
-bash
-Copy code
-npm start
-Open http://localhost:3000 in your browser.
