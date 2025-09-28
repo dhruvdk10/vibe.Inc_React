@@ -1,20 +1,60 @@
-<<<<<<< HEAD
-# React + Vite
+# Vibe - React Streaming Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Vibe Logo](path-to-your-logo)
 
-Currently, two official plugins are available:
+[![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react)](https://reactjs.org/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-purple?logo=bootstrap)](https://getbootstrap.com/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Vibe** is a modern, responsive streaming platform built with **React**. It allows users to browse, search, and watch their favorite movies and TV shows in a sleek, intuitive interface.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔥 Features
 
-## Expanding the ESLint configuration
+- Fully **responsive UI** for desktop, tablet, and mobile.
+- Browse movies and TV shows by category (Trending, Must Watch, New Releases).
+- **Search functionality** to quickly find content.
+- Reusable **React components** for banners, cards, and footers.
+- **Dark-themed interface** with smooth animations.
+- Two-navbar layout:
+  - **Desktop:** Top navbar with logo + icons, bottom navbar with links.
+  - **Mobile:** Top navbar with toggleable navigation links.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# vibe.Inc_React
->>>>>>> a30f607daa667fb4e47fa2408997e0feb681907d
+---
+
+## 💻 Technologies Used
+
+- **React** (JSX)
+- **Bootstrap 5**
+- **CSS / Inline Styling**
+- **JavaScript**
+
+---
+
+## 📸 Screenshots
+
+*(Add screenshots of your app here, e.g., Home, Search, Mobile View)*
+
+---
+
+## 🚀 Installation
+ 
+bash
+git clone https://github.com/your-username/vibe.git
+Navigate to the project directory:
+
+bash
+Copy code
+cd vibe
+Install dependencies:
+
+bash
+Copy code
+npm install
+Start the development server:
+
+bash
+Copy code
+npm start
+Open http://localhost:3000 in your browser.
