@@ -39,8 +39,9 @@
 ---
 
 ## 🚀 Installation
- 
-bash
+
+1. Clone the repository:  
+```bash
 git clone https://github.com/your-username/vibe.git
 Navigate to the project directory:
 
