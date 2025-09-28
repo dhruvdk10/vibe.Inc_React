@@ -248,7 +248,7 @@ footer {
   color: cyan;
 }
 
-@media (min-width: 412px) and (max-width: 1000px) {
+@media (min-width: 412px) and (max-width: 800px) {
   section.img_display img {
     height: 300px;
     object-fit: cover;
@@ -311,7 +311,7 @@ footer {
 
   h2 {
     margin-top: 40px;
-    padding-left: 10px;
+    padding-left: 30px;
     font-size: 24px;
   }
 
