@@ -2,7 +2,6 @@
 
 [![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react)](https://reactjs.org/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-purple?logo=bootstrap)](https://getbootstrap.com/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 **Vibe** is a modern, responsive streaming platform built with **React**. It allows users to browse, search, and watch their favorite movies and TV shows in a sleek, intuitive interface.
 
