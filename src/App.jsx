@@ -8,10 +8,10 @@ import Footer from "./Components/Footer";
 const App = () => {
   return (
     <>
-        <Navbar />
-        <DialogueBox />
-        <Content />
-        <Footer />
+      <Navbar />
+      <DialogueBox />
+      <Content />
+      <Footer />
     </>
   );
 };
