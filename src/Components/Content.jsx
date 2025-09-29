@@ -9,7 +9,7 @@ import {
   thrillingchillsData,
   cheerfulcomedyData,
   toppicksforyouData
-} from "./Components/Data";
+} from "./Data";
 
 function Content() {
   return (
