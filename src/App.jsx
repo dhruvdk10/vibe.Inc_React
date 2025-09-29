@@ -1,4 +1,5 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { banners } from "./Components/Data";
 import Cards from "./Components/Cards";
 import DialogueBox from "./Components/DialogueBox";
