@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import Cards from "./Components/Cards";
+import Cards from "./Cards";
 import {
   banners,
   mustWatchData,
