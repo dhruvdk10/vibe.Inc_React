@@ -3,64 +3,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { banners } from "./Components/Data";
 import Cards from "./Components/Cards";
 import DialogueBox from "./Components/DialogueBox";
+import Navbar from "./Components/Navbar";
 import { mustWatchData, romanticHitsData, thrillingchillsData, cheerfulcomedyData, toppicksforyouData, storeBadges, socialLinks } from "./Components/Data";
 
 const App = () => {
   return (
     <>
-      <nav className="navbar navbar-dark fixed-top" style={{ backgroundColor: "#141414" }}>
-        <div className="container-fluid d-flex mx-auto">
-          <a className="navbar-brand" href="#">
-            <img src="vibe._logo.png" alt="logo" height="40" width="150" style={{ objectFit: "cover" }} />
-          </a>
-          <div className="d-flex align-items-center">
-            <form className="d-flex align-items-center" role="search">
-              <input className="form-control mx-2 d-none" type="search" placeholder="Find your vibe." aria-label="Search"
-                style={{ width: "265px", background: "black", color: "#fff", border: "none" }} />
-              <button className="btn btn-link text-white px-2" type="button" id="search-toggle">
-                <i className="fas fa-search text-white fs-4"></i>
-              </button>
-            </form>
-            <button className="btn btn-link text-white px-2" type="button">
-              <i className="fa fa-bell fs-4"></i>
-            </button>
-            <div className="dropdown ps-2">
-              <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                <i className="fa fa-user fs-4 text-info"></i>
-              </a>
-              <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                <li><a className="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Log In</a></li>
-                <li><a className="dropdown-item" href="#">Sign Out</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
 
-      <div className="App">
+      <div className="Navbar">
+        <Navbar />
+      </div>
+
+
+      <div className="DialogueBox">
         <DialogueBox />
       </div>
 
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: "black", marginTop: "66px" }}>
-        <div className="container-fluid ms-0">
-          <button className="navbar-toggler ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNav"
-            style={{ border: "none", outline: "none", boxShadow: "none" }}>
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="bottomNav">
-            <ul className="navbar-nav ms-3 me-auto mb-lg-0">
-              <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">TV Shows</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">Movies</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">Games</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">New & Popular</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">My List</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">Browse by Languages</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+
 
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
