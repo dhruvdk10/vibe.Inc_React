@@ -80,21 +80,3 @@ export const toppicksforyouData = [
   { img: "pk_poster.jpg", alt: "PK", position: "top" },
   { img: "Animal_poster.jpg", alt: "Animal", position: "bottom" }
 ];
-
-export const storeBadges = [
-  {
-    src: "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg",
-    alt: "Google Play",
-  },
-  {
-    src: "https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg",
-    alt: "App Store",
-  },
-];
-
-export const socialLinks = [
-  { icon: "fab fa-facebook-f", href: "#" },
-  { icon: "fab fa-instagram", href: "#" },
-  { icon: "fab fa-twitter", href: "#" },
-  { icon: "fab fa-youtube", href: "#" },
-];
