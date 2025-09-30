@@ -23,7 +23,7 @@ function Navbar() {
           </Link>
 
           <div className="d-flex align-items-center">
-            
+
             {/* Search */}
             <form className="d-flex align-items-center" role="search">
               <input
