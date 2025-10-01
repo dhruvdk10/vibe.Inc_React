@@ -2,7 +2,7 @@ import React from 'react'
 
 function PageNotFound() {
   return (
-    <div>Page Unavailable</div>
+    <div>Page Not Found </div>
   )
 }
 
