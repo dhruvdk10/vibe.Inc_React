@@ -5,11 +5,11 @@ import Content from "./Components/Content";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import TVShows from "./Pages/TV Shows";
+import TVShows from "./Pages/TVShows";
 import Movies from "./Pages/Movies";
 import Games from "./Pages/Games";
 import Trending from "./Pages/Trending";
-import MyList from "./Pages/My List";
+import MyList from "./Pages/MyList";
 import PageNotFound from "./Pages/Page Not Found";
 
 const App = () => {
@@ -18,11 +18,11 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/TV Shows" element={<TVShows />} />
+        <Route path="/TVShows" element={<TVShows />} />
         <Route path="/Movies" element={<Movies />} />
         <Route path="/Games" element={<Games />} />
         <Route path="/Trending" element={<Trending />} />
-        <Route path="/My List" element={<MyList />} />
+        <Route path="/MyList" element={<MyList />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <DialogueBox />

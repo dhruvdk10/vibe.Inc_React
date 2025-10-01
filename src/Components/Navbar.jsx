@@ -127,7 +127,7 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/new">
-                  New & Popular
+                  Trending
                 </Link>
               </li>
               <li className="nav-item">

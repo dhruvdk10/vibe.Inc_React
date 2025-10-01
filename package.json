@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deploy-all": "git add . && git commit -m 'lu' && git push origin main && bun run deploy"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
