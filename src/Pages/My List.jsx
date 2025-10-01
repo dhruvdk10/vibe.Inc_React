@@ -2,7 +2,13 @@ import React from 'react'
 
 function MyList() {
   return (
-    <div>My List</div>
+  <div>
+    <h1>
+      My List of Items
+    </h1>
+    <p>Here is a list of items:</p>
+
+  </div>
   )
 }
 
