@@ -14,8 +14,6 @@ import {
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page!</h1>
-      <p>This is a simple React application.</p>
 
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -87,10 +85,6 @@ const Home = () => {
         </div>
       </section>
     </div>
-
-
-
-
   )
 }
 export default Home;

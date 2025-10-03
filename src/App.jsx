@@ -4,12 +4,12 @@ import DialogueBox from "./Components/DialogueBox";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import TVShows from "./Pages/TV Shows";
+import TVShows from "./Pages/TVShows";
 import Movies from "./Pages/Movies";
 import Games from "./Pages/Games";
 import Trending from "./Pages/Trending";
-import MyList from "./Pages/My List";
-import PageNotFound from "./Pages/Page Not Found";
+import MyList from "./Pages/MyList";
+import PageNotFound from "./Pages/PageNotFound";
 
 const App = () => {
   return (
