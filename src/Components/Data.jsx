@@ -78,3 +78,35 @@ export const toppicksforyouData = [
   { img: "/vibe.Inc_React/pk_poster.jpg", alt: "PK", position: "top" },
   { img: "/vibe.Inc_React/Animal_poster.jpg", alt: "Animal", position: "bottom" }
 ];
+
+export const todaystoppicksforyouData = [
+  { img: "/vibe.Inc_React/dilwale.png", alt: "Dilwale", position: "top" },
+  { img: "/vibe.Inc_React/badmash company.jpg", alt: "Badmash Company", position: "top right" },
+  { img: "/vibe.Inc_React/bhool bhulaiyan 3.png", alt: "Bhool Bhulaiyan 3", position: "top" },
+  { img: "/vibe.Inc_React/cdi,jpg", alt: "Chakk De India", position: "bottom right" },
+  { img: "/vibe.Inc_React/B3.jpg", alt: "Band Baja Barat", position: "top" },
+  { img: "/vibe.Inc_React/bkb.jpg", alt: "Bareily Ki Barfi", position: "bottom" },
+  { img: "/vibe.Inc_React/highway.jpg", alt: "Highway", position: "top" },
+  { img: "/vibe.Inc_React/houseful.jpg", alt: "Houseful", position: "top" },
+  { img: "/vibe.Inc_React/dangal.jpg", alt: "Dangal", position: "bottom" },
+  { img: "/vibe.Inc_React/k2h2.jpg", alt: "Kuch Kuch Hota Hel Hai", position: "top" },
+  { img: "/vibe.Inc_React/khel khel mein.png", alt: "Khel Khel Mein", position: "top" },
+  { img: "/vibe.Inc_React/ghajini.jpg", alt: "Ghajini", position: "top" }
+
+];
+
+export const crowdpleasersData = [
+  { img: "/vibe.Inc_React/bajrangi bhaijaan.png ", alt: "Bajrangi Bhaijaan", position: "top" },
+  { img: "/vibe.Inc_React/barfi.jpg", alt: "Barfi", position: "top" },
+  { img: "/vibe.Inc_React/article 370.png", alt: "Article 370", position: "bottom" },
+  { img: "/vibe.Inc_React/dear zindagi.png", alt: "Dear Zindagi", position: "bottom" },
+  { img: "/vibe.Inc_React/gangubai.png ", alt: "Gangubai", position: "top" },
+  { img: "/vibe.Inc_React/barfi.jpg", alt: "Raees", position: "top" },
+  { img: "/vibe.Inc_React/k3g.png", alt: "Kabhi Khushi Kabhi Gum", position: "bottom" },
+  { img: "/vibe.Inc_React/dhrishyam.jpg ", alt: "Dhrishyam", position: "top" },
+  { img: "/vibe.Inc_React/DHOOM 2.png", alt: "Dhoom 2", position: "top" },
+  { img: "/vibe.Inc_React/article 370.png", alt: "Fighter", position: "bottom" },
+  { img: "/vibe.Inc_React/hindi medium.jpg", alt: "Hindi Medium", position: "top" },
+  { img: "/vibe.Inc_React/jab we met.jpg", alt: "Jab We Met", position: "top" }
+];
+

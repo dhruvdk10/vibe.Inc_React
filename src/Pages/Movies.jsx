@@ -3,11 +3,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Cards from "../Components/Cards";
 import {
   banners,
-  mustWatchData,
-  romanticHitsData,
-  thrillingchillsData,
-  cheerfulcomedyData,
-  toppicksforyouData
+  todaystoppicksforyouData,
+  crowdpleasersData
+
 } from "../Components/Data";
 
 
@@ -52,40 +50,20 @@ const Movies = () => {
       </section>
 
       <section className="mid_section mt-5">
-        <h2>Must Watch</h2>
+        <h2>Today's Top Picks For You</h2>
         <div className="row g-2">
-          {mustWatchData.map((item, index) => (
+          {todaystoppicksforyouData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
-        <h2>Romantic Hits</h2>
+        <h2>Crowd Pleasers</h2>
         <div className="row g-2">
-          {romanticHitsData.map((item, index) => (
+          {crowdpleasersData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
-        <h2>Thrilling Chills</h2>
-        <div className="row g-2">
-          {thrillingchillsData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2>Cheerful Comedy</h2>
-        <div className="row g-2">
-          {cheerfulcomedyData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2>Top Picks For You</h2>
-        <div className="row g-2 mb-5">
-          {toppicksforyouData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
       </section>
 
     </div>
