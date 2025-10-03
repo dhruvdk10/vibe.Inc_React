@@ -47,7 +47,7 @@ body.modal-open {
 }
 
 section.img_display img {
-  height: 900px;
+  height: 1000px;
   object-fit: cover;
   object-position: top;
   width: 100%;
