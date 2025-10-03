@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Cards from "./Components/Cards";
+import Cards from "../Components/Cards";
 import {
   banners,
   mustWatchData,
@@ -8,7 +8,7 @@ import {
   thrillingchillsData,
   cheerfulcomedyData,
   toppicksforyouData
-} from "./Components/Data";
+} from "../Components/Data";
 
 
 const Movies = () => {
