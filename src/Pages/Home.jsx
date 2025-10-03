@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import Cards from './Cards';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import Cards from "./Components/Cards";
 import {
   banners,
   mustWatchData,
@@ -8,7 +8,7 @@ import {
   thrillingchillsData,
   cheerfulcomedyData,
   toppicksforyouData
-} from './Data';
+} from "./Components/Data";
 
 
 export const Home = () => {
