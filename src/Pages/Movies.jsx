@@ -1,3 +1,6 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Cards from "../Components/Cards";
@@ -10,6 +13,9 @@ import {
 
 
 const Movies = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <div>
       <h1>Movies</h1>
@@ -50,15 +56,15 @@ const Movies = () => {
       </section>
 
       <section className="mid_section mt-5">
-        <h2>Today's Top Picks For You</h2>
-        <div className="row g-2">
+        <h2 data-aos="fade-up">Today's Top Picks For You</h2>
+        <div className="row g-2" data-aos="fade-up">
           {todaystoppicksforyouData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
-        <h2>Crowd Pleasers</h2>
-        <div className="row g-2">
+        <h2 data-aos="fade-up">Crowd Pleasers</h2>
+        <div className="row g-2" data-aos="fade-up">
           {crowdpleasersData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
