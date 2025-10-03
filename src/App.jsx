@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
 import DialogueBox from "./Components/DialogueBox";
-import Content from "./Components/Content";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
@@ -26,7 +25,6 @@ const App = () => {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <DialogueBox />
-      <Content />
       <Footer />
     </BrowserRouter>
   );

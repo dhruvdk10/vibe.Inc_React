@@ -1,4 +1,15 @@
-import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import Cards from "./Components/Cards";
+import {
+  banners,
+  mustWatchData,
+  romanticHitsData,
+  thrillingchillsData,
+  cheerfulcomedyData,
+  toppicksforyouData
+} from "./Components/Data";
+
 
 const Movies = () => {
   return (
@@ -7,8 +18,41 @@ const Movies = () => {
       {/* Display the movies */}
       {/* Example: <Movie title="The Shawshank Redemption" year="1994" /> */}
 
+            <section className="img_display">
+        <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            {banners.map((banner, index) => (
+              <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                <img
+                  src={banner.img}
+                  className="d-block w-100 img-fluid"
+                  alt={banner.alt}
+                  style={{ objectPosition: banner.position }}
+                />
+                <div className="carousel-caption text-light">
+                  <div className="play">
+                    <button><i className="fa-solid fa-play"></i> Play</button>
+                  </div>
+                  <div className="info">
+                    <button><i className="fa-solid fa-circle-info"></i> Info</button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button className="carousel-control-prev" type="button" data-bs-target="#mybannerCarousel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#mybannerCarousel" data-bs-slide="next">
+            <span className="carousel-control-next-icon"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
       <section className="mid_section mt-5">
-        <h2>Top Movies for you</h2>
+        <h2>Must Watch</h2>
         <div className="row g-2">
           {mustWatchData.map((item, index) => (
             <Cards key={index} {...item} />
