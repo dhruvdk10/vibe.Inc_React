@@ -8,7 +8,7 @@ import {
   thrillingchillsData,
   cheerfulcomedyData,
   toppicksforyouData
-} from "./Data";
+} from './Data';
 
 
 const Movies = () => {
