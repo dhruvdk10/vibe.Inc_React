@@ -89,7 +89,7 @@ export const todaystoppicksforyouData = [
   { img: "/vibe.Inc_React/highway.jpg", alt: "Highway", position: "top" },
   { img: "/vibe.Inc_React/housefull.jpg", alt: "housefull", position: "top" },
   { img: "/vibe.Inc_React/dangal.jpg", alt: "Dangal", position: "bottom" },
-  { img: "/vibe.Inc_React/main hoon na.png", alt: "Main Hoon Na", position: "top" },
+  { img: "/vibe.Inc_React/main hoon na.png", alt: "Main Hoon Na", position: "bottom" },
   { img: "/vibe.Inc_React/khel khel mein.png", alt: "Khel Khel Mein", position: "top" },
   { img: "/vibe.Inc_React/ghajini.jpg", alt: "Ghajini", position: "top" }
 
