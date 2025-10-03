@@ -80,7 +80,7 @@ export const toppicksforyouData = [
 ];
 
 export const todaystoppicksforyouData = [
-  { img: "/vibe.Inc_React/dilwale.png", alt: "Dilwale", position: "top" },
+  { img: "/vibe.Inc_React/partner.jpg", alt: "Partner", position: "top" },
   { img: "/vibe.Inc_React/badmash company.jpg", alt: "Badmash Company", position: "top right" },
   { img: "/vibe.Inc_React/bhool bhulaiyaan 3.png", alt: "Bhool Bhulaiyaan 3", position: "top" },
   { img: "/vibe.Inc_React/cdi.jpg", alt: "Chakk De India", position: "bottom right" },
@@ -89,7 +89,7 @@ export const todaystoppicksforyouData = [
   { img: "/vibe.Inc_React/highway.jpg", alt: "Highway", position: "top" },
   { img: "/vibe.Inc_React/housefull.jpg", alt: "housefull", position: "top" },
   { img: "/vibe.Inc_React/dangal.jpg", alt: "Dangal", position: "bottom" },
-  { img: "/vibe.Inc_React/k2h2.jpg", alt: "Kuch Kuch Hota Hel Hai", position: "top" },
+  { img: "/vibe.Inc_React/welcome.jpg", alt: "Welcome", position: "top" },
   { img: "/vibe.Inc_React/khel khel mein.png", alt: "Khel Khel Mein", position: "top" },
   { img: "/vibe.Inc_React/ghajini.jpg", alt: "Ghajini", position: "top" }
 
@@ -98,7 +98,7 @@ export const todaystoppicksforyouData = [
 export const crowdpleasersData = [
   { img: "/vibe.Inc_React/bajrangi bhaijaan.png ", alt: "Bajrangi Bhaijaan", position: "top" },
   { img: "/vibe.Inc_React/barfi.jpg", alt: "Barfi", position: "top" },
-  { img: "/vibe.Inc_React/article_poster.jpg", alt: "Article 370", position: "bottom" },
+  { img: "/vibe.Inc_React/article 370_poster.jpg", alt: "Article 370", position: "bottom" },
   { img: "/vibe.Inc_React/dear zindagi.png", alt: "Dear Zindagi", position: "bottom" },
   { img: "/vibe.Inc_React/gangubai.png ", alt: "Gangubai", position: "bottom" },
   { img: "/vibe.Inc_React/barfi.jpg", alt: "Raees", position: "top" },
