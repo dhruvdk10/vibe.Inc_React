@@ -14,7 +14,7 @@ function Navbar() {
           {/* Brand Logo navigates to home */}
           <Link className="navbar-brand" to="/">
             <img
-              src="/vibe._logo.png"
+              src="/vibe.Inc_React/vibe._logo.png"
               alt="logo"
               height="40"
               width="150"
