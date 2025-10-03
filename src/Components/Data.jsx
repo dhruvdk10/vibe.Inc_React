@@ -80,7 +80,7 @@ export const toppicksforyouData = [
 ];
 
 export const todaystoppicksforyouData = [
-  { img: "/vibe.Inc_React/partner.jpg", alt: "Partner", position: "top" },
+  { img: "/vibe.Inc_React/dostana.png", alt: "Dostana", position: "top" },
   { img: "/vibe.Inc_React/badmash company.jpg", alt: "Badmash Company", position: "top right" },
   { img: "/vibe.Inc_React/bhool bhulaiyaan 3.png", alt: "Bhool Bhulaiyaan 3", position: "top" },
   { img: "/vibe.Inc_React/cdi.jpg", alt: "Chakk De India", position: "bottom right" },
