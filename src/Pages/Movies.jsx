@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import Cards from "./Components/Cards";
+import Cards from './Cards';
 import {
   banners,
   mustWatchData,
@@ -8,7 +8,7 @@ import {
   thrillingchillsData,
   cheerfulcomedyData,
   toppicksforyouData
-} from "./Components/Data";
+} from "./Data";
 
 
 const Movies = () => {
@@ -18,7 +18,7 @@ const Movies = () => {
       {/* Display the movies */}
       {/* Example: <Movie title="The Shawshank Redemption" year="1994" /> */}
 
-            <section className="img_display">
+      <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
             {banners.map((banner, index) => (
