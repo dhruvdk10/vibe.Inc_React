@@ -20,11 +20,9 @@ const Movies = () => {
   }, []);
   return (
     <div>
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center justify-content-between">
         <h1>Movies</h1>
-        <select
-          className="genre-select py-1 px-2 me-2"
-        >
+        <select className="genre-select py-1 px-2 me-3">
           <option value="all">Genres</option>
           <option value="action">Action</option>
           <option value="comedy">Comedy</option>
