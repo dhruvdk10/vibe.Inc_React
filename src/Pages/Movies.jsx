@@ -23,7 +23,7 @@ const Movies = () => {
       <div className="d-flex align-items-center">
         <h1>Movies</h1>
         <select
-          className="genre-select py-1 px-2"
+          className="genre-select py-1 px-2 me-2"
         >
           <option value="all">Genres</option>
           <option value="action">Action</option>
