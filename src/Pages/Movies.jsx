@@ -7,8 +7,7 @@ import Cards from "../Components/Cards";
 import {
   moviebanner,
   todaystoppicksforyouData,
-  crowdpleasersData,
-  moviebanner
+  crowdpleasersData
 
 } from "../Components/Data";
 
