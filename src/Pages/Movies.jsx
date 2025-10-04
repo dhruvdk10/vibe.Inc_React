@@ -78,7 +78,7 @@ const Movies = () => {
           ))}
         </div>
 
-        <h2 data-aos="fade-up">Upcoming Soon</h2>
+        <h2 data-aos="fade-up">Upcoming Movies</h2>
         <div className="row g-2" data-aos="fade-up">
           {upcomingmoviesData.map((item, index) => (
             <Cards key={index} {...item} />
