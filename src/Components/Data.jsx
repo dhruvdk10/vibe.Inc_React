@@ -126,11 +126,11 @@ export const feelgoodmoviesData = [
   { img: "/vibe.Inc_React/partner.jpg", alt: "Partner", position: "top" },
   { img: "/vibe.Inc_React/october.avif", alt: "October", position: "bottom" },
   { img: "/vibe.Inc_React/ok jaanu.png", alt: "Ok Jaanu", position: "top" },
-  { img: "/vibe.Inc_React/sanju.png", alt: "Sanju", position: "bottom" },
+  { img: "/vibe.Inc_React/sanju.png", alt: "Sanju", position: "bottom left" },
   { img: "/vibe.Inc_React/om shanti om.jpg", alt: "Om Shanti Om", position: "top" },
   { img: "/vibe.Inc_React/pathshala.jpg", alt: "pathshala", position: "top" },
   { img: "/vibe.Inc_React/metro in dino.png", alt: "Metro In Dino", position: "top" },
-  { img: "/vibe.Inc_React/l vs rb.jpg", alt: "Ladies vs Ricky Bahal", position: "bottom" },
+  { img: "/vibe.Inc_React/l vs rb.jpg", alt: "Ladies vs Ricky Bahal", position: "top" },
   { img: "/vibe.Inc_React/lsc.png", alt: "Laal Singh Chada", position: "top" },
   { img: "/vibe.Inc_React/kank.png", alt: "Kabhi Alvida Naa Kehna", position: "top" }
 ];
