@@ -20,7 +20,6 @@ const Movies = () => {
   }, []);
   return (
     <div>
-      <h1>Movies</h1>
 
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
