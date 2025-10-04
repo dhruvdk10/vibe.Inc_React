@@ -23,7 +23,7 @@ const Movies = () => {
       <div className="d-flex align-items-center">
         <h1>Movies</h1>
         <select
-          className="text-light bg-black border-light mt-2 px-2 py-1 rounded"
+          className="text-light bg-black border border-2 border-light mx-2 mt-4 px-2 py-1 rounded"
           style={{ fontWeight: "bold", outline: "none", cursor: "pointer" }}
         >
           <option value="all">Genres</option>
