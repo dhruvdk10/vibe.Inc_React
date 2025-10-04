@@ -31,6 +31,7 @@ const Home = () => {
                   src={banner.img}
                   className="d-block w-100 img-fluid"
                   alt={banner.alt}
+                  update={banner.update}
                   style={{ objectPosition: banner.position }}
                 />
                 <div className="carousel-caption text-light">

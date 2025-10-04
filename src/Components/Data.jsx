@@ -84,9 +84,9 @@ export const toppicksforyouData = [
 //{Movie Page Data}
 
 export const moviebanner = [
-  { img: "/vibe.Inc_React/mujhse dosto karoge.jpg", alt: "Movie Banner 1", position: "top" },
-  { img: "/vibe.Inc_React/rang de basanti.jpg", alt: "Movie Banner 2", position: "top right" },
-  { img: "/vibe.Inc_React/wanted.jpg", alt: "Movie Banner 3", position: "bottom" }
+  { img: "/vibe.Inc_React/mujhse dosto karoge.jpg", alt: "Movie Banner 1", update: "Recently Addded", position: "top" },
+  { img: "/vibe.Inc_React/rang de basanti.jpg", alt: "Movie Banner 2", update: "Trending #5 in Movies", position: "top right" },
+  { img: "/vibe.Inc_React/wanted.jpg", alt: "Movie Banner 3", update: "Leaving Soon", position: "bottom" }
 ];
 
 export const todaystoppicksforyouData = [
@@ -120,3 +120,17 @@ export const crowdpleasersData = [
   { img: "/vibe.Inc_React/jab we met.jpg", alt: "Jab We Met", position: "top" }
 ];
 
+export const feelgoodmoviesData = [
+  { img: "/vibe.Inc_React/k2h2.jpg", alt: "Kuch Kuch Hota Hai", position: "top" },
+  { img: "/vibe.Inc_React/chupchup ke.jpg", alt: "Chupchup Ke", position: "top" },
+  { img: "/vibe.Inc_React/partner.jpg", alt: "Partner", position: "top" },
+  { img: "/vibe.Inc_React/october.avif", alt: "October", position: "bottom" },
+  { img: "/vibe.Inc_React/ok jaanu.png", alt: "Ok Jaanu", position: "top" },
+  { img: "/vibe.Inc_React/sanju.png", alt: "Sanju", position: "bottom" },
+  { img: "/vibe.Inc_React/om shanti om.jpg", alt: "Om Shanti Om", position: "top" },
+  { img: "/vibe.Inc_React/pathshala.jpg", alt: "pathshala", position: "top" },
+  { img: "/vibe.Inc_React/metro in dino.png", alt: "Metro In Dino", position: "top" },
+  { img: "/vibe.Inc_React/l vs rb.jpg", alt: "Ladies vs Ricky Bahal", position: "bottom" },
+  { img: "/vibe.Inc_React/lsc.png", alt: "Laal Singh Chada", position: "top" },
+  { img: "/vibe.Inc_React/kank.png", alt: "Kabhi Alvida Naa Kehna", position: "top" }
+];

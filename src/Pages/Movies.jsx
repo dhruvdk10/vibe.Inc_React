@@ -31,6 +31,7 @@ const Movies = () => {
                   src={moviebanner.img}
                   className="d-block w-100 img-fluid"
                   alt={moviebanner.alt}
+                  update={moviebanner.update}
                   style={{ objectPosition: moviebanner.position }}
                 />
                 <div className="carousel-caption text-light">
