@@ -5,9 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Cards from "../Components/Cards";
 import {
-  banners,
+  moviebanner,
   todaystoppicksforyouData,
-  crowdpleasersData
+  crowdpleasersData,
+  moviebanner
 
 } from "../Components/Data";
 
@@ -25,13 +26,13 @@ const Movies = () => {
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
-            {banners.map((banner, index) => (
+            {moviebanner.map((moviebanner, index) => (
               <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
                 <img
-                  src={banner.img}
+                  src={moviebanner.img}
                   className="d-block w-100 img-fluid"
-                  alt={banner.alt}
-                  style={{ objectPosition: banner.position }}
+                  alt={moviebanner.alt}
+                  style={{ objectPosition: moviebanner.position }}
                 />
                 <div className="carousel-caption text-light">
                   <div className="play">

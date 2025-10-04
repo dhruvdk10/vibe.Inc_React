@@ -1,3 +1,5 @@
+// {Home Page Data}
+
 export const banners = [
   { img: "/vibe.Inc_React/itefaaq_poster.jpg", alt: "Banner3", update: "Recently Added ", position: "bottom" },
   { img: "/vibe.Inc_React/new york_poster.jpg", alt: "Banner2", update: "Leaaving Soon", position: "bottom" },
@@ -77,6 +79,14 @@ export const toppicksforyouData = [
   { img: "/vibe.Inc_React/znmd_poster.jpg", alt: "ZNMD", position: "top" },
   { img: "/vibe.Inc_React/pk_poster.jpg", alt: "PK", position: "top" },
   { img: "/vibe.Inc_React/Animal_poster.jpg", alt: "Animal", position: "bottom" }
+];
+
+//{Movie Page Data}
+
+export const moviebanner = [
+  { img: "/vibe.Inc_React/october.avif", alt: "Movie Banner 1", position: "top" },
+  { img: "/vibe.Inc_React/partner.jpg", alt: "Movie Banner 2", position: "top right" },
+  { img: "/vibe.Inc_React/sanju.png", alt: "Movie Banner 3", position: "bottom" }
 ];
 
 export const todaystoppicksforyouData = [
