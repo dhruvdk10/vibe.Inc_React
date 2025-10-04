@@ -124,7 +124,7 @@ export const feelgoodmoviesData = [
   { img: "/vibe.Inc_React/k2h2.jpg", alt: "Kuch Kuch Hota Hai", position: "top" },
   { img: "/vibe.Inc_React/chupchup ke.jpg", alt: "Chupchup Ke", position: "top" },
   { img: "/vibe.Inc_React/partner.jpg", alt: "Partner", position: "top" },
-  { img: "/vibe.Inc_React/october.avif", alt: "October", position: "bottom left" },
+  { img: "/vibe.Inc_React/october.avif", alt: "October", position: "20% 100%" },
   { img: "/vibe.Inc_React/ok jaanu.png", alt: "Ok Jaanu", position: "top" },
   { img: "/vibe.Inc_React/sanju.png", alt: "Sanju", position: "bottom left" },
   { img: "/vibe.Inc_React/om shanti om.jpg", alt: "Om Shanti Om", position: "top" },
