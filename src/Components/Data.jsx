@@ -59,7 +59,7 @@ export const cheerfulcomedyData = [
   { img: "/vibe.Inc_React/indoo ki jawaani_poster.jpg", alt: "Indoo Ki Jawani", position: "bottom" },
   { img: "/vibe.Inc_React/motichoor cknachoor_poster.jpg", alt: "Motichoor Chaknachoor", position: "top" },
   { img: "/vibe.Inc_React/dream girl 2_poster.png", alt: "Dream", position: "top left" },
-  { img: "/vibe.Inc_React/kapoor n sons_poster.jpg", alt: "Kapoor and Sons", position: "top" },
+  { img: "/vibe.Inc_React/kapoor n sons.jpg", alt: "Kapoor and Sons", position: "top" },
   { img: "/vibe.Inc_React/omg 2_poster.jpg", alt: "OMG", position: "top right" },
   { img: "/vibe.Inc_React/lukka_chhupi_poster.jpg", alt: "Luka Chuppi", position: "bottom" },
   { img: "/vibe.Inc_React/pk_poster.jpg", alt: "PK", position: "top" },
@@ -71,7 +71,7 @@ export const toppicksforyouData = [
   { img: "/vibe.Inc_React/soty_poster.jpg", alt: "Student of the Year", position: "bottom" },
   { img: "/vibe.Inc_React/yjhd_poster.webp", alt: "YJHD", position: "bottom right" },
   { img: "/vibe.Inc_React/new york_poster.jpg", alt: "New York", position: "top" },
-  { img: "/vibe.Inc_React/kapoor n sons_poster.jpg", alt: "Kapoor and Sons", position: "top" },
+  { img: "/vibe.Inc_React/kapoor n sons.jpg", alt: "Kapoor and Sons", position: "top" },
   { img: "/vibe.Inc_React/suits_poster.jpg", alt: "Suits", position: "bottom" },
   { img: "/vibe.Inc_React/itefaaq_poster.jpg", alt: "Itefaq", position: "bottom" },
   { img: "/vibe.Inc_React/rockstar_banner.jpg", alt: "Banner3", position: "top" },
@@ -134,3 +134,19 @@ export const feelgoodmoviesData = [
   { img: "/vibe.Inc_React/lsc.png", alt: "Laal Singh Chada", position: "top" },
   { img: "/vibe.Inc_React/kank.png", alt: "Kabhi Alvida Naa Kehna", position: "top" }
 ];
+
+export const upcomingmoviesData = [
+  { img: "/vibe.Inc_React/wazir.jpg", alt: "Wazir", position: "top" },
+  { img: "/vibe.Inc_React/thoda pyar thoda magic.jpg", alt: "Thoda Pyaar Thoda Magic", position: "top" },
+  { img: "/vibe.Inc_React/jolly llb.webp", alt: "Jolly LLB 3", position: "top" },
+  { img: "/vibe.Inc_React/hasee toh phasee.png", alt: "Hasee Toh Phasee", position: "top" },
+  { img: "/vibe.Inc_React/chehre.jpg", alt: "Chehre", position: "top" },
+  { img: "/vibe.Inc_React/bkd.png", alt: "Badrinath ki Dhulaniya", position: "top" },
+  { img: "/vibe.Inc_React/salaam namaste.jpg", alt: "Salaam Namaste", position: "top" },
+  { img: "/vibe.Inc_React/pkp.png", alt: "Pyaar Ka Punchnama", position: "top" },
+  { img: "/vibe.Inc_React/tara rum pum.jpg", alt: "Tara Rum Pum ", position: "top" },
+  { img: "/vibe.Inc_React/knph.jpg", alt: "Kaho Naa Pyaar Hai", position: "top" },
+  { img: "/vibe.Inc_React/life in a metro.png", alt: "Life in a Metro", position: "top" },
+  { img: "/vibe.Inc_React/hum tum.jpg", alt: "Hum Tum", position: "top" }
+];
+

@@ -8,7 +8,8 @@ import {
   moviebanner,
   todaystoppicksforyouData,
   crowdpleasersData,
-  feelgoodmoviesData
+  feelgoodmoviesData,
+  upcomingmoviesData
 
 } from "../Components/Data";
 
@@ -20,8 +21,6 @@ const Movies = () => {
   return (
     <div>
       <h1>Movies</h1>
-      {/* Display the movies */}
-      {/* Example: <Movie title="The Shawshank Redemption" year="1994" /> */}
 
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -75,6 +74,13 @@ const Movies = () => {
         <h2 data-aos="fade-up">Feel-Good Movies</h2>
         <div className="row g-2" data-aos="fade-up">
           {feelgoodmoviesData.map((item, index) => (
+            <Cards key={index} {...item} />
+          ))}
+        </div>
+
+        <h2 data-aos="fade-up">Upcoming Soon</h2>
+        <div className="row g-2" data-aos="fade-up">
+          {upcomingmoviesData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
