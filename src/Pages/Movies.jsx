@@ -20,10 +20,10 @@ const Movies = () => {
   }, []);
   return (
     <div>
-      <div className="d-flex align-items-center justify-content-between px-3 mt-3">
-        <h1 className="text-light m-0">Movies</h1>
+      <div className="d-flex align-items-center">
+        <h1>Movies</h1>
         <select
-          className="text-light bg-black border border-light px-2 py-1 rounded"
+          className="text-light bg-none border-light px-2 py-1 rounded"
           style={{ fontWeight: "bold", outline: "none", cursor: "pointer" }}
         >
           <option value="all">Genres</option>
