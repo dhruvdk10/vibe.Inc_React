@@ -20,6 +20,30 @@ const Movies = () => {
   }, []);
   return (
     <div>
+      <div className="d-flex align-items-center justify-content-between px-3 mt-3">
+        <h1 className="text-light m-0">Movies</h1>
+        <select
+          className="text-light bg-black border border-light px-2 py-1 rounded"
+          style={{ fontWeight: "bold", outline: "none", cursor: "pointer" }}
+        >
+          <option value="all">Genres</option>
+          <option value="action">Action</option>
+          <option value="comedy">Comedy</option>
+          <option value="drama">Drama</option>
+          <option value="family">Romantic</option>
+          <option value="thriller">Thriller</option>
+          <option value="horror">Horror</option>
+          <option value="animation">Anime</option>
+          <option value="adventure">Adventure</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="sci-fi">Sci-Fi</option>
+          <option value="mystery">Mystery</option>
+          <option value="documentary">Biography</option>
+          <option value="war">More...</option>
+
+
+        </select>
+      </div>
 
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
