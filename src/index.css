@@ -210,7 +210,7 @@ p {
   color: #eee;
   background-color: #000;
   border: 2px solid #f8f9fa;
-  margin: 16px 8px;
+  margin: 20px 10px 16px 10px;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-weight: 500;
@@ -336,7 +336,7 @@ footer {
   }
 
   .genre-select {
-    margin: auto;
+    margin: auto 10px;
     padding: 5px 8px;
   }
 
@@ -418,7 +418,7 @@ footer {
   }
 
   .genre-select {
-    margin: auto;
+    margin: auto 5px;
     padding: 5px 6px;
   }
 
