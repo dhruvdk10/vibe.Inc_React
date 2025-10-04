@@ -277,7 +277,7 @@ footer {
 
 @media (min-width: 412px) and (max-width: 800px) {
   section.img_display img {
-    height: 400px;
+    height: 350px;
     object-fit: cover;
     object-position: bottom;
   }
