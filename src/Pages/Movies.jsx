@@ -7,7 +7,8 @@ import Cards from "../Components/Cards";
 import {
   moviebanner,
   todaystoppicksforyouData,
-  crowdpleasersData
+  crowdpleasersData,
+  feelgoodmoviesData
 
 } from "../Components/Data";
 
@@ -70,6 +71,14 @@ const Movies = () => {
             <Cards key={index} {...item} />
           ))}
         </div>
+
+        <h2 data-aos="fade-up">Feel-Good Movies</h2>
+        <div className="row g-2" data-aos="fade-up">
+          {feelgoodmoviesData.map((item, index) => (
+            <Cards key={index} {...item} />
+          ))}
+        </div>
+
 
       </section>
 
