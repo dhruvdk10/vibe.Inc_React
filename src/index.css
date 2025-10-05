@@ -365,10 +365,6 @@ footer {
 
 @media (max-width: 412px) {
 
-  .movie-card {
-    margin-bottom: 5px;
-  }
-
   .movie-card-img-top {
     height: 110px;
   }
