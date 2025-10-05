@@ -365,6 +365,10 @@ footer {
 
 @media (max-width: 412px) {
 
+  .row {
+    --bs-gutter-y: 0.25rem !important;
+  }
+
   .movie-card-img-top {
     height: 110px;
   }

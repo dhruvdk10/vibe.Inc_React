@@ -78,28 +78,28 @@ const Movies = () => {
 
       <section className="mid_section mt-5">
         <h2 data-aos="fade-up">Today's Top Picks For You</h2>
-        <div className="row g-1 g-md-2" data-aos="fade-up">
+        <div className="row g-2" data-aos="fade-up">
           {todaystoppicksforyouData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
         <h2 data-aos="fade-up">Crowd Pleasers</h2>
-        <div className="row g-1 g-md-2" data-aos="fade-up">
+        <div className="row g-2" data-aos="fade-up">
           {crowdpleasersData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
         <h2 data-aos="fade-up">Feel-Good Movies</h2>
-        <div className="row g-1 g-md-2" data-aos="fade-up">
+        <div className="row g-2" data-aos="fade-up">
           {feelgoodmoviesData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
         <h2 data-aos="fade-up">Upcoming Movies</h2>
-        <div className="row g-1 g-md-2 mb-5" data-aos="fade-up">
+        <div className="row g-2" data-aos="fade-up">
           {upcomingmoviesData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}

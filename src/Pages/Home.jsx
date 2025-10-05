@@ -58,35 +58,35 @@ const Home = () => {
 
       <section className="mid_section mt-5">
         <h2 data-aos="fade-up">Must Watch</h2>
-        <div className="rrow g-1 g-md-2" data-aos="fade-up">
+        <div className="row g-2" data-aos="fade-up">
           {mustWatchData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
         <h2 data-aos="fade-up">Romantic Hits</h2>
-        <div className="row g-1 g-md-2" data-aos="fade-up">
+        <div className="row g-2" data-aos="fade-up">
           {romanticHitsData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
         <h2 data-aos="fade-up">Thrilling Chills</h2>
-        <div className="row g-1 g-md-2" data-aos="fade-up">
+        <div className="row g-2" data-aos="fade-up">
           {thrillingchillsData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
         <h2 data-aos="fade-up">Cheerful Comedy</h2>
-        <div className="row g-1 g-md-2" data-aos="fade-up">
+        <div className="row g-2" data-aos="fade-up">
           {cheerfulcomedyData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
         </div>
 
         <h2 data-aos="fade-up">Top Picks For You</h2>
-        <div className="row g-1 g-md-2 mb-5" data-aos="fade-up">
+        <div className="row g-2 mb-5" data-aos="fade-up">
           {toppicksforyouData.map((item, index) => (
             <Cards key={index} {...item} />
           ))}
