@@ -6,6 +6,13 @@ function Navbar() {
 
   return (
     <>
+      <style>
+        {`
+          .search-input::placeholder {
+            color: #eee;
+          }
+        `}
+      </style>
       {/* Top Navbar */}
       <nav
         className="navbar navbar-dark fixed-top"
@@ -31,7 +38,7 @@ function Navbar() {
               onSubmit={(e) => e.preventDefault()}
             >
               <input
-                className={`form-control mx-2 ${showSearch ? "d-block" : "d-none"
+                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"
                   }`}
                 type="search"
                 placeholder="Find your vibe."
@@ -41,6 +48,7 @@ function Navbar() {
                   width: "265px",
                   background: "black",
                   color: "#fff",
+                  boxShadow: "none",
                   border: "none",
                   transition: "all 0.3s ease",
                 }}
