@@ -33,8 +33,9 @@ const Home = () => {
                   alt={banner.alt}
                   style={{ objectPosition: banner.position }}
                 />
+                <div className="update">{banner.update}</div>
                 <div className="carousel-caption text-light">
-                  <span className="update">{banner.update}</span>
+                  <span className="update-label">{banner.update}</span>
                   <div className="play">
                     <button><i className="fa-solid fa-play"></i> Play</button>
                   </div>

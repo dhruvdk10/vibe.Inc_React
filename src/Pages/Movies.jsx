@@ -51,11 +51,10 @@ const Movies = () => {
                   src={moviebanner.img}
                   className="d-block w-100 img-fluid"
                   alt={moviebanner.alt}
-                  update={moviebanner.update}
                   style={{ objectPosition: moviebanner.position }}
                 />
+                <div className="update">{moviebanner.update}</div>
                 <div className="carousel-caption text-light">
-                  <span className="update">{moviebanner.update}</span>
                   <div className="play">
                     <button><i className="fa-solid fa-play"></i> Play</button>
                   </div>
