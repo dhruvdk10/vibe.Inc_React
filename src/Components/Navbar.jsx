@@ -31,19 +31,22 @@ function Navbar() {
               onSubmit={(e) => e.preventDefault()}
             >
               <input
-                ref={searchRef}
-                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"}`}
+                className="form-control mx-2"
                 type="search"
                 placeholder="Find your vibe."
                 aria-label="Search"
                 style={{
-                  width: "265px",
+                  width: showSearch ? "265px" : "0px",
+                  opacity: showSearch ? 1 : 0,
                   background: "black",
                   color: "#fff",
                   border: "none",
+                  outline: "none",
                   transition: "all 0.3s ease",
+                  padding: showSearch ? "6px 12px" : "0px",
                 }}
                 onBlur={() => setShowSearch(false)}
+                autoFocus={showSearch}
               />
               <button
                 className="btn btn-link text-white px-2"
