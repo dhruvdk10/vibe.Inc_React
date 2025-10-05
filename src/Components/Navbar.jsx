@@ -9,7 +9,7 @@ function Navbar() {
       <style>
         {`
           .search-input::placeholder {
-            color: #ccc;
+            color: #aaa;
           }
         `}
       </style>
