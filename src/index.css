@@ -46,7 +46,7 @@ body.modal-open {
   height: 600px;
 }
 
-input::placeholder {
+.search-input::placeholder {
   color: #eee;
 }
 
