@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./index.css";
 
 function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
@@ -36,16 +35,9 @@ function Navbar() {
                 className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"}`}
                 type="search"
                 placeholder="Find your vibe."
-                aria-label="Search"
-                style={{
-                  width: "265px",
-                  background: "black",
-                  color: "#fff",
-                  border: "none",
-                  transition: "all 0.3s ease",
-                }}
                 onBlur={() => setShowSearch(false)}
               />
+
               <button
                 className="btn btn-link text-white px-2"
                 type="button"
