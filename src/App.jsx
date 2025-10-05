@@ -4,7 +4,7 @@ import DialogueBox from "./Components/DialogueBox";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import TVShows from "./Pages/TVShows";
+import Series from "./Pages/Series";
 import Movies from "./Pages/Movies";
 import Games from "./Pages/Games";
 import Trending from "./Pages/Trending";
@@ -17,7 +17,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/TVShows" element={<TVShows />} />
+        <Route path="/Series" element={<Series />} />
         <Route path="/Movies" element={<Movies />} />
         <Route path="/Games" element={<Games />} />
         <Route path="/Trending" element={<Trending />} />

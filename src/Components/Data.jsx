@@ -150,3 +150,72 @@ export const upcomingmoviesData = [
   { img: "/vibe.Inc_React/hum tum.jpg", alt: "Hum Tum", position: "top" }
 ];
 
+//{Series Data}
+
+export const seriesbanner = [
+  { img: "/vibe.Inc_React/seriesbanner.jpg", alt: "TV Shows Banner1", update: "", position: "top" },
+  { img: "/vibe.Inc_React/series.jpg", alt: "TV Shows Banner2", update: "", position: "top" },
+  { img: "/vibe.Inc_React/series2.jpg", alt: "TV Shows Banner3", update: "", position: "top" },
+];
+
+export const seriestoppicksforyouData = [
+  { img: "/vibe.Inc_React/KBC.jpg", alt: "KBC", position: "top" },
+  { img: "/vibe.Inc_React/criminal minds.jpg", alt: "Criminal Minds", position: "top" },
+  { img: "/vibe.Inc_React/the big bang theory.jpg", alt: "The Big Bang Theory", position: "top" },
+  { img: "/vibe.Inc_friends.jpg", alt: "FRIENDS", position: "top" },
+  { img: "/vibe.Inc_React/dmg.png", alt: "Dil Mil Gaye", position: "top" },
+  { img: "/vibe.Inc_React/THE OFFICE.jpg", alt: "The Office", position: "top" },
+  { img: "/vibe.Inc_React/mahabharat.png", alt: "Mahabharat", position: "top" },
+  { img: "/vibe.Inc_React/sb vs sb.png", alt: "Sarabhai vs Sarabhai", position: "top" },
+  { img: "/vibe.Inc_React/tvd_poster.jpg", alt: "the Vampire Diaries", position: "top" },
+  { img: "/vibe.Inc_React/house.png", alt: "House", position: "top" },
+  { img: "/vibe.Inc_React/tgd.png", alt: "The Good Doctor", position: "top" },
+  { img: "/vibe.Inc_React/young sheldon.webp", alt: "Young Sheldon", position: "top" },
+  { img: "/vibe.Inc_React/rookie.png", alt: "Rookie", position: "top" }
+];
+
+export const mustwatchshowsandseriesData = [
+  { img: "/vibe.Inc_React/supernatural.jpg", alt: "Supernatural", position: "top" },
+  { img: "/vibe.Inc_React/indian idol.avif", alt: "Indian Idol", position: "top" },
+  { img: "/vibe.Inc_React/modern family.jpg", alt: "Modern Family", position: "top" },
+  { img: "/vibe.Inc_React/rk.png", alt: "Radha Krishna", position: "top" },
+  { img: "/vibe.Inc_React/fear files.jpg", alt: "Fear Files", position: "top" },
+  { img: "/vibe.Inc_React/rk.png", alt: "Radha Krishna", position: "top" },
+  { img: "/vibe.Inc_React/suits_poster.jpg", alt: "Suits", position: "top" },
+  { img: "/vibe.Inc_React/P&R.jpg", alt: "Parks & Recreations", position: "top" },
+  { img: "/vibe.Inc_React/mjht.png", alt: "Mile Jab Hum Tum ", position: "top" },
+  { img: "/vibe.Inc_React/breaking bad.png", alt: "Breaking Bad", position: "top" },
+ { img: "/vibe.Inc_React/TMKOC.jpg", alt: "taarak Mehta ka Oolta Chashmaa", position: "top" },
+  { img: "/vibe.Inc_React/the originals.jpg", alt: "The Originals", position: "top" }
+];
+
+export const seriesenglishData = [
+  { img: "/vibe.Inc_React/young sheldon.webp", alt: "Young Sheldon", position: "top" },
+  { img: "/vibe.Inc_React/GOT.avif", alt: "Game of Thrones", position: "top" },
+  { img: "/vibe.Inc_React/tvd_poster.jpg", alt: "the Vampire Diaries", position: "top" },
+  { img: "/vibe.Inc_React/THE OFFICE.jpg", alt: "The Office", position: "top" },
+  { img: "/vibe.Inc_React/HIMYM.jpg", alt: "How I Met Your Mother", position: "top" },
+  { img: "/vibe.Inc_React/criminal minds.jpg", alt: "Criminal Minds", position: "top" },
+  { img: "/vibe.Inc_React/breaking bad.png", alt: "Breaking Bad", position: "top" },
+  { img: "/vibe.Inc_React/dexter.jpg", alt: "Dexter", position: "top" },
+  { img: "/vibe.Inc_React/suits_poster.jpg", alt: "Suits", position: "top" },
+  { img: "/vibe.Inc_React/the big bang theory.jpg", alt: "The Big Bang Theory", position: "top" },
+  { img: "/vibe.Inc_friends.jpg", alt: "FRIENDS", position: "top" },
+  { img: "/vibe.Inc_React/the originals.jpg", alt: "The Originals", position: "top" }
+];
+
+export const hinditvshowsData = [
+  { img: "/vibe.Inc_React/dmg.png", alt: "Dil Mil Gaye", position: "top" },
+  { img: "/vibe.Inc_React/CID.avif", alt: "CID", position: "top" },
+  { img: "/vibe.Inc_React/mahabharat.png", alt: "Mahabharat", position: "top" },
+  { img: "/vibe.Inc_React/aahat.avif", alt: "Rahul", position: "top" },
+  { img: "/vibe.Inc_React/KBC.jpg", alt: "KBC", position: "top" },
+  { img: "/vibe.Inc_React/mjht.png", alt: "Mile Jab Hum Tum ", position: "top" },
+  { img: "/vibe.Inc_React/sb vs sb.png", alt: "Sarabhai vs Sarabhai", position: "top" },
+  { img: "/vibe.Inc_React/savdhaan india.webp", alt: "Savdhaan India", position: "top" },
+  { img: "/vibe.Inc_React/TMKOC.jpg", alt: "taarak Mehta ka Oolta Chashmaa", position: "top" },
+  { img: "/vibe.Inc_React/rk.png", alt: "Radha Krishna", position: "top" },
+  { img: "/vibe.Inc_React/sharaaarat.png", alt: "Sharaaarat", position: "top" },
+  { img: "/vibe.Inc_React/pkyek.png", alt: "Pyaar Ki Yeh Ek Kahaani", position: "top" }
+];
+
