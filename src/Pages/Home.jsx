@@ -31,10 +31,10 @@ const Home = () => {
                   src={banner.img}
                   className="d-block w-100 img-fluid"
                   alt={banner.alt}
-                  update={banner.update}
                   style={{ objectPosition: banner.position }}
                 />
                 <div className="carousel-caption text-light">
+                  <span className="update">{banner.update}</span>
                   <div className="play">
                     <button><i className="fa-solid fa-play"></i> Play</button>
                   </div>

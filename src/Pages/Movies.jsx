@@ -55,6 +55,7 @@ const Movies = () => {
                   style={{ objectPosition: moviebanner.position }}
                 />
                 <div className="carousel-caption text-light">
+                  <span className="update">{moviebanner.update}</span>
                   <div className="play">
                     <button><i className="fa-solid fa-play"></i> Play</button>
                   </div>
