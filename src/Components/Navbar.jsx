@@ -45,7 +45,7 @@ function Navbar() {
                   transition: "all 0.3s ease",
                   padding: showSearch ? "6px 12px" : "0px",
                 }}
-                onBlur={() => setShowSearch(false)} // hide when focus lost
+                onBlur={() => setShowSearch(false)} 
                 autoFocus={showSearch}
               />
               <button

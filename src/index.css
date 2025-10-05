@@ -46,6 +46,10 @@ body.modal-open {
   height: 600px;
 }
 
+input::placeholder {
+  color: #eee;
+}
+
 section.img_display img {
   height: 1000px;
   object-fit: cover;
