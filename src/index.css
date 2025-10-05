@@ -355,7 +355,7 @@ footer {
 
   h2 {
     margin-top: 40px;
-    padding-left: 30px;
+    padding-left: 15px;
   }
 
   footer {
@@ -366,6 +366,7 @@ footer {
 @media (max-width: 412px) {
   .movie-card-img-top {
     height: 110px;
+    margin-bottom: 5px;
   }
 
   section.img_display img {
