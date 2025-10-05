@@ -9,6 +9,7 @@ import Movies from "./Pages/Movies";
 import Games from "./Pages/Games";
 import MyList from "./Pages/MyList";
 import PageNotFound from "./Pages/PageNotFound";
+import "./index.css";
 
 const App = () => {
   return (
