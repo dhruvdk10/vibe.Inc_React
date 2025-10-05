@@ -125,19 +125,10 @@ function Navbar() {
                   Games
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/new">
-                  Trending
-                </Link>
-              </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/my-list">
                   My List
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/languages">
-                  Browse by Languages
                 </Link>
               </li>
             </ul>

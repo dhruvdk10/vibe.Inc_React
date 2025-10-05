@@ -7,7 +7,6 @@ import Home from "./Pages/Home";
 import Series from "./Pages/Series";
 import Movies from "./Pages/Movies";
 import Games from "./Pages/Games";
-import Trending from "./Pages/Trending";
 import MyList from "./Pages/MyList";
 import PageNotFound from "./Pages/PageNotFound";
 
@@ -20,7 +19,6 @@ const App = () => {
         <Route path="/Series" element={<Series />} />
         <Route path="/Movies" element={<Movies />} />
         <Route path="/Games" element={<Games />} />
-        <Route path="/Trending" element={<Trending />} />
         <Route path="/MyList" element={<MyList />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
