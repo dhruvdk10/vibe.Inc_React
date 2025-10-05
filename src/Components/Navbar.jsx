@@ -36,13 +36,6 @@ function Navbar() {
                 type="search"
                 placeholder="Find your vibe."
                 aria-label="Search"
-                style={{
-                  width: "265px",
-                  background: "black",
-                  color: "#fff",
-                  border: "none",
-                  transition: "all 0.3s ease",
-                }}
                 onBlur={() => setShowSearch(false)}
               />
               <button
