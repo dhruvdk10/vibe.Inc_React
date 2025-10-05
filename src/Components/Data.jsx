@@ -2,7 +2,7 @@
 
 export const banners = [
   { img: "/vibe.Inc_React/itefaaq_poster.jpg", alt: "Banner3", update: "Recently Added ", position: "bottom" },
-  { img: "/vibe.Inc_React/new york_poster.jpg", alt: "Banner2", update: "Leaaving Soon", position: "bottom" },
+  { img: "/vibe.Inc_React/new york_poster.jpg", alt: "Banner2", update: "Most Watched", position: "bottom" },
   { img: "/vibe.Inc_React/soty_poster.jpg", alt: "Banner1", update: "Leaaving Soon", position: "bottom " }
 ];
 
@@ -153,9 +153,9 @@ export const upcomingmoviesData = [
 //{Series Data}
 
 export const seriesbanner = [
-  { img: "/vibe.Inc_React/seriesbanner.jpg", alt: "TV Shows Banner1", update: "", position: "top" },
-  { img: "/vibe.Inc_React/series.jpg", alt: "TV Shows Banner2", update: "", position: "top" },
-  { img: "/vibe.Inc_React/series2.jpg", alt: "TV Shows Banner3", update: "", position: "top" },
+  { img: "/vibe.Inc_React/friends.jpg", alt: "TV Shows Banner1", update: "Recently Added", position: "top" },
+  { img: "/vibe.Inc_React/THE OFFICE.jpg", alt: "TV Shows Banner2", update: "Trending #2 in Series", position: "top" },
+  { img: "/vibe.Inc_React/KBC.jpg", alt: "TV Shows Banner3", update: "Leaaving Soon", position: "top" },
 ];
 
 export const seriestoppicksforyouData = [
@@ -185,7 +185,7 @@ export const mustwatchshowsandseriesData = [
   { img: "/vibe.Inc_React/P&R.jpg", alt: "Parks & Recreations", position: "top" },
   { img: "/vibe.Inc_React/mjht.png", alt: "Mile Jab Hum Tum ", position: "top" },
   { img: "/vibe.Inc_React/breaking bad.png", alt: "Breaking Bad", position: "top" },
- { img: "/vibe.Inc_React/TMKOC.jpg", alt: "taarak Mehta ka Oolta Chashmaa", position: "top" },
+  { img: "/vibe.Inc_React/TMKOC.jpg", alt: "taarak Mehta ka Oolta Chashmaa", position: "top" },
   { img: "/vibe.Inc_React/the originals.jpg", alt: "The Originals", position: "top" }
 ];
 
@@ -200,7 +200,7 @@ export const seriesenglishData = [
   { img: "/vibe.Inc_React/dexter.jpg", alt: "Dexter", position: "top" },
   { img: "/vibe.Inc_React/suits_poster.jpg", alt: "Suits", position: "top" },
   { img: "/vibe.Inc_React/the big bang theory.jpg", alt: "The Big Bang Theory", position: "top" },
-  { img: "/vibe.Inc_friends.jpg", alt: "FRIENDS", position: "top" },
+  { img: "/vibe.Inc_React/friends.jpg", alt: "FRIENDS", position: "top" },
   { img: "/vibe.Inc_React/the originals.jpg", alt: "The Originals", position: "top" }
 ];
 
