@@ -12,7 +12,7 @@ import {
   hinditvshowsData
 } from "../Components/Data";
 
-function Series() {
+const Series = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
