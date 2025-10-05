@@ -46,19 +46,6 @@ body.modal-open {
   height: 600px;
 }
 
-.search-input {
-  background: #141414;
-  border: none;
-  color: #fff;
-  width: 265px;
-  transition: all 0.3s ease;
-}
-
-.search-input::placeholder {
-  color: #eee;
-  opacity: 1;
-}
-
 section.img_display img {
   height: 1000px;
   object-fit: cover;
