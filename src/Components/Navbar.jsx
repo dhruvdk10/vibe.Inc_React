@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [showSearch, setShowSearch] = useState(false);
+
   return (
     <>
       {/* Top Navbar */}
@@ -10,7 +12,6 @@ function Navbar() {
         style={{ backgroundColor: "#141414" }}
       >
         <div className="container-fluid d-flex mx-auto">
-
           {/* Brand Logo navigates to home */}
           <Link className="navbar-brand" to="/">
             <img
@@ -23,25 +24,33 @@ function Navbar() {
           </Link>
 
           <div className="d-flex align-items-center">
-
             {/* Search */}
-            <form className="d-flex align-items-center" role="search">
+            <form
+              className="d-flex align-items-center position-relative"
+              role="search"
+              onSubmit={(e) => e.preventDefault()}
+            >
               <input
-                className="form-control mx-2 d-none"
+                className={`form-control mx-2 ${showSearch ? "d-block" : "d-none"
+                  }`}
                 type="search"
                 placeholder="Find your vibe."
                 aria-label="Search"
+                autoFocus={showSearch}
                 style={{
                   width: "265px",
                   background: "black",
                   color: "#fff",
                   border: "none",
+                  transition: "all 0.3s ease",
                 }}
+                onBlur={() => setShowSearch(false)} // hide when focus lost
               />
               <button
                 className="btn btn-link text-white px-2"
                 type="button"
                 id="search-toggle"
+                onClick={() => setShowSearch(!showSearch)}
               >
                 <i className="fas fa-search text-white fs-4"></i>
               </button>
@@ -140,4 +149,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
