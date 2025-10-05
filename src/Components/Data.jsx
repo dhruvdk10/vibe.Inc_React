@@ -8,7 +8,7 @@ export const banners = [
 
 export const mustWatchData = [
   { img: "/vibe.Inc_React/crew_poster.webp", alt: "Crew", position: "top" },
-  { img: "/vibe.Inc_React/tvd_poster.jpg", alt: "TVD", position: "top" },
+  { img: "/vibe.Inc_React/TVD.jpg", alt: "TVD", position: "" },
   { img: "/vibe.Inc_React/suits.png", alt: "Suits", position: "top right" },
   { img: "/vibe.Inc_React/yjhd_poster.webp", alt: "YJHD", position: "bottom right" },
   { img: "/vibe.Inc_React/lapataa  ladies_poster.webp", alt: "Lapata Ladies", position: "bottom" },
@@ -75,7 +75,7 @@ export const toppicksforyouData = [
   { img: "/vibe.Inc_React/suits.png", alt: "Suits", position: "top right" },
   { img: "/vibe.Inc_React/itefaaq_poster.jpg", alt: "Itefaq", position: "bottom" },
   { img: "/vibe.Inc_React/rockstar_banner.jpg", alt: "Banner3", position: "top" },
-  { img: "/vibe.Inc_React/tvd_poster.jpg", alt: "TVD", position: "top" },
+  { img: "/vibe.Inc_React/TVD.jpg", alt: "TVD", position: "" },
   { img: "/vibe.Inc_React/znmd_poster.jpg", alt: "ZNMD", position: "top" },
   { img: "/vibe.Inc_React/pk_poster.jpg", alt: "PK", position: "top" },
   { img: "/vibe.Inc_React/Animal_poster.jpg", alt: "Animal", position: "bottom" }
@@ -154,7 +154,7 @@ export const upcomingmoviesData = [
 
 export const seriesbanner = [
   { img: "/vibe.Inc_React/friends.jpg", alt: "TV Shows Banner1", update: "Recently Added", position: "top" },
-  { img: "/vibe.Inc_React/GOT.avif", alt: "TV Shows Banner2", update: "Trending #2 in Series", position: "top" },
+  { img: "/vibe.Inc_React/the originals.jpg", alt: "TV Shows Banner2", update: "Trending #2 in Series", position: "top" },
   { img: "/vibe.Inc_React/KBC.jpg", alt: "TV Shows Banner3", update: "Leaaving Soon", position: "top right" },
 ];
 
@@ -167,7 +167,7 @@ export const seriestoppicksforyouData = [
   { img: "/vibe.Inc_React/arrow.jpg", alt: "Arrow", position: "left" },
   { img: "/vibe.Inc_React/mahabharat.png", alt: "Mahabharat", position: "top right" },
   { img: "/vibe.Inc_React/sb vs sb.png", alt: "Sarabhai vs Sarabhai", position: "top right" },
-  { img: "/vibe.Inc_React/tvd_poster.jpg", alt: "the Vampire Diaries", position: "top" },
+  { img: "/vibe.Inc_React/TVD.jpg", alt: "the Vampire Diaries", position: "" },
   { img: "/vibe.Inc_React/house.png", alt: "House", position: "top right" },
   { img: "/vibe.Inc_React/tgd.png", alt: "The Good Doctor", position: "top" },
   { img: "/vibe.Inc_React/young sheldon.webp", alt: "Young Sheldon", position: "top lrft" }
@@ -175,7 +175,7 @@ export const seriestoppicksforyouData = [
 
 export const mustwatchshowsandseriesData = [
   { img: "/vibe.Inc_React/supernatural.jpg", alt: "Supernatural", position: "top" },
-  { img: "/vibe.Inc_React/indian idol.avif", alt: "Indian Idol", position: "top right" },
+  { img: "/vibe.Inc_React/CID.avif", alt: "CID", position: "top" },
   { img: "/vibe.Inc_React/modern family.jpg", alt: "Modern Family", position: "top" },
   { img: "/vibe.Inc_React/rk.png", alt: "Radha Krishna", position: "top left" },
   { img: "/vibe.Inc_React/fear files.jpg", alt: "Fear Files", position: "top left" },
@@ -191,7 +191,7 @@ export const mustwatchshowsandseriesData = [
 export const seriesenglishData = [
   { img: "/vibe.Inc_React/young sheldon.webp", alt: "Young Sheldon", position: "top left" },
   { img: "/vibe.Inc_React/GOT.avif", alt: "Game of Thrones", position: "top" },
-  { img: "/vibe.Inc_React/tvd_poster.jpg", alt: "the Vampire Diaries", position: "top" },
+  { img: "/vibe.Inc_React/TVD.jpg", alt: "the Vampire Diaries", position: "" },
   { img: "/vibe.Inc_React/arrow.jpg", alt: "Arrow", position: "left" },
   { img: "/vibe.Inc_React/HIMYM.jpg", alt: "How I Met Your Mother", position: "top" },
   { img: "/vibe.Inc_React/criminal minds.jpg", alt: "Criminal Minds", position: "top right" },
