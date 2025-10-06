@@ -277,7 +277,7 @@ footer {
   color: cyan;
 }
 
-@media (min-width: 581px) and (max-width: 767px) {
+@media (min-width: 451px) and (max-width: 767px) {
   section.img_display img {
     height: 350px;
     object-fit: cover;
@@ -367,7 +367,7 @@ footer {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 450px) {
 
   .row {
     --bs-gutter-y: 0.25rem !important;
@@ -527,12 +527,12 @@ footer {
   }
 
   .movie-card {
-    max-width: 200px;
+    max-width: 180px;
     height: 120px;
   }
 
   .movie-card-img-top {
-    max-width: 200px;
+    max-width: 180px;
     height: 100%;
   }
 
