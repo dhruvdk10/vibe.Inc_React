@@ -277,7 +277,7 @@ footer {
   color: cyan;
 }
 
-@media (min-width: 430px) and (max-width: 767px) {
+@media (min-width: 581px) and (max-width: 767px) {
   section.img_display img {
     height: 350px;
     object-fit: cover;
@@ -286,7 +286,7 @@ footer {
 
   .movie-card {
     max-width: 350px;
-    height: 300px;
+    height: 320px;
     width: 100%;
   }
 
@@ -367,7 +367,7 @@ footer {
   }
 }
 
-@media (max-width: 429px) {
+@media (max-width: 580px) {
 
   .row {
     --bs-gutter-y: 0.25rem !important;
@@ -465,7 +465,7 @@ footer {
 
   .movie-card {
     max-width: 250px;
-    height: 110px;
+    height: 130px;
   }
 
   .movie-card-img-top {
@@ -520,7 +520,7 @@ footer {
   }
 }
 
-@media (min-width: 991px) and (max-width: 1280px) {
+@media (min-width: 991px) and (max-width: 1346px) {
   section.img_display img {
     height: 700px;
     object-position: top;
