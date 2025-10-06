@@ -457,19 +457,19 @@ footer {
 
 }
 
-/* @media (min-width: 769px) and (max-width: 990px) {
+@media (min-width: 769px) and (max-width: 990px) {
   section.img_display img {
     height: 600px;
     object-position: top;
   }
 
   .movie-card {
-    max-width: 460px;
-    max-height: 240px;
+    max-width: 200px;
+    height: 90px;
   }
 
   .movie-card-img-top {
-    max-width: 460px;
+    max-width: 200px;
     height: 100%;
   }
 
@@ -527,8 +527,8 @@ footer {
   }
 
   .movie-card {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 200px;
+    height: 120px;
   }
 
   .movie-card-img-top {
@@ -568,4 +568,4 @@ footer {
   h2 {
     font-size: 24px;
   }
-} */
+}
