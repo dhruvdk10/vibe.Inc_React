@@ -223,37 +223,36 @@ export const hinditvshowsData = [
 export const gamesbanner = [
   { img: "/vibe.Inc_React/GTA-V.jpg", alt: "Games Banner1", update: "Recently Added", position: "top" },
   { img: "/vibe.Inc_React/FIFA.jpeg", alt: "Games Banner2", update: "Trending #1 in Games", position: "top" },
-  { img: "/vibe.Inc_React/codenames.jpg", alt: "Games Banner3", update: "Trending #3 in Games", position: "top right" },
+  { img: "/vibe.Inc_React/CHESS.jpeg", alt: "Games Banner3", update: "Trending #3 in Games", position: "top right" },
 ];
 
 export const gamestoppicksforyouData = [
   { img: "/vibe.Inc_React/GTA-V.jpg", alt: "GTA V", position: "top" },
   { img: "/vibe.Inc_React/GOW.webp", alt: "God of War", position: "top" },
-  { img: "/vibe.Inc_React/COD.png", alt: "COD Black Ops 6", position: "top" },
+  { img: "/vibe.Inc_React/COD.png", alt: "COD Black Ops 6", position: "top left" },
   { img: "/vibe.Inc_React/hitman.jpg", alt: "Hitman 3", position: "top" },
   { img: "/vibe.Inc_React/CS-2.jpg", alt: "CS-2", position: "top" },
-  { img: "/vibe.Inc_React/FIFA.jpeg", alt: "FC 2025", position: "top" },
-  { img: "/vibe.Inc_React/NBA.jpg", alt: "NBA 2K25", position: "top" },
+  { img: "/vibe.Inc_React/FIFA.jpeg", alt: "FC 2025", position: "top left" },
+  { img: "/vibe.Inc_React/NBA.jpg", alt: "NBA 2K25", position: "top left" },
   { img: "/vibe.Inc_React/TWO-25.png", alt: "Tennis World Open 25", position: "top" },
   { img: "/vibe.Inc_React/BGMI.jpg", alt: "BGMI", position: "top" },
-  { img: "/vibe.Inc_React/minimilitia.png", alt: "Mini Militia", position: "top" },
-  { img: "/vibe.Inc_React/TR-2.jpg", alt: "Temple Run 2", position: "top" },
-  { img: "/vibe.Inc_React/among_us.png", alt: "Among Us 3", position: "top" },
+  { img: "/vibe.Inc_React/TR-2.jpg", alt: "Temple Run 2", position: "top left" },
+  { img: "/vibe.Inc_React/among us.png", alt: "Among Us 3", position: "top" },
   { img: "/vibe.Inc_React/valorant.jpg", alt: "Valorant", position: "top" }
 ];
 
 export const gamescasualData = [
   { img: "/vibe.Inc_React/minecraft.jpg", alt: "Minecraft", position: "top" },
   { img: "/vibe.Inc_React/pinball.jpg", alt: "Pinball Master", position: "top" },
-  { img: "/vibe.Inc_React/angry_birds_bounce.png", alt: "Angry Birds Bounce", position: "top" },
-  { img: "/vibe.Inc_React/mario.jpg", alt: "Super Mario Galaxy 2", position: "top" },
+  { img: "/vibe.Inc_React/angry birds.png", alt: "Angry Birds Bounce", position: "top" },
+  { img: "/vibe.Inc_React/mario.jpg", alt: "Super Mario Galaxy 2", position: "top right" },
   { img: "/vibe.Inc_React/SUBWAY SURFERS.jpg", alt: "Subway Surfers Mexico", position: "top" },
-  { img: "/vibe.Inc_React/HCR.jpg", alt: "Hill Climb Racing", position: "top" },
-  { img: "/vibe.Inc_React/doodle_army.jpg", alt: "Doodle Army", position: "top" },
-  { img: "/vibe.Inc_React/candy_crush.jpg", alt: "Candy Crush Saga", position: "top" },
-  { img: "/vibe.Inc_React/P vs Z.PNG", alt: "Plants vs Zombies", position: "top" },
-  { img: "/vibe.Inc_React/UNO.jpg", alt: "Uno", position: "top" },
-  { img: "/vibe.Inc_React/ludo_king.jpg", alt: "Ludo King 2", position: "top" },
+  { img: "/vibe.Inc_React/HCR.jpg", alt: "Hill Climb Racing", position: "top left" },
+  { img: "/vibe.Inc_React/minimilitia.png", alt: "Mini Militia", position: "top" },
+  { img: "/vibe.Inc_React/candy crush.jpg", alt: "Candy Crush Saga", position: "top" },
+  { img: "/vibe.Inc_React/P vs Z.png", alt: "Plants vs Zombies", position: "top" },
+  { img: "/vibe.Inc_React/UNO.jpg", alt: "Uno", position: "top  left" },
+  { img: "/vibe.Inc_React/ludo king.jpg", alt: "Ludo King 2", position: "top" },
   { img: "/vibe.Inc_React/fall guys.jpg", alt: "Fall Guys", position: "top" }
 ];
 
@@ -262,14 +261,14 @@ export const gamesstrategictData = [
   { img: "/vibe.Inc_React/codenames.jpg", alt: "Codenames", position: "top" },
   { img: "/vibe.Inc_React/POOL.jpg", alt: "8 Ball Pool", position: "top" },
   { img: "/vibe.Inc_React/skribble.png", alt: "Skribbl.io", position: "top" },
-  { img: "/vibe.Inc_React/pokemon.jpg", alt: "Pokemon Go", position: "top" },
-  { img: "/vibe.Inc_React/COC.jpg", alt: "Clash of Clans", position: "top" },
+  { img: "/vibe.Inc_React/pokemon.jpg", alt: "Pokemon Go", position: "top left" },
+  { img: "/vibe.Inc_React/COC.jpg", alt: "Clash of Clans", position: "top right" },
   { img: "/vibe.Inc_React/zoo tycoon.jpg", alt: "Zoo Tycoon 2", position: "top" },
   { img: "/vibe.Inc_React/WMW-2.jpg", alt: "Where's My Water 2", position: "top" },
   { img: "/vibe.Inc_React/road rash.jpg", alt: "Road Rash", position: "top" },
   { img: "/vibe.Inc_React/cut-the-rope-2.avif", alt: "Cut the Rope 2", position: "top" },
   { img: "/vibe.Inc_React/JJ.avif", alt: "Jetpack Joyride ", position: "top" },
-  { img: "/vibe.Inc_React/NFS.jpg", alt: "NFS Most Wanted", position: "top" }
+  { img: "/vibe.Inc_React/NFS.jpg", alt: "NFS Most Wanted", position: "top left" }
 
 ];
 
