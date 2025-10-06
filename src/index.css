@@ -286,7 +286,7 @@ footer {
 
   .movie-card {
     max-width: 350px;
-    height: 250px;
+    height: 270px;
     width: 100%;
   }
 
@@ -464,12 +464,12 @@ footer {
   }
 
   .movie-card {
-    max-width: 200px;
-    height: 100px;
+    max-width: 250px;
+    height: 110px;
   }
 
   .movie-card-img-top {
-    max-width: 220px;
+    max-width: 250px;
     height: 100%;
   }
 
@@ -532,7 +532,7 @@ footer {
   }
 
   .movie-card-img-top {
-    max-width: 310px;
+    max-width: 200px;
     height: 100%;
   }
 
