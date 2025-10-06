@@ -456,8 +456,7 @@ footer {
 
 }
 
-/* Large Tablets: 769px - 1024px */
-@media (min-width: 769px) and (max-width: 990px) {
+/* @media (min-width: 769px) and (max-width: 990px) {
   section.img_display img {
     height: 600px;
     object-position: top;
@@ -520,7 +519,6 @@ footer {
   }
 }
 
-/* Small Desktops / Laptops: 1025px - 1280px */
 @media (min-width: 991px) and (max-width: 1280px) {
   section.img_display img {
     height: 700px;
@@ -569,4 +567,4 @@ footer {
   h2 {
     font-size: 24px;
   }
-}
+} */
