@@ -277,7 +277,7 @@ footer {
   color: cyan;
 }
 
-@media (min-width: 412px) and (max-width: 767px) {
+@media (min-width: 430px) and (max-width: 767px) {
   section.img_display img {
     height: 350px;
     object-fit: cover;
@@ -367,7 +367,7 @@ footer {
   }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 429px) {
 
   .row {
     --bs-gutter-y: 0.25rem !important;
