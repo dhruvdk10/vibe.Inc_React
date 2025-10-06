@@ -77,7 +77,7 @@ const Movies = () => {
       </section>
 
       <section className="mid_section mt-5">
-        <h2 data-aos="fade-up">Today's Top Picks For You</h2>
+        <h2 data-aos="fade-up">Top Picks for You</h2>
         <div className="row g-2" data-aos="fade-up">
           {todaystoppicksforyouData.map((item, index) => (
             <Cards key={index} {...item} />

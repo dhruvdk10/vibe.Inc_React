@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
@@ -128,23 +128,23 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/series">
+                <Link className="nav-link" to="/Series">
                   Series
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/movies">
+                <Link className="nav-link" to="/Movies">
                   Movies
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/games">
+                <Link className="nav-link" to="/Games">
                   Games
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/my-list">
+                <Link className="nav-link" to="/MyList">
                   My List
                 </Link>
               </li>

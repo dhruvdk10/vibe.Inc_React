@@ -85,7 +85,7 @@ const Home = () => {
           ))}
         </div>
 
-        <h2 data-aos="fade-up">Top Picks For You</h2>
+        <h2 data-aos="fade-up">Top Picks for You</h2>
         <div className="row g-2 mb-5" data-aos="fade-up">
           {toppicksforyouData.map((item, index) => (
             <Cards key={index} {...item} />
