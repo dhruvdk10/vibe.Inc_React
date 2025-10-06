@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const DialogueBox = () => {
-
+  const [name, setName] = useState("");
+  const handleChange = (event) => {
+    setName(event.target.value);
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Form submitted");
-  };
+    alert("Form submitted");
+  }
 
   return (
     <section className="form-box">
@@ -36,6 +39,7 @@ const DialogueBox = () => {
                       className="form-control border-0"
                       placeholder="Username or Email Address"
                       id="username"
+                      onChange={handleChange}
                       style={{ borderTopRightRadius: "12px", borderBottomRightRadius: "12px" }}
                     />
                   </div>
