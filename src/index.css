@@ -158,7 +158,7 @@ select:focus {
 .movie-card {
   max-width: 300px;
   width: 100%;
-  height: 160px;
+  max-height: 160px;
   border-radius: 4px;
   margin: auto;
   background-color: black;
@@ -463,11 +463,12 @@ footer {
   }
 
   .movie-card {
-    max-width: 450px;
+    max-width: 460px;
+    max-height: 200px;
   }
 
   .movie-card-img-top {
-    max-width: 450px;
+    max-width: 460px;
     height: 100%;
   }
 
@@ -526,11 +527,12 @@ footer {
   }
 
   .movie-card {
-    max-width: 280px;
+    max-width: 300px;
+    max-height: 300px;
   }
 
   .movie-card-img-top {
-    max-width: 280px;
+    max-width: 300px;
     height: 100%;
   }
 
