@@ -371,9 +371,9 @@ footer {
     --bs-gutter-y: 0.25rem !important;
   }
 
-  .movie-card-img-top {
+  /* .movie-card-img-top {
     height: 110px;
-  }
+  } */
 
   section.img_display img {
     height: 250px;
