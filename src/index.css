@@ -455,19 +455,19 @@ footer {
 
 }
 
-/* Large Tablets: 801px - 1024px */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* Large Tablets: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 990px) {
   section.img_display img {
-    height: 500px;
+    height: 600px;
     object-position: top;
   }
 
   .movie-card {
-    max-width: 300px;
+    max-width: 450px;
   }
 
   .movie-card-img-top {
-    max-width: 300px;
+    max-width: 450px;
     height: 100%;
   }
 
@@ -519,7 +519,7 @@ footer {
 }
 
 /* Small Desktops / Laptops: 1025px - 1280px */
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 991px) and (max-width: 1280px) {
   section.img_display img {
     height: 700px;
     object-position: top;
@@ -565,99 +565,5 @@ footer {
 
   h2 {
     font-size: 24px;
-  }
-}
-
-/* Large Desktops: 1281px - 1920px */
-@media (min-width: 1281px) and (max-width: 1920px) {
-  section.img_display img {
-    height: 900px;
-  }
-
-  .movie-card {
-    max-width: 320px;
-  }
-
-  .movie-card-img-top {
-    max-width: 320px;
-  }
-
-  .play {
-    top: 50%;
-    left: 88%;
-  }
-
-  .info {
-    top: 50%;
-    left: 102%;
-  }
-
-  .play button,
-  .info button {
-    font-size: 18px;
-    width: 140px;
-  }
-
-  .play i {
-    font-size: 24px;
-  }
-
-  .info i {
-    font-size: 22px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-}
-
-/* Ultra-Wide Screens: 1921px and above */
-@media (min-width: 1921px) {
-  section.img_display img {
-    height: 1200px;
-  }
-
-  .movie-card {
-    max-width: 350px;
-  }
-
-  .movie-card-img-top {
-    max-width: 350px;
-  }
-
-  .play {
-    top: 48%;
-    left: 90%;
-  }
-
-  .info {
-    top: 48%;
-    left: 105%;
-  }
-
-  .play button,
-  .info button {
-    font-size: 20px;
-    width: 160px;
-  }
-
-  .play i {
-    font-size: 26px;
-  }
-
-  .info i {
-    font-size: 24px;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 28px;
   }
 }
