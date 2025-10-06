@@ -454,3 +454,210 @@ footer {
 
 
 }
+
+/* Large Tablets: 801px - 1024px */
+@media (min-width: 801px) and (max-width: 1024px) {
+  section.img_display img {
+    height: 500px;
+    object-position: top;
+  }
+
+  .movie-card {
+    max-width: 300px;
+  }
+
+  .movie-card-img-top {
+    max-width: 300px;
+    height: 100%;
+  }
+
+  .play {
+    top: 55%;
+    left: 82%;
+  }
+
+  .info {
+    top: 55%;
+    left: 97%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 14px;
+    width: 100px;
+    padding: 8px;
+  }
+
+  .play i {
+    font-size: 20px;
+  }
+
+  .info i {
+    font-size: 18px;
+  }
+
+  .update {
+    font-size: 14px;
+    padding: 5px 12px;
+    top: 12px;
+    left: 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 45px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+
+/* Small Desktops / Laptops: 1025px - 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  section.img_display img {
+    height: 700px;
+    object-position: top;
+  }
+
+  .movie-card {
+    max-width: 280px;
+  }
+
+  .movie-card-img-top {
+    max-width: 280px;
+    height: 100%;
+  }
+
+  .play {
+    top: 55%;
+    left: 85%;
+  }
+
+  .info {
+    top: 55%;
+    left: 100%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 16px;
+    width: 120px;
+    padding: 9px;
+  }
+
+  .play i {
+    font-size: 22px;
+  }
+
+  .info i {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* Large Desktops: 1281px - 1920px */
+@media (min-width: 1281px) and (max-width: 1920px) {
+  section.img_display img {
+    height: 900px;
+  }
+
+  .movie-card {
+    max-width: 320px;
+  }
+
+  .movie-card-img-top {
+    max-width: 320px;
+  }
+
+  .play {
+    top: 50%;
+    left: 88%;
+  }
+
+  .info {
+    top: 50%;
+    left: 102%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 18px;
+    width: 140px;
+  }
+
+  .play i {
+    font-size: 24px;
+  }
+
+  .info i {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* Ultra-Wide Screens: 1921px and above */
+@media (min-width: 1921px) {
+  section.img_display img {
+    height: 1200px;
+  }
+
+  .movie-card {
+    max-width: 350px;
+  }
+
+  .movie-card-img-top {
+    max-width: 350px;
+  }
+
+  .play {
+    top: 48%;
+    left: 90%;
+  }
+
+  .info {
+    top: 48%;
+    left: 105%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 20px;
+    width: 160px;
+  }
+
+  .play i {
+    font-size: 26px;
+  }
+
+  .info i {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
