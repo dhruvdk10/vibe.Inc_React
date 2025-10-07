@@ -15,7 +15,7 @@ const ThemeToggle = () => {
         border: "none",
         background: "transparent",
         cursor: "pointer",
-        fontSize: "1.5rem",
+        fontSize: "18px",
         color: "inherit",
       }}
     >

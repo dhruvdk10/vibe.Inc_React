@@ -32,7 +32,7 @@ body {
 
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: cyan !important;
+  transform: scale(1.01);
 }
 
 .dropdown-menu {
@@ -67,8 +67,6 @@ body {
 .btn i:hover {
   color: cyan;
   cursor: pointer;
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
 }
 
 section.img_display img {
@@ -324,6 +322,12 @@ body.light-mode {
 
 /* Navbar Links */
 /* Light Mode Navbar */
+
+
+.light-mode .navbar-toggler-icon {
+  filter: invert(1);
+}
+
 .light-mode .navbar.fixed-top {
   background-color: whitesmoke !important;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -339,12 +343,11 @@ body.light-mode {
 }
 
 .light-mode .nav-link {
-  color: #333 !important;
+  color: #000000 !important;
 }
 
-.light-mode .navbar-nav .nav-link:hover,
 .light-mode .btn i:hover {
-  color: rgb(19, 206, 206);
+  color: cyan;
   transition: color 0.3s ease;
 }
 
@@ -362,7 +365,7 @@ body.light-mode {
 }
 
 .light-mode .dropdown-menu a:hover {
-  background-color: cyan;
+  background-color: rgb(19, 206, 206);
   color: black !important;
 }
 
@@ -372,7 +375,7 @@ body.light-mode {
 }
 
 .light-mode .dropdown-toggle::after {
-  filter: invert(1);
+  filter: invert(0);
 }
 
 /* Modal Content */
@@ -439,10 +442,6 @@ body.light-mode {
 
 .light-mode footer a {
   color: #000 !important;
-}
-
-.light-mode footer a:hover {
-  color: rgb(19, 206, 206) !important;
 }
 
 /* Horizontal Rule */

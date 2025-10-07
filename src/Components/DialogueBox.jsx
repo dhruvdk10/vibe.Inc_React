@@ -1,14 +1,14 @@
 import React, { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const DialogueBox = () => {
-  const [name, setName] = useState("");
-  const handleChange = (event) => {
-    setName(event.target.value);
-  }
+  const [visible, setVisible] = useState(false);
+  const [username, setUsername] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Form submitted");
-  }
+    alert(`Welcome back, ${username}!`);
+  };
 
   return (
     <section className="form-box">
@@ -28,10 +28,21 @@ const DialogueBox = () => {
                   aria-label="Close"
                 ></button>
               </div>
+
               <div className="modal-body px-4">
                 <form onSubmit={handleSubmit}>
-                  <div className="input-group mb-3" style={{ borderRadius: "12px", height: "40px" }}>
-                    <span className="input-group-text bg-white border-0" style={{ borderTopLeftRadius: "12px", borderBottomLeftRadius: "12px" }}>
+                  {/* Username Input */}
+                  <div
+                    className="input-group mb-3"
+                    style={{ borderRadius: "12px", height: "40px" }}
+                  >
+                    <span
+                      className="input-group-text bg-white border-0"
+                      style={{
+                        borderTopLeftRadius: "12px",
+                        borderBottomLeftRadius: "12px",
+                      }}
+                    >
                       <i className="fa fa-user text-black"></i>
                     </span>
                     <input
@@ -39,27 +50,65 @@ const DialogueBox = () => {
                       className="form-control border-0"
                       placeholder="Username or Email Address"
                       id="username"
-                      onChange={handleChange}
-                      style={{ borderTopRightRadius: "12px", borderBottomRightRadius: "12px" }}
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                      style={{
+                        borderTopRightRadius: "12px",
+                        borderBottomRightRadius: "12px",
+                      }}
                     />
                   </div>
 
-                  <div className="input-group mb-3 mx-auto" style={{ borderRadius: "12px", height: "40px" }}>
-                    <span className="input-group-text bg-white border-0" style={{ borderTopLeftRadius: "12px", borderBottomLeftRadius: "12px" }}>
+                  {/* Password Input with Eye Icon */}
+                  <div
+                    className="input-group mb-3 mx-auto"
+                    style={{ position: "relative", height: "40px", borderRadius: "12px" }}
+                  >
+                    <span
+                      className="input-group-text bg-white border-0"
+                      style={{ borderTopLeftRadius: "12px", borderBottomLeftRadius: "12px" }}
+                    >
                       <i className="fa fa-lock text-black"></i>
                     </span>
                     <input
-                      type="password"
+                      type={visible ? "text" : "password"}
                       className="form-control border-0"
                       placeholder="Password"
-                      style={{ borderTopRightRadius: "12px", borderBottomRightRadius: "12px" }}
+                      style={{
+                        borderTopRightRadius: "12px",
+                        borderBottomRightRadius: "12px",
+                        paddingRight: "40px",
+                      }}
                     />
+                    <span
+                      onClick={() => setVisible(!visible)}
+                      style={{
+                        position: "absolute",
+                        right: "10px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        cursor: "pointer",
+                        color: "#555",
+                        zIndex: 10,
+                      }}
+                    >
+                      {visible ? <FaEyeSlash /> : <FaEye />}
+                    </span>
                   </div>
 
+
+                  {/* Remember me and Forgot Password */}
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <div className="form-check">
-                      <input type="checkbox" className="form-check-input" id="rememberMe" />
-                      <label className="form-check-label" htmlFor="rememberMe">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="rememberMe"
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor="rememberMe"
+                      >
                         Remember me
                       </label>
                     </div>
@@ -68,19 +117,25 @@ const DialogueBox = () => {
                     </a>
                   </div>
 
+                  {/* Login Button */}
                   <div className="d-grid">
-                    <button className="btn btn-secondary fw-bold mb-3" style={{ borderRadius: "12px", height: "42px" }}>
+                    <button
+                      className="btn btn-secondary fw-bold mb-3"
+                      style={{ borderRadius: "12px", height: "42px" }}
+                    >
                       Login
                     </button>
                   </div>
                 </form>
 
+                {/* Or login with */}
                 <div className="d-flex align-items-center text-light my-4">
                   <hr className="flex-grow-1" />
                   <span className="px-3">Or login with</span>
                   <hr className="flex-grow-1" />
                 </div>
 
+                {/* Social Buttons */}
                 <div className="d-flex justify-content-center gap-4 mb-4">
                   <a href="#" className="btn px-3 py-2">
                     <i className="fab fa-facebook-f fs-5"></i>

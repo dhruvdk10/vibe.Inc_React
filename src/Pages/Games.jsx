@@ -24,7 +24,7 @@ const Games = () => {
           {/* Dropdown Toggle Button */}
           <a
             href="#"
-            className=" genre d-flex align-items-center text-decoration-none dropdown-toggle"
+            className="genre d-flex align-items-center text-decoration-none dropdown-toggle"
             id="categoryDropdown"
             data-bs-toggle="dropdown"
             aria-expanded="false"

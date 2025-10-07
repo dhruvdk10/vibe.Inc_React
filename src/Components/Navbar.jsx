@@ -17,7 +17,7 @@ const Navbar = () => {
       </style>
       {/* Top Navbar */}
       <nav className="navbar fixed-top">
-        <div className="container-fluid d-flex mx-auto">
+        <div className="container-fluid d-flex ms-2 me-0">
           {/* Brand Logo navigates to home */}
           <div>
             <Link className="navbar-brand" to="/">
@@ -75,7 +75,7 @@ const Navbar = () => {
             <div className="dropdown ps-2">
               <Link
                 to=""
-                className="d-flex align-items-center text-decoration-none text-white dropdown-toggle"
+                className="options d-flex align-items-center text-decoration-none text-white"
                 id="profileDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -123,7 +123,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="bottomNav">
-            <ul className="navbar-nav ms-3 me-auto mb-lg-0">
+            <ul className="navbar-nav ms-2 me-auto mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
