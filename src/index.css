@@ -5,6 +5,11 @@ body {
   padding: 0;
 }
 
+body .light-mode {
+  background-color: #f4f4f4 !important;
+  color: #000;
+}
+
 body.modal-open {
   overflow-y: scroll !important;
   padding-right: 0 !important;
