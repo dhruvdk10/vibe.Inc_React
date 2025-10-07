@@ -28,6 +28,13 @@ const Navbar = () => {
               width="150"
               style={{ objectFit: "cover" }}
             />
+
+            <button
+              className="btn btn-outline-light ms-3"
+              onClick={() => setDarkMode(!darkMode)}
+            >
+              {darkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
+            </button>
           </Link>
 
           <div className="d-flex align-items-center">
