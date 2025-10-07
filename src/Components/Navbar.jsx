@@ -16,12 +16,10 @@ const Navbar = () => {
         `}
       </style>
       {/* Top Navbar */}
-      <nav
-        className="navbar navbar-dark fixed-top"
-        style={{ backgroundColor: "#141414" }}
-      >
+      <nav className="navbar fixed-top">
         <div className="container-fluid d-flex mx-auto">
           {/* Brand Logo navigates to home */}
+          <div>
           <Link className="navbar-brand" to="/">
             <img
               src="/vibe.Inc_React/vibe._logo.png"
@@ -31,8 +29,8 @@ const Navbar = () => {
               style={{ objectFit: "cover" }}
             />
           </Link>
-
           <ThemeToggle />
+          </div>
 
           <div className="d-flex align-items-center">
             {/* Search */}
@@ -64,7 +62,7 @@ const Navbar = () => {
                 id="search-toggle"
                 onClick={() => setShowSearch(!showSearch)}
               >
-                <i className="fas fa-search text-white fs-4"></i>
+                <i className="fas fa-search fs-4"></i>
               </button>
             </form>
 
@@ -77,7 +75,7 @@ const Navbar = () => {
             <div className="dropdown ps-2">
               <Link
                 to=""
-                className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                className="d-flex align-items-center text-decoration-none text-white dropdown-toggle"
                 id="profileDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -112,7 +110,7 @@ const Navbar = () => {
       {/* Bottom Navbar */}
       <nav
         className="navbar navbar-expand-lg navbar-dark"
-        style={{ backgroundColor: "black", marginTop: "66px" }}
+        style={{marginTop: "66px" }}
       >
         <div className="container-fluid ms-0">
           <button

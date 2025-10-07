@@ -5,57 +5,6 @@ body {
   padding: 0;
 }
 
-/* Light mode styles */
-body.light-mode {
-  background-color: #ffffff;
-  /* page background */
-  color: #000000;
-  /* default text color */
-  transition: all 0.3s ease;
-}
-
-body.light-mode nav {
-  background-color: #ffffff;
-  /* nav background */
-  color: #000000;
-  /* nav text color */
-}
-
-/* Containers */
-body.light-mode .container,
-body.light-mode .container-fluid {
-  background-color: #f8f8f8;
-  /* light background for content areas */
-  color: #000000;
-  transition: all 0.3s ease;
-}
-
-/* Footer */
-body.light-mode footer {
-  background-color: #e0e0e0;
-  /* light footer background */
-  color: #000000;
-  transition: all 0.3s ease;
-}
-
-/* Buttons (optional, make them visible in light mode) */
-body.light-mode .btn {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
-}
-
-body.light-mode .btn:hover {
-  background-color: #f0f0f0;
-}
-
-
-body.modal-open {
-  overflow-y: scroll !important;
-  padding-right: 0 !important;
-  margin-right: 0 !important;
-}
-
 * {
   font-family: sans-serif;
   margin: 0;
@@ -67,10 +16,20 @@ body.modal-open {
   padding-left: 0;
 }
 
+.navbar.fixed-top {
+  background-color: #141414 !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-dark {
+  background-color: black;
+}
+
 .nav-link {
   color: #ddd !important;
   font-size: 18px;
 }
+
 
 .navbar-dark .navbar-nav .nav-link:hover {
   color: cyan !important;
@@ -92,8 +51,23 @@ body.modal-open {
   height: 600px;
 }
 
+.btn-close {
+  filter: invert(1);
+}
+
+.btn i {
+  color: #ccc;
+}
+
+.btn i:hover {
+  color: cyan;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 section.img_display img {
-  height: 1000px;
+  height: 900px;
   object-fit: cover;
   object-position: top;
   width: 100%;
@@ -213,8 +187,7 @@ select:focus {
 
 .carousel-inner,
 .carousel-item,
-.mid_section .container-fluid,
-.row {
+.mid_section {
   background-color: black !important;
 }
 
@@ -270,7 +243,6 @@ h1 {
   color: #eee;
   padding-left: 15px;
   margin-bottom: 10px;
-  margin-top: 35px;
   font-weight: 600;
   font-size: 32px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
@@ -307,13 +279,29 @@ h2 {
 
 
 footer {
-  background-color: #141414;
-  color: #ccc;
+  background-color: #141414 !important;
   margin-top: 200px;
+}
+
+footer a {
+  color: #ccc;
+  transition: color 0.3s ease;
+
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
 }
 
 .store-buttons img:hover {
   transform: scale(1.05);
+}
+
+.social-icons i {
+  padding: 5px;
+  font-size: 25px;
+  color: #ccc;
 }
 
 .social-icons i:hover {
@@ -321,6 +309,154 @@ footer {
   transition: transform 0.3s ease;
   color: cyan;
 }
+
+/* Light Mode Styles */
+
+body.light-mode {
+  background-color: #eee;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+/* Navbar Links */
+/* Light Mode Navbar */
+.light-mode .navbar.fixed-top {
+  background-color: whitesmoke !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .navbar.fixed-top i,
+.light-mode .btn i {
+  color: black;
+}
+
+.light-mode .navbar-dark {
+  background-color: #eee !important;
+}
+
+.light-mode .nav-link {
+  color: #333 !important;
+}
+
+.light-mode .navbar-nav .nav-link:hover,
+.light-mode .btn i:hover {
+  color: rgb(19, 206, 206);
+  transition: color 0.3s ease;
+}
+
+/* Dropdown Menu */
+.light-mode .dropdown-toggle::after {
+  filter: invert(1);
+}
+
+.light-mode .dropdown-menu {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+}
+
+.light-mode .dropdown-menu a:hover {
+  background-color: rgb(19, 206, 206);
+  color: #fff !important;
+}
+
+/* Modal Content */
+.light-mode .modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .d-flex.align-items-center.text-light.my-4 span,
+.light-mode .text-center span {
+  color: #000;
+}
+
+.light-mode .btn-close {
+  filter: invert(0);
+}
+
+/* Layout Sections */
+.light-mode .carousel-inner,
+.light-mode .carousel-item,
+.light-mode .mid_section,
+.light-mode .row {
+  background-color: #eee !important;
+}
+
+/* Movie Cards */
+.light-mode .movie-card,
+.light-mode .movie-card-img-top {
+  background-color: #f8f8f8;
+  color: #000;
+  object-fit: cover;
+}
+
+/* Inputs / Selects */
+.light-mode .form-control,
+.light-mode .genre-select {
+  background-color: #ffffff;
+  color: #000;
+  border-color: #ccc;
+}
+
+.light-mode .form-control:focus,
+.light-mode .genre-select:focus {
+  border-color: rgb(19, 206, 206);
+  box-shadow: none;
+}
+
+/* Headings */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3 {
+  color: #000;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .form-check label {
+  color: #000;
+}
+
+/* Footer */
+.light-mode footer {
+  background-color: #ddd !important;
+}
+
+.light-mode footer a {
+  color: #000 !important;
+}
+
+.light-mode footer a:hover {
+  color: rgb(19, 206, 206) !important;
+}
+
+/* Horizontal Rule */
+.light-mode hr {
+  border-top: 1px solid #3f3f3f;
+}
+
+/* Social Icons */
+.light-mode .social-icons i {
+  padding: 5px;
+  font-size: 25px;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.light-mode .social-icons i:hover {
+  color: rgb(19, 206, 206);
+}
+
+/* Updates / Badges */
+.light-mode .update {
+  background: #ffffffcc;
+  color: #000;
+}
+
+.light-mode .update:hover {
+  background: #ffffff99;
+}
+
+
 
 @media (min-width: 501px) and (max-width: 767px) {
   section.img_display img {

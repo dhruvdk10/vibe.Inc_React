@@ -19,28 +19,27 @@ const Footer = () => {
     { icon: "fab fa-youtube", href: "#" },
   ];
   return (
-    <footer className="w-100 pt-5" style={{ backgroundColor: "#141414", overflowX: "hidden" }}>
-      <div className="container-fluid px-0">
-        <div className="row g-0 text-center mb-5 justify-content-center mx-0">
-          <div className="col-6 col-md-3" style={{ backgroundColor: "#141414" }}>
-            <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Audio Description</a>
+    <footer className="w-100 py-4" style={{ backgroundColor: "#141414", overflowX: "hidden" }}>
+        <div className="d-flex text-center mt-3 mb-5 justify-content-center mx-0">
+          <div className="col-6 col-md-3">
+            <a href="#" className="d-block text-decoration-none">Audio Description</a>
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Investor Relations</a>
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Legal Notices</a>
           </div>
 
-          <div className="col-6 col-md-3" style={{ backgroundColor: "#141414" }}>
+          <div className="col-6 col-md-3">
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Help Centre</a>
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Jobs</a>
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Cookie Preferences</a>
           </div>
 
-          <div className="col-6 col-md-3" style={{ backgroundColor: "#141414" }}>
+          <div className="col-6 col-md-3">
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Gift Cards</a>
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Terms of Use</a>
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Corporate Information</a>
           </div>
 
-          <div className="col-6 col-md-3" style={{ backgroundColor: "#141414" }}>
+          <div className="col-6 col-md-3">
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Media Centre</a>
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Privacy</a>
             <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Contact Us</a>
@@ -56,7 +55,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-      </div>
+
 
       <hr className="width-100" style={{ height: "0.2px" }} />
 
@@ -72,7 +71,7 @@ const Footer = () => {
       <div className="social-icons">
         <div className="footer-links d-flex justify-content-center gap-3 fs-5">
           {socialLinks.map((social, index) => (
-            <a key={index} href={social.href} className="text-white fs-4 me-3">
+            <a key={index} href={social.href} className="fs-4 me-3">
               <i className={social.icon}></i>
             </a>
           ))}

@@ -20,17 +20,40 @@ const Games = () => {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h1>Games</h1>
-        <select className="genre-select py-1 px-2 me-3">
-          <option value="all">Category</option>
-          <option value="action">Action</option>
-          <option value="comedy">Sports</option>
-          <option value="drama">Casual</option>
-          <option value="family">Strategy</option>
-          <option value="thriller">Adventure</option>
-          <option value="war">More...</option>
+        <div className="genre-select dropdown">
+  {/* Dropdown Toggle Button */}
+  <button
+    className="btn dropdown-toggle border-0"
+    type="button"
+    id="categoryDropdown"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Category
+  </button>
 
-
-        </select>
+  {/* Dropdown Menu */}
+  <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="categoryDropdown">
+    <li>
+      <button className="dropdown-item" type="button">Action</button>
+    </li>
+    <li>
+      <button className="dropdown-item" type="button">Sports</button>
+    </li>
+    <li>
+      <button className="dropdown-item" type="button">Casual</button>
+    </li>
+    <li>
+      <button className="dropdown-item" type="button">Strategy</button>
+    </li>
+    <li>
+      <button className="dropdown-item" type="button">Adventure</button>
+    </li>
+    <li>
+      <button className="dropdown-item" type="button">More...</button>
+    </li>
+  </ul>
+</div>
       </div>
 
       <section className="img_display">

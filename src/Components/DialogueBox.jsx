@@ -23,7 +23,7 @@ const DialogueBox = () => {
                 <h3 className="modal-title fw-bold mt-4">Log In</h3>
                 <button
                   type="button"
-                  className="btn-close btn-close-white position-absolute top-0 end-0 mt-2 me-3"
+                  className="btn-close position-absolute top-0 end-0 mt-2 me-3"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
@@ -76,20 +76,20 @@ const DialogueBox = () => {
                 </form>
 
                 <div className="d-flex align-items-center text-light my-4">
-                  <hr className="flex-grow-1 border-light" />
+                  <hr className="flex-grow-1" />
                   <span className="px-3">Or login with</span>
-                  <hr className="flex-grow-1 border-light" />
+                  <hr className="flex-grow-1" />
                 </div>
 
                 <div className="d-flex justify-content-center gap-4 mb-4">
-                  <a href="#" className="btn btn-outline-light rounded-circle px-3 py-2">
-                    <i className="fab fa-facebook-f"></i>
+                  <a href="#" className="btn px-3 py-2">
+                    <i className="fab fa-facebook-f fs-5"></i>
                   </a>
-                  <a href="#" className="btn btn-outline-light rounded-circle px-3 py-2">
-                    <i className="fab fa-x-twitter"></i>
+                  <a href="#" className="btn px-3 py-2">
+                    <i className="fab fa-x-twitter fs-5"></i>
                   </a>
-                  <a href="#" className="btn btn-outline-light rounded-circle px-3 py-2">
-                    <i className="fab fa-google"></i>
+                  <a href="#" className="btn px-3 py-2">
+                    <i className="fab fa-google fs-5"></i>
                   </a>
                 </div>
 
