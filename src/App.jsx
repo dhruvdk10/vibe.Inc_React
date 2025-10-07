@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
+import ThemeToggle from "./Components/ThemeToggle";
 import DialogueBox from "./Components/DialogueBox";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/MyList" element={<MyList />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      <ThemeToggle />
       <DialogueBox />
       <Footer />
     </BrowserRouter>

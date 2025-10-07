@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const ThemeToggle = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -13,5 +13,4 @@ const ThemeToggle = () => {
   );
 }
 
-
-export default ThemeToggle
+export default ThemeToggle;
