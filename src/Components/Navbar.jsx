@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <>
@@ -29,12 +30,12 @@ const Navbar = () => {
               style={{ objectFit: "cover" }}
             />
 
-            <button
-              className="btn btn-outline-light ms-3"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? "Light Mode ☀️" : "Dark Mode 🌙"}
-            </button>
+            <div className={darkMode ? "dark-mode" : "light-mode"}>
+              <h2>{darkMode ? "🌙" : "☀️"}</h2>
+              <button onClick={() => setDarkMode(!darkMode)}>
+                {darkMode ? "Switch to Light" : "Switch to Dark"}
+              </button>
+            </div>
           </Link>
 
           <div className="d-flex align-items-center">
