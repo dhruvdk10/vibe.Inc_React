@@ -20,24 +20,52 @@ const Series = () => {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h1>Series</h1>
-        <select className="genre-select py-1 px-2 me-3">
-          <option value="all">Genres</option>
-          <option value="action">Action</option>
-          <option value="comedy">Comedy</option>
-          <option value="drama">Drama</option>
-          <option value="family">Romantic</option>
-          <option value="thriller">Thriller</option>
-          <option value="horror">Horror</option>
-          <option value="animation">Anime</option>
-          <option value="adventure">Adventure</option>
-          <option value="fantasy">Fantasy</option>
-          <option value="sci-fi">Sci-Fi</option>
-          <option value="mystery">Mystery</option>
-          <option value="documentary">Biography</option>
-          <option value="war">More...</option>
+        <div className="dropdown ps-2 me-3">
+          {/* Dropdown Toggle Button */}
+          <a
+            href="#"
+            className=" genre d-flex align-items-center text-decoration-none dropdown-toggle"
+            id="categoryDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Genres
+          </a>
 
-
-        </select>
+          {/* Dropdown Menu */}
+          <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="categoryDropdown">
+            <li>
+              <a className="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Comedy</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Drama</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Romantic</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Horror</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Thriller</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Adventure</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Sci-Fi</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Mystery</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Fantasy</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <section className="img_display">
