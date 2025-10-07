@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
+
+
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
-  const [lightMode, setLightMode] = useState(false);
-  useEffect(() => {
-    document.body.className = darkMode ? "light-mode" : "dark-mode";
-  }, [lightMode]);
-
   return (
     <>
       <style>
@@ -34,9 +32,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <button onClick={() => setDarkMode(!lightMode)}>
-            {lightMode ? "🌙" : "☀️"}
-          </button>
+          <ThemeToggle />
 
           <div className="d-flex align-items-center">
             {/* Search */}

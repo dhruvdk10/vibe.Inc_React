@@ -1,16 +1,27 @@
-// import React, {useState} from 'react'
+import React, { useState, useEffect } from "react";
 
-// const ThemeToggle = () => {
-//   const [darkMode, setDarkMode] = useState(false);
+const ThemeToggle = () => {
+  const [lightMode, setLightMode] = useState(false);
 
-//   return (
-//     <div className={darkMode ? "dark-mode" : "light-mode"}>
-//       <h2>{darkMode ? "🌙" : "☀️"}</h2>
-//       <button onClick={() => setDarkMode(!darkMode)}>
-//         {darkMode ? "Switch to Light" : "Switch to Dark"}
-//       </button>
-//     </div>
-//   );
-// }
+  useEffect(() => {
+    document.body.style.backgroundColor = lightMode ? "#ffffff" : "#000000";
+    document.body.style.color = lightMode ? "#000000" : "#ffffff";
+  }, [lightMode]);
 
-// export default ThemeToggle;
+  return (
+    <button
+      onClick={() => setLightMode(!lightMode)}
+      style={{
+        border: "none",
+        background: "transparent",
+        cursor: "pointer",
+        fontSize: "1.5rem",
+        color: "inherit",
+      }}
+    >
+      {lightMode ? "🌙" : "☀️"}
+    </button>
+  );
+}
+
+export default ThemeToggle;
