@@ -456,8 +456,6 @@ body.light-mode {
   background: #ffffff99;
 }
 
-
-
 @media (min-width: 501px) and (max-width: 767px) {
   section.img_display img {
     height: 350px;
@@ -550,8 +548,9 @@ body.light-mode {
 
 @media (max-width: 500px) {
 
-  .row {
-    --bs-gutter-y: 0.25rem !important;
+  .movie-card{
+    height: 110px;
+
   }
 
   .movie-card-img-top {
