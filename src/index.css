@@ -5,9 +5,10 @@ body {
   padding: 0;
 }
 
-body .light-mode {
-  background-color: #f4f4f4 !important;
+.light-mode {
+  background-color: #f4f4f4;
   color: #000;
+  transition: all 0.3s ease;
 }
 
 body.modal-open {

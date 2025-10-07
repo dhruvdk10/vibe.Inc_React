@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [lightMode, setLightMode] = useState(false);
+  useEffect(() => {
+    document.body.className = darkMode ? "light-mode" : "dark-mode";
+  }, [lightMode]);
 
   return (
     <>
@@ -29,14 +32,11 @@ const Navbar = () => {
               width="150"
               style={{ objectFit: "cover" }}
             />
-
-            <div className={darkMode ? "dark-mode" : "light-mode"}>
-              <h2>{darkMode ? "🌙" : "☀️"}</h2>
-              <button onClick={() => setDarkMode(!darkMode)}>
-                {darkMode ? "Switch to Light" : "Switch to Dark"}
-              </button>
-            </div>
           </Link>
+
+          <button onClick={() => setDarkMode(!lightMode)}>
+            {lightMode ? "🌙" : "☀️"}
+          </button>
 
           <div className="d-flex align-items-center">
             {/* Search */}
