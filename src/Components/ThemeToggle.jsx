@@ -4,8 +4,8 @@ const ThemeToggle = () => {
   const [lightMode, setLightMode] = useState(false);
 
   useEffect(() => {
-    document.body.style.backgroundColor = lightMode ? "#ffffff" : "#000000";
-    document.body.style.color = lightMode ? "#000000" : "#ffffff";
+    document.body.classList.remove("light-mode", "dark-mode");
+    document.body.classList.add(lightMode ? "light-mode" : "dark-mode");
   }, [lightMode]);
 
   return (

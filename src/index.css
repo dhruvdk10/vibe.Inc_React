@@ -5,6 +5,51 @@ body {
   padding: 0;
 }
 
+/* Light mode styles */
+body.light-mode {
+  background-color: #ffffff;
+  /* page background */
+  color: #000000;
+  /* default text color */
+  transition: all 0.3s ease;
+}
+
+body.light-mode nav {
+  background-color: #ffffff;
+  /* nav background */
+  color: #000000;
+  /* nav text color */
+}
+
+/* Containers */
+body.light-mode .container,
+body.light-mode .container-fluid {
+  background-color: #f8f8f8;
+  /* light background for content areas */
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+/* Footer */
+body.light-mode footer {
+  background-color: #e0e0e0;
+  /* light footer background */
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+/* Buttons (optional, make them visible in light mode) */
+body.light-mode .btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+body.light-mode .btn:hover {
+  background-color: #f0f0f0;
+}
+
+
 body.modal-open {
   overflow-y: scroll !important;
   padding-right: 0 !important;
