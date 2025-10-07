@@ -20,40 +20,40 @@ const Games = () => {
     <div>
       <div className="d-flex align-items-center justify-content-between">
         <h1>Games</h1>
-        <div className="genre-select dropdown">
-  {/* Dropdown Toggle Button */}
-  <button
-    className="btn dropdown-toggle border-0"
-    type="button"
-    id="categoryDropdown"
-    data-bs-toggle="dropdown"
-    aria-expanded="false"
-  >
-    Category
-  </button>
+        <div className="dropdown ps-2 me-3">
+          {/* Dropdown Toggle Button */}
+          <a
+            href="#"
+            className=" genre d-flex align-items-center text-decoration-none dropdown-toggle"
+            id="categoryDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Category
+          </a>
 
-  {/* Dropdown Menu */}
-  <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="categoryDropdown">
-    <li>
-      <button className="dropdown-item" type="button">Action</button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">Sports</button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">Casual</button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">Strategy</button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">Adventure</button>
-    </li>
-    <li>
-      <button className="dropdown-item" type="button">More...</button>
-    </li>
-  </ul>
-</div>
+          {/* Dropdown Menu */}
+          <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="categoryDropdown">
+            <li>
+              <a className="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Sports</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Casual</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Strategy</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">Adventure</a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">More...</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <section className="img_display">

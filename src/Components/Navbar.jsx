@@ -20,16 +20,16 @@ const Navbar = () => {
         <div className="container-fluid d-flex mx-auto">
           {/* Brand Logo navigates to home */}
           <div>
-          <Link className="navbar-brand" to="/">
-            <img
-              src="/vibe.Inc_React/vibe._logo.png"
-              alt="logo"
-              height="40"
-              width="150"
-              style={{ objectFit: "cover" }}
-            />
-          </Link>
-          <ThemeToggle />
+            <Link className="navbar-brand" to="/">
+              <img
+                src="/vibe.Inc_React/vibe._logo.png"
+                alt="logo"
+                height="40"
+                width="150"
+                style={{ objectFit: "cover" }}
+              />
+            </Link>
+            <ThemeToggle />
           </div>
 
           <div className="d-flex align-items-center">
@@ -80,7 +80,7 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="fa fa-user fs-4 text-info"></i>
+                <i className="fa fa-user fs-4" style={{ color: "cyan" }}></i>
               </Link>
               <ul
                 className="dropdown-menu dropdown-menu-end"
@@ -110,7 +110,7 @@ const Navbar = () => {
       {/* Bottom Navbar */}
       <nav
         className="navbar navbar-expand-lg navbar-dark"
-        style={{marginTop: "66px" }}
+        style={{ marginTop: "66px" }}
       >
         <div className="container-fluid ms-0">
           <button

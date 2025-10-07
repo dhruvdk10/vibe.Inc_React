@@ -39,6 +39,11 @@ body {
   padding: 0px;
 }
 
+.dropdown-menu a {
+  background-color: #000;
+  color: white;
+}
+
 .dropdown-menu a:hover {
   background-color: cyan;
   color: black !important;
@@ -226,11 +231,10 @@ p {
   line-height: 1;
 }
 
-.genre-select {
+.genre {
   color: #eee;
   background-color: #000;
-  border: 2px solid #f8f9fa;
-  margin-top: 28px;
+  border: 1px solid #f8f9fa;
   margin-bottom: 16px;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -344,19 +348,31 @@ body.light-mode {
   transition: color 0.3s ease;
 }
 
-/* Dropdown Menu */
-.light-mode .dropdown-toggle::after {
-  filter: invert(1);
+
+.light-mode .genre {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid black;
 }
 
-.light-mode .dropdown-menu {
-  background-color: #f8f9fa;
-  border: 1px solid #ccc;
+
+.light-mode .dropdown-menu a {
+  background-color: #ddd;
+  color: rgb(0, 0, 0);
+}
+
+.light-mode .dropdown-menu a:hover {
+  background-color: cyan;
+  color: black !important;
 }
 
 .light-mode .dropdown-menu a:hover {
   background-color: rgb(19, 206, 206);
   color: #fff !important;
+}
+
+.light-mode .dropdown-toggle::after {
+  filter: invert(1);
 }
 
 /* Modal Content */
@@ -531,7 +547,6 @@ body.light-mode {
   }
 
   h1 {
-    margin-top: 25px;
     padding-left: 15px;
   }
 
@@ -548,7 +563,7 @@ body.light-mode {
 
 @media (max-width: 500px) {
 
-  .movie-card{
+  .movie-card {
     height: 110px;
 
   }
@@ -620,12 +635,11 @@ body.light-mode {
   }
 
   h1 {
-    margin-top: 20px;
     padding-left: 10px;
   }
 
   h2 {
-    margin-top: 30px;
+
     padding-left: 10px;
   }
 
@@ -687,7 +701,6 @@ body.light-mode {
 
   h1 {
     font-size: 28px;
-    margin-top: 30px;
   }
 
   h2 {
