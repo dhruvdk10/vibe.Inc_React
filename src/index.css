@@ -180,12 +180,29 @@ select:focus {
 .movie-card {
   max-width: 300px;
   width: 100%;
-  height: 160px;
+  height: 140px;
   max-height: 160px;
   border-radius: 4px;
   margin: auto;
+  position: relative;
+  overflow: hidden;
   background-color: black;
   overflow: hidden;
+}
+
+.movie-card .like-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+}
+
+.movie-card:hover .like-icon {
+  opacity: 1;
+  transform: translateY(0) scale(1.1);
 }
 
 .carousel-inner,
@@ -719,12 +736,12 @@ body.light-mode {
   }
 
   .movie-card {
-    max-width: 180px;
-    height: 100px;
+    max-width: 200px;
+    height: 110px;
   }
 
   .movie-card-img-top {
-    max-width: 180px;
+    max-width: 200px;
     height: 100%;
   }
 

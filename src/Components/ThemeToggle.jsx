@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const ThemeToggle = () => {
-  const [lightMode, setLightMode] = useState(false);
+  const [theme, setTheme] = useState("dark-mode");
 
-  useEffect(() => {
-    document.body.classList.remove("light-mode", "dark-mode");
-    document.body.classList.add(lightMode ? "light-mode" : "dark-mode");
-  }, [lightMode]);
+  const toggleChange = () => {
+    const newTheme = theme === "light-mode" ? "dark-mode" : "light-mode";
+    setTheme(newTheme);
+    document.body.className = newTheme;
+  };
 
   return (
     <button
-      onClick={() => setLightMode(!lightMode)}
+      onClick={toggleChange}
       style={{
         border: "none",
         background: "transparent",
         cursor: "pointer",
         fontSize: "18px",
-        color: "inherit",
       }}
     >
-      {lightMode ? "🌙" : "☀️"}
+      {theme === "light-mode" ? "🌙" : "☀️"}
     </button>
   );
-}
+};
 
 export default ThemeToggle;

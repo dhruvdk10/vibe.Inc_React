@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const Cards = ({ img, alt, position }) => {
+  const [like, setLike] = useState(false);
+
   return (
     <div className="col-6 col-md-3 col-lg-2">
       <div className="movie-card border-0">
@@ -10,6 +13,18 @@ const Cards = ({ img, alt, position }) => {
           className="movie-card-img-top img-fluid"
           style={{ objectPosition: position }}
         />
+        <span
+          className="like-icon"
+          onClick={() => setLike(!like)}
+          style={{
+            fontSize: "20px",
+            cursor: "pointer",
+            color: "rgba(36, 168, 168, 1)",
+            zIndex: 10,
+          }}
+        >
+          {like ? <FaHeart /> : <FaRegHeart />}
+        </span>
       </div>
     </div>
   );
