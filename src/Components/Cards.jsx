@@ -19,7 +19,7 @@ const Cards = ({ img, alt, position }) => {
           style={{
             fontSize: "20px",
             cursor: "pointer",
-            color: "rgba(36, 168, 168, 1)",
+            color: "#bbb",
             zIndex: 10,
           }}
         >
