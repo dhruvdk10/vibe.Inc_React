@@ -6,7 +6,7 @@ const Cards = ({ img, alt, position }) => {
 
   return (
     <div className="col-6 col-md-3 col-lg-2">
-      <div className="movie-card border-0">
+      <div className="movie-card border-0 position-relative">
         <img
           src={img}
           alt={alt}
@@ -14,12 +14,12 @@ const Cards = ({ img, alt, position }) => {
           style={{ objectPosition: position }}
         />
         <span
-          className="like-icon"
+          className="like-icon position-absolute"
           onClick={() => setLike(!like)}
           style={{
             fontSize: "20px",
             cursor: "pointer",
-            color: "#bbb",
+            color: like ? "#931b1b" : "#ffc3c3", // red when liked, pink when not
             zIndex: 10,
           }}
         >
