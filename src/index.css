@@ -35,8 +35,27 @@ body {
   transform: scale(1.01);
 }
 
+.theme-toggle-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in 0.3s ease-out 0.1s all;
+}
+
+.theme-toggle-button:hover {
+  background-color: #eee;
+}
+
 .dropdown-menu {
   padding: 0px;
+  border-radius: 2px;
 }
 
 .dropdown-menu a {
@@ -319,7 +338,7 @@ hr {
 
 .social-icons i {
   padding: 5px;
-  font-size: 25px;
+  font-size: 28px;
   color: #ccc;
 }
 
@@ -334,11 +353,14 @@ hr {
 body.light-mode {
   background-color: #eee;
   color: #000000;
-  transition: all 0.3s ease;
 }
 
 /* Navbar Links */
 /* Light Mode Navbar */
+
+.light-mode .theme-toggle-button:hover {
+  background-color: black;
+}
 
 
 .light-mode .navbar-toggler-icon {
@@ -372,12 +394,12 @@ body.light-mode {
 .light-mode .genre {
   color: #000000;
   background-color: #ffffff;
-  border: 1px solid black;
+  border: 1px solid #aaa;
 }
 
 
 .light-mode .dropdown-menu a {
-  background-color: #ddd;
+  background-color: #eee;
   color: rgb(0, 0, 0);
 }
 
@@ -398,7 +420,7 @@ body.light-mode {
 /* Modal Content */
 .light-mode .modal-content {
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .light-mode .d-flex.align-items-center.text-light.my-4 span,
@@ -416,6 +438,10 @@ body.light-mode {
 .light-mode .mid_section,
 .light-mode .row {
   background-color: #eee !important;
+}
+
+.light-mode .row {
+  transition: ease ease-in-out 10s;
 }
 
 /* Movie Cards */
@@ -471,7 +497,6 @@ body.light-mode {
   padding: 5px;
   font-size: 25px;
   color: #000000;
-  transition: color 0.3s ease;
 }
 
 .light-mode .social-icons i:hover {

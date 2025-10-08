@@ -138,13 +138,13 @@ const DialogueBox = () => {
                 {/* Social Buttons */}
                 <div className="d-flex justify-content-center gap-4 mb-4">
                   <a href="#" className="btn px-3 py-2">
-                    <i className="fab fa-facebook-f fs-5"></i>
+                    <i className="fab fa-facebook-f fs-4"></i>
                   </a>
                   <a href="#" className="btn px-3 py-2">
-                    <i className="fab fa-x-twitter fs-5"></i>
+                    <i className="fab fa-x-twitter fs-4"></i>
                   </a>
                   <a href="#" className="btn px-3 py-2">
-                    <i className="fab fa-google fs-5"></i>
+                    <i className="fab fa-google fs-4"></i>
                   </a>
                 </div>
 

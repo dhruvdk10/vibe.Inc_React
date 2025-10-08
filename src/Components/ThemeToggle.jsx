@@ -11,15 +11,9 @@ const ThemeToggle = () => {
 
   return (
     <button
-      onClick={toggleChange}
-      style={{
-        border: "none",
-        background: "transparent",
-        cursor: "pointer",
-        fontSize: "18px",
-      }}
-    >
-      {theme === "light-mode" ? "🌙" : "☀️"}
+      className="theme-toggle-button"
+      onClick={toggleChange}>
+      {theme === "light-mode" ? "🌙 " : "☀️"}
     </button>
   );
 };

@@ -17,7 +17,7 @@ const Navbar = () => {
       </style>
       {/* Top Navbar */}
       <nav className="navbar fixed-top">
-        <div className="container-fluid d-flex ms-2 me-0">
+        <div className="container-fluid d-flex mx-0">
           {/* Brand Logo navigates to home */}
           <div>
             <Link className="navbar-brand" to="/">
