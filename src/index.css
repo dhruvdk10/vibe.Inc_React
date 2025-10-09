@@ -439,16 +439,19 @@ body.light-mode {
   background-color: #eee !important;
 }
 
-.light-mode .row {
-  transition: ease ease-in-out 10s;
+/* Movie Cards */
+.light-mode .movie-card {
+  background-color: transparent;
 }
 
-/* Movie Cards */
-.light-mode .movie-card,
 .light-mode .movie-card-img-top {
-  background-color: #f8f8f8;
+  background-color: transparent;
   color: #000;
   object-fit: cover;
+}
+
+.light-mode .movie-card.aos-animate {
+  background-color: #f8f8f8;
 }
 
 /* Inputs / Selects */
