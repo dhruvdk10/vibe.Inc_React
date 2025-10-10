@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
+import { ThemeProvider } from './ContextAPI/ThemeProvider'
+import ThemeReceiver from './ContextAPI/ThemeReceiver'
 
 
 
@@ -29,7 +30,9 @@ const Navbar = () => {
                 style={{ objectFit: "cover" }}
               />
             </Link>
-            <ThemeToggle />
+            <ThemeProvider>
+            <ThemeReceiver/>
+        </ThemeProvider>
           </div>
 
           <div className="d-flex align-items-center">
