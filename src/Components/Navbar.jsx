@@ -78,7 +78,7 @@ const Navbar = () => {
             {/* Profile Dropdown */}
             <div className="dropdown ps-2">
               <Link
-                to=""
+                to="#"
                 className="options d-flex align-items-center text-decoration-none text-white"
                 id="profileDropdown"
                 data-bs-toggle="dropdown"
@@ -93,7 +93,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     className="dropdown-item"
-                    to=""
+                    to="#"
                     data-bs-toggle="modal"
                     data-bs-target="#myModal"
                   >
