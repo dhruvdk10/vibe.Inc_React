@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 const DialogueBox = () => {
   const [visible, setVisible] = useState(false);
@@ -138,13 +140,13 @@ const DialogueBox = () => {
                 {/* Social Buttons */}
                 <div className="d-flex justify-content-center gap-4 mb-4">
                   <a href="#" className="btn px-3 py-2">
-                    <i className="fab fa-facebook-f fs-4"></i>
+                    <FontAwesomeIcon icon={faFacebookF} className="fab fa-facebook-f fs-4" />
                   </a>
                   <a href="#" className="btn px-3 py-2">
-                    <i className="fab fa-x-twitter fs-4"></i>
+                    <FontAwesomeIcon icon={faTwitter} className="fab fa-x-twitter fs-4" />
                   </a>
                   <a href="#" className="btn px-3 py-2">
-                    <i className="fab fa-google fs-4"></i>
+                    <FontAwesomeIcon icon={faGoogle} className="fab fa-google fs-4" />
                   </a>
                 </div>
 

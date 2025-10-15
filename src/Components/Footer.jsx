@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const storeBadges = [
@@ -13,10 +15,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: "fab fa-facebook-f", href: "#" },
-    { icon: "fab fa-instagram", href: "#" },
-    { icon: "fab fa-twitter", href: "#" },
-    { icon: "fab fa-youtube", href: "#" },
+    { icon: <FontAwesomeIcon icon={faFacebookF} className="fab fa-facebook-f" />, href: "#" },
+  { icon: <FontAwesomeIcon icon={faInstagram} className="fab fa-instagram" />, href: "#" },
+  { icon: <FontAwesomeIcon icon={faTwitter} className="fab fa-twitter" />, href: "#" },
+  { icon: <FontAwesomeIcon icon={faYoutube} className="fab fa-youtube" />, href: "#" },
   ];
   return (
     <footer className="w-100 py-4" style={{ backgroundColor: "#141414", overflowX: "hidden" }}>
