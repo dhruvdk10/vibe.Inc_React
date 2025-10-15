@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ThemeProvider } from './ContextAPI/ThemeProvider';
-import ThemeReceiver from './ContextAPI/ThemeReceiver';
+import { ThemeProvider } from './ContextAPI/ThemeProvider'
+import ThemeReceiver from './ContextAPI/ThemeReceiver'
+
+
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
-
   return (
     <>
       <style>
@@ -15,15 +16,14 @@ const Navbar = () => {
           }
         `}
       </style>
-
       {/* Top Navbar */}
       <nav className="navbar fixed-top">
         <div className="container-fluid d-flex mx-0">
-          {/* Brand Logo */}
+          {/* Brand Logo navigates to home */}
           <div>
             <Link className="navbar-brand" to="/">
               <img
-                src="/vibe._logo.png"
+                src="/vibe.Inc_React/vibe._logo.png"
                 alt="logo"
                 height="40"
                 width="150"
@@ -31,8 +31,8 @@ const Navbar = () => {
               />
             </Link>
             <ThemeProvider>
-              <ThemeReceiver />
-            </ThemeProvider>
+            <ThemeReceiver/>
+        </ThemeProvider>
           </div>
 
           <div className="d-flex align-items-center">
@@ -43,7 +43,8 @@ const Navbar = () => {
               onSubmit={(e) => e.preventDefault()}
             >
               <input
-                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"}`}
+                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"
+                  }`}
                 type="search"
                 placeholder="Find your vibe."
                 aria-label="Search"
@@ -76,7 +77,7 @@ const Navbar = () => {
             {/* Profile Dropdown */}
             <div className="dropdown ps-2">
               <Link
-                to="#"
+                to=""
                 className="options d-flex align-items-center text-decoration-none text-white"
                 id="profileDropdown"
                 data-bs-toggle="dropdown"
@@ -91,7 +92,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     className="dropdown-item"
-                    to="#"
+                    to=""
                     data-bs-toggle="modal"
                     data-bs-target="#myModal"
                   >
@@ -99,7 +100,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="#logout">
+                  <Link className="dropdown-item" to="/logout">
                     Sign Out
                   </Link>
                 </li>
@@ -110,7 +111,10 @@ const Navbar = () => {
       </nav>
 
       {/* Bottom Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{ marginTop: "66px" }}>
+      <nav
+        className="navbar navbar-expand-lg navbar-dark"
+        style={{ marginTop: "66px" }}
+      >
         <div className="container-fluid ms-0">
           <button
             className="navbar-toggler ms-0"
@@ -124,19 +128,30 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="bottomNav">
             <ul className="navbar-nav ms-2 me-auto mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Series">Series</Link>
+                <Link className="nav-link" to="/Series">
+                  Series
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Movies">Movies</Link>
+                <Link className="nav-link" to="/Movies">
+                  Movies
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Games">Games</Link>
+                <Link className="nav-link" to="/Games">
+                  Games
+                </Link>
               </li>
+
               <li className="nav-item">
-                <Link className="nav-link" to="/MyList">My List</Link>
+                <Link className="nav-link" to="/MyList">
+                  My List
+                </Link>
               </li>
             </ul>
           </div>
@@ -144,6 +159,7 @@ const Navbar = () => {
       </nav>
     </>
   );
-};
+}
 
 export default Navbar;
+
