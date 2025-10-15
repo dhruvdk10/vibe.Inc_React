@@ -335,16 +335,14 @@ hr {
   transform: scale(1.05);
 }
 
-.social-icons i {
-  padding: 5px;
-  font-size: 28px;
-  color: #ccc;
-}
-
-.social-icons i:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease;
-  color: cyan;
+.fa-search,
+.fa-bell,
+.fa-facebook,
+.fa-instagram,
+.fa-twitter,
+.fa-youtube,
+.fa-google{
+  color: #ddd;
 }
 
 /* Light Mode Styles */
@@ -391,12 +389,22 @@ body.light-mode {
 }
 
 .light-mode .fa-search,
-.light-mode .fa-bell {
+.light-mode .fa-bell,
+.light-mode .fa-facebook,
+.light-mode .fa-instagram,
+.light-mode .fa-twitter,
+.light-mode .fa-youtube,
+.light-mode .fa-google{
   color: black;
 }
 
 .fa-search:hover,
-.fa-bell:hover {
+.fa-bell:hover,
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-youtube:hover,
+.fa-google:hover {
   color: cyan;
 }
 
@@ -502,17 +510,6 @@ body.light-mode {
 /* Horizontal Rule */
 .light-mode hr {
   border-top: 1px solid #3f3f3f;
-}
-
-/* Social Icons */
-.light-mode .social-icons i {
-  padding: 5px;
-  font-size: 25px;
-  color: #000000;
-}
-
-.light-mode .social-icons i:hover {
-  color: rgb(19, 206, 206);
 }
 
 /* Updates / Badges */
