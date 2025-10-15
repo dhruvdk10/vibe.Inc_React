@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import DialogueBox from "./Components/DialogueBox";
 import Footer from "./Components/Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Series from "./Pages/Series";
 import Movies from "./Pages/Movies";
@@ -13,7 +13,7 @@ import "./index.css";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/vibe.Inc_React">
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,7 +25,7 @@ const App = () => {
       </Routes>
       <DialogueBox />
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
