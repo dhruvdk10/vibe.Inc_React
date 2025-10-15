@@ -72,7 +72,7 @@ const Navbar = () => {
 
             {/* Notification */}
             <button className="btn btn-link text-white px-2" type="button">
-              <i className="fa fa-bell fs-4"></i>
+              <i className="fas fa-bell fs-4"></i>
             </button>
 
             {/* Profile Dropdown */}
@@ -84,7 +84,7 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="fa fa-user fs-4" style={{ color: "cyan" }}></i>
+                <i className="fas fa-user fs-4" style={{ color: "cyan" }}></i>
               </Link>
               <ul
                 className="dropdown-menu dropdown-menu-end"
