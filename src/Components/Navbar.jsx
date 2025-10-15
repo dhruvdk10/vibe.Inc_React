@@ -68,7 +68,7 @@ const Navbar = () => {
               >
                 <FontAwesomeIcon
                   icon={faSearch}
-                  className="fa fa-search fs-4"
+                  className="fs-4"
                 />
               </button>
             </form>
@@ -77,7 +77,7 @@ const Navbar = () => {
             <button className="btn btn-link text-white px-2" type="button">
               <FontAwesomeIcon
                 icon={faBell}
-                className="fa fa-bell fs-4"
+                className="fs-4"
               />
             </button>
 
@@ -92,7 +92,7 @@ const Navbar = () => {
               >
                 <FontAwesomeIcon
                   icon={faUser}
-                  className="fa fa-user fs-4" style={{ color: "cyan" }}
+                  className="fs-4" style={{ color: "cyan" }}
                 />
               </Link>
               <ul
