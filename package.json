@@ -14,6 +14,7 @@
     "deploy-all": "git add . && git commit -m 'lu' && git push origin main && bun run deploy"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "add": "^2.0.6",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
