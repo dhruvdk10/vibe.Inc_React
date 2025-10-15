@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import {
+  faUser,
+  faLock,
+  faHeart
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebookF,
+  faTwitter,
+  faGoogle
+} from "@fortawesome/free-brands-svg-icons";
 
 const DialogueBox = () => {
   const [visible, setVisible] = useState(false);
@@ -21,6 +30,7 @@ const DialogueBox = () => {
             style={{ maxWidth: "450px", width: "85%", margin: "auto" }}
           >
             <div className="modal-content text-white">
+              {/* Modal Header */}
               <div className="modal-header border-0 d-block text-center position-relative">
                 <h3 className="modal-title fw-bold mt-4">Log In</h3>
                 <button
@@ -31,6 +41,7 @@ const DialogueBox = () => {
                 ></button>
               </div>
 
+              {/* Modal Body */}
               <div className="modal-body px-4">
                 <form onSubmit={handleSubmit}>
                   {/* Username Input */}
@@ -45,7 +56,7 @@ const DialogueBox = () => {
                         borderBottomLeftRadius: "12px",
                       }}
                     >
-                      <i className="fa fa-user text-black"></i>
+                      <FontAwesomeIcon icon={faUser} className="text-black" />
                     </span>
                     <input
                       type="text"
@@ -70,7 +81,7 @@ const DialogueBox = () => {
                       className="input-group-text bg-white border-0"
                       style={{ borderTopLeftRadius: "12px", borderBottomLeftRadius: "12px" }}
                     >
-                      <i className="fa fa-lock text-black"></i>
+                      <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
                     <input
                       type={visible ? "text" : "password"}
@@ -97,7 +108,6 @@ const DialogueBox = () => {
                       {visible ? <FaEyeSlash /> : <FaEye />}
                     </span>
                   </div>
-
 
                   {/* Remember me and Forgot Password */}
                   <div className="d-flex justify-content-between align-items-center mb-4">
@@ -148,8 +158,12 @@ const DialogueBox = () => {
                   <a href="#" className="btn px-3 py-2">
                     <FontAwesomeIcon icon={faGoogle} className="fs-4" />
                   </a>
+                  <a href="#" className="btn px-3 py-2">
+                    <FontAwesomeIcon icon={faHeart} className="fs-4 text-danger" />
+                  </a>
                 </div>
 
+                {/* Sign Up Link */}
                 <div className="text-center">
                   <span>
                     Do not have an account?{" "}
