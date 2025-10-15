@@ -15,10 +15,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <FontAwesomeIcon icon={faFacebookF} className="fab fa-facebook-f" />, href: "#" },
-  { icon: <FontAwesomeIcon icon={faInstagram} className="fab fa-instagram" />, href: "#" },
-  { icon: <FontAwesomeIcon icon={faTwitter} className="fab fa-twitter" />, href: "#" },
-  { icon: <FontAwesomeIcon icon={faYoutube} className="fab fa-youtube" />, href: "#" },
+    { icon: <FontAwesomeIcon icon={faFacebookF} />, href: "#" },
+    { icon: <FontAwesomeIcon icon={faInstagram} />, href: "#" },
+    { icon: <FontAwesomeIcon icon={faTwitter} />, href: "#" },
+    { icon: <FontAwesomeIcon icon={faYoutube} />, href: "#" }
   ];
   return (
     <footer className="w-100 py-4" style={{ backgroundColor: "#141414", overflowX: "hidden" }}>
