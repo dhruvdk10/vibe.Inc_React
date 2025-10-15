@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from './ContextAPI/ThemeProvider'
 import ThemeReceiver from './ContextAPI/ThemeReceiver'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faUser, faBell } from "@fortawesome/free-solid-svg-icons";
 
 
 const Navbar = () => {
@@ -30,8 +32,8 @@ const Navbar = () => {
               />
             </Link>
             <ThemeProvider>
-            <ThemeReceiver/>
-        </ThemeProvider>
+              <ThemeReceiver />
+            </ThemeProvider>
           </div>
 
           <div className="d-flex align-items-center">
@@ -64,13 +66,19 @@ const Navbar = () => {
                 id="search-toggle"
                 onClick={() => setShowSearch(!showSearch)}
               >
-                <i className="fas fa-search fs-4"></i>
+                <FontAwesomeIcon
+                  icon={faSearch}
+                  className="fa fa-search fs-4"
+                />
               </button>
             </form>
 
             {/* Notification */}
             <button className="btn btn-link text-white px-2" type="button">
-              <i className="fas fa-bell fs-4"></i>
+              <FontAwesomeIcon
+                icon={faBell}
+                className="fa fa-bell fs-4"
+              />
             </button>
 
             {/* Profile Dropdown */}
@@ -82,7 +90,10 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="fas fa-user fs-4" style={{ color: "cyan" }}></i>
+                <FontAwesomeIcon
+                  icon={faUser}
+                  className="fa fa-user fs-4" style={{ color: "cyan" }}
+                />
               </Link>
               <ul
                 className="dropdown-menu dropdown-menu-end"
@@ -107,12 +118,13 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </nav >
 
       {/* Bottom Navbar */}
-      <nav
+      < nav
         className="navbar navbar-expand-lg navbar-dark"
-        style={{ marginTop: "66px" }}
+        style={{ marginTop: "66px" }
+        }
       >
         <div className="container-fluid ms-0">
           <button
@@ -155,7 +167,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </nav>
+      </nav >
     </>
   );
 }
