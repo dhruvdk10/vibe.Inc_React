@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ThemeProvider } from './ContextAPI/ThemeProvider'
 import ThemeReceiver from './ContextAPI/ThemeReceiver'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 
