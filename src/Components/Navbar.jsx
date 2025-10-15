@@ -121,7 +121,7 @@ const Navbar = () => {
       </nav >
 
       {/* Bottom Navbar */}
-      < nav
+      <nav
         className="navbar navbar-expand-lg navbar-dark"
         style={{ marginTop: "66px" }
         }
@@ -167,7 +167,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </nav >
+      </nav>
     </>
   );
 }
