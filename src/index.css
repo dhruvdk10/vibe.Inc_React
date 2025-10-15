@@ -390,6 +390,15 @@ body.light-mode {
   transition: color 0.3s ease;
 }
 
+.light-mode .fa-user,
+.light-mode .fa-bell {
+  color: black;
+}
+
+.light-mode .fa-user:hover,
+.light-mode .fa-bell:hover {
+  color: cyan;
+}
 
 .light-mode .genre {
   color: #000000;
