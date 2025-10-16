@@ -1,5 +1,7 @@
-const basePath = process.env.VITE_DEPLOY === 'firebase' ? './' : '/vibe.Inc_React/'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
 export default defineConfig({
   plugins: [react()],
-  base: basePath
+  base: '/vibe.Inc_React/'
 })
