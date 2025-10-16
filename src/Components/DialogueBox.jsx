@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,12 +15,29 @@ import {
 
 const DialogueBox = () => {
   const [visible, setVisible] = useState(false);
+  const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`Welcome back, ${username}!`);
-  };
+  const handleAPI = async () => {
+    try {
+      const response = await axios.post('https://reqres.in/api/login', {
+        email: email,
+        password: password
+      },
+        {
+          headers: {
+            'x-api-key': 'reqres-free-v1'
+          }
+        }
+      );
+      console.log(response.data);
+      alert(`Welcome back, ${email} || ${username}!`);
+    } catch (error) {
+      console.error(error);
+      alert('Wrong email or password');
+    }
+  }
 
   return (
     <section className="form-box">
@@ -43,7 +61,7 @@ const DialogueBox = () => {
 
               {/* Modal Body */}
               <div className="modal-body px-4">
-                <form onSubmit={handleSubmit}>
+                <form>
                   {/* Username Input */}
                   <div
                     className="input-group mb-3"
@@ -62,9 +80,9 @@ const DialogueBox = () => {
                       type="text"
                       className="form-control border-0"
                       placeholder="Username or Email Address"
-                      id="username"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
+                      id="email || username"
+                      value={{email} || {username}}
+                      onChange={(e) => setEmail(e.target.value) || setUsername(e.target.value)}
                       style={{
                         borderTopRightRadius: "12px",
                         borderBottomRightRadius: "12px",
@@ -87,6 +105,9 @@ const DialogueBox = () => {
                       type={visible ? "text" : "password"}
                       className="form-control border-0"
                       placeholder="Password"
+                      id="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       style={{
                         borderTopRightRadius: "12px",
                         borderBottomRightRadius: "12px",
@@ -134,6 +155,8 @@ const DialogueBox = () => {
                     <button
                       className="btn btn-secondary fw-bold mb-3"
                       style={{ borderRadius: "12px", height: "42px" }}
+                      type="button"
+                      onClick={handleAPI}
                     >
                       Login
                     </button>
