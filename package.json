@@ -12,6 +12,7 @@
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
     "deploy:github": "git add . && git commit -m 'lu' && git push origin main && bun run build && bun run deploy",
+    "build:firebase": "cross-env VITE_DEPLOY=firebase vite build",
     "deploy:firebase": "bun run build:firebase && firebase deploy"
   },
   "dependencies": {
@@ -36,6 +37,7 @@
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
+    "cross-env": "^10.1.0",
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
