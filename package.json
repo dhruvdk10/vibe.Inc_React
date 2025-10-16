@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
-    "deploy-all": "git add . && git commit -m 'lu' && git push origin main && bun run deploy"
+    "deploy:github": "git add . && git commit -m 'lu' && git push origin main && bun run build && bun run deploy",
+    "deploy:firebase": "bun run build:firebase && firebase deploy"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
