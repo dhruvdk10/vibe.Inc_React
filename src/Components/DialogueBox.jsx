@@ -32,7 +32,7 @@ const DialogueBox = () => {
         }
       );
       console.log(response.data);
-      alert(`Welcome back, ${email} || ${username}!`);
+      alert(`Welcome back, ${email || username}!`);
     } catch (error) {
       console.error(error);
       alert('Wrong email or password');
@@ -81,7 +81,7 @@ const DialogueBox = () => {
                       className="form-control border-0"
                       placeholder="Username or Email Address"
                       id="email || username"
-                      value={{email} || {username}}
+                      // value={{email} || {username}}
                       onChange={(e) => setEmail(e.target.value) || setUsername(e.target.value)}
                       style={{
                         borderTopRightRadius: "12px",
