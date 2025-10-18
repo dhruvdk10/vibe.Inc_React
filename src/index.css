@@ -313,6 +313,40 @@ h2 {
   right: 0px;
 }
 
+/* Buttons */
+.scroll-btn {
+  border: none;
+  height: 147px;
+  width: 43px;
+  font-size: 50px;
+  cursor: pointer;
+  z-index: 10;
+  background: transparent;
+  color: #bbb;
+}
+
+.scroll-btn.left {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+}
+
+.scroll-btn.right {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+.scroll-btn:hover {
+  color: cyan;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.scroll-btn:focus {
+  outline: none;
+}
 
 
 footer {
@@ -341,7 +375,7 @@ hr {
 .fa-instagram,
 .fa-twitter,
 .fa-youtube,
-.fa-google{
+.fa-google {
   color: #ddd;
 }
 
@@ -394,7 +428,7 @@ body.light-mode {
 .light-mode .fa-instagram,
 .light-mode .fa-twitter,
 .light-mode .fa-youtube,
-.light-mode .fa-google{
+.light-mode .fa-google {
   color: black;
 }
 
@@ -472,6 +506,15 @@ body.light-mode {
   background-color: #f8f8f8;
 }
 
+.light-mode .scroll-btn {
+  background-color: rgba(245, 245, 245, 0.2);
+  color: #333;
+}
+
+.light-mode .scroll-btn:hover {
+  color: cyan;
+}
+
 /* Inputs / Selects */
 .light-mode .form-control,
 .light-mode .genre-select {
@@ -532,7 +575,6 @@ body.light-mode {
   .movie-card {
     max-width: 350px;
     height: 340px;
-    width: 100%;
   }
 
   .movie-card-img-top {
@@ -591,6 +633,21 @@ body.light-mode {
     right: 5px;
   }
 
+  .scroll-btn {
+    height: 175px;
+    width: 40px;
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .scroll-btn.left {
+    top: 45%;
+  }
+
+  .scroll-btn.right {
+    top: 45%;
+  }
+
   .genre-select {
     margin-top: 22px;
     padding: 5px 8px;
@@ -620,6 +677,7 @@ body.light-mode {
 
   .movie-card-img-top {
     height: 110px;
+    width: 100%;
   }
 
   section.img_display img {
@@ -679,6 +737,21 @@ body.light-mode {
     right: 5px;
   }
 
+  .scroll-btn {
+    height: 120px;
+    width: 20px;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .scroll-btn.left {
+    top: 40%;
+  }
+
+  .scroll-btn.right {
+    top: 40%;
+  }
+
   .genre-select {
     margin-top: 20px;
     padding: 5px 6px;
@@ -708,13 +781,13 @@ body.light-mode {
   }
 
   .movie-card {
-    max-width: 250px;
-    height: 130px;
+    max-width: 210px;
+    height: 110px;
   }
 
   .movie-card-img-top {
-    max-width: 250px;
-    height: 100%;
+    max-width: 210px;
+    height: 110px;
   }
 
   .play {
@@ -749,6 +822,31 @@ body.light-mode {
     left: 12px;
   }
 
+  .carousel-control-prev {
+    bottom: 50px;
+    left: 5px;
+  }
+
+  .carousel-control-next {
+    bottom: 50px;
+    right: 5px;
+  }
+
+  .scroll-btn {
+    height: 125px;
+    width: 35px;
+    font-size: 45px;
+    margin-top: 20px;
+  }
+
+  .scroll-btn.left {
+    top: 42%;
+  }
+
+  .scroll-btn.right {
+    top: 42%;
+  }
+
   h1 {
     font-size: 28px;
   }
@@ -763,7 +861,7 @@ body.light-mode {
   }
 }
 
-@media (min-width: 991px) and (max-width: 1346px) {
+@media (min-width: 991px) and (max-width: 1234px) {
   section.img_display img {
     height: 700px;
     object-position: top;
@@ -804,6 +902,38 @@ body.light-mode {
     font-size: 20px;
   }
 
+  .update {
+    font-size: 15px;
+    padding: 6px 14px;
+    top: 13px;
+    left: 13px;
+  }
+
+  .carousel-control-prev {
+    bottom: 55px;
+    left: 5px;
+  }
+
+  .carousel-control-next {
+    bottom: 55px;
+    right: 5px;
+  }
+
+  .scroll-btn {
+    height: 150px;
+    margin-top: 20px;
+    width: 40px;
+    font-size: 48px;
+  }
+
+  .scroll-btn.left {
+    top: 43%;
+  }
+
+  .scroll-btn.right {
+    top: 43%;
+  }
+
   h1 {
     font-size: 30px;
   }
@@ -812,3 +942,415 @@ body.light-mode {
     font-size: 24px;
   }
 }
+
+@media (min-width: 1235px) and (max-width: 1368px) {
+  section.img_display img {
+    height: 800px;
+    object-position: top;
+  }
+
+  .movie-card {
+    max-width: 220px;
+    height: 120px;
+  }
+
+  .movie-card-img-top {
+    max-width: 220px;
+    height: 100%;
+  }
+
+  .play {
+    top: 55%;
+    left: 86%;
+  }
+
+  .info {
+    top: 55%;
+    left: 101%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 18px;
+    width: 130px;
+    padding: 10px;
+  }
+
+  .play i {
+    font-size: 24px;
+  }
+
+  .info i {
+    font-size: 22px;
+  }
+
+  .update {
+    font-size: 16px;
+    padding: 6px 14px;
+    top: 14px;
+    left: 14px;
+  }
+
+  .carousel-control-prev {
+    bottom: 60px;
+    left: 5px;
+  }
+
+  .carousel-control-next {
+    bottom: 60px;
+    right: 5px;
+  }
+
+  .scroll-btn {
+    height: 0px;
+    width: 50px;
+    font-size: 50px;
+  }
+
+  .scroll-btn:hover{
+   background-color: rgb(0, 0, 0, 0.4);
+  }
+
+  .scroll-btn.left {
+    top: 40%;
+  }
+
+  .scroll-btn.right {
+    top: 40%;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1369px) and (max-width: 1600px) {
+  section.img_display img {
+    height: 900px;
+    object-position: top;
+  }
+
+  .movie-card {
+    max-width: 300px;
+    height: 140px;
+  }
+
+  .movie-card-img-top {
+    max-width: 300px;
+    height: 140px;
+  }
+
+  .play {
+    top: 55%;
+    left: 87%;
+  }
+
+  .info {
+    top: 55%;
+    left: 102%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 20px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .play i {
+    font-size: 25px;
+  }
+
+  .info i {
+    font-size: 22px;
+  }
+
+  .update {
+    font-size: 16px;
+    padding: 6px 14px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .carousel-control-prev {
+    bottom: 65px;
+    left: 5px;
+  }
+
+  .carousel-control-next {
+    bottom: 65px;
+    right: 5px;
+  }
+
+  .scroll-btn {
+    height: 170px;
+    margin-top: 20px;
+    width: 52px;
+    font-size: 52px;
+  }
+
+  .scroll-btn.left {
+    top: 45%;
+  }
+
+  .scroll-btn.right {
+    top: 45%;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 1818px) {
+  section.img_display img {
+    height: 1000px;
+    object-position: top;
+  }
+
+  .movie-card {
+    max-width: 350px;
+    height: 160px;
+  }
+
+  .movie-card-img-top {
+    max-width: 350px;
+    height: 160px;
+  }
+
+  .play {
+    top: 55%;
+    left: 88%;
+  }
+
+  .info {
+    top: 55%;
+    left: 103%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 22px;
+    width: 160px;
+    padding: 12px;
+}
+
+  .play i {
+    font-size: 28px;
+  }
+
+  .info i {
+    font-size: 24px;
+  }
+
+  .update {
+    font-size: 18px;
+    padding: 8px 16px;
+    top: 16px;
+    left: 16px;
+  }
+
+  .carousel-control-prev {
+    bottom: 70px;
+    left: 5px;
+  }
+
+  .carousel-control-next {
+    bottom: 70px;
+    right: 5px;
+  }
+
+  .scroll-btn {
+    height: 200px;
+    margin-top: 20px;
+    width: 55px;
+    font-size: 55px;
+  }
+
+  .scroll-btn.left {
+    top: 46%;
+  }
+
+  .scroll-btn.right {
+    top: 46%;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1819px) and (max-width: 2148px) {
+  section.img_display img {
+    height: 1100px;
+    object-position: top;
+  }
+
+  .movie-card {
+    max-width: 360px;
+    height: 170px;
+  }
+
+  .movie-card-img-top {
+    max-width: 360px;
+    height: 170px;
+  }
+
+  .play {
+    top: 55%;
+    left: 89%;
+  }
+
+  .info {
+    top: 55%;
+    left: 104%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 24px;
+    width: 180px;
+    padding: 14px;
+  }
+
+  .play i {
+    font-size: 30px;
+  }
+
+  .info i {
+    font-size: 26px;
+  }
+
+  .update {
+    font-size: 20px;
+    padding: 10px 18px;
+    top: 18px;
+    left: 18px;
+  }
+
+  .carousel-control-prev {
+    bottom: 75px;
+    left: 5px;
+  }
+
+  .carousel-control-next {
+    bottom: 75px;
+    right: 5px;
+  }
+
+  .scroll-btn {
+    height: 220px;
+    width: 60px;
+    font-size: 60px;
+  }
+
+  .scroll-btn.left {
+    top: 47%;
+  }
+
+  .scroll-btn.right {
+    top: 47%;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 2149px) {
+  section.img_display img {
+    height: 1200px;
+    object-position: top;
+  }
+
+  .movie-card {
+    max-width: 380px;
+    height: 180px;
+  }
+
+  .movie-card-img-top {
+    max-width: 380px;
+    height: 180px;
+  }
+
+  .play {
+    top: 55%;
+    left: 90%;
+  }
+
+  .info {
+    top: 55%;
+    left: 105%;
+  }
+
+  .play button,
+  .info button {
+    font-size: 26px;
+    width: 200px;
+    padding: 16px;
+  }
+
+  .play i {
+    font-size: 32px;
+  }
+
+  .info i {
+    font-size: 28px;
+  }
+
+  .update {
+    font-size: 22px;
+    padding: 12px 20px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .carousel-control-prev {
+    bottom: 80px;
+    left: 5px;
+  }
+
+  .carousel-control-next {
+    bottom: 80px;
+    right: 5px;
+  }
+
+  .scroll-btn {
+    height: 240px;
+    width: 65px;
+    font-size: 65px;
+  }
+
+  .scroll-btn.left {
+    top: 48%;
+  }
+
+  .scroll-btn.right {
+    top: 48%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+}
+

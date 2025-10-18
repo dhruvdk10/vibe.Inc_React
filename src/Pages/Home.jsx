@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Cards from "../Components/Cards";
 import {
   banners,
   mustWatchData,
@@ -12,6 +11,7 @@ import {
   cheerfulcomedyData,
   toppicksforyouData
 } from "../Components/Data";
+import ScrollSection from "../Components/ScrollSection";
 
 
 const Home = () => {
@@ -56,41 +56,13 @@ const Home = () => {
       </section>
 
       <section className="mid_section mt-5">
-        <h2 data-aos="fade-up">Must Watch</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {mustWatchData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Romantic Hits</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {romanticHitsData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Thrilling Chills</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {thrillingchillsData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Cheerful Comedy</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {cheerfulcomedyData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Top Picks for You</h2>
-        <div className="row g-2 mb-5" data-aos="fade-up">
-          {toppicksforyouData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
+        <ScrollSection title="Must Watch" data={mustWatchData} />
+        <ScrollSection title="Romantic Hits" data={romanticHitsData} />
+        <ScrollSection title="Thrilling Chills" data={thrillingchillsData} />
+        <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} />
+        <ScrollSection title="Top Picks for You" data={toppicksforyouData} />
       </section>
+
     </div>
   )
 }

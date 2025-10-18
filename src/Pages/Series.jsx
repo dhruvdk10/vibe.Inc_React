@@ -11,6 +11,7 @@ import {
   seriesenglishData,
   hinditvshowsData
 } from "../Components/Data";
+import ScrollSection from "../Components/ScrollSection";
 
 const Series = () => {
   useEffect(() => {
@@ -103,35 +104,10 @@ const Series = () => {
       </section>
 
       <section className="mid_section mt-5">
-        <h2 data-aos="fade-up">Top Picks For You</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {seriestoppicksforyouData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Must Watch</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {mustwatchshowsandseriesData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Popular English Series</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {seriesenglishData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Hindi TV shows</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {hinditvshowsData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-
+        <ScrollSection title="Top Picks for You" data={seriestoppicksforyouData} />
+        <ScrollSection title="Must Watch Shows and Series" data={mustwatchshowsandseriesData} />
+        <ScrollSection title="Series in English" data={seriesenglishData} />
+        <ScrollSection title="Hindi TV Shows" data={hinditvshowsData} />
       </section>
 
     </div>

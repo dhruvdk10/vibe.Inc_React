@@ -6,7 +6,8 @@ const Cards = ({ img, alt, position }) => {
 
   return (
     <div className="col-6 col-md-3 col-lg-2">
-      <div className="movie-card border-0 position-relative">
+      <div className="movie-card border-0 position-relative" >
+
         <img
           src={img}
           alt={alt}

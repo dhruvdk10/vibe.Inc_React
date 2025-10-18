@@ -11,6 +11,7 @@ import {
   gamesstrategictData
 
 } from "../Components/Data";
+import ScrollSection from "../Components/ScrollSection";
 
 const Games = () => {
   useEffect(() => {
@@ -91,27 +92,9 @@ const Games = () => {
       </section>
 
       <section className="mid_section mt-5">
-        <h2 data-aos="fade-up">Top Picks for You</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {gamestoppicksforyouData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Casual Games</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {gamescasualData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
-        <h2 data-aos="fade-up">Strategic Games</h2>
-        <div className="row g-2" data-aos="fade-up">
-          {gamesstrategictData.map((item, index) => (
-            <Cards key={index} {...item} />
-          ))}
-        </div>
-
+        <ScrollSection title="Top Picks for You" data={gamestoppicksforyouData} />
+        <ScrollSection title="Casual Games" data={gamescasualData} />
+        <ScrollSection title="Strategic Games" data={gamesstrategictData} />
       </section>
 
     </div>

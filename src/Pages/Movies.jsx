@@ -14,6 +14,7 @@ import {
   thrillingchillsData,
   cheerfulcomedyData
 } from "../Components/Data";
+import ScrollSection from "../Components/ScrollSection";
 
 const Movies = () => {
   const [selectedGenre, setSelectedGenre] = useState("All");
@@ -130,115 +131,13 @@ const Movies = () => {
 
       {/* Movie Sections */}
       <section className="mid_section mt-5">
-        {/* All */}
-        {selectedGenre === "All" ? (
-          <>
-            <h2 data-aos="fade-up">Top Picks for You</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {todaystoppicksforyouData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-
-            <h2 data-aos="fade-up">Crowd Pleasers</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {crowdpleasersData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-
-            <h2 data-aos="fade-up">Feel-Good Movies</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {feelgoodmoviesData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-
-            <h2 data-aos="fade-up">Upcoming Movies</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {upcomingmoviesData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-
-            <h2 data-aos="fade-up">Romantic Hits</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {romanticHitsData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-
-            <h2 data-aos="fade-up">Thrilling Chills</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {thrillingchillsData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-
-            <h2 data-aos="fade-up">Cheerful Comedy</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {cheerfulcomedyData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-          </>
-        ) : selectedGenre === "Comedy" ? (
-          <>
-            <h2 data-aos="fade-up">Cheerful Comedy</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {cheerfulcomedyData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-          </>
-        ) : selectedGenre === "Romantic" ? (
-          <>
-            <h2 data-aos="fade-up">Romantic Hits</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {romanticHitsData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-          </>
-        ) : selectedGenre === "Thriller" ? (
-          <>
-            <h2 data-aos="fade-up">Thrilling Chills</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {thrillingchillsData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-          </>
-        ) : selectedGenre === "Drama" ? (
-          <>
-            <h2 data-aos="fade-up">Crowd Pleasers</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {crowdpleasersData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-          </>
-        ) : selectedGenre === "Action" ? (
-          <>
-            <h2 data-aos="fade-up">Top Picks for You</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {todaystoppicksforyouData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-          </>
-        ) : selectedGenre === "Horror" ? (
-          <>
-            <h2 data-aos="fade-up">Upcoming Movies</h2>
-            <div className="row g-2" data-aos="fade-up">
-              {upcomingmoviesData.map((item, index) => (
-                <Cards key={index} {...item} />
-              ))}
-            </div>
-          </>
-        ) : (
-          <p className="text-center mt-5">No movies found for this genre.</p>
-        )}
+        <ScrollSection title="Today's Top Picks for You" data={todaystoppicksforyouData} />
+        <ScrollSection title="Crowd Pleasers" data={crowdpleasersData} />
+        <ScrollSection title="Feel Good Movies" data={feelgoodmoviesData} />
+        <ScrollSection title="Upcoming Movies" data={upcomingmoviesData} />
+        <ScrollSection title="Romantic Hits" data={romanticHitsData} />
+        <ScrollSection title="Thrilling Chills" data={thrillingchillsData} />
+        <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} />
       </section>
     </div>
   );
