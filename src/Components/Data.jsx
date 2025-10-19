@@ -1,9 +1,9 @@
 // {Home Page Data}
 
 export const banners = [
-  { img: "/vibe.Inc_React/itefaaq_poster.jpg", alt: "Banner3", update: "Recently Added ", position: "bottom" },
-  { img: "/vibe.Inc_React/new york_poster.jpg", alt: "Banner2", update: "Most Watched", position: "bottom" },
-  { img: "/vibe.Inc_React/soty_poster.jpg", alt: "Banner1", update: "Leaaving Soon", position: "bottom " }
+  { img: "/vibe.Inc_React/barfi.jpg", alt: "Banner2", update: "Most Watched", position: "bottom" },
+  { img: "/vibe.Inc_React/jab we met.jpg", alt: "Banner3", update: "Recently Added ", position: "bottom" },
+  { img: "/vibe.Inc_React/bkb.jpg", alt: "Banner1", update: "Leaaving Soon", position: "bottom " }
 ];
 
 export const mustWatchData = [
@@ -85,7 +85,7 @@ export const toppicksforyouData = [
 
 export const moviebanner = [
   { img: "/vibe.Inc_React/mujhse dosto karoge.jpg", alt: "Movie Banner 1", update: "Recently Addded", position: "top" },
-  { img: "/vibe.Inc_React/rang de basanti.jpg", alt: "Movie Banner 2", update: "Trending #5 in Movies", position: "top left" },
+  { img: "/vibe.Inc_React/rang de basanti.jpg", alt: "Movie Banner 2", update: "Trending #5 Movies", position: "top left" },
   { img: "/vibe.Inc_React/wanted.jpg", alt: "Movie Banner 3", update: "Leaving Soon", position: "" }
 ];
 
@@ -154,8 +154,8 @@ export const upcomingmoviesData = [
 
 export const seriesbanner = [
   { img: "/vibe.Inc_React/friends.jpg", alt: "TV Shows Banner1", update: "Recently Added", position: "top" },
-  { img: "/vibe.Inc_React/the originals.jpg", alt: "TV Shows Banner2", update: "Trending #2 in Series", position: "top" },
-  { img: "/vibe.Inc_React/KBC.jpg", alt: "TV Shows Banner3", update: "Leaaving Soon", position: "top right" },
+  { img: "/vibe.Inc_React/young sheldon.webp", alt: "TV Shows Banner2", update: "Trending #2 Series", position: "top" },
+  { img: "/vibe.Inc_React/arrow.jpg", alt: "TV Shows Banner3", update: "Leaaving Soon", position: "top right" },
 ];
 
 export const seriestoppicksforyouData = [
@@ -222,8 +222,8 @@ export const hinditvshowsData = [
 
 export const gamesbanner = [
   { img: "/vibe.Inc_React/GTA-V.jpg", alt: "Games Banner1", update: "Recently Added", position: "top" },
-  { img: "/vibe.Inc_React/FIFA.jpeg", alt: "Games Banner2", update: "Trending #1 in Games", position: "top" },
-  { img: "/vibe.Inc_React/CHESS.jpeg", alt: "Games Banner3", update: "Trending #3 in Games", position: "top right" },
+  { img: "/vibe.Inc_React/FIFA.jpeg", alt: "Games Banner2", update: "Most Played", position: "top" },
+  { img: "/vibe.Inc_React/CHESS.jpeg", alt: "Games Banner3", update: "Trending #3 Games", position: "top right" },
 ];
 
 export const gamestoppicksforyouData = [

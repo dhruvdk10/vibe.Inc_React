@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Cards from "../Components/Cards";
 import {
   gamesbanner,
   gamestoppicksforyouData,
@@ -12,6 +11,8 @@ import {
 
 } from "../Components/Data";
 import ScrollSection from "../Components/ScrollSection";
+import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Games = () => {
   useEffect(() => {
@@ -70,11 +71,16 @@ const Games = () => {
                 />
                 <div className="update">{gamesbanner.update}</div>
                 <div className="carousel-caption text-light">
-                  <div className="play">
-                    <button><i className="fa-solid fa-play"></i> Play</button>
+                  <div className="play ">
+                    <button><FontAwesomeIcon
+                      icon={faPlay}
+                      className="fs-4 me-2"
+                    />  Play</button>
                   </div>
                   <div className="info">
-                    <button><i className="fa-solid fa-circle-info"></i> Info</button>
+                    <button><FontAwesomeIcon
+                      icon={faCircleInfo}
+                      className="fs-4 me-2" /> Info</button>
                   </div>
                 </div>
               </div>

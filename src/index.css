@@ -87,13 +87,14 @@ body {
   cursor: pointer;
 }
 
-section.img_display img {
-  height: 900px;
-  object-fit: cover;
-  object-position: top;
-  width: 100%;
+.img_display {
   position: relative;
+  width: 100%;
+  height: 900px;
+  /* same as your image height */
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
 }
 
 .btn:focus,
@@ -118,19 +119,7 @@ select:focus {
   border-color: inherit !important;
 }
 
-.play {
-  position: absolute;
-  bottom: 0%;
-  left: 86%;
-}
-
-.info {
-  position: absolute;
-  bottom: 0%;
-  left: 100%;
-}
-
-.update {
+.img_display .update {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -141,6 +130,7 @@ select:focus {
   font-weight: bold;
   font-size: 14px;
   letter-spacing: 0.5px;
+  z-index: 5;
 }
 
 .update:hover {
@@ -149,6 +139,14 @@ select:focus {
   cursor: pointer;
 }
 
+.img_display .carousel-caption {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  bottom: 0%;
+  left: 75%;
+}
 
 .play button {
   font-size: 20px;
@@ -177,22 +175,12 @@ select:focus {
   border-radius: 8px;
   padding: 10px;
   cursor: pointer;
+
 }
 
 .info button:hover {
   background-color: #00000099;
   transform: scale(1.02);
-}
-
-.play i {
-  padding: 0 8px;
-  font-size: 25px;
-
-}
-
-.info i {
-  padding: 0 8px;
-  font-size: 22px;
 }
 
 .movie-card {
@@ -341,7 +329,7 @@ h2 {
 
 .scroll-btn:hover {
   color: cyan;
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .scroll-btn:focus {
@@ -507,11 +495,11 @@ body.light-mode {
 }
 
 .light-mode .scroll-btn {
-  background-color: rgba(245, 245, 245, 0.2);
   color: #333;
 }
 
 .light-mode .scroll-btn:hover {
+  background-color: rgba(245, 245, 245, 0.253);
   color: cyan;
 }
 
@@ -566,8 +554,8 @@ body.light-mode {
 }
 
 @media (min-width: 501px) and (max-width: 767px) {
-  section.img_display img {
-    height: 350px;
+  .img_display {
+    height: 410px;
     object-fit: cover;
     object-position: bottom;
   }
@@ -583,44 +571,28 @@ body.light-mode {
     height: 100%;
   }
 
-  .play {
-    top: 60%;
-    left: 80%;
+  .img_display .carousel-caption {
+    left: 58%;
   }
 
-  .info {
-    top: 60%;
-    left: 95%;
+  .play-icon {
+    font-size: 16px;
+  }
+
+  .info-icon {
+    font-size: 16px;
   }
 
   .play button {
-    font-size: 10px;
-    width: 70px;
+    font-size: 16px;
+    width:95px;
     padding: 9px 7px;
   }
 
   .info button {
-    font-size: 10px;
-    width: 70px;
-    padding: 9px 7px;
-  }
-
-  .play i {
-    padding: 0 5px;
-    font-size: 18px;
-
-  }
-
-  .info i {
-    padding: 0 5px;
     font-size: 16px;
-  }
-
-  .update {
-    font-size: 14px;
-    padding: 5px 10px;
-    top: 10px;
-    left: 10px;
+    width: 95px;
+    padding: 9px 7px;
   }
 
   .carousel-control-prev {
@@ -680,44 +652,35 @@ body.light-mode {
     width: 100%;
   }
 
-  section.img_display img {
-    height: 250px;
+  .img_display {
+    height: 275px;
     object-fit: cover;
     object-position: bottom;
   }
 
-  .play {
-    top: 60%;
-    left: 72%;
+  .img_display .carousel-caption {
+    left: 55%;
   }
 
-  .info {
-    top: 60%;
-    left: 95%;
+  .play-icon {
+    font-size: 16px;
+  }
+
+  .info-icon {
+    font-size: 16px;
   }
 
   .play button {
-    font-size: 10px;
-    width: 60px;
+    font-size: 14px;
+    width: 80px;
     padding: 8px 5px;
   }
 
 
   .info button {
-    font-size: 10px;
-    width: 60px;
-    padding: 8px 5px;
-  }
-
-  .play i {
-    padding: 0 3px;
     font-size: 14px;
-
-  }
-
-  .info i {
-    padding: 0 3px;
-    font-size: 13px;
+    width: 80px;
+    padding: 8px 5px;
   }
 
   .update {
@@ -764,6 +727,7 @@ body.light-mode {
   h2 {
 
     padding-left: 10px;
+    margin-top: 35px;
   }
 
   footer {
@@ -775,7 +739,7 @@ body.light-mode {
 }
 
 @media (min-width: 768px) and (max-width: 990px) {
-  section.img_display img {
+  .img_display {
     height: 600px;
     object-position: top;
   }
@@ -790,14 +754,16 @@ body.light-mode {
     height: 110px;
   }
 
-  .play {
-    top: 55%;
-    left: 82%;
+  .img_display .carousel-caption {
+    left: 70%;
   }
 
-  .info {
-    top: 55%;
-    left: 97%;
+  .play-icon {
+    font-size: 16px;
+  }
+
+  .info-icon {
+    font-size: 16px;
   }
 
   .play button,
@@ -805,14 +771,6 @@ body.light-mode {
     font-size: 14px;
     width: 100px;
     padding: 8px;
-  }
-
-  .play i {
-    font-size: 20px;
-  }
-
-  .info i {
-    font-size: 18px;
   }
 
   .update {
@@ -862,7 +820,7 @@ body.light-mode {
 }
 
 @media (min-width: 991px) and (max-width: 1234px) {
-  section.img_display img {
+  .img_display {
     height: 700px;
     object-position: top;
   }
@@ -877,14 +835,12 @@ body.light-mode {
     height: 100%;
   }
 
-  .play {
-    top: 55%;
-    left: 85%;
+  .img_display .carousel-caption {
+    left: 70%;
   }
 
-  .info {
-    top: 55%;
-    left: 100%;
+  .play-icon {
+    font-size: 16px;
   }
 
   .play button,
@@ -892,14 +848,6 @@ body.light-mode {
     font-size: 16px;
     width: 120px;
     padding: 9px;
-  }
-
-  .play i {
-    font-size: 22px;
-  }
-
-  .info i {
-    font-size: 20px;
   }
 
   .update {
@@ -944,7 +892,7 @@ body.light-mode {
 }
 
 @media (min-width: 1235px) and (max-width: 1368px) {
-  section.img_display img {
+  .img_display {
     height: 800px;
     object-position: top;
   }
@@ -959,29 +907,11 @@ body.light-mode {
     height: 100%;
   }
 
-  .play {
-    top: 55%;
-    left: 86%;
-  }
-
-  .info {
-    top: 55%;
-    left: 101%;
-  }
-
   .play button,
   .info button {
     font-size: 18px;
     width: 130px;
     padding: 10px;
-  }
-
-  .play i {
-    font-size: 24px;
-  }
-
-  .info i {
-    font-size: 22px;
   }
 
   .update {
@@ -1007,8 +937,8 @@ body.light-mode {
     font-size: 50px;
   }
 
-  .scroll-btn:hover{
-   background-color: rgb(0, 0, 0, 0.4);
+  .scroll-btn:hover {
+    background-color: rgb(0, 0, 0, 0.4);
   }
 
   .scroll-btn.left {
@@ -1029,7 +959,7 @@ body.light-mode {
 }
 
 @media (min-width: 1369px) and (max-width: 1600px) {
-  section.img_display img {
+  .img_display {
     height: 900px;
     object-position: top;
   }
@@ -1044,29 +974,11 @@ body.light-mode {
     height: 140px;
   }
 
-  .play {
-    top: 55%;
-    left: 87%;
-  }
-
-  .info {
-    top: 55%;
-    left: 102%;
-  }
-
   .play button,
   .info button {
     font-size: 20px;
     width: 150px;
     padding: 10px;
-  }
-
-  .play i {
-    font-size: 25px;
-  }
-
-  .info i {
-    font-size: 22px;
   }
 
   .update {
@@ -1111,7 +1023,7 @@ body.light-mode {
 }
 
 @media (min-width: 1601px) and (max-width: 1818px) {
-  section.img_display img {
+  .img_display {
     height: 1000px;
     object-position: top;
   }
@@ -1126,29 +1038,11 @@ body.light-mode {
     height: 160px;
   }
 
-  .play {
-    top: 55%;
-    left: 88%;
-  }
-
-  .info {
-    top: 55%;
-    left: 103%;
-  }
-
   .play button,
   .info button {
     font-size: 22px;
     width: 160px;
     padding: 12px;
-}
-
-  .play i {
-    font-size: 28px;
-  }
-
-  .info i {
-    font-size: 24px;
   }
 
   .update {
@@ -1192,8 +1086,8 @@ body.light-mode {
   }
 }
 
-@media (min-width: 1819px) and (max-width: 2148px) {
-  section.img_display img {
+/* @media (min-width: 1819px) and (max-width: 2148px) {
+  .img_display {
     height: 1100px;
     object-position: top;
   }
@@ -1274,7 +1168,7 @@ body.light-mode {
 }
 
 @media (min-width: 2149px) {
-  section.img_display img {
+  .img_display {
     height: 1200px;
     object-position: top;
   }
@@ -1352,5 +1246,4 @@ body.light-mode {
   h2 {
     font-size: 34px;
   }
-}
-
+} */
