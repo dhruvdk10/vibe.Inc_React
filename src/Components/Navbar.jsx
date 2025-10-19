@@ -31,9 +31,6 @@ const Navbar = () => {
                 style={{ objectFit: "cover" }}
               />
             </Link>
-            <ThemeProvider>
-              <ThemeReceiver />
-            </ThemeProvider>
           </div>
 
           <div className="d-flex align-items-center">
@@ -51,7 +48,8 @@ const Navbar = () => {
                 aria-label="Search"
                 autoFocus={showSearch}
                 style={{
-                  width: "265px",
+                  width: "225px",
+                  height: "32px",
                   background: "black",
                   color: "#fff",
                   boxShadow: "none",
@@ -71,10 +69,14 @@ const Navbar = () => {
                   className="fa fa-search fs-4"
                 />
               </button>
+
+              <ThemeProvider>
+                <ThemeReceiver />
+              </ThemeProvider>
             </form>
 
             {/* Notification */}
-            <button className="btn btn-link text-white px-2" type="button">
+            <button className="btn btn-link text-white ps-2 pe-1" type="button">
               <FontAwesomeIcon
                 icon={faBell}
                 className="fa fa-bell fs-4"
@@ -82,7 +84,7 @@ const Navbar = () => {
             </button>
 
             {/* Profile Dropdown */}
-            <div className="dropdown ps-2">
+            <div className="dropdown ps-1">
               <Link
                 to="#"
                 className="options d-flex align-items-center text-decoration-none text-white"

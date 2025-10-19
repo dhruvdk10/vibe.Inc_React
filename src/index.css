@@ -48,8 +48,12 @@ body {
   transition: ease-in 0.3s ease-out 0.1s all;
 }
 
-.theme-toggle-button:hover {
-  background-color: #eee;
+.theme-icon {
+  color: #ddd;
+}
+
+.theme-icon:hover {
+  color: cyan;
 }
 
 .dropdown-menu {
@@ -373,7 +377,8 @@ h2 {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin: 50px auto;;
+  margin: 50px auto;
+  ;
 }
 
 .explore-btn:hover {
@@ -420,9 +425,12 @@ body.light-mode {
 
 /* Navbar Links */
 /* Light Mode Navbar */
+.light-mode .theme-icon {
+  color: black;
+}
 
 .light-mode .theme-toggle-button:hover {
-  background-color: black;
+  color: cyan;
 }
 
 

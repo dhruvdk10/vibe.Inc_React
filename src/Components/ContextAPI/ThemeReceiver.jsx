@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from './ThemeProvider';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 
 const ThemeReceiver = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -12,8 +14,17 @@ const ThemeReceiver = () => {
     <button
       className="theme-toggle-button"
       onClick={toggleChange}
+      title={theme === 'light-mode' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
     >
-      {theme === 'light-mode' ? '🌙' : '☀️'}
+      <FontAwesomeIcon
+        icon={faCircleHalfStroke}
+        className="theme-icon fs-4"
+        style={{
+          transform: theme === 'dark-mode' ? 'scaleX(-1)' : 'none',
+          transition: 'transform 0.3s ease, color 0.3s ease',
+          color: theme === 'dark-mode' ? '' : 'inherit',
+        }}
+      />
     </button>
   );
 };
