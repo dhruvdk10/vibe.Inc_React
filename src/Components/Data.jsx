@@ -1,7 +1,7 @@
 // {Home Page Data}
 
 export const banners = [
-  { img: "/vibe.Inc_React/barfi.jpg", alt: "Banner2", update: "Most Watched", position: "bottom" },
+  { img: "/vibe.Inc_React/barfi.jpg", alt: "Banner2", update: "Most Watched", position: "top" },
   { img: "/vibe.Inc_React/jab we met.jpg", alt: "Banner3", update: "Recently Added ", position: "bottom" },
   { img: "/vibe.Inc_React/bkb.jpg", alt: "Banner1", update: "Leaving Soon", position: "bottom " }
 ];
@@ -221,9 +221,9 @@ export const hinditvshowsData = [
 //{Games Data}
 
 export const gamesbanner = [
-  { img: "/vibe.Inc_React/GTA-V.jpg", alt: "Games Banner1", update: "Recently Added", position: "top" },
   { img: "/vibe.Inc_React/FIFA.jpeg", alt: "Games Banner2", update: "Most Played", position: "top" },
-  { img: "/vibe.Inc_React/CHESS.jpeg", alt: "Games Banner3", update: "Trending #3 Games", position: "top right" },
+  { img: "/vibe.Inc_React/fall guys.jpg", alt: "Games Banner1", update: "Recently Added", position: "top" },
+  { img: "/vibe.Inc_React/CHESS.jpeg", alt: "Games Banner3", update: "Trending #3 Games", position: "top" },
 ];
 
 export const gamestoppicksforyouData = [

@@ -86,14 +86,16 @@ body {
   cursor: pointer;
 }
 
-.img_display {
+.img_display .carousel-item {
   position: relative;
   width: 100%;
-  height: 900px;
-  /* same as your image height */
-  background-size: cover;
+  height: auto;
+}
+
+.img_display .carousel-item img {
+  height: 100%;
+  object-fit: cover;
   background-repeat: no-repeat;
-  background-position: top;
 }
 
 .btn:focus,
@@ -614,12 +616,6 @@ body.light-mode {
     width: 100%;
   }
 
-  .img_display {
-    height: 275px;
-    object-fit: cover;
-    object-position: bottom;
-  }
-
   .img_display .carousel-caption {
     left: 55%;
   }
@@ -645,11 +641,11 @@ body.light-mode {
     padding: 8px 5px;
   }
 
-  .update {
-    font-size: 10px;
-    padding: 4px 8px;
-    top: 10px;
-    left: 10px;
+  .img_display .update {
+    font-size: 12px;
+    padding: 6px 12px;
+    top: 12px;
+    left: 12px;
   }
 
   .carousel-control-prev {
@@ -706,12 +702,6 @@ body.light-mode {
     margin-top: 25px;
   }
 
-  .img_display {
-    height: 300px;
-    object-fit: cover;
-    object-position: bottom;
-  }
-
   .movie-card {
     max-width: 300px;
     height: 150px;
@@ -745,6 +735,13 @@ body.light-mode {
     font-size: 16px;
     width: 90px;
     padding: 9px 6px;
+  }
+
+   .img_display .update {
+    font-size: 14px;
+    padding: 6px 12px;
+    top: 12px;
+    left: 12px;
   }
 
   .carousel-control-prev {
@@ -787,11 +784,6 @@ body.light-mode {
 }
 
 @media (min-width: 569px) and (max-width: 767px) {
-  .img_display {
-    height: 410px;
-    object-fit: cover;
-    object-position: bottom;
-  }
 
   .movie-card {
     max-width: 350px;
@@ -826,6 +818,13 @@ body.light-mode {
     font-size: 16px;
     width: 95px;
     padding: 9px 7px;
+  }
+
+   .img_display .update {
+    font-size: 14px;
+    padding: 6px 12px;
+    top: 12px;
+    left: 12px;
   }
 
   .carousel-control-prev {
@@ -874,10 +873,6 @@ body.light-mode {
 }
 
 @media (min-width: 768px) and (max-width: 990px) {
-  .img_display {
-    height: 600px;
-    object-position: top;
-  }
 
   .movie-card {
     max-width: 210px;
@@ -908,9 +903,9 @@ body.light-mode {
     padding: 8px;
   }
 
-  .update {
-    font-size: 14px;
-    padding: 5px 12px;
+  .img_display .update {
+    font-size: 12px;
+    padding: 6px 12px;
     top: 12px;
     left: 12px;
   }
@@ -955,10 +950,6 @@ body.light-mode {
 }
 
 @media (min-width: 991px) and (max-width: 1234px) {
-  .img_display {
-    height: 700px;
-    object-position: top;
-  }
 
   .movie-card {
     max-width: 200px;
@@ -985,8 +976,8 @@ body.light-mode {
     padding: 9px;
   }
 
-  .update {
-    font-size: 15px;
+  .img_display .update {
+    font-size: 14px;
     padding: 6px 14px;
     top: 13px;
     left: 13px;
@@ -1027,10 +1018,6 @@ body.light-mode {
 }
 
 @media (min-width: 1235px) and (max-width: 1368px) {
-  .img_display {
-    height: 800px;
-    object-position: top;
-  }
 
   .movie-card {
     max-width: 220px;
@@ -1049,7 +1036,7 @@ body.light-mode {
     padding: 10px;
   }
 
-  .update {
+  .img_display .update {
     font-size: 16px;
     padding: 6px 14px;
     top: 14px;
@@ -1093,11 +1080,7 @@ body.light-mode {
   }
 }
 
-@media (min-width: 1369px) and (max-width: 1600px) {
-  .img_display {
-    height: 900px;
-    object-position: top;
-  }
+@media (min-width: 1369px) and (max-width: 1616px) {
 
   .movie-card {
     max-width: 300px;
@@ -1116,9 +1099,9 @@ body.light-mode {
     padding: 10px;
   }
 
-  .update {
-    font-size: 16px;
-    padding: 6px 14px;
+  .img_display .update {
+    font-size: 18px;
+    padding: 6px 16px;
     top: 15px;
     left: 15px;
   }
@@ -1157,11 +1140,7 @@ body.light-mode {
   }
 }
 
-@media (min-width: 1601px) and (max-width: 1818px) {
-  .img_display {
-    height: 1000px;
-    object-position: top;
-  }
+/* @media (min-width: 1617px) and (max-width: 1818px) {
 
   .movie-card {
     max-width: 350px;
@@ -1180,8 +1159,8 @@ body.light-mode {
     padding: 12px;
   }
 
-  .update {
-    font-size: 18px;
+  .img_display .update {
+    font-size: 20px;
     padding: 8px 16px;
     top: 16px;
     left: 16px;
@@ -1219,7 +1198,7 @@ body.light-mode {
   h2 {
     font-size: 30px;
   }
-}
+} */
 
 /* @media (min-width: 1819px) and (max-width: 2148px) {
   .img_display {
@@ -1262,7 +1241,7 @@ body.light-mode {
     font-size: 26px;
   }
 
-  .update {
+  .img_display .update {
     font-size: 20px;
     padding: 10px 18px;
     top: 18px;
@@ -1343,7 +1322,7 @@ body.light-mode {
     font-size: 28px;
   }
 
-  .update {
+  .img_display .update {
     font-size: 22px;
     padding: 12px 20px;
     top: 20px;
