@@ -126,12 +126,11 @@ select:focus {
   left: 15px;
   background: #00000099;
   color: white;
-  padding: 6px 14px;
-  border-radius: 10px;
+  font-size: 15px !important;
   font-weight: bold;
-  font-size: 14px;
+  padding: 6px 15px;
+  border-radius: 10px;
   letter-spacing: 0.5px;
-  z-index: 5;
 }
 
 .update:hover {
@@ -642,7 +641,7 @@ body.light-mode {
   }
 
   .img_display .update {
-    font-size: 12px;
+    font-size: 12px !important;
     padding: 6px 12px;
     top: 12px;
     left: 12px;
@@ -737,8 +736,8 @@ body.light-mode {
     padding: 9px 6px;
   }
 
-   .img_display .update {
-    font-size: 14px;
+  .img_display .update {
+    font-size: 14px !important;
     padding: 6px 12px;
     top: 12px;
     left: 12px;
@@ -820,8 +819,8 @@ body.light-mode {
     padding: 9px 7px;
   }
 
-   .img_display .update {
-    font-size: 14px;
+  .img_display .update {
+    font-size: 14px !important;
     padding: 6px 12px;
     top: 12px;
     left: 12px;
@@ -904,7 +903,7 @@ body.light-mode {
   }
 
   .img_display .update {
-    font-size: 12px;
+    font-size: 12px !important;
     padding: 6px 12px;
     top: 12px;
     left: 12px;
@@ -977,7 +976,7 @@ body.light-mode {
   }
 
   .img_display .update {
-    font-size: 14px;
+    font-size: 14px !important;
     padding: 6px 14px;
     top: 13px;
     left: 13px;
@@ -1037,7 +1036,7 @@ body.light-mode {
   }
 
   .img_display .update {
-    font-size: 16px;
+    font-size: 16px !important;
     padding: 6px 14px;
     top: 14px;
     left: 14px;
