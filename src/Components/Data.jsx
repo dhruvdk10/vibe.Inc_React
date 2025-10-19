@@ -155,7 +155,7 @@ export const upcomingmoviesData = [
 export const seriesbanner = [
   { img: "/vibe.Inc_React/friends.jpg", alt: "TV Shows Banner1", update: "Recently Added", position: "top" },
   { img: "/vibe.Inc_React/young sheldon.webp", alt: "TV Shows Banner2", update: "Trending #2 Series", position: "top" },
-  { img: "/vibe.Inc_React/arrow.jpg", alt: "TV Shows Banner3", update: "Leaaving Soon", position: "top right" },
+  { img: "/vibe.Inc_React/arrow.jpg", alt: "TV Shows Banner3", update: "Leaving Soon", position: "top right" },
 ];
 
 export const seriestoppicksforyouData = [
@@ -272,3 +272,10 @@ export const gamesstrategictData = [
 
 ];
 
+//My List Data
+
+export const listbanner = [
+  { img: "/vibe.Inc_React/wazir.jpg", alt: "Banner2", update: "Arriving Soon", position: "bottom" },
+  { img: "/vibe.Inc_React/COD.png", alt: "Banner3", update: "Trending #5 Games ", position: "bottom" },
+  { img: "/vibe.Inc_React/veer zara.jpg", alt: "Banner1", update: "Leaving Soon", position: "bottom " }
+];

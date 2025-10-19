@@ -336,6 +336,50 @@ h2 {
   outline: none;
 }
 
+.empty-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  /* adjust based on your layout */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.empty-list-message h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.empty-list-message p {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.empty-list-message small {
+  font-size: 14px;
+  color: #888;
+  display: block;
+}
+
+.explore-btn {
+  background-color: #ccc;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 50px auto;;
+}
+
+.explore-btn:hover {
+  background-color: cyan;
+}
+
 
 footer {
   background-color: #141414 !important;
@@ -529,6 +573,10 @@ body.light-mode {
   color: #000;
 }
 
+.light-mode .empty-list-message h2 {
+  color: #333;
+}
+
 /* Footer */
 .light-mode footer {
   background-color: #ddd !important;
@@ -585,7 +633,7 @@ body.light-mode {
 
   .play button {
     font-size: 16px;
-    width:95px;
+    width: 95px;
     padding: 9px 7px;
   }
 
