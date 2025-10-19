@@ -13,8 +13,10 @@ const Navbar = () => {
       <style>
         {`
           .search-input::placeholder {
-            color: #aaa;
+            color: #ccc;
           }
+          .light-mode .search-input::placeholder {
+            color: #000;
         `}
       </style>
       {/* Top Navbar */}
@@ -49,11 +51,10 @@ const Navbar = () => {
                 autoFocus={showSearch}
                 style={{
                   width: "225px",
-                  height: "32px",
-                  background: "black",
+                  height: "35px",
                   color: "#fff",
                   boxShadow: "none",
-                  border: "none",
+                  outline: "none",
                   transition: "all 0.3s ease",
                 }}
                 onBlur={() => setShowSearch(false)}
