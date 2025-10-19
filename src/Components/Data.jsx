@@ -3,7 +3,7 @@
 export const banners = [
   { img: "/vibe.Inc_React/barfi.jpg", alt: "Banner2", update: "Most Watched", position: "bottom" },
   { img: "/vibe.Inc_React/jab we met.jpg", alt: "Banner3", update: "Recently Added ", position: "bottom" },
-  { img: "/vibe.Inc_React/bkb.jpg", alt: "Banner1", update: "Leaaving Soon", position: "bottom " }
+  { img: "/vibe.Inc_React/bkb.jpg", alt: "Banner1", update: "Leaving Soon", position: "bottom " }
 ];
 
 export const mustWatchData = [
