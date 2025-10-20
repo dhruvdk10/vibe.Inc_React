@@ -23,33 +23,34 @@ const ScrollSection = ({ title, data }) => {
 
   return (
     <section className="my-4">
-      <p className="section-title" data-aos="fade-up">{title}</p>
-      <div className="position-relative">
-        <button className="scroll-btn left" onClick={scrollLeft}>
-          ‹
-        </button>
+      <div data-aos="fade-up">
+        <p className="section-title">{title}</p>
+        <div className="position-relative">
+          <button className="scroll-btn left" onClick={scrollLeft}>
+            ‹
+          </button>
 
-        <div
-          ref={rowRef}
-          className={`row g-2 d-flex flex-nowrap ${rowClass}`}
-          data-aos="fade-up"
-          style={{
-            overflowX: "hidden",
-            overflowY: "hidden",
-            whiteSpace: "nowrap",
-            scrollBehavior: "smooth",
-          }}
-        >
-          {Array.from({ length: 20 }, () => data) // repeat data to ensure enough items to scroll
-            .flat() // flatten into one array
-            .map((item, index) => (
-              <Cards key={index} {...item} />
-            ))}
+          <div
+            ref={rowRef}
+            className={`row g-2 d-flex flex-nowrap ${rowClass}`}
+            style={{
+              overflowX: "hidden",
+              overflowY: "hidden",
+              whiteSpace: "nowrap",
+              scrollBehavior: "smooth",
+            }}
+          >
+            {Array.from({ length: 20 }, () => data) // repeat data to ensure enough items to scroll
+              .flat() // flatten into one array
+              .map((item, index) => (
+                <Cards key={index} {...item} />
+              ))}
+          </div>
+
+          <button className="scroll-btn right" onClick={scrollRight}>
+            ›
+          </button>
         </div>
-
-        <button className="scroll-btn right" onClick={scrollRight}>
-          ›
-        </button>
       </div>
     </section>
   );
