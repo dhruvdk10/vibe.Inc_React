@@ -20,9 +20,9 @@ const ThemeReceiver = () => {
         icon={faCircleHalfStroke}
         className="theme-icon fs-4"
         style={{
+          color: theme === 'dark-mode' ? '#ddd' : '#333',
           transform: theme === 'dark-mode' ? 'scaleX(-1)' : 'none',
           transition: 'transform 0.3s ease, color 0.3s ease',
-          color: theme === 'dark-mode' ? '#ddd' : '#333',
         }}
       />
     </button>
@@ -30,4 +30,3 @@ const ThemeReceiver = () => {
 };
 
 export default ThemeReceiver;
-
