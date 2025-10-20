@@ -84,7 +84,7 @@ export const toppicksforyouData = [
 //{Movie Page Data}
 
 export const moviebanner = [
-  { img: "/vibe.Inc_React/mujhse dosto karoge.jpg", alt: "Movie Banner 1", update: "Recently Addded", position: "top" },
+  { img: "/vibe.Inc_React/mujhse dosto karoge.jpg", alt: "Movie Banner 1", update: "Recently Added", position: "top" },
   { img: "/vibe.Inc_React/rang de basanti.jpg", alt: "Movie Banner 2", update: "Trending #5 Movies", position: "top left" },
   { img: "/vibe.Inc_React/wanted.jpg", alt: "Movie Banner 3", update: "Leaving Soon", position: "" }
 ];

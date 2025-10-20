@@ -23,25 +23,25 @@ const Footer = () => {
   return (
     <footer className="w-100 py-4" style={{ backgroundColor: "#141414", overflowX: "hidden" }}>
       <div className="d-flex text-center mt-3 mb-5 justify-content-center mx-0">
-        <div className="col-6 col-md-3">
+        <div className="footer-top col-6 col-md-3">
           <a href="#" className="d-block text-decoration-none">Audio Description</a>
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Investor Relations</a>
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Legal Notices</a>
         </div>
 
-        <div className="col-6 col-md-3">
+        <div className="footer-top col-6 col-md-3">
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Help Centre</a>
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Jobs</a>
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Cookie Preferences</a>
         </div>
 
-        <div className="col-6 col-md-3">
+        <div className=" footer-top col-6 col-md-3">
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Gift Cards</a>
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Terms of Use</a>
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Corporate Information</a>
         </div>
 
-        <div className="col-6 col-md-3">
+        <div className="footer-top col-6 col-md-3">
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Media Centre</a>
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Privacy</a>
           <a href="#" className="d-block text-decoration-none" style={{ color: "#ccc", margin: "8px 0" }}>Contact Us</a>
@@ -62,12 +62,13 @@ const Footer = () => {
       <hr className="width-100" style={{ height: "0.2px" }} />
 
       <div className="text-center mb-3 text-secondary">
-        <p className="mb-1">
-          This site is for educational use only. All posters and images belong to their respective
-          owners. No ownership or endorsement claimed.
+        <p className="footer-bottom mb-1">
+          This site is for educational use only.
         </p>
-        <p className="mb-1">© 2025 vibe.Inc. All rights reserved. | Dhruv Kapoor</p>
-        <p className="mb-2">Follow us on :</p>
+        <p className="footer-bottom mb-1">All posters and images belong to their respective
+          owners.</p>
+        <p className="footer-bottom mb-1">© 2025 vibe.Inc. All rights reserved. | Dhruv Kapoor</p>
+        <p className="footer-bottom mb-2">Follow us on :</p>
       </div>
 
       <div className="social-icons">

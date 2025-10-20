@@ -23,7 +23,7 @@ const ScrollSection = ({ title, data }) => {
 
   return (
     <section className="my-4">
-      <h2 data-aos="fade-up">{title}</h2>
+      <p className="section-title" data-aos="fade-up">{title}</p>
       <div className="position-relative">
         <button className="scroll-btn left" onClick={scrollLeft}>
           ‹
