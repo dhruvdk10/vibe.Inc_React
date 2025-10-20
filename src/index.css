@@ -598,6 +598,10 @@ body.light-mode {
   background-color: #ddd !important;
 }
 
+.light-mode .footer-top {
+  background-color: #ddd !important;
+}
+
 .light-mode footer a {
   color: #333 !important;
 }
