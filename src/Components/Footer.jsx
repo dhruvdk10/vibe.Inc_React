@@ -72,7 +72,7 @@ const Footer = () => {
       </div>
 
       <div className="social-icons">
-        <div className="footer-links d-flex justify-content-center gap-3 fs-5">
+        <div className="footer-links d-flex justify-content-center gap-2 fs-5">
           {socialLinks.map((social, index) => (
             <a key={index} href={social.href} className="fs-4 me-3 text-white">
               {social.icon}

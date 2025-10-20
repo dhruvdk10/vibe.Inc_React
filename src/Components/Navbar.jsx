@@ -36,6 +36,7 @@ const Navbar = () => {
               <img
                 src="/vibe.Inc_React/vibe._logo.png"
                 alt="logo"
+                class="logo"
                 height="40"
                 width="150"
                 style={{ objectFit: "cover" }}
@@ -102,7 +103,7 @@ const Navbar = () => {
               >
                 <FontAwesomeIcon
                   icon={faUser}
-                  className="fa fa-user fs-4"
+                  className="fa fa-user fs-4 me-2"
                 />
               </NavLink>
               <ul

@@ -442,6 +442,11 @@ body.light-mode {
 
 /* Navbar Links */
 /* Light Mode Navbar */
+
+.light-mode .logo {
+  filter: invert(51%) sepia(85%) saturate(4300%) hue-rotate(152deg) brightness(130%) contrast(80%);
+}
+
 .light-mode .theme-icon {
   color: #333;
 }
@@ -471,7 +476,7 @@ body.light-mode {
 }
 
 .light-mode .nav-link.active {
-  border-bottom: 2px solid rgb(19, 206, 206);
+  border-bottom: 2px solid rgb(21, 189, 189);
 }
 
 .light-mode .d-flex.align-items-center.position-relative input {
@@ -479,7 +484,7 @@ body.light-mode {
 }
 
 .light-mode .btn i:hover {
-  color: rgb(19, 206, 206);
+  color: rgb(21, 189, 189);
   transition: color 0.3s ease;
 }
 
@@ -494,7 +499,7 @@ body.light-mode {
 }
 
 .light-mode .fa-user {
-  color: rgb(19, 206, 206);
+  color: rgb(21, 189, 189);
 }
 
 .fa-facebook:hover,
@@ -502,7 +507,7 @@ body.light-mode {
 .fa-twitter:hover,
 .fa-youtube:hover,
 .fa-google:hover {
-  color: rgb(19, 206, 206);
+  color: rgb(21, 189, 189);
 }
 
 .light-mode .genre {
@@ -518,12 +523,12 @@ body.light-mode {
 }
 
 .light-mode .dropdown-menu a:hover {
-  background-color: rgb(19, 206, 206);
+  background-color: rgb(21, 189, 189);
   color: #333 !important;
 }
 
 .light-mode .dropdown-menu a:hover {
-  background-color: rgb(19, 206, 206);
+  background-color: rgb(21, 189, 189);
   color: #fff !important;
 }
 
@@ -574,7 +579,7 @@ body.light-mode {
 
 .light-mode .scroll-btn:hover {
   background-color: rgba(245, 245, 245, 0.253);
-  color: rgb(19, 206, 206);
+  color: rgb(21, 189, 189);
 }
 
 /* Inputs / Selects */
@@ -587,12 +592,12 @@ body.light-mode {
 
 .light-mode .form-control:focus,
 .light-mode .genre-select:focus {
-  border-color: rgb(19, 206, 206);
+  border-color: rgb(21, 189, 189);
   box-shadow: none;
 }
 
 .light-mode .box-options {
-  color: rgb(19, 206, 206);
+  color: rgb(21, 189, 189);
 }
 
 /* Headings */
