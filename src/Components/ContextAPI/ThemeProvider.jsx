@@ -3,10 +3,17 @@ import React, { createContext, useState, useEffect } from 'react';
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
+  // Initialize the theme safely
+  const getInitialTheme = () => {
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? savedTheme : 'dark-mode';
-  });
+    if (savedTheme) return savedTheme;
+
+    // Apply dark mode instantly for first load
+    document.body.classList.add('dark-mode');
+    return 'dark-mode';
+  };
+
+  const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
     document.body.classList.remove('light-mode', 'dark-mode');
