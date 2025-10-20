@@ -6,6 +6,13 @@
     <title>vibe.Inc.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="index.css" />
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme ? savedTheme : 'dark-mode';
+        document.body.classList.add(theme);
+      })();
+    </script>
   </head>
 
   <body>
