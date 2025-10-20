@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ThemeReceiver from './ContextAPI/ThemeReceiver'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser, faBell } from "@fortawesome/free-solid-svg-icons";
@@ -109,19 +110,19 @@ const Navbar = () => {
                 aria-labelledby="profileDropdown"
               >
                 <li>
-                  <NavLink
+                  <Link
                     className="dropdown-item"
                     to="/login"
                     data-bs-toggle="modal"
                     data-bs-target="#myModal"
                   >
                     Log In
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="/sign out">
+                  <Link className="dropdown-item" to="#">
                     Sign Out
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -170,16 +171,16 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <NavLink to="/Games" className={({ isActive }) =>
-                    isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
-                  }>
+                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
+                }>
                   Games
                 </NavLink>
               </li>
 
               <li className="nav-item">
                 <NavLink to="/MyList" className={({ isActive }) =>
-                    isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
-                  }>
+                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
+                }>
                   My List
                 </NavLink>
               </li>
