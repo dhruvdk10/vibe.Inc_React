@@ -415,6 +415,8 @@ hr {
   transform: scale(1.05);
 }
 
+.light-mode .fa-search,
+.light-mode .fa-bell,
 .fa-facebook,
 .fa-instagram,
 .fa-twitter,

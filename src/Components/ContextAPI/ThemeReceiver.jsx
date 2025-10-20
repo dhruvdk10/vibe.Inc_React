@@ -22,7 +22,7 @@ const ThemeReceiver = () => {
         style={{
           transform: theme === 'dark-mode' ? 'scaleX(-1)' : 'none',
           transition: 'transform 0.3s ease, color 0.3s ease',
-          color: theme === 'dark-mode' ? '' : '#333',
+          color: theme === 'dark-mode' ? '#ddd' : '#333',
         }}
       />
     </button>
