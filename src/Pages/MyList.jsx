@@ -62,7 +62,7 @@ const MyList = () => {
       <section>
         <div class="empty-list-container mt-5">
           <div class="empty-list-message">
-            <h2>Nothing here yet!</h2>
+            <h2>Nothing here yet!!</h2>
             <p class="mb-3" style={{fontSize: "16px"}}>Add some favourites to see them here</p>
             <Link className="nav-link" to="/"><button class="explore-btn">Continue Exploring</button></Link>
           </div>
