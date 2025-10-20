@@ -1,13 +1,19 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { ThemeProvider } from './ContextAPI/ThemeProvider'
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import ThemeReceiver from './ContextAPI/ThemeReceiver'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser, faBell } from "@fortawesome/free-solid-svg-icons";
 
 
 const Navbar = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showSearch, setShowSearch] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <style>
@@ -17,6 +23,7 @@ const Navbar = () => {
           }
           .light-mode .search-input::placeholder {
             color: #000;
+          }
         `}
       </style>
       {/* Top Navbar */}
@@ -24,7 +31,7 @@ const Navbar = () => {
         <div className="container-fluid d-flex mx-0">
           {/* Brand Logo navigates to home */}
           <div>
-            <Link className="navbar-brand" to="/">
+            <NavLink className="navbar-brand" to="/">
               <img
                 src="/vibe.Inc_React/vibe._logo.png"
                 alt="logo"
@@ -32,7 +39,7 @@ const Navbar = () => {
                 width="150"
                 style={{ objectFit: "cover" }}
               />
-            </Link>
+            </NavLink>
           </div>
 
           <div className="d-flex align-items-center">
@@ -71,9 +78,8 @@ const Navbar = () => {
                 />
               </button>
 
-              <ThemeProvider>
-                <ThemeReceiver />
-              </ThemeProvider>
+              <ThemeReceiver />
+
             </form>
 
             {/* Notification */}
@@ -86,7 +92,7 @@ const Navbar = () => {
 
             {/* Profile Dropdown */}
             <div className="dropdown ps-1">
-              <Link
+              <NavLink
                 to="#"
                 className="options d-flex align-items-center text-decoration-none text-white"
                 id="profileDropdown"
@@ -97,25 +103,25 @@ const Navbar = () => {
                   icon={faUser}
                   className="fa fa-user fs-4" style={{ color: "cyan" }}
                 />
-              </Link>
+              </NavLink>
               <ul
                 className="dropdown-menu dropdown-menu-end"
                 aria-labelledby="profileDropdown"
               >
                 <li>
-                  <Link
+                  <NavLink
                     className="dropdown-item"
                     to="#"
                     data-bs-toggle="modal"
                     data-bs-target="#myModal"
                   >
                     Log In
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/logout">
+                  <NavLink className="dropdown-item" to="/logout">
                     Sign Out
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -126,8 +132,7 @@ const Navbar = () => {
       {/* Bottom Navbar */}
       <nav
         className="navbar navbar-expand-lg navbar-dark"
-        style={{ marginTop: "66px" }
-        }
+        style={{ marginTop: "66px" }}
       >
         <div className="container-fluid ms-0">
           <button
@@ -142,30 +147,41 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="bottomNav">
             <ul className="navbar-nav ms-2 me-auto mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <NavLink to="/" className={({ isActive }) =>
+                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
+                }
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Series">
+                <NavLink to="/Series" className={({ isActive }) =>
+                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
+                }>
                   Series
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Movies">
+                <NavLink to="/Movies" className={({ isActive }) =>
+                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
+                }>
                   Movies
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Games">
+                <NavLink to="/Games" className={({ isActive }) =>
+                    isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
+                  }>
                   Games
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/MyList">
+                <NavLink to="/MyList" className={({ isActive }) =>
+                    isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
+                  }>
                   My List
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

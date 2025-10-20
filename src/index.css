@@ -28,6 +28,11 @@ body {
 .nav-link {
   color: #ddd !important;
   font-size: 18px;
+  border-bottom: 1px solid black;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid cyan;
 }
 
 .d-flex.align-items-center.position-relative input {
@@ -443,6 +448,12 @@ body.light-mode {
 
 .light-mode .nav-link {
   color: #000000 !important;
+  text-decoration: none;
+  border-bottom: 2px solid #eee;
+}
+
+.light-mode .nav-link.active {
+  border-bottom: 2px solid cyan;
 }
 
 .light-mode .d-flex.align-items-center.position-relative input {

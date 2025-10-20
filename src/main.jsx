@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { ThemeProvider } from './Components/ContextAPI/ThemeProvider'
 import "./index.css";
-import "./firebase";
+import "./firebaase";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
 );
