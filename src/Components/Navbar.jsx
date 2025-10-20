@@ -111,7 +111,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     className="dropdown-item"
-                    to="#"
+                    to="/login"
                     data-bs-toggle="modal"
                     data-bs-target="#myModal"
                   >
@@ -119,7 +119,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="dropdown-item" to="/logout">
+                  <NavLink className="dropdown-item" to="/sign out">
                     Sign Out
                   </NavLink>
                 </li>
