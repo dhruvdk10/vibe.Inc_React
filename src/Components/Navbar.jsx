@@ -102,7 +102,7 @@ const Navbar = () => {
               >
                 <FontAwesomeIcon
                   icon={faUser}
-                  className="fa fa-user fs-4" style={{ color: "cyan" }}
+                  className="fa fa-user fs-4"
                 />
               </NavLink>
               <ul

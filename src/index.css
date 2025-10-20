@@ -28,7 +28,7 @@ body {
 .nav-link {
   color: #ddd !important;
   font-size: 18px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-link.active {
@@ -123,6 +123,10 @@ select:focus {
   outline: none !important;
   box-shadow: none !important;
   border-color: inherit !important;
+}
+
+.box-options {
+  color: cyan;
 }
 
 .img_display .update {
@@ -415,14 +419,18 @@ hr {
   transform: scale(1.05);
 }
 
-.light-mode .fa-search,
-.light-mode .fa-bell,
+.fa-search,
+.fa-bell,
 .fa-facebook,
 .fa-instagram,
 .fa-twitter,
 .fa-youtube,
 .fa-google {
   color: #ddd;
+}
+
+.fa-user {
+  color: cyan;
 }
 
 /* Light Mode Styles */
@@ -459,11 +467,11 @@ body.light-mode {
 .light-mode .nav-link {
   color: #000000 !important;
   text-decoration: none;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid transparent;
 }
 
 .light-mode .nav-link.active {
-  border-bottom: 2px solid cyan;
+  border-bottom: 2px solid rgb(19, 206, 206);
 }
 
 .light-mode .d-flex.align-items-center.position-relative input {
@@ -471,7 +479,7 @@ body.light-mode {
 }
 
 .light-mode .btn i:hover {
-  color: cyan;
+  color: rgb(19, 206, 206);
   transition: color 0.3s ease;
 }
 
@@ -485,12 +493,16 @@ body.light-mode {
   color: #333;
 }
 
+.light-mode .fa-user {
+  color: rgb(19, 206, 206);
+}
+
 .fa-facebook:hover,
 .fa-instagram:hover,
 .fa-twitter:hover,
 .fa-youtube:hover,
 .fa-google:hover {
-  color: cyan;
+  color: rgb(19, 206, 206);
 }
 
 .light-mode .genre {
@@ -562,7 +574,7 @@ body.light-mode {
 
 .light-mode .scroll-btn:hover {
   background-color: rgba(245, 245, 245, 0.253);
-  color: cyan;
+  color: rgb(19, 206, 206);
 }
 
 /* Inputs / Selects */
@@ -577,6 +589,10 @@ body.light-mode {
 .light-mode .genre-select:focus {
   border-color: rgb(19, 206, 206);
   box-shadow: none;
+}
+
+.light-mode .box-options {
+  color: rgb(19, 206, 206);
 }
 
 /* Headings */

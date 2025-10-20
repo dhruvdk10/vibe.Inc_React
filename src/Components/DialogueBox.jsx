@@ -145,7 +145,7 @@ const DialogueBox = () => {
                         Remember me
                       </label>
                     </div>
-                    <a href="#" className="text-info text-decoration-none">
+                    <a href="#" className="box-options text-decoration-none">
                       Forgot Password?
                     </a>
                   </div>
@@ -187,7 +187,7 @@ const DialogueBox = () => {
                 <div className="text-center">
                   <span>
                     Do not have an account?{" "}
-                    <a href="#" className="text-info text-decoration-none">
+                    <a href="#" className="box-options text-decoration-none">
                       Sign up now
                     </a>
                   </span>
