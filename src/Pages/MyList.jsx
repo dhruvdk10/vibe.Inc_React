@@ -60,11 +60,10 @@ const MyList = () => {
       </section >
 
       <section>
-        <div class="empty-list-container">
+        <div class="empty-list-container mt-5">
           <div class="empty-list-message">
-            <h2>We’re Sorry!</h2>
-            <p>Your list is empty right now.</p>
-            <small>Note: All liked items will be added to your list automatically.</small>
+            <h2>Nothing here yet!</h2>
+            <p class="mb-3" style={{fontSize: "16px"}}>Add some favourites to see them here</p>
             <Link className="nav-link" to="/"><button class="explore-btn">Continue Exploring</button></Link>
           </div>
         </div>
