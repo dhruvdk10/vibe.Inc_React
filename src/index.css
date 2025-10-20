@@ -435,7 +435,7 @@ body.light-mode {
 /* Navbar Links */
 /* Light Mode Navbar */
 .light-mode .theme-icon {
-  color: #ddd !important;
+  color: #333;
 }
 
 .light-mode .navbar-toggler-icon {
