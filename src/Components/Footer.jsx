@@ -62,9 +62,6 @@ const Footer = () => {
       <hr className="width-100" style={{ height: "0.2px" }} />
 
       <div className="text-center mb-3 text-secondary">
-        <p className="footer-bottom mb-1">
-          This site is for educational use only.
-        </p>
         <p className="footer-bottom mb-1">All posters and images belong to their respective
           owners.</p>
         <p className="footer-bottom mb-1">© 2025 vibe.Inc. All rights reserved. | Dhruv Kapoor</p>

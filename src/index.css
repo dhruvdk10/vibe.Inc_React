@@ -82,6 +82,11 @@ body {
   filter: invert(1);
 }
 
+.btn-close:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .btn i {
   color: #ccc;
 }
@@ -125,8 +130,17 @@ select:focus {
   border-color: inherit !important;
 }
 
+.modal-title {
+  color: cyan;
+}
+
 .box-options {
   color: cyan;
+}
+
+.btn.btn-secondary.fw-bold.mb-3:hover {
+  background-color: cyan;
+  color: black;
 }
 
 .img_display .update {
@@ -596,8 +610,21 @@ body.light-mode {
   box-shadow: none;
 }
 
+.light-mode .btn.btn-secondary.fw-bold.mb-3:hover {
+  background-color: rgb(21, 189, 189);
+  color: black;
+}
+
+.light-mode .modal-title {
+  color: rgb(21, 189, 189)
+}
+
 .light-mode .box-options {
   color: rgb(21, 189, 189);
+}
+
+.light-mode .explore-btn:hover {
+  background-color: rgb(21, 189, 189);
 }
 
 /* Headings */

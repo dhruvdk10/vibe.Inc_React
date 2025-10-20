@@ -4,8 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
-  faLock,
-  faHeart
+  faLock
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
@@ -21,23 +20,37 @@ const DialogueBox = () => {
 
   const handleAPI = async () => {
     try {
-      const response = await axios.post('https://reqres.in/api/login', {
-        email: email,
-        password: password
-      },
+      const response = await axios.post(
+        "https://reqres.in/api/login",
+        {
+          email: email,
+          password: password,
+        },
         {
           headers: {
-            'x-api-key': 'reqres-free-v1'
-          }
+            "x-api-key": "reqres-free-v1",
+          },
         }
       );
       console.log(response.data);
       alert(`Welcome back, ${email || username}!`);
     } catch (error) {
       console.error(error);
-      alert('Wrong email or password');
+      alert("Wrong email or password");
     }
-  }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // simple front-end validation
+    if (!email || !password) {
+      alert("Please fill in all required fields");
+      return;
+    }
+
+    await handleAPI();
+  };
 
   return (
     <section className="form-box">
@@ -50,7 +63,7 @@ const DialogueBox = () => {
             <div className="modal-content text-white">
               {/* Modal Header */}
               <div className="modal-header border-0 d-block text-center position-relative">
-                <h3 className="modal-title fw-bold mt-4">Log In</h3>
+                <h2 className="modal-title fw-bold mt-4">Log In</h2>
                 <button
                   type="button"
                   className="btn-close position-absolute top-0 end-0 mt-2 me-3"
@@ -61,7 +74,7 @@ const DialogueBox = () => {
 
               {/* Modal Body */}
               <div className="modal-body px-4">
-                <form>
+                <form onSubmit={handleSubmit}>
                   {/* Username Input */}
                   <div
                     className="input-group mb-3"
@@ -80,9 +93,12 @@ const DialogueBox = () => {
                       type="text"
                       className="form-control border-0"
                       placeholder="Username or Email Address"
-                      id="email || username"
-                      // value={{email} || {username}}
-                      onChange={(e) => setEmail(e.target.value) || setUsername(e.target.value)}
+                      id="emailOrUsername"
+                      required
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        setUsername(e.target.value);
+                      }}
                       style={{
                         borderTopRightRadius: "12px",
                         borderBottomRightRadius: "12px",
@@ -93,11 +109,18 @@ const DialogueBox = () => {
                   {/* Password Input with Eye Icon */}
                   <div
                     className="input-group mb-3 mx-auto"
-                    style={{ position: "relative", height: "40px", borderRadius: "12px" }}
+                    style={{
+                      position: "relative",
+                      height: "40px",
+                      borderRadius: "12px",
+                    }}
                   >
                     <span
                       className="input-group-text bg-white border-0"
-                      style={{ borderTopLeftRadius: "12px", borderBottomLeftRadius: "12px" }}
+                      style={{
+                        borderTopLeftRadius: "12px",
+                        borderBottomLeftRadius: "12px",
+                      }}
                     >
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
@@ -113,6 +136,7 @@ const DialogueBox = () => {
                         borderBottomRightRadius: "12px",
                         paddingRight: "40px",
                       }}
+                      required
                     />
                     <span
                       onClick={() => setVisible(!visible)}
@@ -154,9 +178,12 @@ const DialogueBox = () => {
                   <div className="d-grid">
                     <button
                       className="btn btn-secondary fw-bold mb-3"
-                      style={{ borderRadius: "12px", height: "42px" }}
-                      type="button"
-                      onClick={handleAPI}
+                      style={{
+                        borderRadius: "12px",
+                        height: "42px",
+                        border: "none",
+                      }}
+                      type="submit"
                     >
                       Login
                     </button>
@@ -173,13 +200,22 @@ const DialogueBox = () => {
                 {/* Social Buttons */}
                 <div className="d-flex justify-content-center gap-4 mb-4">
                   <a href="#" className="btn px-3 py-2">
-                    <FontAwesomeIcon icon={faFacebookF} className="fa fa-facebook fs-4" />
+                    <FontAwesomeIcon
+                      icon={faFacebookF}
+                      className="fa fa-facebook fs-4"
+                    />
                   </a>
                   <a href="#" className="btn px-3 py-2">
-                    <FontAwesomeIcon icon={faTwitter} className="fa fa-twitter fs-4" />
+                    <FontAwesomeIcon
+                      icon={faTwitter}
+                      className="fa fa-twitter fs-4"
+                    />
                   </a>
                   <a href="#" className="btn px-3 py-2">
-                    <FontAwesomeIcon icon={faGoogle} className="fa fa-google fs-4" />
+                    <FontAwesomeIcon
+                      icon={faGoogle}
+                      className="fa fa-google fs-4"
+                    />
                   </a>
                 </div>
 
