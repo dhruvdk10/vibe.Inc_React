@@ -52,10 +52,6 @@ body {
   transition: ease-in 0.3s ease-out 0.1s all;
 }
 
-.theme-icon {
-  color: #ddd;
-}
-
 .dropdown-menu {
   padding: 0px;
   border-radius: 2px;
@@ -459,10 +455,6 @@ body.light-mode {
 
 .light-mode .logo {
   filter: invert(51%) sepia(85%) saturate(4300%) hue-rotate(152deg) brightness(130%) contrast(80%);
-}
-
-.light-mode .theme-icon {
-  color: #333;
 }
 
 .light-mode .navbar-toggler-icon {

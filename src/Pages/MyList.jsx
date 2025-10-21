@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import {listbanner} from "../Components/Data";
+import { listbanner } from "../Components/Data";
 import ScrollSection from "../Components/ScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -63,7 +63,7 @@ const MyList = () => {
         <div class="empty-list-container mt-5">
           <div class="empty-list-message">
             <h2>Nothing here yet!!</h2>
-            <p class="mb-3" style={{fontSize: "16px"}}>Add some favourites to see them here</p>
+            <p class="mb-3" style={{ fontSize: "16px" }}>Add some favourites to see them here</p>
             <Link className="nav-link" to="/"><button class="explore-btn">Continue Exploring</button></Link>
           </div>
         </div>

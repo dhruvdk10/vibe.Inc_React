@@ -87,13 +87,13 @@ const Series = () => {
                   <div className="play ">
                     <button><FontAwesomeIcon
                       icon={faPlay}
-                      className="fs-4 me-2"
+                      className="play-icon me-1"
                     />  Play</button>
                   </div>
                   <div className="info">
                     <button><FontAwesomeIcon
                       icon={faCircleInfo}
-                      className="fs-4 me-2" /> Info</button>
+                      className="info-icon" /> Info</button>
                   </div>
                 </div>
               </div>
