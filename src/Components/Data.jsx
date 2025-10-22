@@ -643,7 +643,7 @@ export const todaystoppicksforyouData = [
     d1: 2008,
     d2: "2h 25m",
     d3: "U/A",
-    summary: "Two straight men [translate:pretend to be gay] to secure a Miami apartment, falling in love with their roommate in this lively romantic comedy."
+    summary: "Two straight men pretend to be gay to secure a Miami apartment, falling in love with their roommate in this lively romantic comedy."
   },
   {
     img: "/vibe.Inc_React/badmash company.jpg",
@@ -663,17 +663,17 @@ export const todaystoppicksforyouData = [
     d1: 2024,
     d2: "2h 15m",
     d3: "U/A",
-    summary: "Third installment of the comedy horror [translate:Bhool Bhulaiyaa] franchise, where supernatural and comedy blend in a haunted Kolkata mansion."
+    summary: "Third installment of the comedy horror Bhool Bhulaiyaa franchise, where supernatural and comedy blend in a haunted Kolkata mansion."
   },
   {
     img: "/vibe.Inc_React/cdi.jpg",
-    alt: "Chakk De India",
-    title: "Chakk De India",
+    alt: "Chak De India",
+    title: "Chak De India",
     position: "bottom right",
     d1: 2007,
     d2: "2h 31m",
     d3: "U/A",
-    summary: "[translate:Chak De! India] follows a disgraced hockey player coaching the women's national team for redemption and victory."
+    summary: "Chak De India follows a disgraced hockey player coaching the women's national team for redemption and victory."
   },
   {
     img: "/vibe.Inc_React/B3.jpg",
@@ -683,7 +683,7 @@ export const todaystoppicksforyouData = [
     d1: 2010,
     d2: "2h 26m",
     d3: "U/A",
-    summary: "[translate:Band Baaja Baaraat] tells the story of two young entrepreneurs running a wedding planning business with unexpected romantic sparks."
+    summary: "Band Baja Barat tells the story of two young entrepreneurs running a wedding planning business with unexpected romantic sparks."
   },
   {
     img: "/vibe.Inc_React/bkb.jpg",
@@ -800,13 +800,13 @@ export const crowdpleasersData = [
   },
   {
     img: "/vibe.Inc_React/gangubai.png ",
-    alt: "Gangubai",
-    title: "Gangubai",
+    alt: "Gangubai Kathiawadi ",
+    title: "Gangubai Kathiawadi ",
     position: "bottom",
     d1: 2022,
     d2: "2h 10m",
     d3: "U/A",
-    summary: "[translate:Gangubai Kathiawadi] portrays the life of a powerful woman rising from hardships in the underworld to become an icon of justice."
+    summary: "Gangubai Kathiawadi portrays the life of a powerful woman rising from hardships in the underworld to become an icon of justice."
   },
   {
     img: "/vibe.Inc_React/ready.webp",
@@ -1055,7 +1055,7 @@ export const upcomingmoviesData = [
   },
   {
     img: "/vibe.Inc_React/bkd.png",
-    alt: "[translate:Badrinath Ki Dulhania]",
+    alt: "Badrinath Ki Dulhania",
     title: "Badrinath Ki Dulhania",
     position: "top",
     d1: 2017,
@@ -1140,7 +1140,7 @@ export const seriestoppicksforyouData = [
     d1: 2000,
     d2: "1h per episode",
     d3: "U/A",
-    summary: "[translate:कौन बनेगा करोड़पति] is an Indian Hindi-language game show hosted by Amitabh Bachchan where contestants answer questions to win cash prizes."
+    summary: "An Indian Hindi-language game show hosted by Amitabh Bachchan where contestants answer questions to win cash prizes."
   },
   {
     img: "/vibe.Inc_React/criminal minds.jpg",
@@ -1635,9 +1635,9 @@ export const gamestoppicksforyouData = [
     alt: "GTA V",
     title: "GTA V",
     position: "top",
-    d2: "Action-Adventure",
-    d3: "Rockstar North",
-    d1: 2025,
+    d2: "Rockstar North",
+    d1: 2013,
+    d3: "A",
     summary: "An open-world action-adventure game set in Los Santos, allowing players to explore, drive, and pull off heists."
   },
   {
@@ -1645,19 +1645,18 @@ export const gamestoppicksforyouData = [
     alt: "God of War",
     title: "God of War",
     position: "top",
-    d2: "Action Role-Playing",
-    d3: "Santa Monica Studio",
+    d2: "Santa Monica Studio",
     d1: 2018,
+    d3: "16+",
     summary: "Follows Kratos and his son Atreus through Norse mythology in a deeply emotional and brutal adventure."
   },
   {
     img: "/vibe.Inc_React/COD.png",
-    alt: "Call Of Duty : Black Ops 6",
-    title: "Call Of Duty : Black Ops 6",
+    alt: "COD Black Ops 6",
     position: "top left",
-    d2: "First-Person Shooter",
-    d3: "Treyarch",
+    d2: "Treyarch",
     d1: 2024,
+    d3: "A",
     summary: "Fast-paced military shooter with a focus on intense combat, tactical missions, and multiplayer modes."
   },
   {
@@ -1665,19 +1664,19 @@ export const gamestoppicksforyouData = [
     alt: "Hitman 3",
     title: "Hitman 3",
     position: "top",
-    d2: "Stealth Action",
-    d3: "IO Interactive",
+    d2: "IO Interactive",
     d1: 2021,
+    d3: "A",
     summary: "Play as Agent 47 to eliminate targets across the globe using stealth and strategic assassinations."
   },
   {
     img: "/vibe.Inc_React/CS-2.jpg",
-    alt: "Counter Strike 2",
-    title: "Counter Strike 2",
+    alt: "CS-2",
+    title: "CS-2",
     position: "top",
-    d2: "First-Person Shooter",
-    d3: "Valve",
+    d2: "Valve",
     d1: 2023,
+    d3: "16+",
     summary: "A competitive tactical shooter pitting terrorists against counter-terrorists in skill-based matches."
   },
   {
@@ -1685,9 +1684,9 @@ export const gamestoppicksforyouData = [
     alt: "FC 2025",
     title: "FC 2025",
     position: "top left",
-    d2: "Sports",
-    d3: "EA Sports",
+    d2: "EA Sports",
     d1: 2024,
+    d3: "U",
     summary: "The latest football simulation from EA featuring realistic gameplay, teams, and tournaments."
   },
   {
@@ -1695,9 +1694,9 @@ export const gamestoppicksforyouData = [
     alt: "NBA 2K25",
     title: "NBA 2K25",
     position: "top left",
-    d2: "Sports",
-    d3: "Visual Concepts",
+    d2: "Visual Concepts",
     d1: 2024,
+    d3: "U",
     summary: "Delivers immersive basketball experience with stunning graphics and detailed team management."
   },
   {
@@ -1705,9 +1704,9 @@ export const gamestoppicksforyouData = [
     alt: "Tennis World Open 25",
     title: "Tennis World Open 25",
     position: "top",
-    d2: "Sports",
-    d3: "Big Ant Studios",
+    d2: "Big Ant Studios",
     d1: 2025,
+    d3: "3+",
     summary: "Realistic tennis simulation featuring major tournaments and player customization."
   },
   {
@@ -1715,9 +1714,9 @@ export const gamestoppicksforyouData = [
     alt: "BGMI",
     title: "BGMI",
     position: "top",
-    d2: "Battle Royale",
-    d3: "Krafton",
+    d2: "Krafton",
     d1: 2021,
+    d3: "16+",
     summary: "Battle royale shooter where 100 players fight to be the last one standing."
   },
   {
@@ -1725,9 +1724,9 @@ export const gamestoppicksforyouData = [
     alt: "Temple Run 2",
     title: "Temple Run 2",
     position: "top left",
-    d2: "Endless Runner",
-    d3: "Imangi Studios",
+    d2: "Imangi Studios",
     d1: 2013,
+    d3: "U",
     summary: "Fast-paced endless runner dodging obstacles and escaping ancient curses."
   },
   {
@@ -1735,9 +1734,9 @@ export const gamestoppicksforyouData = [
     alt: "Among Us 3",
     title: "Among Us 3",
     position: "top",
-    d2: "Party Game",
-    d3: "Innersloth",
+    d2: "Innersloth",
     d1: 2025,
+    d3: "10+",
     summary: "A social deduction game where players must find impostors aboard a spaceship."
   },
   {
@@ -1745,9 +1744,9 @@ export const gamestoppicksforyouData = [
     alt: "Valorant",
     title: "Valorant",
     position: "top",
-    d2: "Tactical Shooter",
-    d3: "Riot Games",
+    d2: "Riot Games",
     d1: 2020,
+    d3: "16+",
     summary: "Character-based tactical shooter combining precise gunplay with unique agent abilities."
   }
 ];
@@ -1758,9 +1757,9 @@ export const gamescasualData = [
     alt: "Minecraft",
     title: "Minecraft",
     position: "top",
-    d2: "Sandbox",
-    d3: "Mojang",
+    d2: "Mojang",
     d1: 2011,
+    d3: "7+",
     summary: "Block-building sandbox game allowing free exploration and endless creativity."
   },
   {
@@ -1768,9 +1767,9 @@ export const gamescasualData = [
     alt: "Pinball Master",
     title: "Pinball Master",
     position: "top",
-    d2: "Arcade",
-    d3: "Mobirix",
+    d2: "Mobirix",
     d1: 2022,
+    d3: "U",
     summary: "Classic pinball experience with vibrant tables and realistic physics."
   },
   {
@@ -1778,9 +1777,9 @@ export const gamescasualData = [
     alt: "Angry Birds Bounce",
     title: "Angry Birds Bounce",
     position: "top",
-    d2: "Puzzle",
-    d3: "Rovio Entertainment",
+    d2: "Rovio Entertainment",
     d1: 2024,
+    d3: "3+",
     summary: "Launch birds to destroy structures in this physics-based puzzle series."
   },
   {
@@ -1788,9 +1787,9 @@ export const gamescasualData = [
     alt: "Super Mario Galaxy 2",
     title: "Super Mario Galaxy 2",
     position: "top right",
-    d2: "Platformer",
-    d3: "Nintendo",
+    d2: "Nintendo",
     d1: 2010,
+    d3: "U",
     summary: "Mario’s space-themed adventure featuring innovative 3D platforming gameplay."
   },
   {
@@ -1798,9 +1797,9 @@ export const gamescasualData = [
     alt: "Subway Surfers Mexico",
     title: "Subway Surfers Mexico",
     position: "top",
-    d2: "Endless Runner",
-    d3: "Kiloo, SYBO Games",
+    d2: "Kiloo, SYBO Games",
     d1: 2023,
+    d3: "7+",
     summary: "Fast-paced running game dodging trains and collecting coins in colorful settings."
   },
   {
@@ -1808,9 +1807,9 @@ export const gamescasualData = [
     alt: "Hill Climb Racing",
     title: "Hill Climb Racing",
     position: "top left",
-    d2: "Racing",
-    d3: "Fingersoft",
+    d2: "Fingersoft",
     d1: 2012,
+    d3: "3+",
     summary: "Drive uphill using physics and upgrades in this addictive mobile racer."
   },
   {
@@ -1818,9 +1817,9 @@ export const gamescasualData = [
     alt: "Mini Militia",
     title: "Mini Militia",
     position: "top",
-    d2: "Multiplayer Shooter",
-    d3: "Miniclip",
+    d2: "Miniclip",
     d1: 2017,
+    d3: "12+",
     summary: "2D combat game featuring online and local battles with cartoon physics."
   },
   {
@@ -1828,9 +1827,9 @@ export const gamescasualData = [
     alt: "Candy Crush Saga",
     title: "Candy Crush Saga",
     position: "top",
-    d2: "Match-3 Puzzle",
-    d3: "King",
+    d2: "King",
     d1: 2012,
+    d3: "3+",
     summary: "Match sweets and complete levels in this colorful puzzle phenomenon."
   },
   {
@@ -1838,9 +1837,9 @@ export const gamescasualData = [
     alt: "Plants vs Zombies",
     title: "Plants vs Zombies",
     position: "top",
-    d2: "Tower Defense",
-    d3: "PopCap Games",
+    d2: "PopCap Games",
     d1: 2009,
+    d3: "7+",
     summary: "Defend your home from zombies using a variety of quirky plant defenses."
   },
   {
@@ -1848,9 +1847,9 @@ export const gamescasualData = [
     alt: "Uno",
     title: "Uno",
     position: "top left",
-    d2: "Card Game",
-    d3: "Mattel",
+    d2: "Mattel",
     d1: 2016,
+    d3: "3+",
     summary: "Classic family-friendly card game of colors and numbers with multiplayer mode."
   },
   {
@@ -1858,9 +1857,9 @@ export const gamescasualData = [
     alt: "Ludo King 2",
     title: "Ludo King 2",
     position: "top",
-    d2: "Board Game",
-    d3: "Gametion",
+    d2: "Gametion",
     d1: 2025,
+    d3: "U",
     summary: "Digital version of the classic Ludo board game supporting online play."
   },
   {
@@ -1868,9 +1867,9 @@ export const gamescasualData = [
     alt: "Fall Guys",
     title: "Fall Guys",
     position: "top",
-    d2: "Party Battle Royale",
-    d3: "Mediatonic",
+    d2: "Mediatonic",
     d1: 2020,
+    d3: "U",
     summary: "Whimsical obstacle course game where players compete to be the last bean standing."
   }
 ];
@@ -1881,9 +1880,9 @@ export const gamesstrategictData = [
     alt: "Chess.com",
     title: "Chess.com",
     position: "top",
-    d2: "Board Strategy",
-    d3: "Chess.com",
+    d2: "Chess.com",
     d1: 2007,
+    d3: "U",
     summary: "Play chess online or train with puzzles and video lessons from masters."
   },
   {
@@ -1891,9 +1890,9 @@ export const gamesstrategictData = [
     alt: "Codenames",
     title: "Codenames",
     position: "top",
-    d2: "Word Game",
-    d3: "Czech Games Edition",
+    d2: "Czech Games Edition",
     d1: 2015,
+    d3: "10+",
     summary: "Team-based word association game requiring clever clues and strategic thinking."
   },
   {
@@ -1901,9 +1900,9 @@ export const gamesstrategictData = [
     alt: "8 Ball Pool",
     title: "8 Ball Pool",
     position: "top",
-    d2: "Sports Simulation",
-    d3: "Miniclip",
+    d2: "Miniclip",
     d1: 2010,
+    d3: "U",
     summary: "Popular online pool game featuring realistic gameplay and competitive matches."
   },
   {
@@ -1911,9 +1910,9 @@ export const gamesstrategictData = [
     alt: "Skribbl.io",
     title: "Skribbl.io",
     position: "top",
-    d2: "Drawing Game",
-    d3: "Keith Shepherd",
+    d2: "Keith Shepherd",
     d1: 2017,
+    d3: "U",
     summary: "Online multiplayer drawing and guessing game for fun creative interaction."
   },
   {
@@ -1921,9 +1920,9 @@ export const gamesstrategictData = [
     alt: "Pokemon Go",
     title: "Pokemon Go",
     position: "top left",
-    d2: "Augmented Reality",
-    d3: "Niantic",
+    d2: "Niantic",
     d1: 2016,
+    d3: "7+",
     summary: "Explore real-world locations to catch Pokémon through augmented reality gameplay."
   },
   {
@@ -1931,9 +1930,9 @@ export const gamesstrategictData = [
     alt: "Clash of Clans",
     title: "Clash of Clans",
     position: "top right",
-    d2: "Strategy",
-    d3: "Supercell",
+    d2: "Supercell",
     d1: 2012,
+    d3: "10+",
     summary: "Build your village, train troops, and battle others in this classic mobile strategy game."
   },
   {
@@ -1941,9 +1940,9 @@ export const gamesstrategictData = [
     alt: "Zoo Tycoon 2",
     title: "Zoo Tycoon 2",
     position: "top",
-    d2: "Simulation",
-    d3: "Blue Fang Games",
+    d2: "Blue Fang Games",
     d1: 2004,
+    d3: "U",
     summary: "Design and manage your dream zoo, caring for animals and keeping visitors happy."
   },
   {
@@ -1951,9 +1950,9 @@ export const gamesstrategictData = [
     alt: "Where's My Water 2",
     title: "Where's My Water 2",
     position: "top",
-    d2: "Puzzle",
-    d3: "Disney Mobile",
+    d2: "Disney Mobile",
     d1: 2013,
+    d3: "U",
     summary: "Help Swampy get water through creative physics-based puzzles."
   },
   {
@@ -1961,9 +1960,9 @@ export const gamesstrategictData = [
     alt: "Road Rash",
     title: "Road Rash",
     position: "top",
-    d2: "Racing",
-    d3: "Electronic Arts",
+    d2: "Electronic Arts",
     d1: 1996,
+    d3: "12+",
     summary: "Motorcycle racing game featuring combat mechanics and high-speed chases."
   },
   {
@@ -1971,9 +1970,9 @@ export const gamesstrategictData = [
     alt: "Cut the Rope 2",
     title: "Cut the Rope 2",
     position: "top",
-    d2: "Puzzle",
-    d3: "ZeptoLab",
+    d2: "ZeptoLab",
     d1: 2013,
+    d3: "3+",
     summary: "Feed candy to Om Nom in this delightful physics-based puzzle sequel."
   },
   {
@@ -1981,9 +1980,9 @@ export const gamesstrategictData = [
     alt: "Jetpack Joyride",
     title: "Jetpack Joyride",
     position: "top",
-    d2: "Endless Runner",
-    d3: "Halfbrick Studios",
+    d2: "Halfbrick Studios",
     d1: 2011,
+    d3: "9+",
     summary: "Fly through labs, dodge obstacles, and collect coins using a high-powered jetpack."
   },
   {
@@ -1991,12 +1990,13 @@ export const gamesstrategictData = [
     alt: "NFS Most Wanted",
     title: "NFS Most Wanted",
     position: "top left",
-    d2: "Racing",
-    d3: "Criterion Games",
+    d2: "Criterion Games",
     d1: 2012,
+    d3: "12+",
     summary: "High-speed racing experience with police pursuits and open-world exploration."
   }
 ];
+
 
 
 

@@ -180,8 +180,7 @@ select:focus {
 }
 
 .play button:hover {
-  background-color: #fff;
-  transform: scale(1.02);
+  background-color: cyan;
 }
 
 .info button {
@@ -199,7 +198,6 @@ select:focus {
 
 .info button:hover {
   background-color: #00000099;
-  transform: scale(1.02);
 }
 
 .movie-card {
@@ -215,34 +213,18 @@ select:focus {
   overflow: hidden;
 }
 
-.movie-card .like-icon {
-  right: 15px;
-  bottom: 10px;
-  opacity: 0;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(10px);
-}
-
-.movie-card:hover .like-icon {
-  opacity: 1;
-  transform: translateY(0) scale(1.1);
-}
-
 .card-dialog {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 445px;
+  max-width: 450px;
   width: 85%;
-  height: 600px;
-  max-height: 600px;
+  height: auto;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.85);
   border-radius: 12px;
-  /* box-shadow: 0 0 10px rgb(233, 233, 233); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,7 +242,7 @@ select:focus {
 
 .card-dialog h3 {
   color: #ddd;
-  margin: 20px 0 25px 20px;
+  margin: 20px 0 15px 20px;
   font-weight: 600;
   font-size: 26px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
@@ -270,7 +252,9 @@ select:focus {
   border-radius: 12px;
   height: 50px;
   border: none;
-  width: 90%;
+  width: 91%;
+  background-color: #555;
+  color: whitesmoke;
   margin: 0 20px 20px 20px;
   font-weight: bold;
 }
@@ -282,8 +266,29 @@ select:focus {
 
 
 .card-dialog p {
-  line-height: 1.5;
-  color: #ddd;
+  line-height: 1.7;
+  color: #fff;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.card-dialog span {
+  background-color: #555;
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius: 50%;
+  font-size: 15px;
+  padding: 0 8px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-dialog span:hover {
+  background-color: cyan;
+  color: black;
 }
 
 .card-dialog ul {
@@ -296,7 +301,16 @@ select:focus {
   text-shadow: 0 0 6px #ffffff40;
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
+}
+
+.card-dialog ul li:last-child {
+  background-color: #333;
+  border-radius: 6px;
+  font-size: 13px;
+  padding: 0 8px;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 .carousel-inner,
@@ -319,7 +333,7 @@ select:focus {
 
 
 .movie-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
   transition: all 0.3s ease;
   border-radius: 4px;
   cursor: pointer;
@@ -558,6 +572,11 @@ body.light-mode {
   transition: color 0.3s ease;
 }
 
+.light-mode .play button:hover {
+  background-color: rgb(21, 189, 189);
+  color: white;
+}
+
 .light-mode .fa-search,
 .light-mode .fa-bell,
 .light-mode .fa-facebook,
@@ -634,17 +653,38 @@ body.light-mode {
   text-shadow: 0 0 2px #3333334d;
 }
 
+.light-mode .card-dialog .dialog-btn {
+  background-color: #777;
+}
+
 .light-mode .card-dialog .dialog-btn:hover {
   background-color: rgb(21, 189, 189);
+  color: white;
 }
 
 .light-mode .card-dialog p {
   color: #444;
 }
 
+.light-mode .card-dialog span {
+  background-color: #777;
+  color: white;
+}
+
+.light-mode .card-dialog span:hover {
+  background-color: rgb(21, 189, 189);
+  color: white;
+}
+
 .light-mode .card-dialog ul {
   color: black;
-  text-shadow: 0 0 2px #00000040;
+  text-shadow: 0 0 2px #00000010;
+}
+
+.light-mode .card-dialog ul li:last-child {
+  background-color: #bbb;
+  border-radius: 6px;
+  padding: 0 8px;
 }
 
 /* Layout Sections */
@@ -694,7 +734,7 @@ body.light-mode {
 
 .light-mode .btn.btn-secondary.fw-bold.mb-3:hover {
   background-color: rgb(21, 189, 189);
-  color: black;
+  color: white;
 }
 
 .light-mode .modal-title {
@@ -843,7 +883,6 @@ body.light-mode {
 
   .card-dialog {
     width: 75%;
-    max-height: 460px;
   }
 
 
@@ -855,7 +894,7 @@ body.light-mode {
   }
 
   .card-dialog h3 {
-    margin: 20px 0 20px 20px;
+    margin: 20px 0 10px 20px;
     font-size: 20px;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
   }
@@ -865,13 +904,20 @@ body.light-mode {
     height: 40px;
     border: none;
     width: 86%;
-    margin: 0 20px 20px 20px;
+    margin: 0 20px 15px 20px;
     font-weight: bold;
   }
 
   .card-dialog ul {
-    font-size: 14px;
-    margin-bottom: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .card-dialog ul li:last-child {
+    background-color: #333;
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 2px 8px;
   }
 
   .card-dialog p {

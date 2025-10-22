@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faPlus, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CardDialog = ({ img, alt, title, d1, d2, d3, summary, position, onClose }) => {
@@ -20,34 +20,24 @@ const CardDialog = ({ img, alt, title, d1, d2, d3, summary, position, onClose })
   return (
     <div className="card-dialog">
       <div ref={dialogRef} style={{ width: "100%" }}>
-        <button
-          style={{
-            position: "absolute",
-            top: 10,
-            right: 10,
-            fontSize: "20px",
-            color: "#fff",
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-          }}
-          onClick={onClose}
-        >
-          ×
-        </button>
 
         <img className="img-fluid" src={img} alt={alt} style={{ objectPosition: position }} />
         <h3>{title}</h3>
 
-        <button className="dialog-btn btn btn-secondary">
+        <button className="dialog-btn">
           <FontAwesomeIcon icon={faPlay} className="play-icon me-1" /> Play
         </button>
 
-        <div className="mx-4 mt-2 mb-5">
+        <div className="mx-4">
           <ul>
             <li>{d1}</li> |<li>{d2}</li> |<li>{d3}</li>
           </ul>
-          <p>{summary}</p>
+
+          <div className="d-flex gap-2 align-items-center mb-4">
+            <span><FontAwesomeIcon icon={faEye} className="preview-icon" /></span>
+            <span><FontAwesomeIcon icon={faPlus} className="save-icon" /></span>
+          </div>
+          <p className="mb-4">{summary}</p>
         </div>
       </div>
     </div>
