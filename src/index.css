@@ -260,7 +260,7 @@ select:focus {
 
 .card-dialog h3 {
   color: #ddd;
-  margin: 20px 0 25px 25px;
+  margin: 20px 0 25px 20px;
   font-weight: 600;
   font-size: 30px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
