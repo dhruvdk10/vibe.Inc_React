@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Cards from "./Cards";
 
-const ScrollSection = ({ title, data }) => {
+const ScrollSection = ({ title, data, openModal }) => {
   const rowClass = title.replace(/\s+/g, "-").toLowerCase() + "-row";
   const rowRef = useRef(null);
 
@@ -43,7 +43,7 @@ const ScrollSection = ({ title, data }) => {
             {Array.from({ length: 20 }, () => data) // repeat data to ensure enough items to scroll
               .flat() // flatten into one array
               .map((item, index) => (
-                <Cards key={index} {...item} />
+                <Cards key={index} {...item}  openModal={openModal}  />
               ))}
           </div>
 

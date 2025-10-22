@@ -8,16 +8,16 @@ import {
   gamestoppicksforyouData,
   gamescasualData,
   gamesstrategictData
-
 } from "../Components/Data";
 import ScrollSection from "../Components/ScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Games = () => {
+const Games = ({ openModal }) => { // accept openModal prop
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
   return (
     <div>
       <div className="d-flex align-items-center justify-content-between">
@@ -36,28 +36,16 @@ const Games = () => {
 
           {/* Dropdown Menu */}
           <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="categoryDropdown">
-            <li>
-              <a className="dropdown-item" href="#">Action</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Sports</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Casual</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Strategy</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Adventure</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">More...</a>
-            </li>
+            {["Action", "Sports", "Casual", "Strategy", "Adventure", "More..."].map((cat, index) => (
+              <li key={index}>
+                <a className="dropdown-item" href="#">{cat}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
+      {/* Banner */}
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
@@ -71,16 +59,11 @@ const Games = () => {
                 />
                 <div className="update">{gamesbanner.update}</div>
                 <div className="carousel-caption text-light">
-                  <div className="play ">
-                    <button><FontAwesomeIcon
-                      icon={faPlay}
-                      className="play-icon me-1"
-                    />  Play</button>
+                  <div className="play">
+                    <button><FontAwesomeIcon icon={faPlay} className="play-icon me-1" /> Play</button>
                   </div>
                   <div className="info">
-                    <button><FontAwesomeIcon
-                      icon={faCircleInfo}
-                      className="info-icon" /> Info</button>
+                    <button><FontAwesomeIcon icon={faCircleInfo} className="info-icon" /> Info</button>
                   </div>
                 </div>
               </div>
@@ -97,14 +80,14 @@ const Games = () => {
         </div>
       </section>
 
+      {/* Game Sections */}
       <section className="mid_section mt-5">
-        <ScrollSection title="Top Picks for You" data={gamestoppicksforyouData} />
-        <ScrollSection title="Casual Games" data={gamescasualData} />
-        <ScrollSection title="Strategic Games" data={gamesstrategictData} />
+        <ScrollSection title="Top Picks for You" data={gamestoppicksforyouData} openModal={openModal} />
+        <ScrollSection title="Casual Games" data={gamescasualData} openModal={openModal} />
+        <ScrollSection title="Strategic Games" data={gamesstrategictData} openModal={openModal} />
       </section>
-
     </div>
-  )
-}
+  );
+};
 
-export default Games
+export default Games;

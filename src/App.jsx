@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import DialogueBox from "./Components/DialogueBox";
 import Footer from "./Components/Footer";
@@ -9,20 +9,50 @@ import Movies from "./Pages/Movies";
 import Games from "./Pages/Games";
 import MyList from "./Pages/MyList";
 import PageNotFound from "./Pages/PageNotFound";
+import CardDialog from "./Components/CardDialog"; // import CardDialog
 import "./index.css";
 
 const App = () => {
+  // State to hold the data of the card whose modal should open
+  const [modalData, setModalData] = useState(null);
+
   return (
     <HashRouter>
       <Navbar />
+
+      {/* Routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Series" element={<Series />} />
-        <Route path="/Movies" element={<Movies />} />
-        <Route path="/Games" element={<Games />} />
-        <Route path="/MyList" element={<MyList />} />
+        <Route
+          path="/"
+          element={<Home openModal={(item) => setModalData(item)} />}
+        />
+        <Route
+          path="/Series"
+          element={<Series openModal={(item) => setModalData(item)} />}
+        />
+        <Route
+          path="/Movies"
+          element={<Movies openModal={(item) => setModalData(item)} />}
+        />
+        <Route
+          path="/Games"
+          element={<Games openModal={(item) => setModalData(item)} />}
+        />
+        <Route
+          path="/MyList"
+          element={<MyList openModal={(item) => setModalData(item)} />}
+        />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+
+      {/* Render CardDialog at top level */}
+      {modalData && (
+        <CardDialog
+          {...modalData}
+          onClose={() => setModalData(null)}
+        />
+      )}
+
       <DialogueBox />
       <Footer />
     </HashRouter>

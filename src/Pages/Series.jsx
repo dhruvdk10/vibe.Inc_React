@@ -14,11 +14,11 @@ import ScrollSection from "../Components/ScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
-const Series = () => {
+const Series = ({ openModal }) => { // receive openModal prop
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
   return (
     <div>
       <div className="d-flex align-items-center justify-content-between">
@@ -27,7 +27,7 @@ const Series = () => {
           {/* Dropdown Toggle Button */}
           <a
             href="#"
-            className=" genre d-flex align-items-center text-decoration-none dropdown-toggle"
+            className="genre d-flex align-items-center text-decoration-none dropdown-toggle"
             id="categoryDropdown"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -37,40 +37,27 @@ const Series = () => {
 
           {/* Dropdown Menu */}
           <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="categoryDropdown">
-            <li>
-              <a className="dropdown-item" href="#">Action</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Comedy</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Drama</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Romantic</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Horror</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Thriller</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Adventure</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Sci-Fi</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Mystery</a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">Fantasy</a>
-            </li>
+            {[
+              "Action",
+              "Comedy",
+              "Drama",
+              "Romantic",
+              "Horror",
+              "Thriller",
+              "Adventure",
+              "Sci-Fi",
+              "Mystery",
+              "Fantasy",
+            ].map((genre, index) => (
+              <li key={index}>
+                <a className="dropdown-item" href="#">{genre}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
 
+      {/* Banner */}
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
@@ -84,16 +71,15 @@ const Series = () => {
                 />
                 <div className="update">{seriesbanner.update}</div>
                 <div className="carousel-caption text-light">
-                  <div className="play ">
-                    <button><FontAwesomeIcon
-                      icon={faPlay}
-                      className="play-icon me-1"
-                    />  Play</button>
+                  <div className="play">
+                    <button>
+                      <FontAwesomeIcon icon={faPlay} className="play-icon me-1" /> Play
+                    </button>
                   </div>
                   <div className="info">
-                    <button><FontAwesomeIcon
-                      icon={faCircleInfo}
-                      className="info-icon" /> Info</button>
+                    <button>
+                      <FontAwesomeIcon icon={faCircleInfo} className="info-icon" /> Info
+                    </button>
                   </div>
                 </div>
               </div>
@@ -110,15 +96,15 @@ const Series = () => {
         </div>
       </section>
 
+      {/* Series Sections */}
       <section className="mid_section mt-5">
-        <ScrollSection title="Top Picks for You" data={seriestoppicksforyouData} />
-        <ScrollSection title="Must Watch Shows and Series" data={mustwatchshowsandseriesData} />
-        <ScrollSection title="Series in English" data={seriesenglishData} />
-        <ScrollSection title="Hindi TV Shows" data={hinditvshowsData} />
+        <ScrollSection title="Top Picks for You" data={seriestoppicksforyouData} openModal={openModal} />
+        <ScrollSection title="Must Watch Shows and Series" data={mustwatchshowsandseriesData} openModal={openModal} />
+        <ScrollSection title="Series in English" data={seriesenglishData} openModal={openModal} />
+        <ScrollSection title="Hindi TV Shows" data={hinditvshowsData} openModal={openModal} />
       </section>
-
     </div>
-  )
-}
+  );
+};
 
-export default Series
+export default Series;

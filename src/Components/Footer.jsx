@@ -48,10 +48,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center mb-4">
-        <div className="d-flex justify-content-center gap-3 flex-wrap">
+      <div className="text-center mb-4" >
+        <div className="d-flex justify-content-center gap-3 flex-wrap mb-4">
           {storeBadges.map((badge, index) => (
-            <div key={index} className="store-buttons">
+            <div key={index} className="store-buttons ">
               <img src={badge.src} alt={badge.alt} style={{ height: "40px" }} />
             </div>
           ))}
@@ -59,7 +59,7 @@ const Footer = () => {
       </div>
 
 
-      <hr className="width-100" style={{ height: "0.2px" }} />
+
 
       <div className="text-center mb-3 text-secondary">
         <p className="footer-bottom mb-1">All posters and images belong to their respective

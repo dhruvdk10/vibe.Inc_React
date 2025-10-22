@@ -17,7 +17,7 @@ import ScrollSection from "../Components/ScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Movies = () => {
+const Movies = ({ openModal }) => { // Receive openModal from App.jsx
   const [selectedGenre, setSelectedGenre] = useState("All");
 
   useEffect(() => {
@@ -94,16 +94,15 @@ const Movies = () => {
                 />
                 <div className="update">{moviebanner.update}</div>
                 <div className="carousel-caption text-light">
-                  <div className="play ">
-                    <button><FontAwesomeIcon
-                      icon={faPlay}
-                      className="play-icon me-1"
-                    />  Play</button>
+                  <div className="play">
+                    <button>
+                      <FontAwesomeIcon icon={faPlay} className="play-icon me-1" /> Play
+                    </button>
                   </div>
                   <div className="info">
-                    <button><FontAwesomeIcon
-                      icon={faCircleInfo}
-                      className="info-icon" /> Info</button>
+                    <button>
+                      <FontAwesomeIcon icon={faCircleInfo} className="info-icon" /> Info
+                    </button>
                   </div>
                 </div>
               </div>
@@ -133,13 +132,13 @@ const Movies = () => {
 
       {/* Movie Sections */}
       <section className="mid_section mt-5">
-        <ScrollSection title="Today's Top Picks for You" data={todaystoppicksforyouData} />
-        <ScrollSection title="Crowd Pleasers" data={crowdpleasersData} />
-        <ScrollSection title="Feel Good Movies" data={feelgoodmoviesData} />
-        <ScrollSection title="Upcoming Movies" data={upcomingmoviesData} />
-        <ScrollSection title="Romantic Hits" data={romanticHitsData} />
-        <ScrollSection title="Thrilling Chills" data={thrillingchillsData} />
-        <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} />
+        <ScrollSection title="Today's Top Picks for You" data={todaystoppicksforyouData} openModal={openModal} />
+        <ScrollSection title="Crowd Pleasers" data={crowdpleasersData} openModal={openModal} />
+        <ScrollSection title="Feel Good Movies" data={feelgoodmoviesData} openModal={openModal} />
+        <ScrollSection title="Upcoming Movies" data={upcomingmoviesData} openModal={openModal} />
+        <ScrollSection title="Romantic Hits" data={romanticHitsData} openModal={openModal} />
+        <ScrollSection title="Thrilling Chills" data={thrillingchillsData} openModal={openModal} />
+        <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} openModal={openModal} />
       </section>
     </div>
   );
