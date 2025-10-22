@@ -99,8 +99,8 @@ const Series = ({ openModal }) => { // receive openModal prop
       {/* Series Sections */}
       <section className="mid_section mt-5">
         <ScrollSection title="Top Picks for You" data={seriestoppicksforyouData} openModal={openModal} />
-        <ScrollSection title="Must Watch Shows and Series" data={mustwatchshowsandseriesData} openModal={openModal} />
-        <ScrollSection title="Series in English" data={seriesenglishData} openModal={openModal} />
+        <ScrollSection title="Must Watch" data={mustwatchshowsandseriesData} openModal={openModal} />
+        <ScrollSection title="English Series" data={seriesenglishData} openModal={openModal} />
         <ScrollSection title="Hindi TV Shows" data={hinditvshowsData} openModal={openModal} />
       </section>
     </div>

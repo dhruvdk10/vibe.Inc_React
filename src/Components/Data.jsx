@@ -49,8 +49,8 @@ export const mustWatchData = [
   },
   {
     img: "/vibe.Inc_React/lapataa  ladies_poster.webp",
-    alt: "Lapata Ladies",
-    title: "Lapata Ladies",
+    alt: "Laapataa Ladies",
+    title: "Laapataa Ladies",
     position: "bottom",
     d1: 2024,
     d2: "2h 4m",
@@ -109,8 +109,8 @@ export const mustWatchData = [
   },
   {
     img: "/vibe.Inc_React/kal ho na ho_poster.webp",
-    alt: "Kal Ho Na Ho",
-    title: "Kal Ho Na Ho",
+    alt: "Kal Ho Naa Ho",
+    title: "Kal Ho Naa Ho",
     position: "bottom right",
     d1: 2003,
     d2: "3h 6m",
@@ -257,8 +257,8 @@ export const romanticHitsData = [
 export const thrillingchillsData = [
   {
     img: "/vibe.Inc_React/itefaaq_poster.jpg",
-    alt: "Itefaq",
-    title: "Itefaq",
+    alt: "Ittefaq",
+    title: "Ittefaq",
     position: "bottom",
     d1: 2017,
     d2: "1h 47m",
@@ -297,8 +297,8 @@ export const thrillingchillsData = [
   },
   {
     img: "/vibe.Inc_React/shaitaan_poster.jpg",
-    alt: "Shaitan",
-    title: "Shaitan",
+    alt: "Shaitaan",
+    title: "Shaitaan",
     position: "top",
     d1: 2011,
     d2: "2h 6m",
@@ -327,8 +327,8 @@ export const thrillingchillsData = [
   },
   {
     img: "/vibe.Inc_React/uri_poster.jpg",
-    alt: "Uri",
-    title: "Uri",
+    alt: "Uri: The Surgical Strike",
+    title: "Uri: The Surgical Strike",
     position: "top",
     d1: 2019,
     d2: "2h 18m",
@@ -391,8 +391,8 @@ export const cheerfulcomedyData = [
   },
   {
     img: "/vibe.Inc_React/badhai do_poster.avif",
-    alt: "Badhai Do",
-    title: "Badhai Do",
+    alt: "Badhaai Do",
+    title: "Badhaai Do",
     position: "top right",
     d1: 2022,
     d2: "2h 27m",
@@ -437,7 +437,7 @@ export const cheerfulcomedyData = [
     d1: 2019,
     d2: "2h 10m",
     d3: "U",
-    summary: "A 36-d1-old man desperate to marry for immigration meets a feisty girl with her own agenda, leading to an unusual but amusing love story." // [web:44]
+    summary: "A 36-year-old man desperate to marry for immigration meets a feisty girl with her own agenda, leading to an unusual but amusing love story." // [web:44]
   },
   {
     img: "/vibe.Inc_React/dream girl 2_poster.png",
@@ -451,8 +451,8 @@ export const cheerfulcomedyData = [
   },
   {
     img: "/vibe.Inc_React/kapoor n sons.jpg",
-    alt: "Kapoor and Sons",
-    title: "Kapoor and Sons",
+    alt: "Kapoor & Sons",
+    title: "Kapoor & Sons",
     position: "top",
     d1: 2016,
     d2: "2h 18m",
@@ -491,8 +491,8 @@ export const cheerfulcomedyData = [
   },
   {
     img: "/vibe.Inc_React/golmaal_poster.webp",
-    alt: "Golmaal",
-    title: "Golmaal",
+    alt: "Golmaal: Fun Unlimited",
+    title: "Golmaal: Fun Unlimited",
     position: "bottom",
     d1: 2006,
     d2: "2h 30m",
@@ -647,8 +647,8 @@ export const todaystoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/badmash company.jpg",
-    alt: "Badmash Company",
-    title: "Badmash Company",
+    alt: "Badmaash Company",
+    title: "Badmaash Company",
     position: "top right",
     d1: 2010,
     d2: "2h 16m",
@@ -657,8 +657,8 @@ export const todaystoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/bhool bhulaiyaan 3.png",
-    alt: "Bhool Bhulaiyaan 3",
-    title: "Bhool Bhulaiyaan 3",
+    alt: "Bhool Bhulaiyaa 3",
+    title: "Bhool Bhulaiyaa 3",
     position: "top",
     d1: 2024,
     d2: "2h 15m",
@@ -667,28 +667,28 @@ export const todaystoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/cdi.jpg",
-    alt: "Chak De India",
-    title: "Chak De India",
+    alt: "Chak De!!! India",
+    title: "Chak De!!! India",
     position: "bottom right",
     d1: 2007,
     d2: "2h 31m",
     d3: "U/A",
-    summary: "Chak De India follows a disgraced hockey player coaching the women's national team for redemption and victory."
+    summary: "Chak De!!! India follows a disgraced hockey player coaching the women's national team for redemption and victory."
   },
   {
     img: "/vibe.Inc_React/B3.jpg",
-    alt: "Band Baja Barat",
-    title: "Band Baja Barat",
+    alt: "Band Baaja Baaraat",
+    title: "Band Baaja Baaraat",
     position: "top",
     d1: 2010,
     d2: "2h 26m",
     d3: "U/A",
-    summary: "Band Baja Barat tells the story of two young entrepreneurs running a wedding planning business with unexpected romantic sparks."
+    summary: "Band Baaja Baaraat tells the story of two young entrepreneurs running a wedding planning business with unexpected romantic sparks."
   },
   {
     img: "/vibe.Inc_React/bkb.jpg",
-    alt: "Bareily Ki Barfi",
-    title: "Bareily Ki Barfi",
+    alt: "Bareilly Ki Barfi",
+    title: "Bareilly Ki Barfi",
     position: "top",
     d1: 2017,
     d2: "2h 9m",
@@ -770,8 +770,8 @@ export const crowdpleasersData = [
   },
   {
     img: "/vibe.Inc_React/barfi.jpg",
-    alt: "Barfi",
-    title: "Barfi",
+    alt: "Barfi!",
+    title: "Barfi!",
     position: "top",
     d1: 2012,
     d2: "2h 23m",
@@ -1018,7 +1018,7 @@ export const upcomingmoviesData = [
     alt: "Thoda Pyaar Thoda Magic",
     title: "Thoda Pyaar Thoda Magic",
     position: "top",
-    d1: 2023,
+    d1: 2008,
     d2: "2h 20m",
     d3: "U/A",
     summary: "A heartfelt story about love, hope, and the magic of human connections."
@@ -1085,8 +1085,8 @@ export const upcomingmoviesData = [
   },
   {
     img: "/vibe.Inc_React/tara rum pum.jpg",
-    alt: "Taarzan: The Wonder Car",
-    title: "Taarzan: The Wonder Car",
+    alt: "Tara Rum Pum",
+    title: "Tara Rum Pum",
     position: "top",
     d1: 2004,
     d2: "2h 25m",
@@ -1138,7 +1138,7 @@ export const seriestoppicksforyouData = [
     title: "Kaun Banega Crorepati",
     position: "top right",
     d1: 2000,
-    d2: "1h per episode",
+    d2: "23 Seasons",
     d3: "U/A",
     summary: "An Indian Hindi-language game show hosted by Amitabh Bachchan where contestants answer questions to win cash prizes."
   },
@@ -1148,7 +1148,7 @@ export const seriestoppicksforyouData = [
     title: "Criminal Minds",
     position: "top right",
     d1: 2005,
-    d2: "43m per episode",
+    d2: "15 Seasons",
     d3: "A",
     summary: "An elite FBI team profiles criminals and solves complex crimes using behavioral analysis."
   },
@@ -1158,17 +1158,17 @@ export const seriestoppicksforyouData = [
     title: "The Big Bang Theory",
     position: "top left",
     d1: 2007,
-    d2: "22m per episode",
+    d2: "12 Seasons",
     d3: "U/A",
     summary: "The comedic lives of four socially awkward scientists and their relationships with friends and neighbors."
   },
   {
     img: "/vibe.Inc_React/friends.jpg",
-    alt: "FRIENDS",
-    title: "FRIENDS",
+    alt: "Friends",
+    title: "Friends",
     position: "top",
     d1: 1994,
-    d2: "22m per episode",
+    d2: "10 Seasons",
     d3: "U",
     summary: "Six friends navigate life, love, and career in New York City with humor and heart."
   },
@@ -1178,7 +1178,7 @@ export const seriestoppicksforyouData = [
     title: "Dil Mil Gaye",
     position: "top",
     d1: 2004,
-    d2: "45m per episode",
+    d2: "2 Seasons",
     d3: "U/A",
     summary: "Dil Mil Gaye is an Indian medical drama about young doctors balancing their professional and personal lives."
   },
@@ -1188,7 +1188,7 @@ export const seriestoppicksforyouData = [
     title: "Arrow",
     position: "left",
     d1: 2012,
-    d2: "42m per episode",
+    d2: "8 Seasons",
     d3: "A",
     summary: "The story of billionaire Oliver Queen who becomes the vigilante hero known as Arrow."
   },
@@ -1197,8 +1197,8 @@ export const seriestoppicksforyouData = [
     alt: "Mahabharat",
     title: "Mahabharat",
     position: "top right",
-    d1: 1988,
-    d2: "1h per episode",
+    d1: 2013,
+    d2: "267 episodes",
     d3: "U",
     summary: "Mahabharat is an epic Indian TV series based on the ancient Hindu epic describing the conflict between the Pandavas and Kauravas."
   },
@@ -1207,8 +1207,8 @@ export const seriestoppicksforyouData = [
     alt: "Sarabhai vs Sarabhai: Take 2",
     title: "Sarabhai vs Sarabhai: Take 2",
     position: "top right",
-    d1: 2004,
-    d2: "22m per episode",
+    d1: 2017,
+    d2: "10 episodes",
     d3: "U/A",
     summary: "Sarabhai vs Sarabhai: Take 2 is an Indian sitcom focusing on the humorous relationship between a sophisticated mother-in-law and her sarcastic daughter-in-law."
   },
@@ -1218,17 +1218,17 @@ export const seriestoppicksforyouData = [
     title: "The Vampire Diaries",
     position: "top right",
     d1: 2009,
-    d2: "42m per episode",
+    d2: "8 Seasons",
     d3: "U/A",
     summary: "Teenagers in Mystic Falls face love and supernatural secrets involving vampires and werewolves."
   },
   {
     img: "/vibe.Inc_React/house.png",
-    alt: "House",
-    title: "House",
+    alt: "House, M.D.",
+    title: "House, M.D.",
     position: "top right",
     d1: 2004,
-    d2: "43m per episode",
+    d2: "8 Seasons",
     d3: "A",
     summary: "A brilliant but misanthropic doctor solves medical mysteries in a hospital setting."
   },
@@ -1238,7 +1238,7 @@ export const seriestoppicksforyouData = [
     title: "The Good Doctor",
     position: "top",
     d1: 2017,
-    d2: "43m per episode",
+    d2: "6 Seasons",
     d3: "U/A",
     summary: "A young surgeon with autism and savant syndrome navigates working at a prestigious hospital."
   },
@@ -1248,7 +1248,7 @@ export const seriestoppicksforyouData = [
     title: "Young Sheldon",
     position: "top left",
     d1: 2017,
-    d2: "22m per episode",
+    d2: "7 Seasons",
     d3: "U",
     summary: "A prequel following the childhood of genius Sheldon Cooper growing up in East Texas."
   }
@@ -1261,7 +1261,7 @@ export const mustwatchshowsandseriesData = [
     title: "Supernatural",
     position: "top",
     d1: 2005,
-    d2: "42m per episode",
+    d2: "15 Seasons",
     d3: "A",
     summary: "Two brothers hunt demons, ghosts, and monsters while battling dark forces."
   },
@@ -1271,7 +1271,7 @@ export const mustwatchshowsandseriesData = [
     title: "CID",
     position: "top",
     d1: 1998,
-    d2: "44m per episode",
+    d2: "8 Seasons",
     d3: "U/A",
     summary: "Indian crime detective series focusing on the work of a special crime investigation team."
   },
@@ -1281,19 +1281,19 @@ export const mustwatchshowsandseriesData = [
     title: "Modern Family",
     position: "top",
     d1: 2009,
-    d2: "22m per episode",
+    d2: "11 Seasons",
     d3: "U",
     summary: "A mockumentary about the diverse lives of a large, interconnected American family."
   },
   {
     img: "/vibe.Inc_React/rk.png",
-    alt: "Radha Krishna",
-    title: "Radha Krishna",
+    alt: "Radhakrishn",
+    title: "Radhakrishn",
     position: "top left",
     d1: 2018,
-    d2: "22m per episode",
+    d2: "7 Seasons",
     d3: "U/A",
-    summary: "Radha Krishna narrates the love story of Lord Krishna and Radha from Hindu mythology."
+    summary: "Radhakrishn narrates the love story of Lord Krishna and Radha from Hindu mythology."
   },
   {
     img: "/vibe.Inc_React/fear files.jpg",
@@ -1301,7 +1301,7 @@ export const mustwatchshowsandseriesData = [
     title: "Fear Files",
     position: "top left",
     d1: 2012,
-    d2: "45m per episode",
+    d2: "7 Seasons",
     d3: "U/A",
     summary: "An Indian horror anthology series revealing paranormal tales and mysteries."
   },
@@ -1311,7 +1311,7 @@ export const mustwatchshowsandseriesData = [
     title: "How I Met Your Mother",
     position: "top",
     d1: 2005,
-    d2: "22m per episode",
+    d2: "9 Seasons",
     d3: "U",
     summary: "A man narrates the story of how he met the mother of his children to his kids."
   },
@@ -1321,7 +1321,7 @@ export const mustwatchshowsandseriesData = [
     title: "Suits",
     position: "top right",
     d1: 2011,
-    d2: "42m per episode",
+    d2: "9 Seasons",
     d3: "U/A",
     summary: "A college dropout with photographic memory practices law without a degree, navigating corporate battles."
   },
@@ -1331,7 +1331,7 @@ export const mustwatchshowsandseriesData = [
     title: "Parks & Recreations",
     position: "top right",
     d1: 2009,
-    d2: "22m per episode",
+    d2: "7 Seasons",
     d3: "U",
     summary: "A mockumentary about a quirky public parks department in a fictional town."
   },
@@ -1341,7 +1341,7 @@ export const mustwatchshowsandseriesData = [
     title: "Mile Jab Hum Tum",
     position: "top",
     d1: 2008,
-    d2: "45m per episode",
+    d2: "301 Episodes",
     d3: "U/A",
     summary: "Mile Jab Hum Tum is a romantic drama series about the lives and relationships of young professionals."
   },
@@ -1351,7 +1351,7 @@ export const mustwatchshowsandseriesData = [
     title: "Breaking Bad",
     position: "top right",
     d1: 2008,
-    d2: "47m per episode",
+    d2: "5 Seasons",
     d3: "A",
     summary: "A chemistry teacher diagnosed with cancer turns to manufacturing methamphetamine to secure his family's future."
   },
@@ -1361,7 +1361,7 @@ export const mustwatchshowsandseriesData = [
     title: "Taarak Mehta Ka Ooltah Chashmah",
     position: "top left",
     d1: 2008,
-    d2: "22m per episode",
+    d2: "23 Seasons",
     d3: "U",
     summary: "Taarak Mehta Ka Ooltah Chashmah is a popular Indian sitcom portraying comic events in a Gujarati neighborhood."
   },
@@ -1371,7 +1371,7 @@ export const mustwatchshowsandseriesData = [
     title: "The Originals",
     position: "top",
     d1: 2013,
-    d2: "42m per episode",
+    d2: "5 Seasons",
     d3: "U/A",
     summary: "The original vampire family returns to New Orleans to reclaim their power in this supernatural drama."
   }
@@ -1384,7 +1384,7 @@ export const seriesenglishData = [
     title: "Young Sheldon",
     position: "top left",
     d1: 2017,
-    d2: "22m per episode",
+    d2: "7 Seasons",
     d3: "U",
     summary: "A prequel exploring the childhood of genius Sheldon Cooper growing up in East Texas."
   },
@@ -1394,7 +1394,7 @@ export const seriesenglishData = [
     title: "Game of Thrones",
     position: "top",
     d1: 2011,
-    d2: "57m per episode",
+    d2: "8 Seasons",
     d3: "A",
     summary: "Noble families vie for control of the Seven Kingdoms of Westeros in a medieval fantasy world marked by war and intrigue."
   },
@@ -1404,7 +1404,7 @@ export const seriesenglishData = [
     title: "The Vampire Diaries",
     position: "",
     d1: 2009,
-    d2: "42m per episode",
+    d2: "8 Seasons",
     d3: "U/A",
     summary: "Teenagers in Mystic Falls face supernatural challenges as love triangles develop around vampires and werewolves."
   },
@@ -1414,7 +1414,7 @@ export const seriesenglishData = [
     title: "Arrow",
     position: "left",
     d1: 2012,
-    d2: "42m per episode",
+    d2: "8 Seasons",
     d3: "A",
     summary: "Billionaire Oliver Queen becomes a vigilante archer to fight crime and corruption in Star City."
   },
@@ -1424,7 +1424,7 @@ export const seriesenglishData = [
     title: "How I Met Your Mother",
     position: "top",
     d1: 2005,
-    d2: "22m per episode",
+    d2: "9 Seasons",
     d3: "U",
     summary: "A man narrates to his children the elaborate story of how he met their mother."
   },
@@ -1434,7 +1434,7 @@ export const seriesenglishData = [
     title: "Criminal Minds",
     position: "top right",
     d1: 2005,
-    d2: "43m per episode",
+    d2: "15 Seasons",
     d3: "A",
     summary: "A team of FBI profilers analyze the nation's most dangerous serial killers."
   },
@@ -1444,7 +1444,7 @@ export const seriesenglishData = [
     title: "Breaking Bad",
     position: "top right",
     d1: 2008,
-    d2: "47m per episode",
+    d2: "5 Seasons",
     d3: "A",
     summary: "A chemistry teacher turned methamphetamine manufacturer descends into a life of crime."
   },
@@ -1454,7 +1454,7 @@ export const seriesenglishData = [
     title: "Rookie",
     position: "top left",
     d1: 2018,
-    d2: "42m per episode",
+    d2: "3 Seasons",
     d3: "U/A",
     summary: "The story of a police officer starting his career and encountering the challenges of law enforcement."
   },
@@ -1464,7 +1464,7 @@ export const seriesenglishData = [
     title: "Suits",
     position: "top right",
     d1: 2011,
-    d2: "42m per episode",
+    d2: "9 Seasons",
     d3: "U/A",
     summary: "A talented college dropout works as a law associate despite never attending law school."
   },
@@ -1474,7 +1474,7 @@ export const seriesenglishData = [
     title: "The Big Bang Theory",
     position: "top left",
     d1: 2007,
-    d2: "22m per episode",
+    d2: "12 Seasons",
     d3: "U/A",
     summary: "Socially awkward physicists navigate friendship, romance, and career struggles."
   },
@@ -1484,7 +1484,7 @@ export const seriesenglishData = [
     title: "FRIENDS",
     position: "top",
     d1: 1994,
-    d2: "22m per episode",
+    d2: "10 Seasons",
     d3: "U",
     summary: "Six friends living in New York deal with the ups and downs of life and relationships."
   },
@@ -1494,11 +1494,12 @@ export const seriesenglishData = [
     title: "The Originals",
     position: "top",
     d1: 2013,
-    d2: "42m per episode",
+    d2: "5 Seasons",
     d3: "U/A",
     summary: "The original vampire family returns to New Orleans, rekindling old rivalries and romance."
   }
 ];
+
 export const hinditvshowsData = [
   {
     img: "/vibe.Inc_React/dmg.png",
@@ -1506,7 +1507,7 @@ export const hinditvshowsData = [
     title: "Dil Mil Gaye",
     position: "top",
     d1: 2004,
-    d2: "45m per episode",
+    d2: "2 Seasons",
     d3: "U/A",
     summary: "Dil Mil Gaye is a medical drama focusing on the lives and relationships of young doctors."
   },
@@ -1515,7 +1516,7 @@ export const hinditvshowsData = [
     alt: "CID",
     position: "top",
     d1: 1998,
-    d2: "44m per episode",
+    d2: "8 Seasons",
     d3: "U/A",
     summary: "A long-running investigative crime series solving cases with forensic techniques."
   },
@@ -1524,8 +1525,8 @@ export const hinditvshowsData = [
     alt: "Mahabharat",
     title: "Mahabharat",
     position: "top right",
-    d1: 1988,
-    d2: "1h per episode",
+    d1: 2013,
+    d2: "267 Episodes",
     d3: "U",
     summary: "Mahabharat depicts the epic Hindu tale of the civil war between the Pandavas and Kauravas."
   },
@@ -1535,7 +1536,7 @@ export const hinditvshowsData = [
     title: "Aahat",
     position: "top",
     d1: 1995,
-    d2: "45m per episode",
+    d2: "7 Seasons",
     d3: "U/A",
     summary: "An Indian horror series showcasing supernatural stories and unexplained phenomena."
   },
@@ -1545,7 +1546,7 @@ export const hinditvshowsData = [
     title: "Kaun Banega Crorepati",
     position: "top",
     d1: 2000,
-    d2: "1h per episode",
+    d2: "23 Seasons",
     d3: "U/A",
     summary: "A quiz show hosted by Amitabh Bachchan offering contestants large cash prizes."
   },
@@ -1555,27 +1556,27 @@ export const hinditvshowsData = [
     title: "Mile Jab Hum Tum",
     position: "top",
     d1: 2008,
-    d2: "45m per episode",
+    d2: "301 Episodes",
     d3: "U/A",
     summary: "Mile Jab Hum Tum depicts the romantic and professional lives of young Indian professionals."
   },
   {
     img: "/vibe.Inc_React/sb vs sb.png",
-    alt: "Sarabhai vs Sarabhai : Take 2",
-    title: "Sarabhai vs Sarabhai : Take 2",
+    alt: "Sarabhai vs Sarabhai: Take 2",
+    title: "Sarabhai vs Sarabhai: Take 2",
     position: "top right",
-    d1: 2004,
-    d2: "22m per episode",
+    d1: 2017,
+    d2: "10 episodes",
     d3: "U/A",
     summary: "Sarabhai vs Sarabhai : Take 2 is a comedy series about the humorous battle of wits between a mother-in-law and daughter-in-law."
   },
   {
     img: "/vibe.Inc_React/savdhaan india.webp",
-    alt: "Savdhaan India",
-    title: "Savdhaan India",
+    alt: "Savdhaan India: Criminal Decoded",
+    title: "Savdhaan India: Criminal Decoded",
     position: "top",
-    d1: 2012,
-    d2: "22m per episode",
+    d1: 2023,
+    d2: "137 episodes",
     d3: "U/A",
     summary: "An Indian crime show showcasing real-life crime stories and raising awareness."
   },
@@ -1585,7 +1586,7 @@ export const hinditvshowsData = [
     title: "Taarak Mehta Ka Ooltah Chashmah",
     position: "top left",
     d1: 2008,
-    d2: "22m per episode",
+    d2: "23 Seasons",
     d3: "U",
     summary: "Taarak Mehta Ka Ooltah Chashmah is a popular sitcom focused on a Gujarati community's everyday life."
   },
@@ -1595,7 +1596,7 @@ export const hinditvshowsData = [
     title: "Radha Krishna",
     position: "top left",
     d1: 2018,
-    d2: "22m per episode",
+    d2: "7 Seasons",
     d3: "U/A",
     summary: "Radha Krishna depicts the divine love story of Radha and Krishna from Hindu mythology."
   },
@@ -1605,21 +1606,22 @@ export const hinditvshowsData = [
     title: "Shararat",
     position: "top left",
     d1: 2003,
-    d2: "30m per episode",
+    d2: "3 Seasons",
     d3: "U/A",
     summary: "A lighthearted fantasy sitcom about a mischievous girl with magical powers."
   },
   {
     img: "/vibe.Inc_React/pkyek.png",
-    alt: "Pyaar Ki Yeh Ek Kahani",
-    title: "Pyaar Ki Yeh Ek Kahani",
+    alt: "Pyaar Kii Ye Ek Kahaani",
+    title: "Pyaar Kii Ye Ek Kahaani",
     position: "top",
     d1: 2003,
-    d2: "30m per episode",
+    d2: "254 Episodes",
     d3: "U/A",
-    summary: "Pyaar Ki Yeh Ek Kahani depicts a modern love story filled with challenges and drama."
+    summary: "Pyaar Kii Ye Ek Kahaani depicts a modern love story filled with challenges and drama."
   }
 ];
+
 
 //{Games Data}
 
@@ -1632,8 +1634,8 @@ export const gamesbanner = [
 export const gamestoppicksforyouData = [
   {
     img: "/vibe.Inc_React/GTA-V.jpg",
-    alt: "GTA V",
-    title: "GTA V",
+    alt: "Grand Theft Auto V",
+    title: "Grand Theft Auto V",
     position: "top",
     d2: "Rockstar North",
     d1: 2013,
@@ -1652,7 +1654,8 @@ export const gamestoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/COD.png",
-    alt: "COD Black Ops 6",
+    alt: "Call of Duty: Black Ops 6",
+    title: "Call of Duty: Black Ops 6",
     position: "top left",
     d2: "Treyarch",
     d1: 2024,
@@ -1661,8 +1664,8 @@ export const gamestoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/hitman.jpg",
-    alt: "Hitman 3",
-    title: "Hitman 3",
+    alt: "Hitman: World of Assassination",
+    title: "Hitman: World of Assassination",
     position: "top",
     d2: "IO Interactive",
     d1: 2021,
@@ -1671,8 +1674,8 @@ export const gamestoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/CS-2.jpg",
-    alt: "CS-2",
-    title: "CS-2",
+    alt: "Counter-Strike 2",
+    title: "Counter-Strike 2",
     position: "top",
     d2: "Valve",
     d1: 2023,
@@ -1681,10 +1684,10 @@ export const gamestoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/FIFA.jpeg",
-    alt: "FC 2025",
-    title: "FC 2025",
+    alt: "EA SPORTS FC™ 25",
+    title: "EA SPORTS FC™ 25",
     position: "top left",
-    d2: "EA Sports",
+    d2: "Electronic Arts",
     d1: 2024,
     d3: "U",
     summary: "The latest football simulation from EA featuring realistic gameplay, teams, and tournaments."
@@ -1721,8 +1724,8 @@ export const gamestoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/TR-2.jpg",
-    alt: "Temple Run 2",
-    title: "Temple Run 2",
+    alt: "Temple Run 2: Twilight Palace",
+    title: "Temple Run 2: Twilight Palace",
     position: "top left",
     d2: "Imangi Studios",
     d1: 2013,
@@ -1731,11 +1734,11 @@ export const gamestoppicksforyouData = [
   },
   {
     img: "/vibe.Inc_React/among us.png",
-    alt: "Among Us 3",
-    title: "Among Us 3",
+    alt: "Among Us",
+    title: "Among Us",
     position: "top",
     d2: "Innersloth",
-    d1: 2025,
+    d1: 2018,
     d3: "10+",
     summary: "A social deduction game where players must find impostors aboard a spaceship."
   },
@@ -1794,11 +1797,11 @@ export const gamescasualData = [
   },
   {
     img: "/vibe.Inc_React/SUBWAY SURFERS.jpg",
-    alt: "Subway Surfers Mexico",
-    title: "Subway Surfers Mexico",
+    alt: "Subway Surfers World Tour: Mexico 2022",
+    title: "Subway Surfers World Tour: Mexico 2022",
     position: "top",
     d2: "Kiloo, SYBO Games",
-    d1: 2023,
+    d1: 2022,
     d3: "7+",
     summary: "Fast-paced running game dodging trains and collecting coins in colorful settings."
   },
@@ -1814,8 +1817,8 @@ export const gamescasualData = [
   },
   {
     img: "/vibe.Inc_React/minimilitia.png",
-    alt: "Mini Militia",
-    title: "Mini Militia",
+    alt: "Doodle Army 2: Mini Militia",
+    title: "Doodle Army 2: Mini Militia",
     position: "top",
     d2: "Miniclip",
     d1: 2017,
@@ -1987,8 +1990,8 @@ export const gamesstrategictData = [
   },
   {
     img: "/vibe.Inc_React/NFS.jpg",
-    alt: "NFS Most Wanted",
-    title: "NFS Most Wanted",
+    alt: "Need for Speed: Most Wanted",
+    title: "Need for Speed: Most Wanted",
     position: "top left",
     d2: "Criterion Games",
     d1: 2012,
