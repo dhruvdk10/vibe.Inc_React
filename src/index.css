@@ -203,7 +203,7 @@ select:focus {
 .movie-card {
   max-width: 300px;
   width: 100%;
-  height: 140px;
+  height: 160px;
   max-height: 160px;
   border-radius: 4px;
   margin: auto;
@@ -212,6 +212,46 @@ select:focus {
   background-color: black;
   overflow: hidden;
 }
+
+.trending-container {
+  margin-right: 30px;
+}
+
+.trending-card {
+  height: 200px;
+  width: 100%;
+  border-radius: 8px;
+  /* keeps badge inside if rounded corners */
+}
+
+.trending-img {
+  position: absolute;
+  top: 25px;
+  left: 88px;
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.trending-img:hover {
+  transform: translate(1.01)
+}
+
+.card-id {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  font-size: 205px;
+  /* large number */
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 4px #333;
+  /* border color and thickness */
+  pointer-events: none;
+  line-height: 1;
+}
+
 
 .card-dialog {
   position: fixed;
@@ -809,6 +849,30 @@ body.light-mode {
     width: 100%;
   }
 
+  .trending-container {
+    margin-right: 5px;
+  }
+
+  .trending-img {
+    top: 24px;
+    left: 80px;
+    width: 300px;
+    height:150px;
+  }
+
+  .card-id {
+    top: 2px;
+    left: 8px;
+    font-size: 200px;
+    /* large number */
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 4px #333;
+    /* border color and thickness */
+    pointer-events: none;
+    line-height: 1;
+  }
+
   .img_display .carousel-caption {
     left: 55%;
   }
@@ -951,6 +1015,11 @@ body.light-mode {
     max-width: 300px;
     width: 100%;
     height: 100%;
+  }
+
+  .trending-img {
+    width: 300px;
+    height: 150px;
   }
 
   .img_display .carousel-caption {

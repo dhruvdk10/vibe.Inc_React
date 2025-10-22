@@ -9,9 +9,10 @@ import {
   romanticHitsData,
   thrillingchillsData,
   cheerfulcomedyData,
-  toppicksforyouData
+  toppicksforyouData, topShows
 } from "../Components/Data";
 import ScrollSection from "../Components/ScrollSection";
+import TrendingScrollSection from "../Components/TrendingScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -71,6 +72,7 @@ const Home = ({ openModal }) => { // Receive openModal from App.jsx
 
       <section className="mid_section mt-5">
         {/* Pass openModal to each ScrollSection */}
+        <TrendingScrollSection title="" data={topShows} openModal={openModal} />
         <ScrollSection title="Must Watch" data={mustWatchData} openModal={openModal} />
         <ScrollSection title="Romantic Hits" data={romanticHitsData} openModal={openModal} />
         <ScrollSection title="Thrilling Chills" data={thrillingchillsData} openModal={openModal} />

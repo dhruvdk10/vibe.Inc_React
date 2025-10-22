@@ -2011,3 +2011,99 @@ export const listbanner = [
   { img: "/vibe.Inc_React/COD.png", alt: "Banner3", update: "Trending #5 Games ", position: "bottom" },
   { img: "/vibe.Inc_React/veer zara.jpg", alt: "Banner1", update: "Leaving Soon", position: "bottom " }
 ];
+
+
+
+// topShowsData.js
+export const topShows = [
+  {
+    id: 1, img: "/vibe.Inc_React/Saiyaara_banner (2).png",
+    alt: "Saiyaara",
+    title: "Saiyaara",
+    position: "bottom left",
+    d1: 2025,
+    d2: "2h 30m",
+    d3: "U/A",
+    summary: "A modern love drama that explores emotional connection, heartbreak, and rediscovery against a backdrop of music and destiny."
+  },
+  {
+    id: 2, img: "/vibe.Inc_React/barfi.jpg",
+    alt: "Barfi!",
+    title: "Barfi!",
+    position: "top right",
+    d1: 2012,
+    d2: "2h 23m",
+    d3: "U",
+    summary: "A charming deaf-and-mute man enchants the lives of two women in a heartfelt tale of love and acceptance."
+  },
+  {
+    id: 3, img: "/vibe.Inc_React/friends.jpg",
+    alt: "Friends",
+    title: "Friends",
+    position: "top",
+    d1: 1994,
+    d2: "10 Seasons",
+    d3: "U",
+    summary: "Six friends navigate life, love, and career in New York City with humor and heart."
+  },
+  {
+    id: 4, img: "/vibe.Inc_React/FIFA.jpeg",
+    alt: "EA SPORTS FC™ 25",
+    title: "EA SPORTS FC™ 25",
+    position: "top left",
+    d2: "Electronic Arts",
+    d1: 2024,
+    d3: "U",
+    summary: "The latest football simulation from EA featuring realistic gameplay, teams, and tournaments."
+  },
+  {
+    id: 5, img: "/vibe.Inc_React/GOT.avif",
+    alt: "Game of Thrones",
+    title: "Game of Thrones",
+    position: "top",
+    d1: 2011,
+    d2: "8 Seasons",
+    d3: "A",
+    summary: "Noble families vie for control of the Seven Kingdoms of Westeros in a medieval fantasy world marked by war and intrigue."
+  },
+  {
+    id: 6, img: "/vibe.Inc_React/young sheldon.webp",
+    alt: "Young Sheldon",
+    title: "Young Sheldon",
+    position: "top left",
+    d1: 2017,
+    d2: "7 Seasons",
+    d3: "U",
+    summary: "A prequel following the childhood of genius Sheldon Cooper growing up in East Texas."
+  },
+  {
+    id: 7, img: "/vibe.Inc_React/dear zindagi.png",
+    alt: "Dear Zindagi",
+    title: "Dear Zindagi",
+    position: "bottom",
+    d1: 2016,
+    d2: "2h 19m",
+    d3: "U/A",
+    summary: "A young woman grapples with career and emotional issues, finding guidance from a free-thinking therapist."
+  },
+  {
+    id: 8, img: "/vibe.Inc_React/GTA-V.jpg",
+    alt: "Grand Theft Auto V",
+    title: "Grand Theft Auto V",
+    position: "top",
+    d2: "Rockstar North",
+    d1: 2013,
+    d3: "A",
+    summary: "An open-world action-adventure game set in Los Santos, allowing players to explore, drive, and pull off heists."
+  },
+  {
+    id: 9, img: "/vibe.Inc_React/breaking bad.png",
+    alt: "Breaking Bad",
+    title: "Breaking Bad",
+    position: "top right",
+    d1: 2008,
+    d2: "5 Seasons",
+    d3: "A",
+    summary: "A chemistry teacher diagnosed with cancer turns to manufacturing methamphetamine to secure his family's future."
+  }
+];
