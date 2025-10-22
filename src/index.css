@@ -262,7 +262,7 @@ select:focus {
   color: #ddd;
   margin: 20px 0 25px 20px;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 26px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
@@ -361,8 +361,6 @@ h1 {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-
-
 .section-title {
   color: #ddd;
   padding-left: 15px;
@@ -371,9 +369,7 @@ h1 {
   font-weight: 600;
   font-size: 26px !important;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-
 }
-
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -868,7 +864,7 @@ body.light-mode {
     border-radius: 12px;
     height: 40px;
     border: none;
-    width: 87%;
+    width: 86%;
     margin: 0 20px 20px 20px;
     font-weight: bold;
   }
