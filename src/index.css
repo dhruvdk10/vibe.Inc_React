@@ -918,7 +918,6 @@ body.light-mode {
     /* large number */
     font-weight: bold;
     color: transparent;
-    -webkit-text-stroke: 4px #333;
     /* border color and thickness */
     pointer-events: none;
     line-height: 1;
