@@ -226,12 +226,12 @@ select:focus {
 
 .trending-img {
   position: absolute;
-  top: 25px;
-  left: 88px;
+  top: 23px;
+  left: 86px;
   width: 300px;
-  height: 150px;
+  height: 153px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .trending-img:hover {
@@ -246,7 +246,7 @@ select:focus {
   /* large number */
   font-weight: bold;
   color: transparent;
-  -webkit-text-stroke: 4px #333;
+  -webkit-text-stroke: 5px #6b6b6b;
   /* border color and thickness */
   pointer-events: none;
   line-height: 1;
