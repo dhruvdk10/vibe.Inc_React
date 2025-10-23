@@ -590,6 +590,14 @@ footer .text-center.mb-4 {
   color: #ddd;
 }
 
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-youtube:hover,
+.fa-google:hover {
+  color: cyan;
+}
+
 .fa-user {
   color: cyan;
 }
@@ -666,7 +674,7 @@ body.light-mode {
 
 .light-mode .fa-facebook:hover,
 .light-mode .fa-instagram:hover,
-.light-mode.fa-twitter:hover,
+.light-mode .fa-twitter:hover,
 .light-mode .fa-youtube:hover,
 .light-mode .fa-google:hover {
   color: rgb(21, 189, 189);
