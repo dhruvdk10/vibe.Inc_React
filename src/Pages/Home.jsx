@@ -71,7 +71,6 @@ const Home = ({ openModal }) => { // Receive openModal from App.jsx
       </section>
 
       <section className="mid_section mt-5">
-        {/* Pass openModal to each ScrollSection */}
         <TrendingScrollSection title="" data={topShows} openModal={openModal} />
         <ScrollSection title="Must Watch" data={mustWatchData} openModal={openModal} />
         <ScrollSection title="Romantic Hits" data={romanticHitsData} openModal={openModal} />

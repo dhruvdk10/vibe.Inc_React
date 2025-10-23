@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import TrendingCard from "./TrendingCard";
 
-const TrendingScrollSection = ({ title, data, openModal  }) => {
+const TrendingScrollSection = ({ title, data, openModal }) => {
   const rowClass = title.replace(/\s+/g, "-").toLowerCase() + "-row";
   const rowRef = useRef(null);
 
@@ -24,12 +24,13 @@ const TrendingScrollSection = ({ title, data, openModal  }) => {
   return (
     <section className="my-4">
       <div data-aos="fade-up">
-        <p className="section-title">{title}</p>
         <div className="position-relative">
-          <button className="scroll-btn left" onClick={scrollLeft}>
+          {/* Scroll Buttons */}
+          <button className="trending-scroll-btn left" onClick={scrollLeft}>
             ‹
           </button>
 
+          {/* Scrollable Row */}
           <div
             ref={rowRef}
             className={`row g-2 d-flex flex-nowrap ${rowClass}`}
@@ -40,14 +41,15 @@ const TrendingScrollSection = ({ title, data, openModal  }) => {
               scrollBehavior: "smooth",
             }}
           >
-            {Array.from({ length: 20 }, () => data) // repeat data to ensure enough items to scroll
-              .flat() // flatten into one array
+            {Array.from({ length: 20 }, () => data)
+              .flat()
               .map((item, index) => (
-              <TrendingCard key={index} {...item} openModal={openModal} />
-            ))}
+                <TrendingCard key={index} {...item} openModal={openModal} />
+              ))}
           </div>
 
-          <button className="scroll-btn right" onClick={scrollRight}>
+          {/* Right Button */}
+          <button className="trending-scroll-btn right" onClick={scrollRight}>
             ›
           </button>
         </div>
