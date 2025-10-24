@@ -4,27 +4,11 @@ import TrendingCard from "./TrendingCard";
 const TrendingScrollSection = ({ title, data, openModal }) => {
   const rowClass = title.replace(/\s+/g, "-").toLowerCase() + "-row";
   const rowRef = useRef(null);
-  const [repeatCount, setRepeatCount] = useState(2); // default for desktop
+  const [repeatCount, setRepeatCount] = useState(2);
 
-  // ✅ Adjust number of cards based on screen width
+  // ✅ Keep same layout but repeatCount fixed to 1
   useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        // Mobile
-        setRepeatCount(8);
-      } else if (width < 1200) {
-        // Tablet
-        setRepeatCount(4);
-      } else {
-        // Desktop / large screens
-        setRepeatCount(2);
-      }
-    };
-
-    handleResize(); // run on mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    setRepeatCount(1);
   }, []);
 
   const scrollLeft = () => {
@@ -36,6 +20,58 @@ const TrendingScrollSection = ({ title, data, openModal }) => {
     if (rowRef.current)
       rowRef.current.scrollBy({ left: rowRef.current.offsetWidth, behavior: "smooth" });
   };
+
+  // ✅ Add swipe and drag functionality
+  useEffect(() => {
+    const row = rowRef.current;
+    if (!row) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const startDragging = (e) => {
+      isDown = true;
+      row.classList.add("active");
+      startX = e.pageX || e.touches[0].pageX;
+      scrollLeft = row.scrollLeft;
+    };
+
+    const stopDragging = () => {
+      isDown = false;
+      row.classList.remove("active");
+    };
+
+    const whileDragging = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX || e.touches[0].pageX;
+      const walk = (x - startX) * 1.5; // scroll speed
+      row.scrollLeft = scrollLeft - walk;
+    };
+
+    // Mouse events
+    row.addEventListener("mousedown", startDragging);
+    row.addEventListener("mouseleave", stopDragging);
+    row.addEventListener("mouseup", stopDragging);
+    row.addEventListener("mousemove", whileDragging);
+
+    // Touch events (for phones)
+    row.addEventListener("touchstart", startDragging);
+    row.addEventListener("touchend", stopDragging);
+    row.addEventListener("touchmove", whileDragging);
+
+    return () => {
+      row.removeEventListener("mousedown", startDragging);
+      row.removeEventListener("mouseleave", stopDragging);
+      row.removeEventListener("mouseup", stopDragging);
+      row.removeEventListener("mousemove", whileDragging);
+
+      row.removeEventListener("touchstart", startDragging);
+      row.removeEventListener("touchend", stopDragging);
+      row.removeEventListener("touchmove", whileDragging);
+    };
+  }, []);
 
   return (
     <section className="my-4">
@@ -55,6 +91,7 @@ const TrendingScrollSection = ({ title, data, openModal }) => {
               overflowY: "hidden",
               whiteSpace: "nowrap",
               scrollBehavior: "smooth",
+              cursor: "grab",
             }}
           >
             {Array.from({ length: repeatCount }, () => data)

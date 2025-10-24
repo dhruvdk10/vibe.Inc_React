@@ -18,6 +18,7 @@ const CardDialog = ({ img, alt, title, d1, d2, d3, summary, position, onClose })
   }, [onClose]);
 
   return (
+    <div className="dialog-overlay">
     <div className="card-dialog">
       <div ref={dialogRef} style={{ width: "100%" }}>
 
@@ -40,6 +41,7 @@ const CardDialog = ({ img, alt, title, d1, d2, d3, summary, position, onClose })
           <p className="mb-4">{summary}</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

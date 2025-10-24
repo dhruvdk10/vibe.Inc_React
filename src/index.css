@@ -12,6 +12,12 @@ body {
   box-sizing: border-box;
 }
 
+body.modal-open {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-right: 0 !important;
+}
+
 .heading {
   padding-left: 0;
 }
@@ -252,6 +258,14 @@ select:focus {
   line-height: 1;
 }
 
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: brightness(70%) blur(2px);
+  /* make sure it's above everything */
+}
+
 
 .card-dialog {
   position: fixed;
@@ -283,6 +297,7 @@ select:focus {
   color: #ddd;
   margin: 20px 20px 15px 20px;
   font-weight: 600;
+  text-align: left !important;
   font-size: 26px;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }

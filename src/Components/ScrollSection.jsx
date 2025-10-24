@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Cards from "./Cards";
 
 const ScrollSection = ({ title, data, openModal }) => {
@@ -21,6 +21,58 @@ const ScrollSection = ({ title, data, openModal }) => {
     });
   };
 
+  // ✅ Add swipe + drag scroll support
+  useEffect(() => {
+    const row = rowRef.current;
+    if (!row) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const startDragging = (e) => {
+      isDown = true;
+      row.classList.add("active");
+      startX = e.pageX || e.touches[0].pageX;
+      scrollLeft = row.scrollLeft;
+    };
+
+    const stopDragging = () => {
+      isDown = false;
+      row.classList.remove("active");
+    };
+
+    const whileDragging = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX || e.touches[0].pageX;
+      const walk = (x - startX) * 1.5; // drag sensitivity
+      row.scrollLeft = scrollLeft - walk;
+    };
+
+    // Mouse events
+    row.addEventListener("mousedown", startDragging);
+    row.addEventListener("mouseleave", stopDragging);
+    row.addEventListener("mouseup", stopDragging);
+    row.addEventListener("mousemove", whileDragging);
+
+    // Touch events
+    row.addEventListener("touchstart", startDragging);
+    row.addEventListener("touchend", stopDragging);
+    row.addEventListener("touchmove", whileDragging);
+
+    return () => {
+      row.removeEventListener("mousedown", startDragging);
+      row.removeEventListener("mouseleave", stopDragging);
+      row.removeEventListener("mouseup", stopDragging);
+      row.removeEventListener("mousemove", whileDragging);
+
+      row.removeEventListener("touchstart", startDragging);
+      row.removeEventListener("touchend", stopDragging);
+      row.removeEventListener("touchmove", whileDragging);
+    };
+  }, []);
+
   return (
     <section className="my-4">
       <div data-aos="fade-up">
@@ -38,12 +90,13 @@ const ScrollSection = ({ title, data, openModal }) => {
               overflowY: "hidden",
               whiteSpace: "nowrap",
               scrollBehavior: "smooth",
+              cursor: "grab",
             }}
           >
-            {Array.from({ length: 20 }, () => data) // repeat data to ensure enough items to scroll
-              .flat() // flatten into one array
+            {Array.from({ length: 20 }, () => data)
+              .flat()
               .map((item, index) => (
-                <Cards key={index} {...item}  openModal={openModal}  />
+                <Cards key={index} {...item} openModal={openModal} />
               ))}
           </div>
 
