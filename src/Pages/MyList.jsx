@@ -34,7 +34,7 @@ const MyList = () => {
       {/* My List items */}
       <section className="mt-5">
         {myList.length === 0 ? (
-          <div className="empty-list-container mt-5 text-center d-flex flex-column align-items-center">
+          <div className="empty-list-message mt-5 text-center d-flex flex-column align-items-center">
             <p className="mb-3" style={{ fontSize: "18px" }}>
               You haven’t added any titles to your list yet.
             </p>

@@ -596,13 +596,11 @@ h1 {
   outline: none;
 }
 
-.empty-list-container {
+.empty-list-message {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 300px;
-  /* adjust based on your layout */
-  border-radius: 8px;
   padding: 20px;
   text-align: center;
 }
@@ -959,10 +957,6 @@ body.light-mode {
 
 .light-mode .form-check label {
   color: #000;
-}
-
-.light-mode .empty-list-message h2 {
-  color: #333;
 }
 
 /* Footer */
