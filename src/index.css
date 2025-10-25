@@ -38,9 +38,14 @@ body.modal-open {
   padding: 25px 30px;
   border-radius: 12px;
   text-align: center;
-  width: 320px;
+  height: auto;
+  width: 325px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   animation: fadeIn 0.3s ease;
+}
+
+.confirm-box p {
+  font-size: 18px;
 }
 
 .confirm-box button {
@@ -1148,6 +1153,15 @@ body.light-mode {
 
   .card-dialog p {
     font-size: 12px;
+  }
+
+  .confirm-box {
+    padding: 30px 20px;
+    width: 90%;
+  }
+
+  .confirm-box p {
+    font-size: 16px;
   }
 
   .footer-top {
