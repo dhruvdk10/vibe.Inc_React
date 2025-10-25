@@ -16,8 +16,12 @@ export const MyListProvider = ({ children }) => {
     }
   };
 
+  const removeFromMyList = (title) => {
+    setMyList((prev) => prev.filter((i) => i.title !== title));
+  };
+
   return (
-    <MyListContext.Provider value={{ myList, addToMyList }}>
+    <MyListContext.Provider value={{ myList, addToMyList, removeFromMyList }}>
       {children}
     </MyListContext.Provider>
   );
