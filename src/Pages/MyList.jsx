@@ -3,40 +3,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { MyListContext } from "../Components/ContextAPI/MyListContext"; // import context
-import CardDialog from "../Components/CardDialog"; // import CardDialog
+import { MyListContext } from "../Components/ContextAPI/MyListContext";
+import CardDialog from "../Components/CardDialog";
 
 const MyList = () => {
-  const { myList, removeFromMyList } = useContext(MyListContext);
-  const [selectedTitle, setSelectedTitle] = useState(null); // for remove modal
-  const [showConfirm, setShowConfirm] = useState(false); // remove modal toggle
+  const { myList } = useContext(MyListContext);
   const [dialogItem, setDialogItem] = useState(null); // for CardDialog
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-
-  // handle remove click → open modal
-  const handleRemoveClick = (title) => {
-    setSelectedTitle(title);
-    setShowConfirm(true);
-  };
-
-  const confirmRemove = () => {
-    if (selectedTitle) {
-      removeFromMyList(selectedTitle);
-      setShowConfirm(false);
-      setSelectedTitle(null);
-    }
-  };
-
-  const cancelRemove = () => {
-    setShowConfirm(false);
-    setSelectedTitle(null);
-  };
 
   // handle image click → open CardDialog
   const handleImageClick = (item) => {
@@ -57,39 +34,43 @@ const MyList = () => {
       {/* My List items */}
       <section className="mt-5">
         {myList.length === 0 ? (
-          <div className="empty-list-container mt-5">
-            <div className="empty-list-message text-center">
-              <h2>Nothing here yet!!</h2>
-              <p className="mb-3" style={{ fontSize: "16px" }}>
-                Add some favourites to see them here
-              </p>
-              <Link className="nav-link" to="/">
-                <button className="explore-btn">Continue Exploring</button>
-              </Link>
-            </div>
+          <div className="empty-list-container mt-5 text-center d-flex flex-column align-items-center">
+            <p className="mb-3" style={{ fontSize: "18px" }}>
+              You haven’t added any titles to your list yet.
+            </p>
+            <Link to="/" className="mt-0" style={{textDecoration: "none"}}>
+              <button className="explore-btn d-block mx-auto">Discover your vibe.</button>
+            </Link>
           </div>
         ) : (
-          <div className="row g-3">
-            {myList.map((item, index) => (
-              <div
-                key={index}
-                className="col-6 col-md-3 col-lg-2 position-relative"
-              >
-                <div className="movie-card border-0">
-                  <img
-                    src={item.img}
-                    alt={item.alt}
-                    className="movie-card img-top img-fluid"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => handleImageClick(item)}
-                  />
+          <>
+            <div className="row g-3">
+              {myList.map((item, index) => (
+                <div key={index} className="col-6 col-md-3 col-lg-2">
+                  <div className="movie-card border-0">
+                    <img
+                      src={item.img}
+                      alt={item.alt}
+                      className="movie-card img-top img-fluid"
+                      style={{ cursor: "pointer" }}
+                      onClick={() => handleImageClick(item)}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+
+            {/* Add More / Expand Button */}
+            <div className="text-center mt-4">
+              <Link className="nav-link" to="/">
+                <button className="explore-btn">Expand your vibe.</button>
+              </Link>
+            </div>
+          </>
         )}
       </section>
 
+      {/* CardDialog */}
       {dialogItem && (
         <CardDialog
           img={dialogItem.img}
@@ -101,7 +82,7 @@ const MyList = () => {
           summary={dialogItem.summary}
           position={dialogItem.position}
           onClose={closeDialog}
-          isMyListDialog={true} // enable remove icon instead of plus
+          isMyListDialog={true} // enable trash icon
         />
       )}
     </div>
