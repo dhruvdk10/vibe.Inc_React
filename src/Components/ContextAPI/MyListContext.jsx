@@ -5,19 +5,21 @@ export const MyListContext = createContext();
 export const MyListProvider = ({ children }) => {
   const [myList, setMyList] = useState([]);
 
+  // Function to add an item
   const addToMyList = (item) => {
-    // Check if item already exists based on title (or id if you have one)
     const exists = myList.some((i) => i.title === item.title);
+
     if (!exists) {
-      setMyList((prev) => [...prev, item]);
-      alert("Item added to My List."); // professional alert
+      setMyList((prevList) => [...prevList, item]);
+      return true; // ✅ Added successfully
     } else {
-      alert("Item is already in My List."); // avoid duplicates
+      return false; // ❌ Already exists
     }
   };
 
+  // Function to remove an item by title
   const removeFromMyList = (title) => {
-    setMyList((prev) => prev.filter((i) => i.title !== title));
+    setMyList((prevList) => prevList.filter((i) => i.title !== title));
   };
 
   return (
@@ -26,3 +28,5 @@ export const MyListProvider = ({ children }) => {
     </MyListContext.Provider>
   );
 };
+
+
