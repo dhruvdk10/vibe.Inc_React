@@ -59,7 +59,7 @@ const Navbar = () => {
                 aria-label="Search"
                 autoFocus={showSearch}
                 style={{
-                  width: "225px",
+                  width: "270px",
                   height: "35px",
                   color: "#fff",
                   boxShadow: "none",
@@ -85,12 +85,12 @@ const Navbar = () => {
             </form>
 
             {/* Notification */}
-            <button className="btn btn-link text-white ps-2 pe-1" type="button">
+            {/* <button className="btn btn-link text-white ps-2 pe-1" type="button">
               <FontAwesomeIcon
                 icon={faBell}
                 className="fa fa-bell fs-4"
               />
-            </button>
+            </button> */}
 
             {/* Profile Dropdown */}
             <div className="dropdown ps-1">
