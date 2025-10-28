@@ -3,17 +3,14 @@ import React, { createContext, useState, useEffect } from 'react';
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  // Initialize the theme safely and normalize older values
   const getInitialTheme = () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-      // normalize legacy values "light" / "dark" to "light-mode" / "dark-mode"
       if (savedTheme === 'light') return 'light-mode';
       if (savedTheme === 'dark') return 'dark-mode';
-      return savedTheme; // already in expected format
+      return savedTheme;
     }
 
-    // No saved preference: try to respect system preference, fallback to dark-mode
     const prefersDark =
       typeof window !== 'undefined' &&
       window.matchMedia &&
