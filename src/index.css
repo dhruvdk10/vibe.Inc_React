@@ -112,6 +112,7 @@ body.modal-open {
 
 .d-flex.align-items-center.position-relative input {
   background-color: black;
+  color: white;
 }
 
 .theme-toggle-button {
@@ -723,6 +724,7 @@ body.light-mode {
 
 .light-mode .d-flex.align-items-center.position-relative input {
   background-color: white;
+  color: black;
 }
 
 .light-mode .btn i:hover {

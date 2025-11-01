@@ -66,7 +66,6 @@ const Navbar = () => {
                   outline: "none",
                   transition: "all 0.3s ease",
                 }}
-                onBlur={() => setShowSearch(false)}
               />
               <button
                 className="btn btn-link text-white px-2"
