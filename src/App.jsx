@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import DialogueBox from "./Components/DialogueBox";
+import SignUp from "./Components/SignUp";
 import Footer from "./Components/Footer";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
@@ -55,6 +56,7 @@ const App = () => {
         )}
 
         <DialogueBox />
+        <SignUp />
         <Footer />
       </HashRouter>
     </MyListProvider>
