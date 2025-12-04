@@ -9,7 +9,7 @@ import {
   faLock,
 } from "@fortawesome/free-solid-svg-icons";
 
-const SignupBox = () => {
+const SignUpBox = () => {
   const [visible, setVisible] = useState(false);
   const [visible2, setVisible2] = useState(false);
 
@@ -210,4 +210,4 @@ const SignupBox = () => {
   );
 };
 
-export default SignupBox;
+export default SignUpBox;
