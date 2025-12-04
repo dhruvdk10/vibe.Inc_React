@@ -223,7 +223,8 @@ const DialogueBox = () => {
                 <div className="text-center">
                   <span>
                     Do not have an account?{" "}
-                    <a href="#" className="box-options text-decoration-none">
+                    <a href="#" className="box-options text-decoration-none" data-bs-toggle="modal"
+                    data-bs-target="#signupModal">
                       Sign up now
                     </a>
                   </span>
