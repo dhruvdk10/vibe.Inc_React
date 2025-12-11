@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import API from "../api";
+import API from '../../api';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
