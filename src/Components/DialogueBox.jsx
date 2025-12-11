@@ -106,6 +106,8 @@ const DialogueBox = () => {
                         top: "50%",
                         transform: "translateY(-50%)",
                         cursor: "pointer",
+                        zIndex: 10,   // ensure it’s above input
+                        userSelect: "none" // prevent text selection while clicking
                       }}
                     >
                       {visible ? <FaEyeSlash /> : <FaEye />}
