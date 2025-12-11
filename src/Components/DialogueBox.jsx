@@ -3,7 +3,7 @@ import API from '../../api';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 const DialogueBox = () => {
   const [visible, setVisible] = useState(false);
@@ -142,7 +142,7 @@ const DialogueBox = () => {
 
                 {/* Social */}
                 <div className="d-flex justify-content-center gap-4 mb-4">
-                  <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faFacebookF} /></a>
+                  <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faFacebook} /></a>
                   <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faTwitter} /></a>
                   <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faGoogle} /></a>
                 </div>
