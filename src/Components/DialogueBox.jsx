@@ -29,7 +29,7 @@ const DialogueBox = () => {
       setMessage("Login successful!");
 
       setTimeout(() => {
-        window.location.href = "/Dashboard";
+        window.location.href = "/#/Dashboard";
       }, 800);
 
     } catch (err) {
