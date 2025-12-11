@@ -11,30 +11,30 @@ const DialogueBox = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
+  // --- REAL LOGIN LOGIC (Your working logic added here) ---
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const loginData = {
-      emailOrUsername: emailOrUsername,   // IMPORTANT FIX
+      email: emailOrUsername,
       password: password,
     };
 
     try {
       const res = await API.post("/auth/login", loginData);
 
-      // Store only the correct username
-      console.log("LOGIN RESPONSE:", res.data);
+      console.log("LOGIN RESPONSE:", res.data);  // <-- ADD THIS
 
       localStorage.setItem("token", res.data.token);
-      localStorage.setItem("username", username);   // IMPORTANT FIX
+      localStorage.setItem("user", JSON.stringify(res.data.user || {}));
 
       setMessage("Login successful!");
-
       setTimeout(() => {
         window.location.hash = "#/Dashboard";
       }, 800);
 
-    } catch (err) {
+    }
+    catch (err) {
       setMessage(err?.response?.data?.msg || "Login failed");
     }
   };
@@ -43,12 +43,12 @@ const DialogueBox = () => {
     <section className="form-box">
       <div className="container">
         <div className="modal fade" id="myModal">
-          <div
-            className="modal-dialog modal-dialog-centered border-0"
-            style={{ maxWidth: "450px", width: "85%", margin: "auto" }}
-          >
+          <div className="modal-dialog modal-dialog-centered border-0"
+            style={{ maxWidth: "450px", width: "85%", margin: "auto" }}>
+
             <div className="modal-content text-white">
 
+              {/* Header */}
               <div className="modal-header border-0 d-block text-center position-relative">
                 <h2 className="modal-title fw-bold mt-4">Log In</h2>
                 <button
@@ -58,16 +58,19 @@ const DialogueBox = () => {
                 ></button>
               </div>
 
+              {/* Body */}
               <div className="modal-body px-4">
+
+                {/* Alert Message */}
                 {message && (
-                  <div
-                    className={`alert ${message.includes("successful") ? "alert-success" : "alert-danger"}`}
-                  >
+                  <div className={`alert ${message.includes("successful") ? "alert-success" : "alert-danger"}`}>
                     {message}
                   </div>
                 )}
 
                 <form onSubmit={handleSubmit}>
+
+                  {/* Email / Username */}
                   <div className="input-group mb-3" style={{ height: "40px", borderRadius: "12px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faUser} className="text-black" />
@@ -81,6 +84,7 @@ const DialogueBox = () => {
                     />
                   </div>
 
+                  {/* Password */}
                   <div className="input-group mb-3 position-relative" style={{ height: "40px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
@@ -109,12 +113,49 @@ const DialogueBox = () => {
                     </span>
                   </div>
 
+                  {/* Remember + Forgot */}
+                  <div className="d-flex justify-content-between align-items-center mb-4">
+                    <div className="form-check">
+                      <input type="checkbox" className="form-check-input" />
+                      <label className="form-check-label">Remember me</label>
+                    </div>
+                    <a href="#" className="box-options text-decoration-none">
+                      Forgot Password?
+                    </a>
+                  </div>
+
+                  {/* Login Button */}
                   <div className="d-grid">
                     <button className="btn btn-secondary fw-bold mb-3" style={{ height: "42px", borderRadius: "12px" }}>
                       Login
                     </button>
                   </div>
                 </form>
+
+                {/* OR */}
+                <div className="d-flex align-items-center text-light my-4">
+                  <hr className="flex-grow-1" />
+                  <span className="px-3">Or login with</span>
+                  <hr className="flex-grow-1" />
+                </div>
+
+                {/* Social */}
+                <div className="d-flex justify-content-center gap-4 mb-4">
+                  <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faFacebookF} /></a>
+                  <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faTwitter} /></a>
+                  <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faGoogle} /></a>
+                </div>
+
+                {/* Signup Link */}
+                <div className="text-center">
+                  <span>
+                    Do not have an account?{" "}
+                    <a href="#" className="box-options text-decoration-none"
+                      data-bs-toggle="modal" data-bs-target="#signupModal">
+                      Sign up now
+                    </a>
+                  </span>
+                </div>
 
               </div>
             </div>
