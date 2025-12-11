@@ -1,62 +1,48 @@
-import axios from "axios";
 import React, { useState } from "react";
+import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faEnvelope,
-  faPhone,
-  faLock,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope, faPhone, faLock } from "@fortawesome/free-solid-svg-icons";
 
 const SignUpBox = () => {
   const [visible, setVisible] = useState(false);
   const [visible2, setVisible2] = useState(false);
 
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // single clean form state (from your first code)
+  const [form, setForm] = useState({
+    username: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-  // API: demo signup reqres (won't actually create account)
-  const handleSignupAPI = async () => {
-    try {
-      const response = await axios.post(
-        "https://reqres.in/api/register",
-        {
-          email,
-          password,
-        },
-        {
-          headers: {
-            "x-api-key": "reqres-free-v1",
-          },
-        }
-      );
+  const [message, setMessage] = useState("");
 
-      console.log(response.data);
-      alert(`Account created, ${username}!`);
-    } catch (error) {
-      console.error(error);
-      alert("Signup failed. Try again.");
-    }
+  // onChange
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // final register submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!username || !email || !phone || !password || !confirmPassword) {
-      alert("Please fill in all fields");
+    if (form.password !== form.confirmPassword) {
+      setMessage("Passwords do not match");
       return;
     }
 
-    if (password !== confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
+    try {
+      const response = await axios.post("http://localhost:3013/api/users", form);
+      setMessage("Account created successfully!");
 
-    await handleSignupAPI();
+      setTimeout(() => {
+        window.location.href = "/Dashboard";
+      }, 1000);
+    } catch (err) {
+      setMessage(err?.response?.data?.error || "Signup failed");
+    }
   };
 
   return (
@@ -88,11 +74,11 @@ const SignUpBox = () => {
                     </span>
                     <input
                       type="text"
+                      name="username"
                       className="form-control border-0"
                       placeholder="Full Name"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                      required
+                      value={form.username}
+                      onChange={handleChange}
                     />
                   </div>
 
@@ -103,11 +89,11 @@ const SignUpBox = () => {
                     </span>
                     <input
                       type="email"
+                      name="email"
                       className="form-control border-0"
                       placeholder="Email Address"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
+                      value={form.email}
+                      onChange={handleChange}
                     />
                   </div>
 
@@ -118,11 +104,11 @@ const SignUpBox = () => {
                     </span>
                     <input
                       type="tel"
+                      name="phone"
                       className="form-control border-0"
                       placeholder="Phone Number"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      required
+                      value={form.phone}
+                      onChange={handleChange}
                     />
                   </div>
 
@@ -133,11 +119,11 @@ const SignUpBox = () => {
                     </span>
                     <input
                       type={visible ? "text" : "password"}
+                      name="password"
                       className="form-control border-0"
                       placeholder="Password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
+                      value={form.password}
+                      onChange={handleChange}
                     />
                     <span
                       onClick={() => setVisible(!visible)}
@@ -160,11 +146,11 @@ const SignUpBox = () => {
                     </span>
                     <input
                       type={visible2 ? "text" : "password"}
+                      name="confirmPassword"
                       className="form-control border-0"
                       placeholder="Confirm Password"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      required
+                      value={form.confirmPassword}
+                      onChange={handleChange}
                     />
                     <span
                       onClick={() => setVisible2(!visible2)}
@@ -192,6 +178,13 @@ const SignUpBox = () => {
                   </div>
 
                 </form>
+
+                {/* Display message */}
+                {message && (
+                  <p className="text-center mt-3 fw-bold text-warning">
+                    {message}
+                  </p>
+                )}
 
                 <div className="text-center mt-4">
                   Already have an account?{" "}
