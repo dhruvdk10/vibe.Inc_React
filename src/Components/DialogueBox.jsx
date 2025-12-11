@@ -23,7 +23,7 @@ const DialogueBox = () => {
       const res = await API.post("/auth/login", loginData);
 
       // Store only the correct username
-      const username = res?.data?.user?.username || "";
+      console.log("LOGIN RESPONSE:", res.data);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("username", username);   // IMPORTANT FIX
