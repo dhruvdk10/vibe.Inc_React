@@ -45,12 +45,13 @@ const App = () => {
             path="/MyList"
             element={<MyList openModal={(item) => setModalData(item)} />}
           />
-          <Route path="*" element={<PageNotFound />} />
 
           <Route
             path="/Dashboard"
             element={<Dashboard openModal={(item) => setModalData(item)} />}
           />
+
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
 
         {/* Render CardDialog at top level */}
