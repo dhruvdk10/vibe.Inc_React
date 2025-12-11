@@ -11,21 +11,21 @@ const DialogueBox = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
-  // --- REAL LOGIN LOGIC (Your working logic added here) ---
+  // --- REAL LOGIN LOGIC (Updated for identifier) ---
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const loginData = {
-      emailOrUsername: emailOrUsername,
+      identifier: emailOrUsername, // updated key to match backend
       password: password,
     };
 
     try {
       const res = await API.post("/users/login", loginData);
 
-      console.log("LOGIN RESPONSE:", res.data);  // <-- ADD THIS
+      console.log("LOGIN RESPONSE:", res.data);
 
-      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("token", res.data.token); // keep as is
       localStorage.setItem("user", JSON.stringify(res.data.user || {}));
 
       setMessage("Login successful!");
@@ -33,9 +33,8 @@ const DialogueBox = () => {
         window.location.hash = "#/Dashboard";
       }, 800);
 
-    }
-    catch (err) {
-      setMessage(err?.response?.data?.msg || "Login failed");
+    } catch (err) {
+      setMessage(err?.response?.data?.message || "Login failed"); // updated to match backend response
     }
   };
 
