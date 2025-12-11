@@ -120,7 +120,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/Home">
+                  <Link className="dropdown-item" to="/#/">
                     Sign Out
                   </Link>
                 </li>
