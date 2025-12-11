@@ -21,7 +21,7 @@ const DialogueBox = () => {
     };
 
     try {
-      const res = await API.post("/auth/login", loginData);
+      const res = await API.post("/users/login", loginData);
 
       console.log("LOGIN RESPONSE:", res.data);  // <-- ADD THIS
 
