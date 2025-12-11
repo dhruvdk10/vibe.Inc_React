@@ -16,7 +16,7 @@ const DialogueBox = () => {
     e.preventDefault();
 
     const loginData = {
-      email: emailOrUsername,
+      emailOrUsername: emailOrUsername,
       password: password,
     };
 
