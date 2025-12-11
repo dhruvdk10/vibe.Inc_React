@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"; // added useState
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,29 +17,18 @@ import TrendingScrollSection from "../Components/TrendingScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Dashboard = ({ openModal }) => {
-  const [username, setUsername] = useState("User"); // default value
-
+const Dashboard = ({ openModal }) => { // Receive openModal from App.jsx
   useEffect(() => {
     AOS.init({ duration: 1000 });
-
-    // Read stored username from logged-in user object
-    const userData = JSON.parse(localStorage.getItem("user"));
-    if (userData && userData.username) {
-      setUsername(userData.username);
-    }
   }, []);
 
   return (
     <div>
-      {/* ----------------- DASHBOARD HEADER ------------------ */}
+      {/* ----------------- WELCOME MESSAGE ------------------ */}
       <div className="text-light px-4 pt-4">
         <h1 className="fw-bold" style={{ fontSize: "2rem" }}>
-          Welcome back, {username}! 👋
+          Welcome back!
         </h1>
-        <p className="text-secondary" style={{ fontSize: "1rem" }}>
-          Here’s your personalised dashboard. Continue watching or explore new titles below.
-        </p>
       </div>
 
       {/* ----------------- MAIN BANNER SECTION ------------------ */}
@@ -70,13 +59,21 @@ const Dashboard = ({ openModal }) => {
               </div>
             ))}
           </div>
-
-          <button className="carousel-control-prev" type="button" data-bs-target="#mybannerCarousel" data-bs-slide="prev">
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#mybannerCarousel"
+            data-bs-slide="prev"
+          >
             <span className="carousel-control-prev-icon"></span>
             <span className="visually-hidden">Previous</span>
           </button>
-
-          <button className="carousel-control-next" type="button" data-bs-target="#mybannerCarousel" data-bs-slide="next">
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#mybannerCarousel"
+            data-bs-slide="next"
+          >
             <span className="carousel-control-next-icon"></span>
             <span className="visually-hidden">Next</span>
           </button>
@@ -85,42 +82,12 @@ const Dashboard = ({ openModal }) => {
 
       {/* ----------------- PERSONALIZED SECTIONS ------------------ */}
       <section className="mid_section mt-5">
-
-        <ScrollSection
-          title={`Continue Watching, ${username}`}
-          data={mustWatchData}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Recommended Based on Your Interests"
-          data={romanticHitsData}
-          openModal={openModal}
-        />
-
-        <TrendingScrollSection
-          title="Trending Now for You"
-          data={topShows}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Because You Like Thriller Shows"
-          data={thrillingchillsData}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Relax with Comedy"
-          data={cheerfulcomedyData}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Your Top Picks"
-          data={toppicksforyouData}
-          openModal={openModal}
-        />
+        <ScrollSection title="Must Watch" data={mustWatchData} openModal={openModal} />
+        <ScrollSection title="Romantic Hits" data={romanticHitsData} openModal={openModal} />
+        <TrendingScrollSection title="" data={topShows} openModal={openModal} />
+        <ScrollSection title="Thrilling Chills" data={thrillingchillsData} openModal={openModal} />
+        <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} openModal={openModal} />
+        <ScrollSection title="Top Picks for You" data={toppicksforyouData} openModal={openModal} />
       </section>
     </div>
   );
