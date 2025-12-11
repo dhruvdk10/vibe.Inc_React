@@ -19,18 +19,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Dashboard = ({ openModal }) => {
 
-  let user = {};
-  try {
-    const userData = localStorage.getItem("user");
-    if (userData && userData !== "undefined") {
-      user = JSON.parse(userData);
-    }
-  } catch (err) {
-    console.error("Invalid JSON in localStorage 'user':", err);
-    user = {};
-  }
-
-  const username = user?.username || "User";
+  // ---- UPDATED LOGIN DATA READING ---- //
+  const username = localStorage.getItem("username") || "User";
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -92,42 +82,36 @@ const Dashboard = ({ openModal }) => {
       {/* ----------------- PERSONALIZED SECTIONS ------------------ */}
       <section className="mid_section mt-5">
 
-        {/* CONTINUE WATCHING — personalized */}
         <ScrollSection
           title={`Continue Watching, ${username}`}
           data={mustWatchData}
           openModal={openModal}
         />
 
-        {/* RECOMMENDED FOR YOU */}
         <ScrollSection
           title="Recommended Based on Your Interests"
           data={romanticHitsData}
           openModal={openModal}
         />
 
-        {/* TRENDING FOR YOU */}
         <TrendingScrollSection
           title="Trending Now for You"
           data={topShows}
           openModal={openModal}
         />
 
-        {/* THRILLERS SUGGESTIONS */}
         <ScrollSection
           title="Because You Like Thriller Shows"
           data={thrillingchillsData}
           openModal={openModal}
         />
 
-        {/* LIGHT COMEDY */}
         <ScrollSection
           title="Relax with Comedy"
           data={cheerfulcomedyData}
           openModal={openModal}
         />
 
-        {/* TOP PICKS */}
         <ScrollSection
           title="Your Top Picks"
           data={toppicksforyouData}
