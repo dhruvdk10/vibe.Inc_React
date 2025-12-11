@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react"; // added useState
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,14 +16,31 @@ import ScrollSection from "../Components/ScrollSection";
 import TrendingScrollSection from "../Components/TrendingScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import API from "../../api"; // make sure this is your axios instance
 
 const Dashboard = ({ openModal }) => {
 
   // ---- UPDATED LOGIN DATA READING ---- //
-  const username = localStorage.getItem("username") || "User";
+  const [username, setUsername] = useState("User"); // default value
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+
+    // Fetch user from backend
+    const fetchUser = async () => {
+      try {
+        const userData = JSON.parse(localStorage.getItem("user")); // you already store user in localStorage on login
+        if (userData && userData._id) {
+          // Optionally, fetch fresh data from backend if needed
+          const res = await API.get(`/users/${userData._id}`);
+          setUsername(res.data.username || "User");
+        }
+      } catch (err) {
+        console.error("Failed to fetch user:", err);
+      }
+    };
+
+    fetchUser();
   }, []);
 
   return (
