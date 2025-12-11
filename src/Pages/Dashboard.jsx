@@ -19,7 +19,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Dashboard = ({ openModal }) => {
 
-  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  let user = {};
+  try {
+    const userData = localStorage.getItem("user");
+    if (userData && userData !== "undefined") {
+      user = JSON.parse(userData);
+    }
+  } catch (err) {
+    console.error("Invalid JSON in localStorage 'user':", err);
+    user = {};
+  }
+
   const username = user?.username || "User";
 
   useEffect(() => {
