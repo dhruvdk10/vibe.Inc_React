@@ -24,7 +24,7 @@ const DialogueBox = () => {
       const res = await API.post("/auth/login", loginData);
 
       localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data.user));
+      localStorage.setItem("user", JSON.stringify(res.data.user || {}));
 
       setMessage("Login successful!");
 
