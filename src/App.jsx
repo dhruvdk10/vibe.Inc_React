@@ -10,7 +10,7 @@ import Movies from "./Pages/Movies";
 import Games from "./Pages/Games";
 import MyList from "./Pages/MyList";
 import PageNotFound from "./Pages/PageNotFound";
-import PersonalizedDashboard from "./Pages/PersonalisedDashboard";
+import Dashboard from "./Pages/Dashboard";
 import CardDialog from "./Components/CardDialog";
 import "./index.css";
 import { MyListProvider } from "./Components/ContextAPI/MyListContext"; // Import Context
@@ -49,7 +49,7 @@ const App = () => {
 
           <Route
             path="/Dashboard"
-            element={<PersonalizedDashboard openModal={(item) => setModalData(item)} />}
+            element={<Dashboard openModal={(item) => setModalData(item)} />}
           />
         </Routes>
 

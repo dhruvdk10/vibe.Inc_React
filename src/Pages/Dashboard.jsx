@@ -17,7 +17,7 @@ import TrendingScrollSection from "../Components/TrendingScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const PersonalizedDashboard = ({ openModal }) => {
+const Dashboard = ({ openModal }) => {
 
   const user = JSON.parse(localStorage.getItem("user"));
   const username = user?.username || "User";
@@ -128,4 +128,4 @@ const PersonalizedDashboard = ({ openModal }) => {
   );
 };
 
-export default PersonalizedDashboard;
+export default Dashboard;
