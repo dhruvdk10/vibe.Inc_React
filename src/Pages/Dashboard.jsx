@@ -25,7 +25,7 @@ const Dashboard = ({ openModal }) => { // Receive openModal from App.jsx
   return (
     <div>
       {/* ----------------- WELCOME MESSAGE ------------------ */}
-      <div className="text-light px-4 pt-4">
+      <div className="text-light px-2 pt-4">
         <h1 className="fw-bold" style={{ fontSize: "2rem" }}>
           Welcome back!
         </h1>

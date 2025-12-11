@@ -188,11 +188,15 @@ const SignUpBox = () => {
 
                 <div className="text-center mt-4">
                   Already have an account?{" "}
-                  <a href="#" className="box-options text-decoration-none">
+                  <Link
+                    className="box-options text-decoration-none"
+                    to="/login"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal"
+                  >
                     Login here
-                  </a>
+                  </Link>
                 </div>
-
               </div>
 
             </div>
