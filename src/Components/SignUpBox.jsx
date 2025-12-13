@@ -8,7 +8,6 @@ const SignUpBox = () => {
   const [visible, setVisible] = useState(false);
   const [visible2, setVisible2] = useState(false);
 
-  // single clean form state (from your first code)
   const [form, setForm] = useState({
     username: "",
     email: "",
@@ -19,14 +18,25 @@ const SignUpBox = () => {
 
   const [message, setMessage] = useState("");
 
-  // onChange
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // final register submit
+  // ✅ UPDATED ONLY THIS FUNCTION
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // empty field validation
+    if (
+      !form.username.trim() ||
+      !form.email.trim() ||
+      !form.phone.trim() ||
+      !form.password.trim() ||
+      !form.confirmPassword.trim()
+    ) {
+      setMessage("Please fill all fields");
+      return;
+    }
 
     if (form.password !== form.confirmPassword) {
       setMessage("Passwords do not match");
@@ -34,7 +44,7 @@ const SignUpBox = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3013/api/users", form);
+      await axios.post("http://localhost:3013/api/users", form);
       setMessage("Account created successfully!");
 
       setTimeout(() => {
@@ -54,7 +64,6 @@ const SignUpBox = () => {
             style={{ maxWidth: "460px", width: "85%", margin: "auto" }}
           >
             <div className="modal-content text-white">
-
               <div className="modal-header border-0 d-block text-center position-relative">
                 <h2 className="modal-title fw-bold mt-4">Sign Up</h2>
                 <button
@@ -66,7 +75,6 @@ const SignUpBox = () => {
 
               <div className="modal-body px-4">
                 <form onSubmit={handleSubmit}>
-
                   {/* Username */}
                   <div className="input-group mb-3" style={{ height: "40px" }}>
                     <span className="input-group-text bg-white border-0">
@@ -166,7 +174,6 @@ const SignUpBox = () => {
                     </span>
                   </div>
 
-                  {/* Submit */}
                   <div className="d-grid">
                     <button
                       className="btn btn-secondary fw-bold"
@@ -176,10 +183,8 @@ const SignUpBox = () => {
                       Create Account
                     </button>
                   </div>
-
                 </form>
 
-                {/* Display message */}
                 {message && (
                   <p className="text-center mt-3 fw-bold text-warning">
                     {message}
@@ -188,14 +193,16 @@ const SignUpBox = () => {
 
                 <div className="text-center mt-4">
                   Already have an account?{" "}
-                  <a href="#" className="box-options text-decoration-none" data-bs-toggle="modal"
-                    data-bs-target="#myModal">
+                  <a
+                    href="#"
+                    className="box-options text-decoration-none"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal"
+                  >
                     Login here
                   </a>
                 </div>
-
               </div>
-
             </div>
           </div>
         </div>
