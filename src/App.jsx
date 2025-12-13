@@ -11,6 +11,7 @@ import Games from "./Pages/Games";
 import MyList from "./Pages/MyList";
 import PageNotFound from "./Pages/PageNotFound";
 import Dashboard from "./Pages/Dashboard";
+import SignupDashboard from "./Pages/SignupDashboard";
 import CardDialog from "./Components/CardDialog";
 import "./index.css";
 import { MyListProvider } from "./Components/ContextAPI/MyListContext"; // Import Context
@@ -49,6 +50,11 @@ const App = () => {
           <Route
             path="/Dashboard"
             element={<Dashboard openModal={(item) => setModalData(item)} />}
+          />
+
+          <Route
+          path="/SignupDashboard"
+            element={<SignupDashboard openModal={(item) => setModalData(item)} />}
           />
 
           <Route path="*" element={<PageNotFound />} />

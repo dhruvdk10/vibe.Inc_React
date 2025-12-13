@@ -48,7 +48,7 @@ const SignUpBox = () => {
       setMessage("Account created successfully!");
 
       setTimeout(() => {
-        window.location.href = "/Dashboard";
+        window.location.hash = "#/SignupDashboard";
       }, 1000);
     } catch (err) {
       setMessage(err?.response?.data?.error || "Signup failed");
