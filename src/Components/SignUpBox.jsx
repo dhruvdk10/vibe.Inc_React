@@ -71,26 +71,6 @@ const SignUpBox = () => {
     }
   };
 
-  const switchToLogin = () => {
-    // Hide signup modal
-    const signupModalEl = document.getElementById("signupModal");
-    const signupModal =
-      bootstrap.Modal.getInstance(signupModalEl) ||
-      new bootstrap.Modal(signupModalEl);
-
-    signupModal.hide();
-
-    // Show login modal after small delay
-    setTimeout(() => {
-      const loginModalEl = document.getElementById("myModal");
-      const loginModal =
-        bootstrap.Modal.getInstance(loginModalEl) ||
-        new bootstrap.Modal(loginModalEl);
-
-      loginModal.show();
-    }, 50);
-  };
-
 
   return (
     <section className="form-box">
@@ -194,9 +174,11 @@ const SignUpBox = () => {
 
                 <div className="text-center mt-4">
                   Already have an account?{" "}
-                  <span onClick={switchToLogin} className="box-options text-decoration-none" style={{ cursor: "pointer" }}>
+                  <link to="/login"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal">
                     Login here
-                  </span>
+                  </link>
                 </div>
               </div>
             </div>

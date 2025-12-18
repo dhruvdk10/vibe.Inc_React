@@ -49,21 +49,6 @@ const DialogueBox = () => {
     }
   };
 
-  // ✅ Smooth switch to Sign Up modal
-  const switchToSignup = () => {
-    // Hide login modal
-    const loginModalEl = document.getElementById('myModal');
-    const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
-    loginModal.hide();
-
-    // Show signup modal after a tiny delay to ensure DOM update
-    setTimeout(() => {
-      const signupModalEl = document.getElementById('signupModal');
-      const signupModal = bootstrap.Modal.getInstance(signupModalEl) || new bootstrap.Modal(signupModalEl);
-      signupModal.show();
-    }, 50);
-  };
-
   return (
     <section className="form-box">
       <div className="container">
@@ -166,13 +151,13 @@ const DialogueBox = () => {
                 <div className="text-center">
                   <span>
                     Do not have an account?{" "}
-                    <span
-                      onClick={switchToSignup}
-                      className="box-options text-decoration-none"
-                      style={{ cursor: "pointer" }}
+                    <link
+                    to="/signup"
+                    data-bs-toggle="modal"
+                    data-bs-target="#signupModal"
                     >
                       Sign up now
-                    </span>
+                    </link>
                   </span>
                 </div>
 
