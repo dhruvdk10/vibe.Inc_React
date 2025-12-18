@@ -108,27 +108,28 @@ const DialogueBox = () => {
                     />
                   </div>
 
-                  <div className="input-group position-relative mb-3" style={{ height: "40px" }}>
+                  <div className="input-group mb-3" style={{ height: "40px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
 
-                    <div className="w-100">
+                    {/* This div behaves like form-control */}
+                    <div className="form-control p-0 position-relative border-0">
                       <input
                         type={visible ? "text" : "password"}
-                        className="form-control border-0"
+                        className="w-100 h-100 border-0 px-2"
                         placeholder="Password"
                         required
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        style={{ paddingRight: "45px" }}
+                        style={{ paddingRight: "45px", outline: "none" }}
                       />
 
                       <span
                         className="eye-icon"
                         onClick={() => setVisible(!visible)}
                       >
-                        {visible ? <FaEye /> : <FaEyeSlash />}
+                        {visible ? <FaEyeSlash /> : <FaEye />}
                       </span>
                     </div>
                   </div>
