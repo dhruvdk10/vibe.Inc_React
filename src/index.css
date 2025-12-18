@@ -208,11 +208,12 @@ select:focus {
 
 .eye-icon {
   position: absolute;
-  right: 10px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 20; 
+  z-index: 50;
+  color: #000;
   user-select: none;
 }
 

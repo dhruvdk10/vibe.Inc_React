@@ -13,52 +13,56 @@ const DialogueBox = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const loginData = {
-    identifier: emailOrUsername,
-    password: password,
+    const loginData = {
+      identifier: emailOrUsername,
+      password: password,
+    };
+
+    try {
+      const res = await API.post("/users/login", loginData);
+      console.log("LOGIN RESPONSE:", res.data);
+
+      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("user", JSON.stringify(res.data.user || {}));
+
+      setMessage("Login successful!");
+
+      // ✅ Close login modal safely
+      const loginModalEl = document.getElementById('myModal');
+      const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
+      loginModal.hide();
+
+      // Optional: redirect after a short delay
+      setTimeout(() => {
+        window.location.hash = "#/Dashboard";
+      }, 500);
+
+      // ✅ Reset fields
+      setEmailOrUsername("");
+      setPassword("");
+      setVisible(false);
+
+    } catch (err) {
+      setMessage(err?.response?.data?.message || "Login failed");
+    }
   };
 
-  try {
-    const res = await API.post("/users/login", loginData);
-    console.log("LOGIN RESPONSE:", res.data);
-
-    localStorage.setItem("token", res.data.token);
-    localStorage.setItem("user", JSON.stringify(res.data.user || {}));
-
-    setMessage("Login successful!");
-
-    // ✅ Close login modal safely
+  // ✅ Smooth switch to Sign Up modal
+  const switchToSignup = () => {
+    // Hide login modal
     const loginModalEl = document.getElementById('myModal');
     const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
     loginModal.hide();
 
-    // Optional: redirect after a short delay
+    // Show signup modal after a tiny delay to ensure DOM update
     setTimeout(() => {
-      window.location.hash = "#/Dashboard";
-    }, 500);
-
-    // ✅ Reset fields
-    setEmailOrUsername("");
-    setPassword("");
-    setVisible(false);
-
-  } catch (err) {
-    setMessage(err?.response?.data?.message || "Login failed");
-  }
-};
-
-  // ✅ Smooth switch to Sign Up modal
-const switchToSignup = () => {
-  const loginModalEl = document.getElementById('myModal');
-  const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
-  loginModal.hide();
-
-  const signupModalEl = document.getElementById('signupModal');
-  const signupModal = bootstrap.Modal.getInstance(signupModalEl) || new bootstrap.Modal(signupModalEl);
-  signupModal.show();
-};
+      const signupModalEl = document.getElementById('signupModal');
+      const signupModal = bootstrap.Modal.getInstance(signupModalEl) || new bootstrap.Modal(signupModalEl);
+      signupModal.show();
+    }, 50);
+  };
 
   return (
     <section className="form-box">
@@ -104,33 +108,29 @@ const switchToSignup = () => {
                     />
                   </div>
 
-                  <div className="input-group mb-3 position-relative" style={{ height: "40px" }}>
+                  <div className="input-group mb-3" style={{ height: "40px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
-                    <input
-                      type={visible ? "text" : "password"}
-                      className="form-control border-0"
-                      placeholder="Password"
-                      required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      style={{ paddingRight: "40px" }}
-                    />
-                    <span className="eye-icon"
-                      onClick={() => setVisible(!visible)}
-                      style={{
-                        position: "absolute",
-                        right: "10px",
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        cursor: "pointer",
-                        zIndex: 10,
-                        userSelect: "none"
-                      }}
-                    >
-                      {visible ? <FaEyeSlash /> : <FaEye />}
-                    </span>
+
+                    <div className="position-relative w-100">
+                      <input
+                        type={visible ? "text" : "password"}
+                        className="form-control border-0"
+                        placeholder="Password"
+                        required
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        style={{ paddingRight: "45px" }}
+                      />
+
+                      <span
+                        className="eye-icon"
+                        onClick={() => setVisible(!visible)}
+                      >
+                        {visible ? <FaEyeSlash /> : <FaEye />}
+                      </span>
+                    </div>
                   </div>
 
                   <div className="d-flex justify-content-between align-items-center mb-4">

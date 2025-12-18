@@ -72,14 +72,25 @@ const SignUpBox = () => {
   };
 
   const switchToLogin = () => {
-    const signupModalEl = document.getElementById('signupModal');
-    const signupModal = bootstrap.Modal.getInstance(signupModalEl) || new bootstrap.Modal(signupModalEl);
+    // Hide signup modal
+    const signupModalEl = document.getElementById("signupModal");
+    const signupModal =
+      bootstrap.Modal.getInstance(signupModalEl) ||
+      new bootstrap.Modal(signupModalEl);
+
     signupModal.hide();
 
-    const loginModalEl = document.getElementById('myModal');
-    const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
-    loginModal.show();
+    // Show login modal after small delay
+    setTimeout(() => {
+      const loginModalEl = document.getElementById("myModal");
+      const loginModal =
+        bootstrap.Modal.getInstance(loginModalEl) ||
+        new bootstrap.Modal(loginModalEl);
+
+      loginModal.show();
+    }, 50);
   };
+
 
   return (
     <section className="form-box">
@@ -119,45 +130,55 @@ const SignUpBox = () => {
                   </div>
 
                   {/* Password */}
-                  <div className="input-group mb-3" style={{ height: "40px", position: "relative" }}>
+                  <div className="input-group mb-3" style={{ height: "40px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
-                    <input
-                      type={visible ? "text" : "password"}
-                      name="password"
-                      className="form-control border-0"
-                      placeholder="Password"
-                      value={form.password}
-                      onChange={handleChange}
-                    />
-                    <span
-                      onClick={() => setVisible(!visible)}
-                      style={{ position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)", cursor: "pointer", zIndex: 10, userSelect: "none" }}
-                    >
-                      {visible ? <FaEyeSlash /> : <FaEye />}
-                    </span>
+
+                    <div className="position-relative w-100">
+                      <input
+                        type={visible ? "text" : "password"}
+                        name="password"
+                        className="form-control border-0"
+                        placeholder="Password"
+                        value={form.password}
+                        onChange={handleChange}
+                        style={{ paddingRight: "45px" }}
+                      />
+
+                      <span
+                        className="eye-icon"
+                        onClick={() => setVisible(!visible)}
+                      >
+                        {visible ? <FaEyeSlash /> : <FaEye />}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Confirm Password */}
-                  <div className="input-group mb-4" style={{ height: "40px", position: "relative" }}>
+                  <div className="input-group mb-4" style={{ height: "40px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
-                    <input
-                      type={visible2 ? "text" : "password"}
-                      name="confirmPassword"
-                      className="form-control border-0"
-                      placeholder="Confirm Password"
-                      value={form.confirmPassword}
-                      onChange={handleChange}
-                    />
-                    <span
-                      onClick={() => setVisible2(!visible2)}
-                      style={{ position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)", cursor: "pointer", zIndex: 10, userSelect: "none" }}
-                    >
-                      {visible2 ? <FaEyeSlash /> : <FaEye />}
-                    </span>
+
+                    <div className="position-relative w-100">
+                      <input
+                        type={visible2 ? "text" : "password"}
+                        name="confirmPassword"
+                        className="form-control border-0"
+                        placeholder="Confirm Password"
+                        value={form.confirmPassword}
+                        onChange={handleChange}
+                        style={{ paddingRight: "45px" }}
+                      />
+
+                      <span
+                        className="eye-icon"
+                        onClick={() => setVisible2(!visible2)}
+                      >
+                        {visible2 ? <FaEyeSlash /> : <FaEye />}
+                      </span>
+                    </div>
                   </div>
 
                   <div className="d-grid">
