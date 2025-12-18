@@ -206,6 +206,16 @@ select:focus {
   color: cyan;
 }
 
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 20; 
+  user-select: none;
+}
+
 .box-options {
   color: cyan;
 }
