@@ -113,7 +113,7 @@ const DialogueBox = () => {
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
 
-                    <div className="position-relative w-100">
+                    <div className="w-100">
                       <input
                         type={visible ? "text" : "password"}
                         className="form-control border-0"
