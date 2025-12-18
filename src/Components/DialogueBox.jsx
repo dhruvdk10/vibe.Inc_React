@@ -108,7 +108,7 @@ const DialogueBox = () => {
                     />
                   </div>
 
-                  <div className="input-group mb-3" style={{ height: "40px" }}>
+                  <div className="input-group position-relative mb-3" style={{ height: "40px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
@@ -128,7 +128,7 @@ const DialogueBox = () => {
                         className="eye-icon"
                         onClick={() => setVisible(!visible)}
                       >
-                        {visible ? <FaEyeSlash /> : <FaEye />}
+                        {visible ? <FaEye /> : <FaEyeSlash />}
                       </span>
                     </div>
                   </div>
