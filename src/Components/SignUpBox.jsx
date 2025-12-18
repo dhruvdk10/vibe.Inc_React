@@ -44,7 +44,7 @@ const SignUpBox = () => {
     }
 
     try {
-      await axios.post("http://localhost:3013/api/users", form);
+      await axios.post("http://localhost:3013/users/register", form);
       setMessage("Account created successfully!");
 
       setTimeout(() => {
