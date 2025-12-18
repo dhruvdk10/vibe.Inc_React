@@ -46,6 +46,10 @@ const SignUpBox = () => {
       await axios.post("http://localhost:3013/users/register", form);
       setMessage("Account created successfully!");
 
+      // ✅ Close the signup modal
+      const signupModal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+      signupModal.hide();
+
       // ✅ Reset form fields and eye visibility
       setForm({
         username: "",
@@ -57,9 +61,10 @@ const SignUpBox = () => {
       setVisible(false);
       setVisible2(false);
 
+      // Optional: redirect after short delay
       setTimeout(() => {
         window.location.hash = "#/SignupDashboard";
-      }, 1000);
+      }, 500);
     } catch (err) {
       setMessage(err?.response?.data?.error || "Sign up failed");
     }

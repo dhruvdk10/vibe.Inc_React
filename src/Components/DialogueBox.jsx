@@ -28,9 +28,20 @@ const DialogueBox = () => {
       localStorage.setItem("user", JSON.stringify(res.data.user || {}));
 
       setMessage("Login successful!");
+
+      // ✅ Close the login modal after successful login
+      const loginModal = bootstrap.Modal.getInstance(document.getElementById('myModal'));
+      loginModal.hide();
+
+      // Optional: redirect after a short delay
       setTimeout(() => {
         window.location.hash = "#/Dashboard";
-      }, 800);
+      }, 500);
+
+      // ✅ Reset fields
+      setEmailOrUsername("");
+      setPassword("");
+      setVisible(false);
 
     } catch (err) {
       setMessage(err?.response?.data?.message || "Login failed");
@@ -85,6 +96,7 @@ const DialogueBox = () => {
                       className="form-control border-0"
                       placeholder="Username or Email Address"
                       required
+                      value={emailOrUsername}
                       onChange={(e) => setEmailOrUsername(e.target.value)}
                     />
                   </div>
