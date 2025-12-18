@@ -46,8 +46,9 @@ const SignUpBox = () => {
       await axios.post("http://localhost:3013/users/register", form);
       setMessage("Account created successfully!");
 
-      // ✅ Close the signup modal
-      const signupModal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+      // ✅ Close the signup modal safely
+      const signupModalEl = document.getElementById('signupModal');
+      const signupModal = bootstrap.Modal.getInstance(signupModalEl) || new bootstrap.Modal(signupModalEl);
       signupModal.hide();
 
       // ✅ Reset form fields and eye visibility
@@ -71,10 +72,12 @@ const SignUpBox = () => {
   };
 
   const switchToLogin = () => {
-    const signupModal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+    const signupModalEl = document.getElementById('signupModal');
+    const signupModal = bootstrap.Modal.getInstance(signupModalEl) || new bootstrap.Modal(signupModalEl);
     signupModal.hide();
 
-    const loginModal = new bootstrap.Modal(document.getElementById('myModal'));
+    const loginModalEl = document.getElementById('myModal');
+    const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
     loginModal.show();
   };
 

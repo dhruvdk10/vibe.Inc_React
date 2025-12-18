@@ -13,49 +13,52 @@ const DialogueBox = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const loginData = {
-      identifier: emailOrUsername,
-      password: password,
-    };
-
-    try {
-      const res = await API.post("/users/login", loginData);
-      console.log("LOGIN RESPONSE:", res.data);
-
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data.user || {}));
-
-      setMessage("Login successful!");
-
-      // ✅ Close the login modal after successful login
-      const loginModal = bootstrap.Modal.getInstance(document.getElementById('myModal'));
-      loginModal.hide();
-
-      // Optional: redirect after a short delay
-      setTimeout(() => {
-        window.location.hash = "#/Dashboard";
-      }, 500);
-
-      // ✅ Reset fields
-      setEmailOrUsername("");
-      setPassword("");
-      setVisible(false);
-
-    } catch (err) {
-      setMessage(err?.response?.data?.message || "Login failed");
-    }
+  const loginData = {
+    identifier: emailOrUsername,
+    password: password,
   };
+
+  try {
+    const res = await API.post("/users/login", loginData);
+    console.log("LOGIN RESPONSE:", res.data);
+
+    localStorage.setItem("token", res.data.token);
+    localStorage.setItem("user", JSON.stringify(res.data.user || {}));
+
+    setMessage("Login successful!");
+
+    // ✅ Close login modal safely
+    const loginModalEl = document.getElementById('myModal');
+    const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
+    loginModal.hide();
+
+    // Optional: redirect after a short delay
+    setTimeout(() => {
+      window.location.hash = "#/Dashboard";
+    }, 500);
+
+    // ✅ Reset fields
+    setEmailOrUsername("");
+    setPassword("");
+    setVisible(false);
+
+  } catch (err) {
+    setMessage(err?.response?.data?.message || "Login failed");
+  }
+};
 
   // ✅ Smooth switch to Sign Up modal
-  const switchToSignup = () => {
-    const loginModal = bootstrap.Modal.getInstance(document.getElementById('myModal'));
-    loginModal.hide(); // hide login modal
+const switchToSignup = () => {
+  const loginModalEl = document.getElementById('myModal');
+  const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
+  loginModal.hide();
 
-    const signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
-    signupModal.show(); // show signup modal
-  };
+  const signupModalEl = document.getElementById('signupModal');
+  const signupModal = bootstrap.Modal.getInstance(signupModalEl) || new bootstrap.Modal(signupModalEl);
+  signupModal.show();
+};
 
   return (
     <section className="form-box">
