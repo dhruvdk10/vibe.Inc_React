@@ -93,34 +93,22 @@ const Navbar = () => {
 
             {/* Profile Dropdown */}
             <div className="dropdown ps-1">
-              <NavLink
-                to="#"
-                className="options d-flex align-items-center text-decoration-none text-white"
-                id="profileDropdown"
+              <button
+                className="btn btn-link text-white"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <FontAwesomeIcon
-                  icon={faUser}
-                  className="fa fa-user fs-4 me-2"
-                />
-              </NavLink>
-              <ul
-                className="dropdown-menu dropdown-menu-end"
-                aria-labelledby="profileDropdown"
-              >
+                <FontAwesomeIcon icon={faUser} className="fs-4" />
+              </button>
+
+              <ul className="dropdown-menu dropdown-menu-end">
                 <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/login"
-                    data-bs-toggle="modal"
-                    data-bs-target="#myModal"
-                  >
+                  <Link className="dropdown-item" to="/login">
                     Log In
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/#/">
+                  <Link className="dropdown-item" to="/">
                     Sign Out
                   </Link>
                 </li>
