@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import API from '../../api';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ✅ ensure bootstrap JS is imported
+import * as bootstrap from "bootstrap";
+import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
@@ -151,13 +153,13 @@ const DialogueBox = () => {
                 <div className="text-center">
                   <span>
                     Do not have an account?{" "}
-                    <link
+                    <Link
                     to="/signup"
                     data-bs-toggle="modal"
                     data-bs-target="#signupModal"
                     >
                       Sign up now
-                    </link>
+                    </Link>
                   </span>
                 </div>
 

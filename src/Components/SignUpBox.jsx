@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import * as bootstrap from "bootstrap";
+import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faPhone, faLock } from "@fortawesome/free-solid-svg-icons";
@@ -174,11 +176,11 @@ const SignUpBox = () => {
 
                 <div className="text-center mt-4">
                   Already have an account?{" "}
-                  <link to="/login"
+                  <Link to="/login"
                     data-bs-toggle="modal"
                     data-bs-target="#myModal">
                     Login here
-                  </link>
+                  </Link>
                 </div>
               </div>
             </div>
