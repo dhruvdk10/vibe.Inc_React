@@ -4,12 +4,22 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-icons";
+// import bootstrap Modal helper (Bootstrap 5)
+import { Modal } from "bootstrap"; // make sure bootstrap JS is loaded [web:12]
 
 const DialogueBox = () => {
   const [visible, setVisible] = useState(false);
   const [emailOrUsername, setEmailOrUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+
+  // helper: close the modal
+  const closeModal = () => {
+    const modalEl = document.getElementById("myModal");
+    if (!modalEl) return;
+    const modal = Modal.getInstance(modalEl) || new Modal(modalEl); // [web:7][web:12]
+    modal.hide();
+  };
 
   // --- REAL LOGIN LOGIC (Updated for identifier) ---
   const handleSubmit = async (e) => {
@@ -29,10 +39,13 @@ const DialogueBox = () => {
       localStorage.setItem("user", JSON.stringify(res.data.user || {}));
 
       setMessage("Login successful!");
+
+      // close dialog immediately after success
+      closeModal();
+
       setTimeout(() => {
         window.location.hash = "#/Dashboard";
       }, 800);
-
     } catch (err) {
       setMessage(err?.response?.data?.message || "Login failed"); // updated to match backend response
     }
@@ -106,8 +119,8 @@ const DialogueBox = () => {
                         top: "50%",
                         transform: "translateY(-50%)",
                         cursor: "pointer",
-                        zIndex: 10,   // ensure it’s above input
-                        userSelect: "none" // prevent text selection while clicking
+                        zIndex: 10,
+                        userSelect: "none"
                       }}
                     >
                       {visible ? <FaEyeSlash /> : <FaEye />}
@@ -152,7 +165,10 @@ const DialogueBox = () => {
                   <span>
                     Do not have an account?{" "}
                     <a href="#" className="box-options text-decoration-none"
-                      data-bs-toggle="modal" data-bs-target="#signupModal">
+                      data-bs-dismiss="modal"        // close current login modal
+                      data-bs-toggle="modal"         // open another modal
+                      data-bs-target="#signupModal"  // id of signup modal
+                    >
                       Sign up now
                     </a>
                   </span>
