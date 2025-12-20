@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import API from '../../api';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ✅ ensure bootstrap JS is imported
-import * as bootstrap from "bootstrap";
-import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
@@ -14,40 +11,30 @@ const DialogueBox = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
+  // --- REAL LOGIN LOGIC (Updated for identifier) ---
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const loginData = {
-      identifier: emailOrUsername,
+      identifier: emailOrUsername, // updated key to match backend
       password: password,
     };
 
     try {
       const res = await API.post("/users/login", loginData);
+
       console.log("LOGIN RESPONSE:", res.data);
 
-      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("token", res.data.token); // keep as is
       localStorage.setItem("user", JSON.stringify(res.data.user || {}));
 
       setMessage("Login successful!");
-
-      // ✅ Close login modal safely
-      const loginModalEl = document.getElementById('myModal');
-      const loginModal = bootstrap.Modal.getInstance(loginModalEl) || new bootstrap.Modal(loginModalEl);
-      loginModal.hide();
-
-      // Optional: redirect after a short delay
       setTimeout(() => {
         window.location.hash = "#/Dashboard";
-      }, 500);
-
-      // ✅ Reset fields
-      setEmailOrUsername("");
-      setPassword("");
-      setVisible(false);
+      }, 800);
 
     } catch (err) {
-      setMessage(err?.response?.data?.message || "Login failed");
+      setMessage(err?.response?.data?.message || "Login failed"); // updated to match backend response
     }
   };
 
@@ -73,6 +60,7 @@ const DialogueBox = () => {
               {/* Body */}
               <div className="modal-body px-4">
 
+                {/* Alert Message */}
                 {message && (
                   <div className={`alert ${message.includes("successful") ? "alert-success" : "alert-danger"}`}>
                     {message}
@@ -81,6 +69,7 @@ const DialogueBox = () => {
 
                 <form onSubmit={handleSubmit}>
 
+                  {/* Email / Username */}
                   <div className="input-group mb-3" style={{ height: "40px", borderRadius: "12px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faUser} className="text-black" />
@@ -90,37 +79,42 @@ const DialogueBox = () => {
                       className="form-control border-0"
                       placeholder="Username or Email Address"
                       required
-                      value={emailOrUsername}
                       onChange={(e) => setEmailOrUsername(e.target.value)}
                     />
                   </div>
 
-                  <div className="input-group mb-3" style={{ height: "40px" }}>
+                  {/* Password */}
+                  <div className="input-group mb-3 position-relative" style={{ height: "40px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
+                    <input
+                      type={visible ? "text" : "password"}
+                      className="form-control border-0"
+                      placeholder="Password"
+                      required
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      style={{ paddingRight: "40px" }}
+                    />
 
-                    {/* This div behaves like form-control */}
-                    <div className="form-control p-0 position-relative border-0">
-                      <input
-                        type={visible ? "text" : "password"}
-                        className="w-100 h-100 border-0 px-2"
-                        placeholder="Password"
-                        required
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        style={{ paddingRight: "45px", outline: "none" }}
-                      />
-
-                      <span
-                        className="eye-icon"
-                        onClick={() => setVisible(!visible)}
-                      >
-                        {visible ? <FaEyeSlash /> : <FaEye />}
-                      </span>
-                    </div>
+                    <span
+                      onClick={() => setVisible(!visible)}
+                      style={{
+                        position: "absolute",
+                        right: "10px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        cursor: "pointer",
+                        zIndex: 10,   // ensure it’s above input
+                        userSelect: "none" // prevent text selection while clicking
+                      }}
+                    >
+                      {visible ? <FaEyeSlash /> : <FaEye />}
+                    </span>
                   </div>
 
+                  {/* Remember + Forgot */}
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <div className="form-check">
                       <input type="checkbox" className="form-check-input" />
@@ -131,6 +125,7 @@ const DialogueBox = () => {
                     </a>
                   </div>
 
+                  {/* Login Button */}
                   <div className="d-grid">
                     <button className="btn btn-secondary fw-bold mb-3" style={{ height: "42px", borderRadius: "12px" }}>
                       Login
@@ -138,28 +133,28 @@ const DialogueBox = () => {
                   </div>
                 </form>
 
+                {/* OR */}
                 <div className="d-flex align-items-center text-light my-4">
                   <hr className="flex-grow-1" />
                   <span className="px-3">Or login with</span>
                   <hr className="flex-grow-1" />
                 </div>
 
+                {/* Social */}
                 <div className="d-flex justify-content-center gap-4 mb-4">
                   <a href="#" className="fa fa-facebook btn px-3 py-2"><FontAwesomeIcon icon={faFacebookF} /></a>
                   <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faTwitter} /></a>
                   <a href="#" className="btn px-3 py-2"><FontAwesomeIcon icon={faGoogle} /></a>
                 </div>
 
+                {/* Signup Link */}
                 <div className="text-center">
                   <span>
                     Do not have an account?{" "}
-                    <Link
-                    to="/signup"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signupModal"
-                    >
+                    <a href="#" className="box-options text-decoration-none"
+                      data-bs-toggle="modal" data-bs-target="#signupModal">
                       Sign up now
-                    </Link>
+                    </a>
                   </span>
                 </div>
 

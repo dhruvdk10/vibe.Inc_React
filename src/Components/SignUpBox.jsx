@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import * as bootstrap from "bootstrap";
-import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faPhone, faLock } from "@fortawesome/free-solid-svg-icons";
@@ -48,11 +46,6 @@ const SignUpBox = () => {
       await axios.post("http://localhost:3013/users/register", form);
       setMessage("Account created successfully!");
 
-      // ✅ Close the signup modal safely
-      const signupModalEl = document.getElementById('signupModal');
-      const signupModal = bootstrap.Modal.getInstance(signupModalEl) || new bootstrap.Modal(signupModalEl);
-      signupModal.hide();
-
       // ✅ Reset form fields and eye visibility
       setForm({
         username: "",
@@ -64,15 +57,21 @@ const SignUpBox = () => {
       setVisible(false);
       setVisible2(false);
 
-      // Optional: redirect after short delay
       setTimeout(() => {
         window.location.hash = "#/SignupDashboard";
-      }, 500);
+      }, 1000);
     } catch (err) {
       setMessage(err?.response?.data?.error || "Sign up failed");
     }
   };
 
+  const switchToLogin = () => {
+    const signupModal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+    signupModal.hide();
+
+    const loginModal = new bootstrap.Modal(document.getElementById('myModal'));
+    loginModal.show();
+  };
 
   return (
     <section className="form-box">
@@ -112,55 +111,45 @@ const SignUpBox = () => {
                   </div>
 
                   {/* Password */}
-                  <div className="input-group mb-3" style={{ height: "40px" }}>
+                  <div className="input-group mb-3" style={{ height: "40px", position: "relative" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
-
-                    <div className="position-relative w-100">
-                      <input
-                        type={visible ? "text" : "password"}
-                        name="password"
-                        className="form-control border-0"
-                        placeholder="Password"
-                        value={form.password}
-                        onChange={handleChange}
-                        style={{ paddingRight: "45px" }}
-                      />
-
-                      <span
-                        className="eye-icon"
-                        onClick={() => setVisible(!visible)}
-                      >
-                        {visible ? <FaEyeSlash /> : <FaEye />}
-                      </span>
-                    </div>
+                    <input
+                      type={visible ? "text" : "password"}
+                      name="password"
+                      className="form-control border-0"
+                      placeholder="Password"
+                      value={form.password}
+                      onChange={handleChange}
+                    />
+                    <span
+                      onClick={() => setVisible(!visible)}
+                      style={{ position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)", cursor: "pointer", zIndex: 10, userSelect: "none" }}
+                    >
+                      {visible ? <FaEyeSlash /> : <FaEye />}
+                    </span>
                   </div>
 
                   {/* Confirm Password */}
-                  <div className="input-group mb-4" style={{ height: "40px" }}>
+                  <div className="input-group mb-4" style={{ height: "40px", position: "relative" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
-
-                    <div className="position-relative w-100">
-                      <input
-                        type={visible2 ? "text" : "password"}
-                        name="confirmPassword"
-                        className="form-control border-0"
-                        placeholder="Confirm Password"
-                        value={form.confirmPassword}
-                        onChange={handleChange}
-                        style={{ paddingRight: "45px" }}
-                      />
-
-                      <span
-                        className="eye-icon"
-                        onClick={() => setVisible2(!visible2)}
-                      >
-                        {visible2 ? <FaEyeSlash /> : <FaEye />}
-                      </span>
-                    </div>
+                    <input
+                      type={visible2 ? "text" : "password"}
+                      name="confirmPassword"
+                      className="form-control border-0"
+                      placeholder="Confirm Password"
+                      value={form.confirmPassword}
+                      onChange={handleChange}
+                    />
+                    <span
+                      onClick={() => setVisible2(!visible2)}
+                      style={{ position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)", cursor: "pointer", zIndex: 10, userSelect: "none" }}
+                    >
+                      {visible2 ? <FaEyeSlash /> : <FaEye />}
+                    </span>
                   </div>
 
                   <div className="d-grid">
@@ -176,11 +165,9 @@ const SignUpBox = () => {
 
                 <div className="text-center mt-4">
                   Already have an account?{" "}
-                  <Link to="/login"
-                    data-bs-toggle="modal"
-                    data-bs-target="#myModal">
+                  <span onClick={switchToLogin} className="box-options text-decoration-none" style={{ cursor: "pointer" }}>
                     Login here
-                  </Link>
+                  </span>
                 </div>
               </div>
             </div>
