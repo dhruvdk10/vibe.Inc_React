@@ -93,18 +93,15 @@ const Navbar = () => {
 
             {/* Profile Dropdown */}
             <div className="dropdown ps-1">
-              <NavLink
-                to="#"
-                className="options d-flex align-items-center text-decoration-none text-white"
+              <button
+                className="btn options d-flex align-items-center text-white"
                 id="profileDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                style={{ background: "none", border: "none" }}
               >
-                <FontAwesomeIcon
-                  icon={faUser}
-                  className="fa fa-user fs-4 me-2"
-                />
-              </NavLink>
+                <FontAwesomeIcon icon={faUser} className="fs-4 me-2" />
+              </button>
               <ul
                 className="dropdown-menu dropdown-menu-end"
                 aria-labelledby="profileDropdown"
