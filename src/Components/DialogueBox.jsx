@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import API from '../../api';
+import { Modal } from "bootstrap";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
@@ -21,21 +22,28 @@ const DialogueBox = () => {
     };
 
     try {
-      const res = await API.post("/users/login", loginData);
+  const res = await API.post("/users/login", loginData);
 
-      console.log("LOGIN RESPONSE:", res.data);
+  console.log("LOGIN RESPONSE:", res.data);
 
-      localStorage.setItem("token", res.data.token); // keep as is
-      localStorage.setItem("user", JSON.stringify(res.data.user || {}));
+  localStorage.setItem("token", res.data.token);
+  localStorage.setItem("user", JSON.stringify(res.data.user || {}));
 
-      setMessage("Login successful!");
-      setTimeout(() => {
-        window.location.hash = "#/Dashboard";
-      }, 800);
+  setMessage("Login successful!");
 
-    } catch (err) {
-      setMessage(err?.response?.data?.message || "Login failed"); // updated to match backend response
-    }
+  // ✅ CLOSE MODAL
+  const modalElement = document.getElementById("myModal");
+  const modalInstance = Modal.getInstance(modalElement);
+  modalInstance?.hide();
+
+  // ✅ Redirect after modal closes
+  setTimeout(() => {
+    window.location.hash = "#/Dashboard";
+  }, 800);
+
+} catch (err) {
+  setMessage(err?.response?.data?.message || "Login failed");
+}
   };
 
   return (
