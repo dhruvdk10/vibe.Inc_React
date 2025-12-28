@@ -2,12 +2,13 @@ import React, { useRef, useEffect } from "react";
 import Cards from "./Cards";
 
 const ScrollSection = ({ title, data = [], openModal }) => {
+  // ✅ Safety for title
   const safeTitle = typeof title === "string" ? title : "section";
-  const rowClass =
-    safeTitle.replace(/\s+/g, "-").toLowerCase() + "-row";
+  const rowClass = `${safeTitle.replace(/\s+/g, "-").toLowerCase()}-row`;
 
   const rowRef = useRef(null);
 
+  // Scroll buttons
   const scrollLeft = () => {
     rowRef.current?.scrollBy({
       left: -rowRef.current.offsetWidth,
@@ -22,46 +23,50 @@ const ScrollSection = ({ title, data = [], openModal }) => {
     });
   };
 
+  // Drag + Swipe support
   useEffect(() => {
     const row = rowRef.current;
     if (!row) return;
 
     let isDown = false;
-    let startX;
-    let scrollLeft;
+    let startX = 0;
+    let scrollLeftValue = 0;
 
     const startDragging = (e) => {
       isDown = true;
       startX = e.pageX || e.touches[0].pageX;
-      scrollLeft = row.scrollLeft;
+      scrollLeftValue = row.scrollLeft;
     };
 
-    const stopDragging = () => (isDown = false);
+    const stopDragging = () => {
+      isDown = false;
+    };
 
     const whileDragging = (e) => {
       if (!isDown) return;
       const x = e.pageX || e.touches[0].pageX;
-      row.scrollLeft = scrollLeft - (x - startX) * 1.5;
+      const walk = (x - startX) * 1.5;
+      row.scrollLeft = scrollLeftValue - walk;
     };
 
     row.addEventListener("mousedown", startDragging);
+    row.addEventListener("mousemove", whileDragging);
     row.addEventListener("mouseup", stopDragging);
     row.addEventListener("mouseleave", stopDragging);
-    row.addEventListener("mousemove", whileDragging);
 
     row.addEventListener("touchstart", startDragging);
-    row.addEventListener("touchend", stopDragging);
     row.addEventListener("touchmove", whileDragging);
+    row.addEventListener("touchend", stopDragging);
 
     return () => {
       row.removeEventListener("mousedown", startDragging);
+      row.removeEventListener("mousemove", whileDragging);
       row.removeEventListener("mouseup", stopDragging);
       row.removeEventListener("mouseleave", stopDragging);
-      row.removeEventListener("mousemove", whileDragging);
 
       row.removeEventListener("touchstart", startDragging);
-      row.removeEventListener("touchend", stopDragging);
       row.removeEventListener("touchmove", whileDragging);
+      row.removeEventListener("touchend", stopDragging);
     };
   }, []);
 
@@ -71,8 +76,12 @@ const ScrollSection = ({ title, data = [], openModal }) => {
         <p className="section-title">{safeTitle}</p>
 
         <div className="position-relative">
-          <button className="scroll-btn left" onClick={scrollLeft}>‹</button>
+          {/* Left Button */}
+          <button className="scroll-btn left" onClick={scrollLeft}>
+            ‹
+          </button>
 
+          {/* Scroll Row */}
           <div
             ref={rowRef}
             className={`row g-2 d-flex flex-nowrap ${rowClass}`}
@@ -82,15 +91,19 @@ const ScrollSection = ({ title, data = [], openModal }) => {
               cursor: "grab",
             }}
           >
-            {Array.from({ length: 20 }, () => data)
-              .flat()
-              .filter(item => item && item.title)
-              .map((item, index) => (
+            {data.length === 0 ? (
+              <p className="text-muted ms-3">No results found</p>
+            ) : (
+              data.map((item, index) => (
                 <Cards key={index} {...item} openModal={openModal} />
-              ))}
+              ))
+            )}
           </div>
 
-          <button className="scroll-btn right" onClick={scrollRight}>›</button>
+          {/* Right Button */}
+          <button className="scroll-btn right" onClick={scrollRight}>
+            ›
+          </button>
         </div>
       </div>
     </section>
