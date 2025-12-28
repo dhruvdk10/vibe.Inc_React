@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,10 +16,22 @@ import TrendingScrollSection from "../Components/TrendingScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Home = ({ openModal }) => { // Receive openModal from App.jsx
+const Home = ({ openModal }) => {
+  const [searchTerm, setSearchTerm] = useState("");// Receive openModal from App.jsx
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+    const allShows = [
+    ...mustWatchData,
+    ...romanticHitsData,
+    ...thrillingchillsData,
+    ...cheerfulcomedyData,
+    ...toppicksforyouData,
+    ...topShows
+  ];
+   const searchResults = allShows.filter((item) =>
+    item.title?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <div>
       <section className="img_display">
@@ -70,14 +82,42 @@ const Home = ({ openModal }) => { // Receive openModal from App.jsx
         </div>
       </section>
 
+      <div className="container my-4">
+  <input
+    type="text"
+    className="form-control"
+    placeholder="Search movies, shows..."
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+  />
+</div>
+
       <section className="mid_section mt-5">
-        <ScrollSection title="Must Watch" data={mustWatchData} openModal={openModal} />
-        <ScrollSection title="Romantic Hits" data={romanticHitsData} openModal={openModal} />
-        <TrendingScrollSection title="" data={topShows} openModal={openModal} />
-        <ScrollSection title="Thrilling Chills" data={thrillingchillsData} openModal={openModal} />
-        <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} openModal={openModal} />
-        <ScrollSection title="Top Picks for You" data={toppicksforyouData} openModal={openModal} />
-      </section>
+
+{searchTerm ? (
+  searchResults.length > 0 ? (
+    <ScrollSection
+      title={`Search Results for "${searchTerm}"`}
+      data={searchResults}
+      openModal={openModal}
+    />
+  ) : (
+    <p className="text-center text-muted mt-4">
+      No results found
+    </p>
+  )
+) : (
+  <>
+    <ScrollSection title="Must Watch" data={mustWatchData} openModal={openModal} />
+    <ScrollSection title="Romantic Hits" data={romanticHitsData} openModal={openModal} />
+    <TrendingScrollSection title="" data={topShows} openModal={openModal} />
+    <ScrollSection title="Thrilling Chills" data={thrillingchillsData} openModal={openModal} />
+    <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} openModal={openModal} />
+    <ScrollSection title="Top Picks for You" data={toppicksforyouData} openModal={openModal} />
+  </>
+)}
+
+</section>
     </div>
   );
 };

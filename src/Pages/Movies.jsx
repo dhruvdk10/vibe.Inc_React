@@ -17,20 +17,49 @@ import ScrollSection from "../Components/ScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Movies = ({ openModal }) => { // Receive openModal from App.jsx
+const Movies = ({ openModal }) => {
+
+  // 🔹 EXISTING
   const [selectedGenre, setSelectedGenre] = useState("All");
+
+  // 🔹 NEW: search state
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  // 🔹 NEW: combine all movies
+  const allMovies = [
+    ...todaystoppicksforyouData,
+    ...crowdpleasersData,
+    ...feelgoodmoviesData,
+    ...upcomingmoviesData,
+    ...romanticHitsData,
+    ...thrillingchillsData,
+    ...cheerfulcomedyData
+  ];
+
+  // 🔹 NEW: genre + search filter
+  const filteredMovies = allMovies.filter((movie) => {
+    const matchesGenre =
+      selectedGenre === "All" ||
+      movie.genre?.toLowerCase() === selectedGenre.toLowerCase();
+
+    const matchesSearch =
+      movie.title?.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesGenre && matchesSearch;
+  });
+
   return (
     <div>
+
       {/* Top Section */}
       <div className="d-flex align-items-center justify-content-between">
         <h1>Movies</h1>
 
-        {/* Genre Dropdown */}
+        {/* Genre Dropdown (UNCHANGED) */}
         <div className="dropdown ps-2 me-3">
           <a
             href="#"
@@ -73,7 +102,18 @@ const Movies = ({ openModal }) => { // Receive openModal from App.jsx
         </div>
       </div>
 
-      {/* Banner */}
+      {/* 🔹 NEW: Search Input (does NOT affect layout) */}
+      <div className="container my-4">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Search movies..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+
+      {/* Banner (UNCHANGED) */}
       <section className="img_display">
         <div
           id="mybannerCarousel"
@@ -130,15 +170,33 @@ const Movies = ({ openModal }) => { // Receive openModal from App.jsx
         </div>
       </section>
 
-      {/* Movie Sections */}
+      {/* Movie Sections (LOGIC ADDED, STRUCTURE SAME) */}
       <section className="mid_section mt-5">
-        <ScrollSection title="Today's Top Picks for You" data={todaystoppicksforyouData} openModal={openModal} />
-        <ScrollSection title="Crowd Pleasers" data={crowdpleasersData} openModal={openModal} />
-        <ScrollSection title="Feel Good Movies" data={feelgoodmoviesData} openModal={openModal} />
-        <ScrollSection title="Upcoming Movies" data={upcomingmoviesData} openModal={openModal} />
-        <ScrollSection title="Romantic Hits" data={romanticHitsData} openModal={openModal} />
-        <ScrollSection title="Thrilling Chills" data={thrillingchillsData} openModal={openModal} />
-        <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} openModal={openModal} />
+
+        {(searchTerm || selectedGenre !== "All") ? (
+          filteredMovies.length > 0 ? (
+            <ScrollSection
+              title="Filtered Results"
+              data={filteredMovies}
+              openModal={openModal}
+            />
+          ) : (
+            <p className="text-center text-muted mt-4">
+              No movies found
+            </p>
+          )
+        ) : (
+          <>
+            <ScrollSection title="Today's Top Picks for You" data={todaystoppicksforyouData} openModal={openModal} />
+            <ScrollSection title="Crowd Pleasers" data={crowdpleasersData} openModal={openModal} />
+            <ScrollSection title="Feel Good Movies" data={feelgoodmoviesData} openModal={openModal} />
+            <ScrollSection title="Upcoming Movies" data={upcomingmoviesData} openModal={openModal} />
+            <ScrollSection title="Romantic Hits" data={romanticHitsData} openModal={openModal} />
+            <ScrollSection title="Thrilling Chills" data={thrillingchillsData} openModal={openModal} />
+            <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} openModal={openModal} />
+          </>
+        )}
+
       </section>
     </div>
   );

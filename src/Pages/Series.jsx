@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,17 +14,45 @@ import ScrollSection from "../Components/ScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Series = ({ openModal }) => { // receive openModal prop
+const Series = ({ openModal }) => {
+
+  // 🔹 NEW: genre + search state
+  const [selectedGenre, setSelectedGenre] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  // 🔹 NEW: combine all series data
+  const allSeries = [
+    ...seriestoppicksforyouData,
+    ...mustwatchshowsandseriesData,
+    ...seriesenglishData,
+    ...hinditvshowsData
+  ];
+
+  // 🔹 NEW: search + genre filter
+  const filteredSeries = allSeries.filter((series) => {
+    const matchesGenre =
+      selectedGenre === "All" ||
+      series.genre?.toLowerCase() === selectedGenre.toLowerCase();
+
+    const matchesSearch =
+      series.title?.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesGenre && matchesSearch;
+  });
+
   return (
     <div>
+
+      {/* Top Section */}
       <div className="d-flex align-items-center justify-content-between">
         <h1>Series</h1>
+
+        {/* Genre Dropdown (UI UNCHANGED) */}
         <div className="dropdown ps-2 me-3">
-          {/* Dropdown Toggle Button */}
           <a
             href="#"
             className="genre d-flex align-items-center text-decoration-none dropdown-toggle"
@@ -32,12 +60,12 @@ const Series = ({ openModal }) => { // receive openModal prop
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Genres
+            {selectedGenre === "All" ? "Genres" : selectedGenre}
           </a>
 
-          {/* Dropdown Menu */}
           <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="categoryDropdown">
             {[
+              "All",
               "Action",
               "Comedy",
               "Drama",
@@ -50,14 +78,31 @@ const Series = ({ openModal }) => { // receive openModal prop
               "Fantasy",
             ].map((genre, index) => (
               <li key={index}>
-                <a className="dropdown-item" href="#">{genre}</a>
+                <a
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => setSelectedGenre(genre)}
+                >
+                  {genre}
+                </a>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      {/* Banner */}
+      {/* 🔹 NEW: Search Input */}
+      <div className="container my-4">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Search series..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+
+      {/* Banner (UNCHANGED) */}
       <section className="img_display">
         <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
@@ -85,6 +130,7 @@ const Series = ({ openModal }) => { // receive openModal prop
               </div>
             ))}
           </div>
+
           <button className="carousel-control-prev" type="button" data-bs-target="#mybannerCarousel" data-bs-slide="prev">
             <span className="carousel-control-prev-icon"></span>
             <span className="visually-hidden">Previous</span>
@@ -96,12 +142,30 @@ const Series = ({ openModal }) => { // receive openModal prop
         </div>
       </section>
 
-      {/* Series Sections */}
+      {/* Series Sections (LOGIC ADDED, LAYOUT SAME) */}
       <section className="mid_section mt-5">
-        <ScrollSection title="Top Picks for You" data={seriestoppicksforyouData} openModal={openModal} />
-        <ScrollSection title="Must Watch" data={mustwatchshowsandseriesData} openModal={openModal} />
-        <ScrollSection title="English Series" data={seriesenglishData} openModal={openModal} />
-        <ScrollSection title="Hindi TV Shows" data={hinditvshowsData} openModal={openModal} />
+
+        {(searchTerm || selectedGenre !== "All") ? (
+          filteredSeries.length > 0 ? (
+            <ScrollSection
+              title="Filtered Results"
+              data={filteredSeries}
+              openModal={openModal}
+            />
+          ) : (
+            <p className="text-center text-muted mt-4">
+              No series found
+            </p>
+          )
+        ) : (
+          <>
+            <ScrollSection title="Top Picks for You" data={seriestoppicksforyouData} openModal={openModal} />
+            <ScrollSection title="Must Watch" data={mustwatchshowsandseriesData} openModal={openModal} />
+            <ScrollSection title="English Series" data={seriesenglishData} openModal={openModal} />
+            <ScrollSection title="Hindi TV Shows" data={hinditvshowsData} openModal={openModal} />
+          </>
+        )}
+
       </section>
     </div>
   );
