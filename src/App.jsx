@@ -14,34 +14,45 @@ import Dashboard from "./Pages/Dashboard";
 import SignupDashboard from "./Pages/SignupDashboard";
 import CardDialog from "./Components/CardDialog";
 import "./index.css";
-import { MyListProvider } from "./Components/ContextAPI/MyListContext"; // Import Context
+import { MyListProvider } from "./Components/ContextAPI/MyListContext";
 
 const App = () => {
   const [modalData, setModalData] = useState(null);
+  const [searchTerm, setSearchTerm] = useState(""); // ✅ GLOBAL SEARCH STATE
 
   return (
-    <MyListProvider> {/* Wrap entire app */}
+    <MyListProvider>
       <HashRouter>
-        <Navbar />
 
-        {/* Routes */}
+        {/* ✅ Pass setSearchTerm to Navbar */}
+        <Navbar setSearchTerm={setSearchTerm} />
+
         <Routes>
           <Route
             path="/"
-            element={<Home openModal={(item) => setModalData(item)} />}
+            element={
+              <Home
+                searchTerm={searchTerm}
+                openModal={(item) => setModalData(item)}
+              />
+            }
           />
+
           <Route
             path="/Series"
             element={<Series openModal={(item) => setModalData(item)} />}
           />
+
           <Route
             path="/Movies"
             element={<Movies openModal={(item) => setModalData(item)} />}
           />
+
           <Route
             path="/Games"
             element={<Games openModal={(item) => setModalData(item)} />}
           />
+
           <Route
             path="/MyList"
             element={<MyList openModal={(item) => setModalData(item)} />}
@@ -53,19 +64,16 @@ const App = () => {
           />
 
           <Route
-          path="/SignupDashboard"
+            path="/SignupDashboard"
             element={<SignupDashboard openModal={(item) => setModalData(item)} />}
           />
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>
 
-        {/* Render CardDialog at top level */}
+        {/* Card Dialog */}
         {modalData && (
-          <CardDialog
-            {...modalData}
-            onClose={() => setModalData(null)}
-          />
+          <CardDialog {...modalData} onClose={() => setModalData(null)} />
         )}
 
         <DialogueBox />
@@ -77,4 +85,3 @@ const App = () => {
 };
 
 export default App;
-

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
-import ThemeReceiver from './ContextAPI/ThemeReceiver'
+import { NavLink, Link } from "react-router-dom";
+import ThemeReceiver from "./ContextAPI/ThemeReceiver";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faUser, faBell } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 
-
-const Navbar = () => {
+const Navbar = ({ setSearchTerm }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showSearch, setShowSearch] = useState(false);
 
@@ -15,49 +13,47 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <>
+      {/* Placeholder color fix */}
       <style>
         {`
-          .search-input::placeholder {
-            color: #ccc;
-          }
-          .light-mode .search-input::placeholder {
-            color: #000;
-          }
+          .search-input::placeholder { color: #ccc; }
+          .light-mode .search-input::placeholder { color: #000; }
         `}
       </style>
-      {/* Top Navbar */}
+
+      {/* 🔹 TOP NAVBAR */}
       <nav className="navbar fixed-top">
         <div className="container-fluid d-flex mx-0">
-          {/* Brand Logo navigates to home */}
-          <div>
-            <NavLink className="navbar-brand" to="/">
-              <img
-                src="/vibe.Inc_React/vibe._logo.png"
-                alt="logo"
-                class="logo"
-                height="40"
-                width="150"
-                style={{ objectFit: "cover" }}
-              />
-            </NavLink>
-          </div>
+
+          {/* Logo */}
+          <NavLink className="navbar-brand" to="/">
+            <img
+              src="/vibe.Inc_React/vibe._logo.png"
+              alt="logo"
+              className="logo"
+              height="40"
+              width="150"
+              style={{ objectFit: "cover" }}
+            />
+          </NavLink>
 
           <div className="d-flex align-items-center">
-            {/* Search */}
+
+            {/* 🔍 SEARCH */}
             <form
               className="d-flex align-items-center position-relative"
-              role="search"
               onSubmit={(e) => e.preventDefault()}
             >
               <input
-                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"
-                  }`}
                 type="search"
+                className={`form-control mx-2 search-input ${
+                  showSearch ? "d-block" : "d-none"
+                }`}
                 placeholder="Find your vibe."
-                aria-label="Search"
-                autoFocus={showSearch}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
                   width: "270px",
                   height: "35px",
@@ -67,45 +63,29 @@ const Navbar = () => {
                   transition: "all 0.3s ease",
                 }}
               />
+
               <button
                 className="btn btn-link text-white px-2"
                 type="button"
-                id="search-toggle"
                 onClick={() => setShowSearch(!showSearch)}
               >
-                <FontAwesomeIcon
-                  icon={faSearch}
-                  className="fa fa-search fs-4"
-                />
+                <FontAwesomeIcon icon={faSearch} className="fs-4" />
               </button>
 
               <ThemeReceiver />
-
             </form>
 
-            {/* Notification */}
-            {/* <button className="btn btn-link text-white ps-2 pe-1" type="button">
-              <FontAwesomeIcon
-                icon={faBell}
-                className="fa fa-bell fs-4"
-              />
-            </button> */}
-
-            {/* Profile Dropdown */}
+            {/* 👤 PROFILE */}
             <div className="dropdown ps-1">
               <button
                 className="btn options d-flex align-items-center text-white"
-                id="profileDropdown"
                 data-bs-toggle="dropdown"
-                aria-expanded="false"
                 style={{ background: "none", border: "none" }}
               >
-                <FontAwesomeIcon icon={faUser} className="fs-4 me-2" />
+                <FontAwesomeIcon icon={faUser} className="fs-4" />
               </button>
-              <ul
-                className="dropdown-menu dropdown-menu-end"
-                aria-labelledby="profileDropdown"
-              >
+
+              <ul className="dropdown-menu dropdown-menu-end">
                 <li>
                   <Link
                     className="dropdown-item"
@@ -117,7 +97,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/#/">
+                  <Link className="dropdown-item" to="/">
                     Sign Out
                   </Link>
                 </li>
@@ -125,69 +105,49 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav >
+      </nav>
 
-      {/* Bottom Navbar */}
+      {/* 🔹 BOTTOM NAVBAR */}
       <nav
         className="navbar navbar-expand-lg navbar-dark"
         style={{ marginTop: "66px" }}
       >
         <div className="container-fluid ms-0">
           <button
-            className="navbar-toggler ms-0"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#bottomNav"
-            style={{ border: "none", outline: "none", boxShadow: "none" }}
+            style={{ border: "none", boxShadow: "none" }}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="bottomNav">
             <ul className="navbar-nav ms-2 me-auto mb-lg-0">
-              <li className="nav-item">
-                <NavLink to="/" className={({ isActive }) =>
-                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
-                }
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/Series" className={({ isActive }) =>
-                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
-                }>
-                  Series
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/Movies" className={({ isActive }) =>
-                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
-                }>
-                  Movies
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/Games" className={({ isActive }) =>
-                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
-                }>
-                  Games
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink to="/MyList" className={({ isActive }) =>
-                  isActive && windowWidth > 991 ? "nav-link active ms-2" : "nav-link ms-2"
-                }>
-                  My List
-                </NavLink>
-              </li>
+              {["/", "/Series", "/Movies", "/Games", "/MyList"].map((path, i) => {
+                const labels = ["Home", "Series", "Movies", "Games", "My List"];
+                return (
+                  <li className="nav-item" key={path}>
+                    <NavLink
+                      to={path}
+                      className={({ isActive }) =>
+                        isActive && windowWidth > 991
+                          ? "nav-link active ms-2"
+                          : "nav-link ms-2"
+                      }
+                    >
+                      {labels[i]}
+                    </NavLink>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;
-
