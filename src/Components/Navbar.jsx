@@ -59,13 +59,12 @@ const Navbar = ({ setSearchTerm }) => {
             >
               <input
                 type="search"
-                className={`form-control mx-2 search-input ${
-                  showSearch ? "d-block" : "d-none"
-                } ${lightMode ? "light-mode" : "dark-mode"}`}
+                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"
+                  } ${lightMode ? "light-mode" : "dark-mode"}`}
                 placeholder="Find your vibe."
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
-                  width: "270px",
+                  width: "250px",
                   height: "35px",
                   boxShadow: "none",
                   outline: "none",
