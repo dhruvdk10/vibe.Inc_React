@@ -18,25 +18,25 @@ import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SignupDashboard = ({ openModal }) => {
-
+  // 🔍 SEARCH STATE
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // 🔍 SEARCH FILTER
+  // 🔍 SEARCH FILTER (same as Dashboard.jsx)
   const filterData = (data) => {
-    return data.filter(item =>
-      item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.name?.toLowerCase().includes(searchTerm.toLowerCase())
+    return data.filter(
+      (item) =>
+        item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.name?.toLowerCase().includes(searchTerm.toLowerCase())
     );
   };
 
   return (
     <div>
-
-      {/* ----------------- WELCOME MESSAGE ------------------ */}
+      {/* ----------------- WELCOME + SEARCH ------------------ */}
       <div className="text-light px-2 pt-4 d-flex justify-content-between align-items-center">
         <h1 className="fw-bold" style={{ fontSize: "2rem" }}>
           Welcome !
@@ -52,12 +52,19 @@ const SignupDashboard = ({ openModal }) => {
         />
       </div>
 
-      {/* ----------------- MAIN BANNER SECTION ------------------ */}
+      {/* ----------------- MAIN BANNER ------------------ */}
       <section className="img_display">
-        <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
+        <div
+          id="mybannerCarousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
           <div className="carousel-inner">
             {banners.map((banner, index) => (
-              <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+              <div
+                key={index}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+              >
                 <img
                   src={banner.img}
                   className="d-block w-100 img-fluid"
@@ -65,15 +72,25 @@ const SignupDashboard = ({ openModal }) => {
                   style={{ objectPosition: banner.position }}
                 />
                 <div className="update">{banner.update}</div>
+
                 <div className="carousel-caption text-light">
                   <div className="play">
                     <button>
-                      <FontAwesomeIcon icon={faPlay} className="play-icon me-1" /> Play
+                      <FontAwesomeIcon
+                        icon={faPlay}
+                        className="play-icon me-1"
+                      />
+                      Play
                     </button>
                   </div>
+
                   <div className="info">
                     <button>
-                      <FontAwesomeIcon icon={faCircleInfo} className="info-icon" /> Info
+                      <FontAwesomeIcon
+                        icon={faCircleInfo}
+                        className="info-icon"
+                      />
+                      Info
                     </button>
                   </div>
                 </div>
@@ -83,7 +100,7 @@ const SignupDashboard = ({ openModal }) => {
         </div>
       </section>
 
-      {/* ----------------- PERSONALIZED SECTIONS ------------------ */}
+      {/* ----------------- CONTENT SECTIONS ------------------ */}
       <section className="mid_section mt-5">
         <ScrollSection
           title="Must Watch"
@@ -121,7 +138,6 @@ const SignupDashboard = ({ openModal }) => {
           openModal={openModal}
         />
       </section>
-
     </div>
   );
 };

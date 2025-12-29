@@ -87,6 +87,7 @@ const ScrollSection = ({ title, data = [], openModal }) => {
             className={`row g-2 d-flex flex-nowrap ${rowClass}`}
             style={{
               overflowX: "hidden",
+              overflowY: "hidden",
               whiteSpace: "nowrap",
               cursor: "grab",
             }}

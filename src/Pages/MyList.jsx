@@ -7,20 +7,24 @@ import { Link } from "react-router-dom";
 import { MyListContext } from "../Components/ContextAPI/MyListContext";
 import CardDialog from "../Components/CardDialog";
 
-const MyList = () => {
+const MyList = ({ searchTerm }) => {
   const { myList } = useContext(MyListContext);
-  const [dialogItem, setDialogItem] = useState(null); // for CardDialog
+  const [dialogItem, setDialogItem] = useState(null);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // handle image click → open CardDialog
+  // 🔹 Filter My List using global search
+  const filteredList = myList.filter((item) =>
+    !searchTerm ||
+    item.title?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const handleImageClick = (item) => {
     setDialogItem(item);
   };
 
-  // close CardDialog
   const closeDialog = () => {
     setDialogItem(null);
   };
@@ -31,21 +35,24 @@ const MyList = () => {
         <h1>My List</h1>
       </div>
 
-      {/* My List items */}
       <section className="mt-5">
         {myList.length === 0 ? (
           <div className="empty-list-message mt-5 text-center d-flex flex-column align-items-center">
             <p className="mb-3" style={{ fontSize: "18px" }}>
               You haven’t added any titles to your list yet.
             </p>
-            <Link to="/" className="mt-0" style={{textDecoration: "none"}}>
-              <button className="explore-btn d-block mx-auto">Discover your vibe.</button>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <button className="explore-btn">Discover your vibe.</button>
             </Link>
           </div>
+        ) : searchTerm && filteredList.length === 0 ? (
+          <p className="text-center text-muted mt-4">
+            No results found in your list
+          </p>
         ) : (
           <>
             <div className="row g-3">
-              {myList.map((item, index) => (
+              {(searchTerm ? filteredList : myList).map((item, index) => (
                 <div key={index} className="col-6 col-md-3 col-lg-2">
                   <div className="movie-card border-0">
                     <img
@@ -60,7 +67,6 @@ const MyList = () => {
               ))}
             </div>
 
-            {/* Add More / Expand Button */}
             <div className="text-center mt-4">
               <Link className="nav-link" to="/">
                 <button className="explore-btn">Expand your vibe.</button>
@@ -70,7 +76,7 @@ const MyList = () => {
         )}
       </section>
 
-      {/* CardDialog */}
+      {/* Card Dialog */}
       {dialogItem && (
         <CardDialog
           img={dialogItem.img}
@@ -82,7 +88,7 @@ const MyList = () => {
           summary={dialogItem.summary}
           position={dialogItem.position}
           onClose={closeDialog}
-          isMyListDialog={true} // enable trash icon
+          isMyListDialog={true}
         />
       )}
     </div>

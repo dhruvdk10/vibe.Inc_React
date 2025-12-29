@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import {
   banners,
   mustWatchData,
@@ -10,54 +11,50 @@ import {
   thrillingchillsData,
   cheerfulcomedyData,
   toppicksforyouData,
-  topShows
+  topShows,
 } from "../Components/Data";
+
 import ScrollSection from "../Components/ScrollSection";
 import TrendingScrollSection from "../Components/TrendingScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Dashboard = ({ openModal }) => {
-
-  const [searchTerm, setSearchTerm] = useState("");
-
+const Dashboard = ({ searchTerm, openModal }) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // 🔍 SEARCH FILTER FUNCTION
-  const filterData = (data) => {
-    return data.filter(item =>
-      item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.name?.toLowerCase().includes(searchTerm.toLowerCase())
+  /* 🔹 Search filter (reused safely) */
+  const filterData = (data) =>
+    data.filter(
+      (item) =>
+        !searchTerm ||
+        item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.name?.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  };
 
   return (
     <div>
-
       {/* ----------------- WELCOME MESSAGE ------------------ */}
       <div className="text-light px-2 pt-4 d-flex justify-content-between align-items-center">
         <h1 className="fw-bold" style={{ fontSize: "2rem" }}>
           Welcome back!
         </h1>
-
-        {/* 🔍 SEARCH INPUT */}
-        <input
-          type="text"
-          className="form-control w-25"
-          placeholder="Search movies or shows..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
       </div>
 
       {/* ----------------- MAIN BANNER SECTION ------------------ */}
       <section className="img_display">
-        <div id="mybannerCarousel" className="carousel slide" data-bs-ride="carousel">
+        <div
+          id="mybannerCarousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
           <div className="carousel-inner">
             {banners.map((banner, index) => (
-              <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+              <div
+                key={index}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+              >
                 <img
                   src={banner.img}
                   className="d-block w-100 img-fluid"
@@ -65,15 +62,18 @@ const Dashboard = ({ openModal }) => {
                   style={{ objectPosition: banner.position }}
                 />
                 <div className="update">{banner.update}</div>
+
                 <div className="carousel-caption text-light">
                   <div className="play">
                     <button>
-                      <FontAwesomeIcon icon={faPlay} className="play-icon me-1" /> Play
+                      <FontAwesomeIcon icon={faPlay} className="me-1" />
+                      Play
                     </button>
                   </div>
                   <div className="info">
                     <button>
-                      <FontAwesomeIcon icon={faCircleInfo} className="info-icon" /> Info
+                      <FontAwesomeIcon icon={faCircleInfo} />
+                      Info
                     </button>
                   </div>
                 </div>
@@ -98,7 +98,6 @@ const Dashboard = ({ openModal }) => {
         />
 
         <TrendingScrollSection
-          title=""
           data={filterData(topShows)}
           openModal={openModal}
         />
@@ -121,7 +120,6 @@ const Dashboard = ({ openModal }) => {
           openModal={openModal}
         />
       </section>
-
     </div>
   );
 };

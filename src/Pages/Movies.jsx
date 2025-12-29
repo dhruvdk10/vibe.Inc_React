@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import {
   moviebanner,
   todaystoppicksforyouData,
@@ -11,25 +12,21 @@ import {
   upcomingmoviesData,
   romanticHitsData,
   thrillingchillsData,
-  cheerfulcomedyData
+  cheerfulcomedyData,
 } from "../Components/Data";
+
 import ScrollSection from "../Components/ScrollSection";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Movies = ({ openModal }) => {
-
-  // 🔹 EXISTING
+const Movies = ({ searchTerm, openModal }) => {
   const [selectedGenre, setSelectedGenre] = useState("All");
-
-  // 🔹 NEW: search state
-  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // 🔹 NEW: combine all movies
+  /* 🔹 Combine all movies */
   const allMovies = [
     ...todaystoppicksforyouData,
     ...crowdpleasersData,
@@ -37,16 +34,17 @@ const Movies = ({ openModal }) => {
     ...upcomingmoviesData,
     ...romanticHitsData,
     ...thrillingchillsData,
-    ...cheerfulcomedyData
+    ...cheerfulcomedyData,
   ];
 
-  // 🔹 NEW: genre + search filter
+  /* 🔹 Search + Genre filter */
   const filteredMovies = allMovies.filter((movie) => {
     const matchesGenre =
       selectedGenre === "All" ||
       movie.genre?.toLowerCase() === selectedGenre.toLowerCase();
 
     const matchesSearch =
+      !searchTerm ||
       movie.title?.toLowerCase().includes(searchTerm.toLowerCase());
 
     return matchesGenre && matchesSearch;
@@ -54,27 +52,21 @@ const Movies = ({ openModal }) => {
 
   return (
     <div>
-
-      {/* Top Section */}
+      {/* 🔹 Top Section */}
       <div className="d-flex align-items-center justify-content-between">
         <h1>Movies</h1>
 
-        {/* Genre Dropdown (UNCHANGED) */}
+        {/* Genre Dropdown */}
         <div className="dropdown ps-2 me-3">
           <a
             href="#"
             className="genre d-flex align-items-center text-decoration-none dropdown-toggle"
-            id="categoryDropdown"
             data-bs-toggle="dropdown"
-            aria-expanded="false"
           >
             {selectedGenre === "All" ? "Genres" : selectedGenre}
           </a>
 
-          <ul
-            className="dropdown-menu dropdown-menu-end"
-            aria-labelledby="categoryDropdown"
-          >
+          <ul className="dropdown-menu dropdown-menu-end">
             {[
               "All",
               "Action",
@@ -102,18 +94,7 @@ const Movies = ({ openModal }) => {
         </div>
       </div>
 
-      {/* 🔹 NEW: Search Input (does NOT affect layout) */}
-      <div className="container my-4">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search movies..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
-
-      {/* Banner (UNCHANGED) */}
+      {/* 🔹 Banner (UNCHANGED) */}
       <section className="img_display">
         <div
           id="mybannerCarousel"
@@ -121,27 +102,30 @@ const Movies = ({ openModal }) => {
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
-            {moviebanner.map((moviebanner, index) => (
+            {moviebanner.map((banner, index) => (
               <div
                 key={index}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}
               >
                 <img
-                  src={moviebanner.img}
+                  src={banner.img}
                   className="d-block w-100 img-fluid"
-                  alt={moviebanner.alt}
-                  style={{ objectPosition: moviebanner.position }}
+                  alt={banner.alt}
+                  style={{ objectPosition: banner.position }}
                 />
-                <div className="update">{moviebanner.update}</div>
+                <div className="update">{banner.update}</div>
+
                 <div className="carousel-caption text-light">
                   <div className="play">
                     <button>
-                      <FontAwesomeIcon icon={faPlay} className="play-icon me-1" /> Play
+                      <FontAwesomeIcon icon={faPlay} className="me-1" />
+                      Play
                     </button>
                   </div>
                   <div className="info">
                     <button>
-                      <FontAwesomeIcon icon={faCircleInfo} className="info-icon" /> Info
+                      <FontAwesomeIcon icon={faCircleInfo} />
+                      Info
                     </button>
                   </div>
                 </div>
@@ -156,8 +140,8 @@ const Movies = ({ openModal }) => {
             data-bs-slide="prev"
           >
             <span className="carousel-control-prev-icon"></span>
-            <span className="visually-hidden">Previous</span>
           </button>
+
           <button
             className="carousel-control-next"
             type="button"
@@ -165,25 +149,23 @@ const Movies = ({ openModal }) => {
             data-bs-slide="next"
           >
             <span className="carousel-control-next-icon"></span>
-            <span className="visually-hidden">Next</span>
           </button>
         </div>
       </section>
 
-      {/* Movie Sections (LOGIC ADDED, STRUCTURE SAME) */}
+      {/* 🔹 Movie Sections */}
       <section className="mid_section mt-5">
-
-        {(searchTerm || selectedGenre !== "All") ? (
+        {searchTerm || selectedGenre !== "All" ? (
           filteredMovies.length > 0 ? (
             <ScrollSection
-              title="Filtered Results"
+              title={`${
+                searchTerm ? `Search Results for "${searchTerm}"` : "Filtered Movies"
+              }`}
               data={filteredMovies}
               openModal={openModal}
             />
           ) : (
-            <p className="text-center text-muted mt-4">
-              No movies found
-            </p>
+            <p className="text-center text-muted mt-4">No movies found</p>
           )
         ) : (
           <>
@@ -196,7 +178,6 @@ const Movies = ({ openModal }) => {
             <ScrollSection title="Cheerful Comedy" data={cheerfulcomedyData} openModal={openModal} />
           </>
         )}
-
       </section>
     </div>
   );
