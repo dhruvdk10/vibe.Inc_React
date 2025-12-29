@@ -74,7 +74,7 @@ const Navbar = ({ setSearchTerm }) => {
                   <FontAwesomeIcon
                     icon={faSearch}
                     className="fs-4"
-                    style={{ color: lightMode ? "#333" : "#ddd" }}
+                    color={lightMode ? "#333" : "#ddd"}
                   />
                 </button>
               </div>
