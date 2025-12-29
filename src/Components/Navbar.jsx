@@ -3,8 +3,6 @@ import { NavLink, Link } from "react-router-dom";
 import { ThemeContext } from "./ContextAPI/ThemeProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
-
-// ✅ Import ThemeReceiver here
 import ThemeReceiver from "./ThemeReceiver";
 
 const Navbar = ({ setSearchTerm }) => {
