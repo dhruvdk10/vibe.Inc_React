@@ -115,6 +115,11 @@ body.modal-open {
   color: white;
 }
 
+.search-input:focus {
+  background-color: transparent ;
+  color: white;
+}
+
 .theme-toggle-button {
   border: none;
   background: transparent;
