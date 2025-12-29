@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
-import ThemeReceiver from "./ContextAPI/ThemeReceiver";
+import { ThemeContext } from "./ContextAPI/ThemeProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,7 +9,8 @@ const Navbar = ({ setSearchTerm }) => {
   const [showSearch, setShowSearch] = useState(false);
 
   // ✅ Get theme dynamically
-  const { lightMode } = ThemeReceiver();
+  const { theme } = useContext(ThemeContext);
+  const lightMode = theme === 'light-mode';
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
