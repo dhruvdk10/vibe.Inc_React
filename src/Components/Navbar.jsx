@@ -4,11 +4,13 @@ import { ThemeContext } from "./ContextAPI/ThemeProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 
+// ✅ Import ThemeReceiver here
+import ThemeReceiver from "./ThemeReceiver";
+
 const Navbar = ({ setSearchTerm }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showSearch, setShowSearch] = useState(false);
 
-  // ✅ Get theme dynamically
   const { theme } = useContext(ThemeContext);
   const lightMode = theme === 'light-mode';
 
@@ -31,7 +33,6 @@ const Navbar = ({ setSearchTerm }) => {
       {/* 🔹 TOP NAVBAR */}
       <nav className="navbar fixed-top">
         <div className="container-fluid d-flex mx-0">
-
           {/* Logo */}
           <NavLink className="navbar-brand" to="/">
             <img
@@ -45,7 +46,6 @@ const Navbar = ({ setSearchTerm }) => {
           </NavLink>
 
           <div className="d-flex align-items-center">
-
             {/* 🔍 SEARCH */}
             <form
               className="d-flex align-items-center position-relative"
@@ -77,6 +77,7 @@ const Navbar = ({ setSearchTerm }) => {
                 />
               </button>
 
+              {/* ✅ Theme toggle button */}
               <ThemeReceiver />
             </form>
 
