@@ -49,18 +49,19 @@ const Navbar = ({ setSearchTerm }) => {
           </NavLink>
 
           <div className="d-flex align-items-center">
-            {/* 🔍 SEARCH */}
+            {/* 🔍 SEARCH FORM */}
             <form
               className="d-flex align-items-center position-relative"
               onSubmit={(e) => {
                 e.preventDefault();
-                handleSearchToggle(); // ✅ ENTER = icon click
+                handleSearchToggle(); // ✅ ENTER works correctly
               }}
             >
               <input
                 type="search"
-                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"
-                  } ${lightMode ? "light-mode" : "dark-mode"}`}
+                className={`form-control mx-2 search-input ${
+                  showSearch ? "d-block" : "d-none"
+                } ${lightMode ? "light-mode" : "dark-mode"}`}
                 placeholder="Find your vibe."
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
@@ -83,10 +84,12 @@ const Navbar = ({ setSearchTerm }) => {
                   color={lightMode ? "#333" : "#ddd"}
                 />
               </button>
-
-              {/* Theme toggle */}
-              <ThemeReceiver />
             </form>
+
+            {/* ✅ THEME TOGGLE (OUTSIDE FORM) */}
+            <div className="ms-2">
+              <ThemeReceiver />
+            </div>
 
             {/* 👤 PROFILE */}
             <div className="dropdown ps-1">
