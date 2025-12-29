@@ -10,7 +10,7 @@ import {
   thrillingchillsData,
   cheerfulcomedyData,
   toppicksforyouData,
-  topShows
+  topShows,
 } from "../Components/Data";
 import ScrollSection from "../Components/ScrollSection";
 import TrendingScrollSection from "../Components/TrendingScrollSection";
@@ -18,21 +18,28 @@ import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SignupDashboard = ({ openModal }) => {
-  // 🔍 SEARCH STATE
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // 🔍 SEARCH FILTER (same as Dashboard.jsx)
-  const filterData = (data) => {
-    return data.filter(
-      (item) =>
-        item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.name?.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  };
+  // 🔹 Combine all shows for search
+  const allShows = [
+    ...mustWatchData,
+    ...romanticHitsData,
+    ...thrillingchillsData,
+    ...cheerfulcomedyData,
+    ...toppicksforyouData,
+    ...topShows,
+  ];
+
+  // 🔹 Filter based on searchTerm
+  const searchResults = allShows.filter(
+    (item) =>
+      item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.name?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
@@ -86,10 +93,7 @@ const SignupDashboard = ({ openModal }) => {
 
                   <div className="info">
                     <button>
-                      <FontAwesomeIcon
-                        icon={faCircleInfo}
-                        className="info-icon"
-                      />
+                      <FontAwesomeIcon icon={faCircleInfo} className="info-icon" />
                       Info
                     </button>
                   </div>
@@ -97,46 +101,71 @@ const SignupDashboard = ({ openModal }) => {
               </div>
             ))}
           </div>
+
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#mybannerCarousel"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#mybannerCarousel"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
 
       {/* ----------------- CONTENT SECTIONS ------------------ */}
       <section className="mid_section mt-5">
-        <ScrollSection
-          title="Must Watch"
-          data={filterData(mustWatchData)}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Romantic Hits"
-          data={filterData(romanticHitsData)}
-          openModal={openModal}
-        />
-
-        <TrendingScrollSection
-          title=""
-          data={filterData(topShows)}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Thrilling Chills"
-          data={filterData(thrillingchillsData)}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Cheerful Comedy"
-          data={filterData(cheerfulcomedyData)}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Top Picks for You"
-          data={filterData(toppicksforyouData)}
-          openModal={openModal}
-        />
+        {searchTerm ? (
+          searchResults.length > 0 ? (
+            <ScrollSection
+              title={`Search Results for "${searchTerm}"`}
+              data={searchResults}
+              openModal={openModal}
+            />
+          ) : (
+            <p className="text-center text-muted mt-4">No results found</p>
+          )
+        ) : (
+          <>
+            <ScrollSection
+              title="Must Watch"
+              data={mustWatchData}
+              openModal={openModal}
+            />
+            <ScrollSection
+              title="Romantic Hits"
+              data={romanticHitsData}
+              openModal={openModal}
+            />
+            <TrendingScrollSection data={topShows} openModal={openModal} />
+            <ScrollSection
+              title="Thrilling Chills"
+              data={thrillingchillsData}
+              openModal={openModal}
+            />
+            <ScrollSection
+              title="Cheerful Comedy"
+              data={cheerfulcomedyData}
+              openModal={openModal}
+            />
+            <ScrollSection
+              title="Top Picks for You"
+              data={toppicksforyouData}
+              openModal={openModal}
+            />
+          </>
+        )}
       </section>
     </div>
   );

@@ -24,14 +24,22 @@ const Dashboard = ({ searchTerm, openModal }) => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  /* 🔹 Search filter (reused safely) */
-  const filterData = (data) =>
-    data.filter(
-      (item) =>
-        !searchTerm ||
-        item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.name?.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+  // 🔹 Combine all shows for search
+  const allShows = [
+    ...mustWatchData,
+    ...romanticHitsData,
+    ...thrillingchillsData,
+    ...cheerfulcomedyData,
+    ...toppicksforyouData,
+    ...topShows,
+  ];
+
+  // 🔹 Filter based on searchTerm
+  const searchResults = allShows.filter(
+    (item) =>
+      item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.name?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
@@ -80,45 +88,71 @@ const Dashboard = ({ searchTerm, openModal }) => {
               </div>
             ))}
           </div>
+
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#mybannerCarousel"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#mybannerCarousel"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
 
-      {/* ----------------- PERSONALIZED SECTIONS ------------------ */}
+      {/* ----------------- MAIN CONTENT ------------------ */}
       <section className="mid_section mt-5">
-        <ScrollSection
-          title="Must Watch"
-          data={filterData(mustWatchData)}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Romantic Hits"
-          data={filterData(romanticHitsData)}
-          openModal={openModal}
-        />
-
-        <TrendingScrollSection
-          data={filterData(topShows)}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Thrilling Chills"
-          data={filterData(thrillingchillsData)}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Cheerful Comedy"
-          data={filterData(cheerfulcomedyData)}
-          openModal={openModal}
-        />
-
-        <ScrollSection
-          title="Top Picks for You"
-          data={filterData(toppicksforyouData)}
-          openModal={openModal}
-        />
+        {searchTerm ? (
+          searchResults.length > 0 ? (
+            <ScrollSection
+              title={`Search Results for "${searchTerm}"`}
+              data={searchResults}
+              openModal={openModal}
+            />
+          ) : (
+            <p className="text-center text-muted mt-4">No results found</p>
+          )
+        ) : (
+          <>
+            <ScrollSection
+              title="Must Watch"
+              data={mustWatchData}
+              openModal={openModal}
+            />
+            <ScrollSection
+              title="Romantic Hits"
+              data={romanticHitsData}
+              openModal={openModal}
+            />
+            <TrendingScrollSection data={topShows} openModal={openModal} />
+            <ScrollSection
+              title="Thrilling Chills"
+              data={thrillingchillsData}
+              openModal={openModal}
+            />
+            <ScrollSection
+              title="Cheerful Comedy"
+              data={cheerfulcomedyData}
+              openModal={openModal}
+            />
+            <ScrollSection
+              title="Top Picks for You"
+              data={toppicksforyouData}
+              openModal={openModal}
+            />
+          </>
+        )}
       </section>
     </div>
   );
