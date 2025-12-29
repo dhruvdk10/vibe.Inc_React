@@ -23,8 +23,7 @@ const App = () => {
   return (
     <MyListProvider>
       <HashRouter>
-
-        {/* ✅ Pass setSearchTerm to Navbar */}
+        {/* ✅ Navbar controls global search */}
         <Navbar setSearchTerm={setSearchTerm} />
 
         <Routes>
@@ -40,38 +39,68 @@ const App = () => {
 
           <Route
             path="/Series"
-            element={<Series openModal={(item) => setModalData(item)} />}
+            element={
+              <Series
+                searchTerm={searchTerm}
+                openModal={(item) => setModalData(item)}
+              />
+            }
           />
 
           <Route
             path="/Movies"
-            element={<Movies openModal={(item) => setModalData(item)} />}
+            element={
+              <Movies
+                searchTerm={searchTerm}
+                openModal={(item) => setModalData(item)}
+              />
+            }
           />
 
           <Route
             path="/Games"
-            element={<Games openModal={(item) => setModalData(item)} />}
+            element={
+              <Games
+                searchTerm={searchTerm}
+                openModal={(item) => setModalData(item)}
+              />
+            }
           />
 
           <Route
             path="/MyList"
-            element={<MyList openModal={(item) => setModalData(item)} />}
+            element={
+              <MyList
+                searchTerm={searchTerm}
+                openModal={(item) => setModalData(item)}
+              />
+            }
           />
 
           <Route
             path="/Dashboard"
-            element={<Dashboard openModal={(item) => setModalData(item)} />}
+            element={
+              <Dashboard
+                searchTerm={searchTerm}
+                openModal={(item) => setModalData(item)}
+              />
+            }
           />
 
           <Route
             path="/SignupDashboard"
-            element={<SignupDashboard openModal={(item) => setModalData(item)} />}
+            element={
+              <SignupDashboard
+                searchTerm={searchTerm}
+                openModal={(item) => setModalData(item)}
+              />
+            }
           />
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>
 
-        {/* Card Dialog */}
+        {/* ✅ Card Modal */}
         {modalData && (
           <CardDialog {...modalData} onClose={() => setModalData(null)} />
         )}
