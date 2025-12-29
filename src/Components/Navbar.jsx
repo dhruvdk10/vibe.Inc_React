@@ -8,8 +8,8 @@ const Navbar = ({ setSearchTerm }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showSearch, setShowSearch] = useState(false);
 
-  // 🔹 Minimal fix: define lightMode
-  const [lightMode] = useState(false); // default dark, change to true if needed
+  // ✅ Get theme dynamically
+  const { lightMode } = ThemeReceiver();
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -52,7 +52,7 @@ const Navbar = ({ setSearchTerm }) => {
             >
               <input
                 type="search"
-                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"} ${lightMode ? "light-mode" : ""}`}
+                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"} ${lightMode ? "light-mode" : "dark-mode"}`}
                 placeholder="Find your vibe."
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
@@ -64,20 +64,17 @@ const Navbar = ({ setSearchTerm }) => {
                 }}
               />
 
-
-              <div className={lightMode ? "light-mode" : "dark-mode"}>
-                <button
-                  className="btn btn-link px-2"
-                  type="button"
-                  onClick={() => setShowSearch(!showSearch)}
-                >
-                  <FontAwesomeIcon
-                    icon={faSearch}
-                    className="fs-4"
-                    color={lightMode ? "#333" : "#ddd"}
-                  />
-                </button>
-              </div>
+              <button
+                className="btn btn-link px-2"
+                type="button"
+                onClick={() => setShowSearch(!showSearch)}
+              >
+                <FontAwesomeIcon
+                  icon={faSearch}
+                  className="fs-4"
+                  color={lightMode ? "#333" : "#ddd"} // dynamic color
+                />
+              </button>
 
               <ThemeReceiver />
             </form>
