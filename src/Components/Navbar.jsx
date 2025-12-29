@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { ThemeContext } from "./ContextAPI/ThemeProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
-import ThemeReceiver from "./ThemeReceiver";
+import ThemeReceiver from "./ContextAPI/ThemeReceiver";
 
 const Navbar = ({ setSearchTerm }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
