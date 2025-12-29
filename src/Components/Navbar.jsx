@@ -49,9 +49,8 @@ const Navbar = ({ setSearchTerm }) => {
             >
               <input
                 type="search"
-                className={`form-control mx-2 search-input ${
-                  showSearch ? "d-block" : "d-none"
-                }`}
+                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"
+                  }`}
                 placeholder="Find your vibe."
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
@@ -64,13 +63,15 @@ const Navbar = ({ setSearchTerm }) => {
                 }}
               />
 
-              <button
-                className="btn btn-link text-white px-2"
-                type="button"
-                onClick={() => setShowSearch(!showSearch)}
-              >
-                <FontAwesomeIcon icon={faSearch} className="fs-4" />
-              </button>
+              <div className={lightMode ? "light-mode" : "dark-mode"}>
+                <button
+                  className="btn btn-link px-2"
+                  type="button"
+                  onClick={() => setShowSearch(!showSearch)}
+                >
+                  <FontAwesomeIcon icon={faSearch} className="fs-4" />
+                </button>
+              </div>
 
               <ThemeReceiver />
             </form>
