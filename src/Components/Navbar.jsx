@@ -8,6 +8,9 @@ const Navbar = ({ setSearchTerm }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showSearch, setShowSearch] = useState(false);
 
+  // 🔹 Minimal fix: define lightMode
+  const [lightMode] = useState(false); // default dark, change to true if needed
+
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -49,14 +52,13 @@ const Navbar = ({ setSearchTerm }) => {
             >
               <input
                 type="search"
-                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"
-                  }`}
+                className={`form-control mx-2 search-input ${showSearch ? "d-block" : "d-none"} ${lightMode ? "light-mode" : ""}`}
                 placeholder="Find your vibe."
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
                   width: "270px",
                   height: "35px",
-                  color: "#fff",
+                  color: lightMode ? "#000" : "#fff",
                   boxShadow: "none",
                   outline: "none",
                   transition: "all 0.3s ease",
