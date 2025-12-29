@@ -110,7 +110,7 @@ body.modal-open {
   border-bottom: 2px solid cyan;
 }
 
-.d-flex.align-items-center.position-relative input {
+.search-input {
   background-color: black;
   color: white;
 }
@@ -669,7 +669,6 @@ footer .text-center.mb-4 {
   transform: scale(1.05);
 }
 
-.fa-search,
 .fa-bell,
 .fa-facebook,
 .fa-instagram,
@@ -733,7 +732,7 @@ body.light-mode {
   border-bottom: 2px solid rgb(21, 189, 189);
 }
 
-.light-mode .d-flex.align-items-center.position-relative input {
+.search-input.light-mode {
   background-color: white;
   color: black;
 }
@@ -748,7 +747,6 @@ body.light-mode {
   color: white;
 }
 
-.light-mode .fa-search,
 .light-mode .fa-bell,
 .light-mode .fa-facebook,
 .light-mode .fa-instagram,
