@@ -8,7 +8,7 @@ import { faFacebookF, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-i
 const DialogueBox = () => {
   const [visible, setVisible] = useState(false);
   const [emailOrUsername, setEmailOrUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(false);
   const [message, setMessage] = useState("");
 
   // --- REAL LOGIN LOGIC (Updated for identifier) ---
@@ -97,8 +97,9 @@ const DialogueBox = () => {
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
+
                     <input
-                      type={visible ? "text" : "password"}
+                      type={showPassword ? "text" : "password"}
                       className="form-control border-0"
                       placeholder="Password"
                       required
@@ -108,18 +109,18 @@ const DialogueBox = () => {
                     />
 
                     <span
-                      onClick={() => setVisible(!visible)}
+                      onClick={() => setShowPassword(!showPassword)}
                       style={{
                         position: "absolute",
-                        right: "10px",
+                        right: "12px",
                         top: "50%",
                         transform: "translateY(-50%)",
                         cursor: "pointer",
-                        zIndex: 10,   // ensure it’s above input
-                        userSelect: "none" // prevent text selection while clicking
+                        zIndex: 5,
+                        color: "#555"
                       }}
                     >
-                      {visible ? <FaEyeSlash /> : <FaEye />}
+                      {showPassword ? <FaEyeSlash /> : <FaEye />}
                     </span>
                   </div>
 
