@@ -52,7 +52,7 @@ const DialogueBox = () => {
       <div className="container">
         <div className="modal fade" id="myModal">
           <div className="modal-dialog modal-dialog-centered border-0"
-            style={{ maxWidth: "450px", width: "85%", margin: "auto" }}>
+            style={{ maxWidth: "460px", width: "90%", margin: "auto" }}>
 
             <div className="modal-content text-white">
 

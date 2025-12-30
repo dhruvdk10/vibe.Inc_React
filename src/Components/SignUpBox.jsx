@@ -61,7 +61,7 @@ const SignUpBox = () => {
         <div className="modal fade" id="signupModal">
           <div
             className="modal-dialog modal-dialog-centered"
-            style={{ maxWidth: "460px", width: "85%", margin: "auto" }}
+            style={{ maxWidth: "460px", width: "90%", margin: "auto" }}
           >
             <div className="modal-content text-white">
               <div className="modal-header border-0 d-block text-center position-relative">
