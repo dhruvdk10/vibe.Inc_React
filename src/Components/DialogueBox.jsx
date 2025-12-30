@@ -6,9 +6,9 @@ import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 const DialogueBox = () => {
-  const [visible, setVisible] = useState(false);
-  const [emailOrUsername, setEmailOrUsername] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [emailOrUsername, setEmailOrUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
   // --- REAL LOGIN LOGIC (Updated for identifier) ---
