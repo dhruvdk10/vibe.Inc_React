@@ -8,48 +8,40 @@ const SignUpBox = () => {
   const [visible, setVisible] = useState(false);
   const [visible2, setVisible2] = useState(false);
 
-  const [form, setForm] = useState({
-    username: "",
-    email: "",
-    phone: "",
-    password: "",
-    confirmPassword: "",
-  });
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const [message, setMessage] = useState("");
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  // ✅ UPDATED ONLY THIS FUNCTION
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // empty field validation
-    if (
-      !form.username.trim() ||
-      !form.email.trim() ||
-      !form.phone.trim() ||
-      !form.password.trim() ||
-      !form.confirmPassword.trim()
-    ) {
+    if (!username || !email || !phone || !password || !confirmPassword) {
       setMessage("Please fill all fields");
       return;
     }
 
-    if (form.password !== form.confirmPassword) {
+    if (password !== confirmPassword) {
       setMessage("Passwords do not match");
       return;
     }
 
     try {
-      await axios.post("http://localhost:3013/api/users", form);
+      await axios.post("http://localhost:3013/api/users", {
+        username,
+        email,
+        phone,
+        password,
+      });
+
       setMessage("Account created successfully!");
 
       setTimeout(() => {
         window.location.hash = "#/SignupDashboard";
-      }, 1000);
+      }, 800);
     } catch (err) {
       setMessage(err?.response?.data?.error || "Signup failed");
     }
@@ -59,79 +51,71 @@ const SignUpBox = () => {
     <section className="form-box">
       <div className="container">
         <div className="modal fade" id="signupModal">
-          <div
-            className="modal-dialog modal-dialog-centered"
-            style={{ maxWidth: "460px", width: "90%", margin: "auto" }}
-          >
+          <div className="modal-dialog modal-dialog-centered" style={{ maxWidth: "460px", width: "90%" }}>
             <div className="modal-content text-white">
-              <div className="modal-header border-0 d-block text-center position-relative">
-                <h2 className="modal-title fw-bold mt-4">Sign Up</h2>
-                <button
-                  type="button"
-                  className="btn-close position-absolute top-0 end-0 mt-2 me-3"
-                  data-bs-dismiss="modal"
-                ></button>
+
+              <div className="modal-header border-0 text-center position-relative">
+                <h2 className="fw-bold mt-4">Sign Up</h2>
+                <button type="button" className="btn-close position-absolute top-0 end-0 mt-2 me-3" data-bs-dismiss="modal"></button>
               </div>
 
               <div className="modal-body px-4">
                 <form onSubmit={handleSubmit}>
+
                   {/* Username */}
-                  <div className="input-group mb-3" style={{ height: "40px" }}>
+                  <div className="input-group mb-3">
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faUser} className="text-black" />
+                      <FontAwesomeIcon icon={faUser} />
                     </span>
                     <input
                       type="text"
-                      name="username"
                       className="form-control border-0"
                       placeholder="Full Name"
-                      value={form.username}
-                      onChange={handleChange}
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
                     />
                   </div>
 
                   {/* Email */}
-                  <div className="input-group mb-3" style={{ height: "40px" }}>
+                  <div className="input-group mb-3">
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faEnvelope} className="text-black" />
+                      <FontAwesomeIcon icon={faEnvelope} />
                     </span>
                     <input
                       type="email"
-                      name="email"
                       className="form-control border-0"
                       placeholder="Email Address"
-                      value={form.email}
-                      onChange={handleChange}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
 
                   {/* Phone */}
-                  <div className="input-group mb-3" style={{ height: "40px" }}>
+                  <div className="input-group mb-3">
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faPhone} className="text-black" />
+                      <FontAwesomeIcon icon={faPhone} />
                     </span>
                     <input
                       type="tel"
-                      name="phone"
                       className="form-control border-0"
                       placeholder="Phone Number"
-                      value={form.phone}
-                      onChange={handleChange}
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </div>
 
                   {/* Password */}
-                  <div className="input-group mb-3" style={{ height: "40px", position: "relative" }}>
+                  <div className="input-group mb-3 position-relative">
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faLock} className="text-black" />
+                      <FontAwesomeIcon icon={faLock} />
                     </span>
                     <input
                       type={visible ? "text" : "password"}
-                      name="password"
                       className="form-control border-0"
                       placeholder="Password"
-                      value={form.password}
-                      onChange={handleChange}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      style={{ paddingRight: "40px" }}
                     />
                     <span
                       onClick={() => setVisible(!visible)}
@@ -141,6 +125,7 @@ const SignUpBox = () => {
                         top: "50%",
                         transform: "translateY(-50%)",
                         cursor: "pointer",
+                        zIndex: 10,
                       }}
                     >
                       {visible ? <FaEyeSlash /> : <FaEye />}
@@ -148,17 +133,17 @@ const SignUpBox = () => {
                   </div>
 
                   {/* Confirm Password */}
-                  <div className="input-group mb-4" style={{ height: "40px", position: "relative" }}>
+                  <div className="input-group mb-4 position-relative">
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faLock} className="text-black" />
+                      <FontAwesomeIcon icon={faLock} />
                     </span>
                     <input
                       type={visible2 ? "text" : "password"}
-                      name="confirmPassword"
                       className="form-control border-0"
                       placeholder="Confirm Password"
-                      value={form.confirmPassword}
-                      onChange={handleChange}
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      style={{ paddingRight: "40px" }}
                     />
                     <span
                       onClick={() => setVisible2(!visible2)}
@@ -168,21 +153,16 @@ const SignUpBox = () => {
                         top: "50%",
                         transform: "translateY(-50%)",
                         cursor: "pointer",
+                        zIndex: 10,
                       }}
                     >
                       {visible2 ? <FaEyeSlash /> : <FaEye />}
                     </span>
                   </div>
 
-                  <div className="d-grid">
-                    <button
-                      className="btn btn-secondary fw-bold"
-                      style={{ height: "42px", borderRadius: "12px" }}
-                      type="submit"
-                    >
-                      Create Account
-                    </button>
-                  </div>
+                  <button className="btn btn-secondary w-100 fw-bold">
+                    Create Account
+                  </button>
                 </form>
 
                 {message && (
@@ -191,17 +171,6 @@ const SignUpBox = () => {
                   </p>
                 )}
 
-                <div className="text-center mt-4">
-                  Already have an account?{" "}
-                  <a
-                    href="#"
-                    className="box-options text-decoration-none"
-                    data-bs-toggle="modal"
-                    data-bs-target="#myModal"
-                  >
-                    Login here
-                  </a>
-                </div>
               </div>
             </div>
           </div>

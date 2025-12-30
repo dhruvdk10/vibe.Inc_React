@@ -120,7 +120,7 @@ const DialogueBox = () => {
                         color: "#555"
                       }}
                     >
-                      {showPassword ? <FaEyeSlash /> : <FaEye />}
+                      {showPassword ? <FaEye /> : <FaEyeSlash />}
                     </span>
                   </div>
 
