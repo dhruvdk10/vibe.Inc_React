@@ -8,7 +8,7 @@ import { faFacebookF, faTwitter, faGoogle } from "@fortawesome/free-brands-svg-i
 const DialogueBox = () => {
   const [visible, setVisible] = useState(false);
   const [emailOrUsername, setEmailOrUsername] = useState("");
-  const [password, setPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState("");
 
   // --- REAL LOGIN LOGIC (Updated for identifier) ---
