@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faEnvelope, faPhone, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope, faPhone, faLock, faShieldHalved } from "@fortawesome/free-solid-svg-icons";
 
 const SignUpBox = () => {
   // ✅ SAME LOGIC AS DialogueBox
@@ -156,7 +156,7 @@ const SignUpBox = () => {
                     style={{ height: "40px" }}
                   >
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faLock} className="text-black" />
+                      <FontAwesomeIcon icon={faShieldHalved} className="text-black" />
                     </span>
 
                     <input
