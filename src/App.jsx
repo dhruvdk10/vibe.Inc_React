@@ -18,6 +18,9 @@ import { MyListProvider } from "./Components/ContextAPI/MyListContext";
 import SplashScreen from "./Components/SplashScreen";
 
 const App = () => {
+useEffect(() => {
+  document.title = "vibe."; 
+}, []);
   const [modalData, setModalData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [showSplash, setShowSplash] = useState(true);
