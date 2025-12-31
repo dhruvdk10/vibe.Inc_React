@@ -64,7 +64,7 @@ const Navbar = ({ setSearchTerm }) => {
                 placeholder="Find your vibe."
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
-                  width: "250px",
+                  width: "200px",
                   height: "35px",
                   boxShadow: "none",
                   outline: "none",
