@@ -93,7 +93,7 @@ const DialogueBox = () => {
                   </div>
 
                   {/* Password */}
-                  <div className="input-group mb-3 position-relative" style={{ height: "40px" }}>
+                  <div className="input-group mb-3 position-relative" style={{ height: "40px", borderRadius: "12px" }}>
                     <span className="input-group-text bg-white border-0">
                       <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>

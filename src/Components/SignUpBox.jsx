@@ -75,7 +75,7 @@ const SignUpBox = () => {
                   {/* Username */}
                   <div className="input-group mb-3">
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faUser} />
+                      <FontAwesomeIcon icon={faUser} className="text-black" />
                     </span>
                     <input
                       type="text"
@@ -114,7 +114,7 @@ const SignUpBox = () => {
                     />
                   </div>
 
-                  {/* Password (EXACT SAME AS DialogueBox) */}
+                  {/* Password */}
                   <div
                     className="input-group mb-3 position-relative"
                     style={{ height: "40px" }}
@@ -148,7 +148,7 @@ const SignUpBox = () => {
                     </span>
                   </div>
 
-                  {/* Confirm Password (SAME LOGIC) */}
+                  {/* Confirm Password */}
                   <div
                     className="input-group mb-4 position-relative"
                     style={{ height: "40px" }}
