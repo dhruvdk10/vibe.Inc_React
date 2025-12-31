@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faPhone, faLock } from "@fortawesome/free-solid-svg-icons";
 
 const SignUpBox = () => {
-  const [visible, setVisible] = useState(false);
-  const [visible2, setVisible2] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -51,14 +51,23 @@ const SignUpBox = () => {
     <section className="form-box">
       <div className="container">
         <div className="modal fade" id="signupModal">
-          <div className="modal-dialog modal-dialog-centered" style={{ maxWidth: "460px", width: "90%" }}>
+          <div
+            className="modal-dialog modal-dialog-centered"
+            style={{ maxWidth: "460px", width: "90%" }}
+          >
             <div className="modal-content text-white">
 
+              {/* Header */}
               <div className="modal-header border-0 text-center position-relative">
                 <h2 className="fw-bold mt-4">Sign Up</h2>
-                <button type="button" className="btn-close position-absolute top-0 end-0 mt-2 me-3" data-bs-dismiss="modal"></button>
+                <button
+                  type="button"
+                  className="btn-close position-absolute top-0 end-0 mt-2 me-3"
+                  data-bs-dismiss="modal"
+                ></button>
               </div>
 
+              {/* Body */}
               <div className="modal-body px-4">
                 <form onSubmit={handleSubmit}>
 
@@ -105,58 +114,70 @@ const SignUpBox = () => {
                   </div>
 
                   {/* Password */}
-                  <div className="input-group mb-3 position-relative">
+                  <div
+                    className="input-group mb-3 position-relative"
+                    style={{ height: "40px" }}
+                  >
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faLock} />
+                      <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
+
                     <input
-                      type={visible ? "text" : "password"}
+                      type={showPassword ? "text" : "password"}
                       className="form-control border-0"
                       placeholder="Password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       style={{ paddingRight: "40px" }}
                     />
+
                     <span
-                      onClick={() => setVisible(!visible)}
+                      onClick={() => setShowPassword(!showPassword)}
                       style={{
                         position: "absolute",
-                        right: "10px",
+                        right: "12px",
                         top: "50%",
                         transform: "translateY(-50%)",
                         cursor: "pointer",
-                        zIndex: 10,
+                        zIndex: 5,
+                        color: "#555",
                       }}
                     >
-                      {visible ? <FaEyeSlash /> : <FaEye />}
+                      {showPassword ? <FaEye /> : <FaEyeSlash />}
                     </span>
                   </div>
 
                   {/* Confirm Password */}
-                  <div className="input-group mb-4 position-relative">
+                  <div
+                    className="input-group mb-4 position-relative"
+                    style={{ height: "40px" }}
+                  >
                     <span className="input-group-text bg-white border-0">
-                      <FontAwesomeIcon icon={faLock} />
+                      <FontAwesomeIcon icon={faLock} className="text-black" />
                     </span>
+
                     <input
-                      type={visible2 ? "text" : "password"}
+                      type={showPassword2 ? "text" : "password"}
                       className="form-control border-0"
                       placeholder="Confirm Password"
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       style={{ paddingRight: "40px" }}
                     />
+
                     <span
-                      onClick={() => setVisible2(!visible2)}
+                      onClick={() => setShowPassword2(!showPassword2)}
                       style={{
                         position: "absolute",
-                        right: "10px",
+                        right: "12px",
                         top: "50%",
                         transform: "translateY(-50%)",
                         cursor: "pointer",
-                        zIndex: 10,
+                        zIndex: 5,
+                        color: "#555",
                       }}
                     >
-                      {visible2 ? <FaEyeSlash /> : <FaEye />}
+                      {showPassword2 ? <FaEye /> : <FaEyeSlash />}
                     </span>
                   </div>
 
@@ -170,8 +191,8 @@ const SignUpBox = () => {
                     {message}
                   </p>
                 )}
-
               </div>
+
             </div>
           </div>
         </div>
