@@ -15,10 +15,17 @@ import SignupDashboard from "./Pages/SignupDashboard";
 import CardDialog from "./Components/CardDialog";
 import "./index.css";
 import { MyListProvider } from "./Components/ContextAPI/MyListContext";
+import SplashScreen from "./Components/SplashScreen";
 
 const App = () => {
   const [modalData, setModalData] = useState(null);
-  const [searchTerm, setSearchTerm] = useState(""); // ✅ GLOBAL SEARCH STATE
+  const [searchTerm, setSearchTerm] = useState("");
+  const [showSplash, setShowSplash] = useState(true); 
+
+  // ✅ SHOW SPLASH FIRST
+  if (showSplash) {
+    return <SplashScreen onFinish={() => setShowSplash(false)} />;
+  }
 
   return (
     <MyListProvider>
