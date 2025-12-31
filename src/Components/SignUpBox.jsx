@@ -57,10 +57,8 @@ const SignUpBox = () => {
             style={{ maxWidth: "460px", width: "90%" }}
           >
             <div className="modal-content text-white">
-
-              {/* Header */}
-              <div className="modal-header border-0 text-center position-relative">
-                <h2 className="fw-bold mt-4">Sign Up</h2>
+              <div className="modal-header border-0 d-block text-center position-relative">
+                <h2 className="modal-title fw-bold mt-4">Sign Up</h2>
                 <button
                   type="button"
                   className="btn-close position-absolute top-0 end-0 mt-2 me-3"
