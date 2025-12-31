@@ -129,8 +129,8 @@ const SignUpBox = () => {
                       onChange={(e) => setPassword(e.target.value)}
                       style={{
                         paddingRight: "40px",
-                        borderBottomRightRadius: "12px",
-                        borderTopRightRadius: "12px"
+                        borderBottomRightRadius: "6px",
+                        borderTopRightRadius: "6px"
                       }}
                     />
 
@@ -167,8 +167,8 @@ const SignUpBox = () => {
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       style={{
                         paddingRight: "40px",
-                        borderBottomRightRadius: "12px",
-                        borderTopRightRadius: "12px"
+                        borderBottomRightRadius: "6px",
+                        borderTopRightRadius: "6px"
                       }}
                     />
 
