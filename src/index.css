@@ -35,7 +35,7 @@ body.modal-open {
 }
 
 .splash-logo-img {
-  width: 150px;
+  width: 200px;
   height: auto;
   object-fit: cover;
   animation: zoomFade 2s ease forwards;

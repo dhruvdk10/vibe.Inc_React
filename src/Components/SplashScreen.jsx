@@ -11,7 +11,7 @@ const SplashScreen = ({ onFinish }) => {
 
       const timer = setTimeout(() => {
         onFinish();
-      }, 2000); // 2 sec splash
+      }, 5000); // 5 sec splash
 
       return () => clearTimeout(timer);
     }
