@@ -116,7 +116,7 @@ body.modal-open {
 }
 
 .search-input:focus {
-  background-color: transparent ;
+  background-color: transparent;
   color: white;
 }
 
@@ -152,7 +152,7 @@ body.modal-open {
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 12px;
   box-shadow: 0 0 10px white;
-  height: 650px;
+  height: 600px;
 }
 
 .btn-close {

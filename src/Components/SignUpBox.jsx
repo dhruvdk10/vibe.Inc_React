@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faPhone, faLock } from "@fortawesome/free-solid-svg-icons";
 
 const SignUpBox = () => {
+  // ✅ SAME LOGIC AS DialogueBox
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
 
@@ -113,7 +114,7 @@ const SignUpBox = () => {
                     />
                   </div>
 
-                  {/* Password */}
+                  {/* Password (EXACT SAME AS DialogueBox) */}
                   <div
                     className="input-group mb-3 position-relative"
                     style={{ height: "40px" }}
@@ -147,7 +148,7 @@ const SignUpBox = () => {
                     </span>
                   </div>
 
-                  {/* Confirm Password */}
+                  {/* Confirm Password (SAME LOGIC) */}
                   <div
                     className="input-group mb-4 position-relative"
                     style={{ height: "40px" }}
@@ -191,6 +192,17 @@ const SignUpBox = () => {
                     {message}
                   </p>
                 )}
+                <div className="text-center mt-4">
+                  Already have an account?{" "}
+                  <a
+                    href="#"
+                    className="box-options text-decoration-none"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal"
+                  >
+                    Login here
+                  </a>
+                </div>
               </div>
 
             </div>
