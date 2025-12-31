@@ -3,18 +3,11 @@ import { NavLink } from "react-router-dom";
 
 const SplashScreen = ({ onFinish }) => {
   useEffect(() => {
-    // ✅ Play intro only if not played this session
-    if (sessionStorage.getItem("introPlayed")) {
+    const timer = setTimeout(() => {
       onFinish();
-    } else {
-      sessionStorage.setItem("introPlayed", "true");
+    }, 5000); //
 
-      const timer = setTimeout(() => {
-        onFinish();
-      }, 5000); // 5 sec splash
-
-      return () => clearTimeout(timer);
-    }
+    return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
