@@ -53,8 +53,8 @@ const SignUpBox = () => {
       <div className="container">
         <div className="modal fade" id="signupModal">
           <div
-            className="modal-dialog modal-dialog-centered"
-            style={{ maxWidth: "460px", width: "90%" }}
+            className="modal-dialog modal-dialog-centered border-0"
+            style={{ maxWidth: "460px", width: "90%", margin: "auto" }}
           >
             <div className="modal-content text-white">
               <div className="modal-header border-0 d-block text-center position-relative">
@@ -127,7 +127,10 @@ const SignUpBox = () => {
                       placeholder="Password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      style={{ paddingRight: "40px" }}
+                      style={{
+                        paddingRight: "40px",
+                        borderRadius: "12px"
+                      }}
                     />
 
                     <span
@@ -161,7 +164,10 @@ const SignUpBox = () => {
                       placeholder="Confirm Password"
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
-                      style={{ paddingRight: "40px" }}
+                      style={{
+                        paddingRight: "40px",
+                        borderRadius: "12px"  
+                      }}
                     />
 
                     <span

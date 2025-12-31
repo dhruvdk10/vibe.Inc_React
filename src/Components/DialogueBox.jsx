@@ -100,12 +100,15 @@ const DialogueBox = () => {
 
                     <input
                       type={showPassword ? "text" : "password"}
-                      className="form-control border-0"
+                      className="form-control border-0 password-input"
                       placeholder="Password"
                       required
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      style={{ paddingRight: "40px" }}
+                      style={{
+                        paddingRight: "40px",
+                        borderRadius: "12px"
+                      }}
                     />
 
                     <span
