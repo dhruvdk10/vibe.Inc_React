@@ -20,103 +20,96 @@ import SplashScreen from "./Components/SplashScreen";
 const App = () => {
   const [modalData, setModalData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [showSplash, setShowSplash] = useState(true); 
-
-  // ✅ SHOW SPLASH FIRST
-  if (showSplash) {
-    return <SplashScreen onFinish={() => setShowSplash(false)} />;
-  }
+  const [showSplash, setShowSplash] = useState(true);
 
   return (
-    <MyListProvider>
-      <HashRouter>
-        {/* ✅ Navbar controls global search */}
-        <Navbar setSearchTerm={setSearchTerm} />
+    <HashRouter>
+      {/* ✅ SplashScreen shown first */}
+      {showSplash ? (
+        <SplashScreen onFinish={() => setShowSplash(false)} />
+      ) : (
+        <MyListProvider>
+          {/* ✅ Navbar controls global search */}
+          <Navbar setSearchTerm={setSearchTerm} />
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                searchTerm={searchTerm}
-                openModal={(item) => setModalData(item)}
-              />
-            }
-          />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  searchTerm={searchTerm}
+                  openModal={(item) => setModalData(item)}
+                />
+              }
+            />
+            <Route
+              path="/Series"
+              element={
+                <Series
+                  searchTerm={searchTerm}
+                  openModal={(item) => setModalData(item)}
+                />
+              }
+            />
+            <Route
+              path="/Movies"
+              element={
+                <Movies
+                  searchTerm={searchTerm}
+                  openModal={(item) => setModalData(item)}
+                />
+              }
+            />
+            <Route
+              path="/Games"
+              element={
+                <Games
+                  searchTerm={searchTerm}
+                  openModal={(item) => setModalData(item)}
+                />
+              }
+            />
+            <Route
+              path="/MyList"
+              element={
+                <MyList
+                  searchTerm={searchTerm}
+                  openModal={(item) => setModalData(item)}
+                />
+              }
+            />
+            <Route
+              path="/Dashboard"
+              element={
+                <Dashboard
+                  searchTerm={searchTerm}
+                  openModal={(item) => setModalData(item)}
+                />
+              }
+            />
+            <Route
+              path="/SignupDashboard"
+              element={
+                <SignupDashboard
+                  searchTerm={searchTerm}
+                  openModal={(item) => setModalData(item)}
+                />
+              }
+            />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
 
-          <Route
-            path="/Series"
-            element={
-              <Series
-                searchTerm={searchTerm}
-                openModal={(item) => setModalData(item)}
-              />
-            }
-          />
+          {/* ✅ Card Modal */}
+          {modalData && (
+            <CardDialog {...modalData} onClose={() => setModalData(null)} />
+          )}
 
-          <Route
-            path="/Movies"
-            element={
-              <Movies
-                searchTerm={searchTerm}
-                openModal={(item) => setModalData(item)}
-              />
-            }
-          />
-
-          <Route
-            path="/Games"
-            element={
-              <Games
-                searchTerm={searchTerm}
-                openModal={(item) => setModalData(item)}
-              />
-            }
-          />
-
-          <Route
-            path="/MyList"
-            element={
-              <MyList
-                searchTerm={searchTerm}
-                openModal={(item) => setModalData(item)}
-              />
-            }
-          />
-
-          <Route
-            path="/Dashboard"
-            element={
-              <Dashboard
-                searchTerm={searchTerm}
-                openModal={(item) => setModalData(item)}
-              />
-            }
-          />
-
-          <Route
-            path="/SignupDashboard"
-            element={
-              <SignupDashboard
-                searchTerm={searchTerm}
-                openModal={(item) => setModalData(item)}
-              />
-            }
-          />
-
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-
-        {/* ✅ Card Modal */}
-        {modalData && (
-          <CardDialog {...modalData} onClose={() => setModalData(null)} />
-        )}
-
-        <DialogueBox />
-        <SignUpBox />
-        <Footer />
-      </HashRouter>
-    </MyListProvider>
+          <DialogueBox />
+          <SignUpBox />
+          <Footer />
+        </MyListProvider>
+      )}
+    </HashRouter>
   );
 };
 
