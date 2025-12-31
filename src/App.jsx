@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import DialogueBox from "./Components/DialogueBox";
 import SignUpBox from "./Components/SignUpBox";
@@ -18,9 +18,9 @@ import { MyListProvider } from "./Components/ContextAPI/MyListContext";
 import SplashScreen from "./Components/SplashScreen";
 
 const App = () => {
-useEffect(() => {
-  document.title = "vibe."; 
-}, []);
+  useEffect(() => {
+    document.title = "vibe.";
+  }, []);
   const [modalData, setModalData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [showSplash, setShowSplash] = useState(true);
